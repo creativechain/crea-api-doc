@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>JS: Get Voters List On Post | Steem Developer</title>
+<title>JS: Get Voters List On Post | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="JS: Get Voters List On Post" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="By the end of this tutorial you would know how to get voters list on any content." />
 <meta property="og:description" content="By the end of this tutorial you would know how to get voters list on any content." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-javascript/get_voters_list_on_post" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-javascript/get_voters_list_on_post" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-javascript/get_voters_list_on_post" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-javascript/get_voters_list_on_post" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"By the end of this tutorial you would know how to get voters list on any content.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-javascript/get_voters_list_on_post","headline":"JS: Get Voters List On Post","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-javascript/get_voters_list_on_post"},"@context":"http://schema.org"}</script>
+{"description":"By the end of this tutorial you would know how to get voters list on any content.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-javascript/get_voters_list_on_post","headline":"JS: Get Voters List On Post","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-javascript/get_voters_list_on_post"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,7 +323,7 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/06_get_voters_list_on_post">Get Voters List On Post</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-js">JS tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/06_get_voters_list_on_post">Get Voters List On Post</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-js">JS tutorials repository</a>.</span>
 <br /></p>
 
 <p>The purpose of this tutorial is to <strong>a)</strong> demonstrate how to get a list of articles from the trending list on the blockchain, and <strong>b)</strong> fetch the voters of the selected post to display the account and date at which they voted.</p>
@@ -332,7 +332,7 @@
 
 <h2 id="intro">Intro</h2>
 
-<p>Each post has voters that support content and play big role in reward distribution. Getting details of each voter and their vote value, time, etc. is another crucial information for authors and app developers. We will be using <code class="highlighter-rouge">get_active_votes</code> API call to retrieve that information right from Steem blockchain.</p>
+<p>Each post has voters that support content and play big role in reward distribution. Getting details of each voter and their vote value, time, etc. is another crucial information for authors and app developers. We will be using <code class="highlighter-rouge">get_active_votes</code> API call to retrieve that information right from Crea blockchain.</p>
 
 <h2 id="steps">Steps</h2>
 
@@ -413,7 +413,7 @@
   <li><code class="highlighter-rouge">weight</code> - Weight of the voting power.</li>
   <li><code class="highlighter-rouge">rshares</code> - Reward shares.</li>
   <li><code class="highlighter-rouge">percent</code> - Percent of vote.</li>
-  <li><code class="highlighter-rouge">reputation</code> - The <a href="https://developers.steem.io/glossary/#reputation">reputation</a> of the account that voted.</li>
+  <li><code class="highlighter-rouge">reputation</code> - The <a href="https://developers.creaproject.io/glossary/#reputation">reputation</a> of the account that voted.</li>
   <li><code class="highlighter-rouge">time</code> - Time the vote was submitted.</li>
 </ul>
 

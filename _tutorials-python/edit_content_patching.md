@@ -4,16 +4,16 @@ position: 12
 description: "How to edit post content with diff_match_patch using Python."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Edit Content Patching](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/12_edit_content_patching) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Edit Content Patching](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/12_edit_content_patching) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial we show you how to patch and update posts/comments on the **Steem** blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to patch and update posts/comments on the **Crea** blockchain using the `commit` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-Being able to patch a post is critical to save resources on Steem. The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `diff_match_patch` class for python to create a `patch` for a post or comment. We then use the `post` method found within the `commit` class in the library. It should be noted that comments and new post are both treated as `commit.post` operation with the only difference being that a comment/reply has got an additional parameter containing the `parent post/comment`. There is already a tutorial on how to create a new post so the focus of this tutorial will be on `patching` the content of the post. We will be using a couple of methods within the `diff_match_patch` class.
+Being able to patch a post is critical to save resources on Crea. The Crea python library has a built-in function to transmit transactions to the blockchain. We are using the `diff_match_patch` class for python to create a `patch` for a post or comment. We then use the `post` method found within the `commit` class in the library. It should be noted that comments and new post are both treated as `commit.post` operation with the only difference being that a comment/reply has got an additional parameter containing the `parent post/comment`. There is already a tutorial on how to create a new post so the focus of this tutorial will be on `patching` the content of the post. We will be using a couple of methods within the `diff_match_patch` class.
 
 `diff_main` - This compares two text fields to find the differences.
 `diff_cleanupSemantic` - This reduces the number of edits by eliminating semantically trivial equalities.
@@ -24,7 +24,7 @@ Being able to patch a post is critical to save resources on Steem. The Steem pyt
 ## Steps
 
 1.  [**App setup**](#setup) - Library install and import. Connection to testnet
-1.  [**User information and steem node**](#userinfo) - Input user information and connection to Steem node
+1.  [**User information and crea node**](#userinfo) - Input user information and connection to Crea node
 1.  [**Post to update**](#post) - Input and retrieve post information
 1.  [**Patching**](#patch) - Create the patch to update the post
 1.  [**New post commit**](#commit) - Commit the post to the blockchain
@@ -33,27 +33,27 @@ Being able to patch a post is critical to save resources on Steem. The Steem pyt
 
 In this tutorial we use 2 packages:
 
-- `steem` - steem-python library and interaction with Blockchain
+- `crea` - crea-python library and interaction with Blockchain
 - `diff_match_patch` - used to compute the difference between two text fields to create a patch
 
 We import the libraries and connect to the `testnet`.
 
 ```python
-import steembase
-import steem
+import creabase
+import crea
 from diff_match_patch import diff_match_patch
 
-steembase.chains.known_chains['STEEM'] = {
+creabase.chains.known_chains['CREA'] = {
     'chain_id': '79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673',
-    'prefix': 'STX', 'steem_symbol': 'STEEM', 'sbd_symbol': 'SBD', 'vests_symbol': 'VESTS'
+    'prefix': 'STX', 'crea_symbol': 'CREA', 'sbd_symbol': 'CBD', 'vests_symbol': 'VESTS'
 }
 ```
 
 Because this tutorial alters the blockchain we connect to a testnet so we don't create spam on the production server.
 
-#### 2. User information and steem node <a name="userinfo"></a>
+#### 2. User information and crea node <a name="userinfo"></a>
 
-We require the `private posting key` of the user in order for the transfer to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it's good practice.
+We require the `private posting key` of the user in order for the transfer to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the crea class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it's good practice.
 
 ```python
 #capture user information
@@ -61,7 +61,7 @@ username = input('Enter username: ') #demo account: cdemo
 wif = input('Enter private POSTING key: ') #demo account: 5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz
 
 #connect node and private active key
-client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
+client = crea.Crea(nodes=['https://testnet.crea.vc'], keys=[wif])
 ```
 
 #### 3. Post to update <a name="post"></a>
@@ -141,7 +141,7 @@ print('\n' + 'Content of the post has been successfully updated')
 
 A simple confirmation is displayed on the screen for a successful commit.
 
-We encourage users to play around with different values and data types to fully understand how this process works. You can also check the balances and transaction history on the [testnet portal](http://condenser.steem.vc/).
+We encourage users to play around with different values and data types to fully understand how this process works. You can also check the balances and transaction history on the [testnet portal](http://condenser.crea.vc/).
 
 ### To Run the tutorial
 

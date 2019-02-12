@@ -4,16 +4,16 @@ position: 29
 description: "_View the vesting delegations made by a user as well as the delegations that are expiring._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Delegations By User](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/29_get_delegations_by_user) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Delegations By User](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/29_get_delegations_by_user) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-This tutorial will take you through the process of calling delegation information from the steem blockchain using the `database API`. The account information provided has been chosen by random and the process is applicable to any user account on both the `production server` and the `testnet`.
+This tutorial will take you through the process of calling delegation information from the crea blockchain using the `database API`. The account information provided has been chosen by random and the process is applicable to any user account on both the `production server` and the `testnet`.
 
 ## Intro
 
-This tutorial has two separate functions, one for viewing active delegations and one for viewing expiring delegations. Both of these use the `database API` to pull information from the steem blockchain. It should be noted that when a delegation is cancelled it will only be available after 7 days. The value of the delegation can also be changed at any time, either decreased or increased. The first function we use is `getVestingDelegations` for which we require the following parameters:
+This tutorial has two separate functions, one for viewing active delegations and one for viewing expiring delegations. Both of these use the `database API` to pull information from the crea blockchain. It should be noted that when a delegation is cancelled it will only be available after 7 days. The value of the delegation can also be changed at any time, either decreased or increased. The first function we use is `getVestingDelegations` for which we require the following parameters:
 
 1.  _account_ - The username for which the query is done
 2.  _from_ - The value from where to start the search. This can be used for paging. This parameter is optional
@@ -27,7 +27,7 @@ The second function is `getExpiringVestingDelegations` with parameters:
 
 ## Steps
 
-1.  [**Configure connection**](#connection) Configuration of `dsteem` to communicate with a Steem blockchain
+1.  [**Configure connection**](#connection) Configuration of `dcrea` to communicate with a Crea blockchain
 2.  [**Input variables**](#input) Collecting the required inputs via an HTML UI
 3.  [**Database query**](#query) Sending a query to the blockchain for the user delegations
 4.  [**Display results**](#display) Display the results of the blockchain query
@@ -37,17 +37,17 @@ The second function is `getExpiringVestingDelegations` with parameters:
 As usual, we have a `public/app.js` file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-const dsteem = require('dsteem');
+const dcrea = require('dcrea');
 let opts = {};
 //define network parameters
 opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
-//connect to a steem node, production in this case
-const client = new dsteem.Client('https://api.steemit.com');
+//connect to a crea node, production in this case
+const client = new dcrea.Client('https://node1.creary.net');
 ```
 
-Above, we have `dsteem` pointing to the production network with the proper chainId, addressPrefix, and endpoint.
+Above, we have `dcrea` pointing to the production network with the proper chainId, addressPrefix, and endpoint.
 
 #### 2. Input variables<a name="input"></a>
 
@@ -67,7 +67,7 @@ window.createList = async () => {
 
 #### 3. Database query<a name="query"></a>
 
-The queries are sent through to the steem blockchain using the `database API` and parameters as per the `intro`. The result of the query is displayed on the console as a control check.
+The queries are sent through to the crea blockchain using the `database API` and parameters as per the `intro`. The result of the query is displayed on the console as a control check.
 
 ```javascript
 //active delegations function

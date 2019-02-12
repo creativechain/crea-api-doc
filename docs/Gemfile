@@ -4,7 +4,7 @@ gem 'jekyll'
 gem 'neatjson'
 gem 'rake'
 gem 'git'
-gem 'steem-ruby'
+gem 'crea-ruby'
 
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'

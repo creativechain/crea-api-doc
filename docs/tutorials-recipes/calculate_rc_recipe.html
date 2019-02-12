@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Calculating RC costs | Steem Developer</title>
+<title>Calculating RC costs | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Calculating RC costs" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="How to calculate resource credit cost for transactions." />
 <meta property="og:description" content="How to calculate resource credit cost for transactions." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-recipes/calculate_rc_recipe" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-recipes/calculate_rc_recipe" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-recipes/calculate_rc_recipe" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-recipes/calculate_rc_recipe" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"How to calculate resource credit cost for transactions.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-recipes/calculate_rc_recipe","headline":"Calculating RC costs","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-recipes/calculate_rc_recipe"},"@context":"http://schema.org"}</script>
+{"description":"How to calculate resource credit cost for transactions.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-recipes/calculate_rc_recipe","headline":"Calculating RC costs","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-recipes/calculate_rc_recipe"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,17 +323,17 @@
 </span>
 	
 
-	<p>Since HF20 a Resource Credit (RC) system has been implemented to manage the number of transactions (comments, votes, transfers, etc) you can execute on the blockchain at any given time. This recipe will look at how to calculate your current RC and also what the current RC cost is for a given transaction. This recipe is far more ‘basics oriented’ than most. For a more in-depth description of how RC’s work consume <a href="https://github.com/steemit/rcdemo">this excellent RC demo</a> created by Steemit’s Blockchain Team.</p>
+	<p>Since HF20 a Resource Credit (RC) system has been implemented to manage the number of transactions (comments, votes, transfers, etc) you can execute on the blockchain at any given time. This recipe will look at how to calculate your current RC and also what the current RC cost is for a given transaction. This recipe is far more ‘basics oriented’ than most. For a more in-depth description of how RC’s work consume <a href="https://github.com/creativechain/rcdemo">this excellent RC demo</a> created by Creary’s Blockchain Team.</p>
 
 <h2 id="intro">Intro</h2>
 
-<p>RCs are non-transferable credits that accrue to each Steem account based on how much Steem Power(SP) it has. An account spends RC when it transacts on the Steem blockchain. RCs regenerate over a 5 day period. If an account doesn’t have sufficient credits, the transaction will not be allowed to occur.</p>
+<p>RCs are non-transferable credits that accrue to each Crea account based on how much Crea Power(SP) it has. An account spends RC when it transacts on the Crea blockchain. RCs regenerate over a 5 day period. If an account doesn’t have sufficient credits, the transaction will not be allowed to occur.</p>
 
 <p>The price of a transaction (which consumes a particular resource, or resources) is based on the current stockpile of those resources. As a stockpile of a resource decreases, the RC cost of that resource increases. In other words, as the stockpile goes down, accounts will have to pay more RCs to use the remaining resources. This system disincentivize the over-consumption of resources by users as well as spam.</p>
 
 <p>The RC system uses three measurements to determine how much a transaction should cost in terms of RCs: blockchain size, compute time, and state size. If an transaction is especially expensive in any one of these measurements, then performing that operation will be costly in terms of RCs. It is important to bear in mind that these are objective measurements of resource consumption at the blockchain level, so when something is expensive in RCs, all that means is that performing the action places a high burden on the network relative to other operations.</p>
 
-<p>There are applications available to check an account’s status, like <a href="https://steemd.com/@username">steemd.com</a>, but here we will look at how calculate the values manually.</p>
+<p>There are applications available to check an account’s status, like <a href="https://cread.com/@username">cread.com</a>, but here we will look at how calculate the values manually.</p>
 
 <h2 id="calculating-available-rc">Calculating available RC</h2>
 
@@ -368,9 +368,9 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">beem</span>
 <span class="kn">from</span> <span class="nn">beem.rc</span> <span class="kn">import</span> <span class="n">RC</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="n">beem</span><span class="o">.</span><span class="n">Steem</span><span class="p">()</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">beem</span><span class="o">.</span><span class="n">Crea</span><span class="p">()</span>
 
-<span class="n">rc</span> <span class="o">=</span> <span class="n">RC</span><span class="p">(</span><span class="n">steem_instance</span><span class="o">=</span><span class="n">client</span><span class="p">)</span>
+<span class="n">rc</span> <span class="o">=</span> <span class="n">RC</span><span class="p">(</span><span class="n">crea_instance</span><span class="o">=</span><span class="n">client</span><span class="p">)</span>
 <span class="c1">#beem sets its own rough, default values if you don't pass them in.
 </span><span class="k">print</span><span class="p">(</span><span class="n">rc</span><span class="o">.</span><span class="n">comment</span><span class="p">())</span> <span class="c1">#(self, tx_size=1000, permlink_length=10, parent_permlink_length=10)
 </span><span class="k">print</span><span class="p">(</span><span class="n">rc</span><span class="o">.</span><span class="n">vote</span><span class="p">())</span> <span class="c1">#(self, tx_size=210)
@@ -380,7 +380,7 @@
 <p>The functions can also be executed for a specific transaction by passing in data for transaction in question. The first step is to calculate the transfer size of the operation which is then used to execute the function to calculate the RC costs.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">opdata</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">'voter'</span><span class="p">:</span> <span class="s">'steemit'</span><span class="p">,</span>
+    <span class="s">'voter'</span><span class="p">:</span> <span class="s">'creary'</span><span class="p">,</span>
     <span class="s">'author'</span><span class="p">:</span> <span class="s">'r1s2g3'</span><span class="p">,</span>
     <span class="s">'permlink'</span><span class="p">:</span> <span class="s">'rc-calculations-according-to-your-need-part-1'</span><span class="p">,</span>
     <span class="s">'weight'</span><span class="p">:</span> <span class="mi">100</span>
@@ -395,11 +395,11 @@
 </code></pre></div></div>
 
 <p>You can find the source for beem’s RC class in the <a href="https://github.com/holgern/beem/blob/master/beem/rc.py">beem github repo</a>
-Additional info can also be found in <a href="https://steemit.com/utopian-io/@holger80/update-for-beem-adding-rc-costs-calculation-and-witnesssetproperties-broadcasting?sort=new">this article by steem user @holger80</a></p>
+Additional info can also be found in <a href="https://creary.net/utopian-io/@holger80/update-for-beem-adding-rc-costs-calculation-and-witnesssetproperties-broadcasting?sort=new">this article by crea user @holger80</a></p>
 
 <h2 id="allocation-of-rc-to-blockchain-resources">Allocation of RC to blockchain resources</h2>
 
-<p>An in depth look at how RC’s are assigned to each of the three resources (CPU megacycles/state memory/history size) can be found in Steemit’s wiki articles for <a href="https://github.com/steemit/steem/wiki/RC-Bandwidth-System">RC Bandwidth System</a> and <a href="https://github.com/steemit/steem/wiki/RC-Bandwidth-Parameters">Parameters</a></p>
+<p>An in depth look at how RC’s are assigned to each of the three resources (CPU megacycles/state memory/history size) can be found in Creary’s wiki articles for <a href="https://github.com/creativechain/crea/wiki/RC-Bandwidth-System">RC Bandwidth System</a> and <a href="https://github.com/creativechain/crea/wiki/RC-Bandwidth-Parameters">Parameters</a></p>
 
 </section>
 

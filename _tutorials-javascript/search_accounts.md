@@ -1,19 +1,19 @@
 ---
 title: 'JS: Search Accounts'
 position: 15
-description: "_By the end of this tutorial you should know how to call a list of user names from the steem blockchain_"
+description: "_By the end of this tutorial you should know how to call a list of user names from the crea blockchain_"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Search Accounts](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/15_search_accounts) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Search Accounts](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/15_search_accounts) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-This tutorial will show the method of capturing a queried user name, matching that to the steem database and then displaying the matching names. This tutorial will be run on the `production server`.
+This tutorial will show the method of capturing a queried user name, matching that to the crea database and then displaying the matching names. This tutorial will be run on the `production server`.
 
 ## Intro
 
-We are using the `call` function provided by the `dsteem` library to pull user names from the steem blockchain. The information being pulled is dependent on two variables:
+We are using the `call` function provided by the `dcrea` library to pull user names from the crea blockchain. The information being pulled is dependent on two variables:
 
 1.  The max number of user names that needs to be displayed by the search
 2.  The string representing the first characters of the user name you are searching for
@@ -22,7 +22,7 @@ A simple HTML interface is used to both capture the string query as well as disp
 
 ## Steps
 
-1. [**Configure connection**](#configure_connection) Configuration of `dsteem` to use the proper connection and network.
+1. [**Configure connection**](#configure_connection) Configuration of `dcrea` to use the proper connection and network.
 2. [**Collecting input variables**](#collecting_input_variables) Assigning and collecting the necessary variables
 3. [**Blockchain query**](#blockchain_query) Finding the data on the blockchain based on the inputs
 4. [**Output**](#output) Displaying query results
@@ -30,17 +30,17 @@ A simple HTML interface is used to both capture the string query as well as disp
 
 #### 1. **Configure connection**<a name="configure_connection"></a>
 
-Below we have `dsteem` pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:
+Below we have `dcrea` pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-const dsteem = require('dsteem');
+const dcrea = require('dcrea');
 let opts = {};
 //connect to production server
 opts.addressPrefix = 'STM';
 opts.chainId =
 	'0000000000000000000000000000000000000000000000000000000000000000';
 //connect to server which is connected to the network/production
-const client = new dsteem.Client('https://api.steemit.com');
+const client = new dcrea.Client('https://node1.creary.net');
 ```
 
 #### 2.  **Collecting input variables**<a name="collecting_input_variables"></a>

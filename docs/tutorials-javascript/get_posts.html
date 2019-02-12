@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>JS: Get Posts | Steem Developer</title>
+<title>JS: Get Posts | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="JS: Get Posts" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Query for the most recent posts having a specific tag, using a Steem filter" />
-<meta property="og:description" content="Query for the most recent posts having a specific tag, using a Steem filter" />
-<link rel="canonical" href="https://developers.steem.io/tutorials-javascript/get_posts" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-javascript/get_posts" />
-<meta property="og:site_name" content="Steem Developer" />
+<meta name="description" content="Query for the most recent posts having a specific tag, using a Crea filter" />
+<meta property="og:description" content="Query for the most recent posts having a specific tag, using a Crea filter" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-javascript/get_posts" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-javascript/get_posts" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Query for the most recent posts having a specific tag, using a Steem filter","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-javascript/get_posts","headline":"JS: Get Posts","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-javascript/get_posts"},"@context":"http://schema.org"}</script>
+{"description":"Query for the most recent posts having a specific tag, using a Crea filter","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-javascript/get_posts","headline":"JS: Get Posts","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-javascript/get_posts"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -319,11 +319,11 @@
 		</a>
 	</h3>
 	
-		<span class="description"><p>Query for the most recent posts having a specific tag, using a Steem filter</p>
+		<span class="description"><p>Query for the most recent posts having a specific tag, using a Crea filter</p>
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/04_get_posts">Get Posts</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-js">JS tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/04_get_posts">Get Posts</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-js">JS tutorials repository</a>.</span>
 <br /></p>
 
 <p>This tutorial pulls a list of the posts from different tags or filters and displays them.
@@ -333,11 +333,11 @@ Tags and filters are different. It’s important to understand them.</p>
 
 <p>Tags &amp; Filters are two different.</p>
 
-<p>A <code class="highlighter-rouge">tag</code> in Steem is much like a tag in Gmail, or Twitter. It’s a way to describe a
+<p>A <code class="highlighter-rouge">tag</code> in Crea is much like a tag in Gmail, or Twitter. It’s a way to describe a
 post as being relevant to a particular topic. Posts may have up to five tags on them, but there are limits when
 querying (more on this later).</p>
 
-<p>A <code class="highlighter-rouge">filter</code> in Steem is a kind of built-in ‘view’ or ordering of posts. You can use the following filters:
+<p>A <code class="highlighter-rouge">filter</code> in Crea is a kind of built-in ‘view’ or ordering of posts. You can use the following filters:
 <code class="highlighter-rouge">trending</code>, <code class="highlighter-rouge">hot</code>, <code class="highlighter-rouge">new</code>, <code class="highlighter-rouge">active</code>, and <code class="highlighter-rouge">promoted</code>. You’ll get a feel for the subtleties of each as you create your
 application.</p>
 
@@ -346,14 +346,14 @@ application.</p>
 <ol>
   <li><a href="#UI"><strong>UI</strong></a> - A brief description of the UI and inputting our query values</li>
   <li><a href="#Construct-query"><strong>Construct query</strong></a> - Assemble the information from the UI into our <code class="highlighter-rouge">filter</code> &amp; <code class="highlighter-rouge">query</code></li>
-  <li><a href="#API-call"><strong>API call</strong></a> - Make the call to Steem</li>
+  <li><a href="#API-call"><strong>API call</strong></a> - Make the call to Crea</li>
   <li><a href="#Handle-response"><strong>Handle response</strong></a> - Accept the response in a promise callback, then render the results</li>
   <li><a href="#Example-post-object"><strong>Example post object</strong></a> - An example post object from the response list</li>
 </ol>
 
 <h4 id="1-ui-">1. UI <a name="UI"></a></h4>
 
-<p>The source HTML for our UI can be found in <a href="https://github.com/steemit/devportal-tutorials-js/blob/master/tutorials/04_get_posts/public/index.html">public/index.html</a></p>
+<p>The source HTML for our UI can be found in <a href="https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/04_get_posts/public/index.html">public/index.html</a></p>
 
 <p>There are three input components to the UI.</p>
 
@@ -364,7 +364,7 @@ application.</p>
     <p><code class="highlighter-rouge">&lt;select id="filters" class="form-control" &gt;...</code></p>
   </li>
   <li>
-    <p>Tag: where we type in a <em>single</em>, arbitrary tag. (The Steem blockchain does not support searching on multiple tags)</p>
+    <p>Tag: where we type in a <em>single</em>, arbitrary tag. (The Crea blockchain does not support searching on multiple tags)</p>
 
     <p><code class="highlighter-rouge">&lt;input id="tag" class="form-control"/&gt;</code></p>
   </li>
@@ -374,7 +374,7 @@ application.</p>
   </li>
 </ul>
 
-<p><img src="https://github.com/steemit/devportal-tutorials-js/blob/master/tutorials/04_get_posts/images/Step-01-UI.png?raw=true" alt="Step-01-UI.png" /></p>
+<p><img src="https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/04_get_posts/images/Step-01-UI.png?raw=true" alt="Step-01-UI.png" /></p>
 
 <h4 id="2-construct-query-">2. Construct query <a name="Construct-query"></a></h4>
 
@@ -395,7 +395,7 @@ managable. In this case, five.</p>
 <p>The api call itself is fairly simple. We use <code class="highlighter-rouge">getDiscussions</code>.
 The first argument, filter, is a simple string.
 The second argument is our query object.
-Like most of dsteem’s api functions, <code class="highlighter-rouge">getDiscussions</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>.</p>
+Like most of dcrea’s api functions, <code class="highlighter-rouge">getDiscussions</code> returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">client</span><span class="p">.</span><span class="nx">database</span>
     <span class="p">.</span><span class="nx">getDiscussions</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">query</span><span class="p">)</span>
@@ -437,16 +437,16 @@ iterates over the entries response, and constructs html from it.</p>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37338948</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steemitblog"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"permlink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"join-team-steemit-at-tokenfest"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steemit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crearyblog"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permlink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"join-team-creary-at-tokenfest"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creary"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"parent_author"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"parent_permlink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steemit"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Join Team Steemit at TokenFest!"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"parent_permlink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creary"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Join Team Creary at TokenFest!"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"body"</span><span class="p">:</span><span class="w">
-            </span><span class="s2">"&lt;a href=</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital</span><span class="se">\"</span><span class="s2">&gt;&lt;img src=</span><span class="se">\"</span><span class="s2">https://i.imgur.com/fOScDIW.png</span><span class="se">\"</span><span class="s2">/&gt;&lt;/a&gt;</span><span class="se">\n\n</span><span class="s2">Hello Steemians! If you’d like to meet Team Steemit live-in-person, or are just interested in attending what promises to be a great blockchain conference, join us at &lt;a href=</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital/</span><span class="se">\"</span><span class="s2">&gt;TokenFest&lt;/a&gt; in San Francisco from March 15th to 16th. </span><span class="se">\n\n</span><span class="s2">Steemit CEO, Ned Scott, will be participating in a fireside chat alongside Steemit’s CTO, Harry Schmidt, as well as the creator of Utopian.io, Diego Pucci. Steemit will also be hosting the opening party on Thursday night and we’d certainly love to meet as many of you as possible IRL, so head on over to https://tokenfest.adria.digital/ and get your tickets while you can. </span><span class="se">\n\n</span><span class="s2">*Team Steemit*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"&lt;a href=</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital</span><span class="se">\"</span><span class="s2">&gt;&lt;img src=</span><span class="se">\"</span><span class="s2">https://i.imgur.com/fOScDIW.png</span><span class="se">\"</span><span class="s2">/&gt;&lt;/a&gt;</span><span class="se">\n\n</span><span class="s2">Hello Crearians! If you’d like to meet Team Creary live-in-person, or are just interested in attending what promises to be a great blockchain conference, join us at &lt;a href=</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital/</span><span class="se">\"</span><span class="s2">&gt;TokenFest&lt;/a&gt; in San Francisco from March 15th to 16th. </span><span class="se">\n\n</span><span class="s2">Creary CEO, Ned Scott, will be participating in a fireside chat alongside Creary’s CTO, Harry Schmidt, as well as the creator of Utopian.io, Diego Pucci. Creary will also be hosting the opening party on Thursday night and we’d certainly love to meet as many of you as possible IRL, so head on over to https://tokenfest.adria.digital/ and get your tickets while you can. </span><span class="se">\n\n</span><span class="s2">*Team Creary*"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"json_metadata"</span><span class="p">:</span><span class="w">
-            </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">tags</span><span class="se">\"</span><span class="s2">:[</span><span class="se">\"</span><span class="s2">steemit</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">tokenfest</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">conference</span><span class="se">\"</span><span class="s2">],</span><span class="se">\"</span><span class="s2">image</span><span class="se">\"</span><span class="s2">:[</span><span class="se">\"</span><span class="s2">https://i.imgur.com/fOScDIW.png</span><span class="se">\"</span><span class="s2">],</span><span class="se">\"</span><span class="s2">links</span><span class="se">\"</span><span class="s2">:[</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital/</span><span class="se">\"</span><span class="s2">],</span><span class="se">\"</span><span class="s2">app</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">steemit/0.1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">format</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">markdown</span><span class="se">\"</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">tags</span><span class="se">\"</span><span class="s2">:[</span><span class="se">\"</span><span class="s2">creary</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">tokenfest</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">conference</span><span class="se">\"</span><span class="s2">],</span><span class="se">\"</span><span class="s2">image</span><span class="se">\"</span><span class="s2">:[</span><span class="se">\"</span><span class="s2">https://i.imgur.com/fOScDIW.png</span><span class="se">\"</span><span class="s2">],</span><span class="se">\"</span><span class="s2">links</span><span class="se">\"</span><span class="s2">:[</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">https://tokenfest.adria.digital/</span><span class="se">\"</span><span class="s2">],</span><span class="se">\"</span><span class="s2">app</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">creary/0.1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">format</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">markdown</span><span class="se">\"</span><span class="s2">}"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"last_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-07T23:22:54"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-07T20:56:36"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-13T01:40:21"</span><span class="p">,</span><span class="w">
@@ -461,24 +461,24 @@ iterates over the entries response, and constructs html from it.</p>
         </span><span class="s2">"max_cashout_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1969-12-31T23:59:59"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"total_vote_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">3462435</span><span class="p">,</span><span class="w">
         </span><span class="s2">"reward_weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"total_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 SBD"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"curator_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 SBD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CBD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"curator_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CBD"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"author_rewards"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
         </span><span class="s2">"net_votes"</span><span class="p">:</span><span class="w"> </span><span class="mi">77</span><span class="p">,</span><span class="w">
         </span><span class="s2">"root_comment"</span><span class="p">:</span><span class="w"> </span><span class="mi">37338948</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"max_accepted_payout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 SBD"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"percent_steem_dollars"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"max_accepted_payout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CBD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"percent_crea_dollars"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
         </span><span class="s2">"allow_replies"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
         </span><span class="s2">"allow_votes"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
         </span><span class="s2">"allow_curation_rewards"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
         </span><span class="s2">"beneficiaries"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/steemit/@steemitblog/join-team-steemit-at-tokenfest"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"root_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Join Team Steemit at TokenFest!"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pending_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46.436 SBD"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"total_pending_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 STEEM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/creary/@crearyblog/join-team-creary-at-tokenfest"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"root_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Join Team Creary at TokenFest!"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pending_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46.436 CBD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total_pending_payout_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CREA"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"active_votes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"voter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steemitblog"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"voter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crearyblog"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"rshares"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1870813909383"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"percent"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
@@ -496,7 +496,7 @@ iterates over the entries response, and constructs html from it.</p>
         </span><span class="p">],</span><span class="w">
         </span><span class="s2">"replies"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
         </span><span class="s2">"author_reputation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"128210130644387"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"promoted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 SBD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"promoted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CBD"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"body_length"</span><span class="p">:</span><span class="w"> </span><span class="mi">754</span><span class="p">,</span><span class="w">
         </span><span class="s2">"reblogged_by"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
     </span><span class="p">}</span><span class="w">

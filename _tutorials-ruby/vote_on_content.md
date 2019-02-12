@@ -4,7 +4,7 @@ position: 17
 description: "To vote for a post (or reply), we can use a vote operation and provide the voting weight (the percentage of one vote being cast)."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Vote On Content](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/17_vote_on_content) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Vote On Content](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/17_vote_on_content) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -51,7 +51,7 @@ tx.operations << {
 And to do the same with our tutorial script:
 
 ```bash
-ruby vote_on_content.rb https://steemit.com/@inertia/kinda-spooky
+ruby vote_on_content.rb https://creary.net/@inertia/kinda-spooky
 ```
 
 #### Example Output
@@ -71,12 +71,12 @@ From the example we get the following output from our script:
 }
 ```
 
-The response we get after broadcasting the transaction gives us the transaction id ([`244a67b...`](https://steemd.com/tx/244a67bf1e64f05fb2ab52a0652a8edd30c5d273)), block number ([`27035223`](https://steemd.com/b/27035223)), and the transaction number of that block (`15`).
+The response we get after broadcasting the transaction gives us the transaction id ([`244a67b...`](https://cread.com/tx/244a67bf1e64f05fb2ab52a0652a8edd30c5d273)), block number ([`27035223`](https://cread.com/b/27035223)), and the transaction number of that block (`15`).
 
 Note, this script accepts accepts an optional percentage (defaulting `100.0 %`).  To set the vote to `50.0 %`:
 
 ```bash
-ruby vote_on_content.rb https://steemit.com/@inertia/kinda-spooky 50
+ruby vote_on_content.rb https://creary.net/@inertia/kinda-spooky 50
 ```
 
 ### Example Error
@@ -88,7 +88,7 @@ If an invalid vote weight is given (e.g.: `101 %`), we will get back an error:
   "jsonrpc": "2.0",
   "error": {
     "code": -32000,
-    "message": "Assert Exception:abs(weight) <= STEEM_100_PERCENT: Weight is not a STEEMIT percentage",
+    "message": "Assert Exception:abs(weight) <= CREA_100_PERCENT: Weight is not a CREARY percentage",
     "data": {
       "code": 10,
       "name": "assert_exception",
@@ -97,13 +97,13 @@ If an invalid vote weight is given (e.g.: `101 %`), we will get back an error:
         {
           "context": {
             "level": "error",
-            "file": "steem_operations.cpp",
+            "file": "crea_operations.cpp",
             "line": 179,
             "method": "validate",
             "hostname": "",
             "timestamp": "2018-10-22T16:09:50"
           },
-          "format": "abs(weight) <= STEEM_100_PERCENT: Weight is not a STEEMIT percentage",
+          "format": "abs(weight) <= CREA_100_PERCENT: Weight is not a CREARY percentage",
           "data": {
           }
         },
@@ -197,13 +197,13 @@ Broadcasting a `vote` operation will require the following fields:
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository) with the following arguments:
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository) with the following arguments:
 
 * `<url>` - the URL to vote on
 * `[weight]` - the weight of the vote as percentage, optional (default `100.0 %`)
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/17_vote_on_content
 bundle install
 ruby vote_on_content.rb <url> [weight]

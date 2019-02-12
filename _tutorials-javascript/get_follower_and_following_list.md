@@ -4,16 +4,16 @@ position: 19
 description: "_Get the followers of a user/author & the authors that user is following._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Follower And Following List](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/19_get_follower_and_following_list) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Follower And Following List](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/19_get_follower_and_following_list) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-This tutorial will take you through the process of calling both the `follower` and `following` functions from the STEEM API.
+This tutorial will take you through the process of calling both the `follower` and `following` functions from the CREA API.
 
 ## Intro
 
-We are using the `call` operation provided by the `dsteem` library to pull the follow information for a specified user account. There are 4 variables required to execute this operation:
+We are using the `call` operation provided by the `dcrea` library to pull the follow information for a specified user account. There are 4 variables required to execute this operation:
 
 1.  _username_ - The specific user for which the follower(ing) list will be retrieved.
 2.  _startFollower(ing)_ - The starting letter(s) or name for the search query.
@@ -24,7 +24,7 @@ A simple HTML interface is used to capture the required information after which 
 
 ## Steps
 
-1.  [**Configure connection**](#connection) Configuration of `dsteem` to communicate with the Steem blockchain
+1.  [**Configure connection**](#connection) Configuration of `dcrea` to communicate with the Crea blockchain
 2.  [**Input variables**](#input) Collecting the required inputs via an HTML UI
 3.  [**Get followers/following**](#query) Get the followers or users being followed
 4.  [**Display**](#display) Display the array of results on the UI
@@ -34,17 +34,17 @@ A simple HTML interface is used to capture the required information after which 
 As usual, we have a `public/app.js` file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-const dsteem = require('dsteem');
+const dcrea = require('dcrea');
 let opts = {};
 //define network parameters
 opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
-//connect to a steem node, production in this case
-const client = new dsteem.Client('https://api.steemit.com');
+//connect to a crea node, production in this case
+const client = new dcrea.Client('https://node1.creary.net');
 ```
 
-Above, we have `dsteem` pointing to the production network with the proper chainId, addressPrefix, and endpoint.
+Above, we have `dcrea` pointing to the production network with the proper chainId, addressPrefix, and endpoint.
 
 #### 2. Input variables<a name="input"></a>
 
@@ -69,7 +69,7 @@ window.submitFollower = async () => {
 
 #### 3. Get followers/following<a name="query"></a>
 
-A list of followers or users being followed is called from the database with the `follow_api` available in the `SteemJS` library.
+A list of followers or users being followed is called from the database with the `follow_api` available in the `CreaJS` library.
 
 ```javascript
 //get list of followers

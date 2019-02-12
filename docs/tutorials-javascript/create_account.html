@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>JS: Create Account | Steem Developer</title>
+<title>JS: Create Account | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="JS: Create Account" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Create Steem account using Steemconnect as well as with client-side signing." />
-<meta property="og:description" content="Create Steem account using Steemconnect as well as with client-side signing." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-javascript/create_account" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-javascript/create_account" />
-<meta property="og:site_name" content="Steem Developer" />
+<meta name="description" content="Create Crea account using Creaconnect as well as with client-side signing." />
+<meta property="og:description" content="Create Crea account using Creaconnect as well as with client-side signing." />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-javascript/create_account" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-javascript/create_account" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Create Steem account using Steemconnect as well as with client-side signing.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-javascript/create_account","headline":"JS: Create Account","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-javascript/create_account"},"@context":"http://schema.org"}</script>
+{"description":"Create Crea account using Creaconnect as well as with client-side signing.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-javascript/create_account","headline":"JS: Create Account","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-javascript/create_account"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -319,40 +319,40 @@
 		</a>
 	</h3>
 	
-		<span class="description"><p><em>Create Steem account using Steemconnect as well as with client-side signing.</em></p>
+		<span class="description"><p><em>Create Crea account using Creaconnect as well as with client-side signing.</em></p>
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/26_create_account">Create Account</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-js">JS tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/26_create_account">Create Account</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-js">JS tutorials repository</a>.</span>
 <br /></p>
 
-<p>This tutorial will show how to search for a valid account name and then create a new account by means of Resource Credits or STEEM. This tutorial runs on the main Steem blockchain so extra care needs to be taken as any operation will affect real accounts.</p>
+<p>This tutorial will show how to search for a valid account name and then create a new account by means of Resource Credits or CREA. This tutorial runs on the main Crea blockchain so extra care needs to be taken as any operation will affect real accounts.</p>
 
 <h2 id="intro">Intro</h2>
 
-<p>This tutorial will show few functions such as querying account by name and check if username is taken or available to register. We are using the <code class="highlighter-rouge">call</code> function provided by the <code class="highlighter-rouge">dsteem</code> library to pull account from the Steem blockchain. We then create proper private keys for new account. A simple HTML interface is used to enter payment of account creation fee and create account right inside tutorial. We use the <code class="highlighter-rouge">account_create</code> function to commit the transaction to the blockchain. This function is used to create what is called a “non-discounted account”. This means that the creator account needs to supply the exact <code class="highlighter-rouge">account_creation_fee</code> in STEEM in order for the transaction to process successfully. Currently this value is set to 3 STEEM. There is a second method of creating accounts using tokens. These are called “discounted accounts”. In stead of STEEM, the <code class="highlighter-rouge">account_creation_fee</code> is paid in RC (resource credits). There are however a limited amount of discounted accounts that can be claimed which is decided upon by the witnesses. This account creation process is done in two steps, first claiming an account and then creating the account.</p>
+<p>This tutorial will show few functions such as querying account by name and check if username is taken or available to register. We are using the <code class="highlighter-rouge">call</code> function provided by the <code class="highlighter-rouge">dcrea</code> library to pull account from the Crea blockchain. We then create proper private keys for new account. A simple HTML interface is used to enter payment of account creation fee and create account right inside tutorial. We use the <code class="highlighter-rouge">account_create</code> function to commit the transaction to the blockchain. This function is used to create what is called a “non-discounted account”. This means that the creator account needs to supply the exact <code class="highlighter-rouge">account_creation_fee</code> in CREA in order for the transaction to process successfully. Currently this value is set to 3 CREA. There is a second method of creating accounts using tokens. These are called “discounted accounts”. In stead of CREA, the <code class="highlighter-rouge">account_creation_fee</code> is paid in RC (resource credits). There are however a limited amount of discounted accounts that can be claimed which is decided upon by the witnesses. This account creation process is done in two steps, first claiming an account and then creating the account.</p>
 
 <h2 id="steps">Steps</h2>
 
 <ol>
-  <li><a href="#app-setup"><strong>App setup</strong></a> Setup <code class="highlighter-rouge">dsteem</code> to use the proper connection and network.</li>
+  <li><a href="#app-setup"><strong>App setup</strong></a> Setup <code class="highlighter-rouge">dcrea</code> to use the proper connection and network.</li>
   <li><a href="#search-account"><strong>Search account</strong></a> Get account details after input has account name</li>
   <li><a href="#generate-keys"><strong>Generate private keys</strong></a> Generate proper keys for new account</li>
-  <li><a href="#create-account"><strong>Create account</strong></a> Create account via Client-side or Steemconnect</li>
+  <li><a href="#create-account"><strong>Create account</strong></a> Create account via Client-side or Creaconnect</li>
 </ol>
 
 <h4 id="1-app-setup-">1. App setup <a name="app-setup"></a></h4>
 
-<p>Below we have <code class="highlighter-rouge">dsteem</code> pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a <code class="highlighter-rouge">public/app.js</code> file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:</p>
+<p>Below we have <code class="highlighter-rouge">dcrea</code> pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a <code class="highlighter-rouge">public/app.js</code> file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dsteem</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'dsteem'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dcrea</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'dcrea'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">opts</span> <span class="o">=</span> <span class="p">{};</span>
 <span class="c1">//connect to production server</span>
 <span class="nx">opts</span><span class="p">.</span><span class="nx">addressPrefix</span> <span class="o">=</span> <span class="s1">'STM'</span><span class="p">;</span>
 <span class="nx">opts</span><span class="p">.</span><span class="nx">chainId</span> <span class="o">=</span>
     <span class="s1">'0000000000000000000000000000000000000000000000000000000000000000'</span><span class="p">;</span>
 <span class="c1">//connect to server which is connected to the network/production</span>
-<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">Client</span><span class="p">(</span><span class="s1">'https://api.steemit.com'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">Client</span><span class="p">(</span><span class="s1">'https://node1.creary.net'</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h4 id="2-search-account-">2. Search account <a name="search-account"></a></h4>
@@ -378,15 +378,15 @@
 
 <h4 id="3-generate-private-keys-">3. Generate private keys <a name="generate-keys"></a></h4>
 
-<p>After we know that account is available to register, we will fill form with password we wish for that account and enter creation fee. Note, that creation fees are “burned” once the new account is created. The creator account wishes to provide the new account with VEST (as per previous account creation process) they can do so by following the <code class="highlighter-rouge">delegate_vesting_shares</code> process (refer tutorial <a href="https://developers.steem.io/tutorials-javascript/delegate_power">#27</a>). Irrespective of which account creation method is being followed, the process for generating new accounts keys is the same for both.</p>
+<p>After we know that account is available to register, we will fill form with password we wish for that account and enter creation fee. Note, that creation fees are “burned” once the new account is created. The creator account wishes to provide the new account with VEST (as per previous account creation process) they can do so by following the <code class="highlighter-rouge">delegate_vesting_shares</code> process (refer tutorial <a href="https://developers.creaproject.io/tutorials-javascript/delegate_power">#27</a>). Irrespective of which account creation method is being followed, the process for generating new accounts keys is the same for both.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'username'</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'password'</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
 
-<span class="kd">const</span> <span class="nx">ownerKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="s1">'owner'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">activeKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="s1">'active'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">postingKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="s1">'posting'</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">memoKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span>
+<span class="kd">const</span> <span class="nx">ownerKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="s1">'owner'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">activeKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="s1">'active'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">postingKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">,</span> <span class="s1">'posting'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">memoKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromLogin</span><span class="p">(</span>
     <span class="nx">username</span><span class="p">,</span>
     <span class="nx">password</span><span class="p">,</span>
     <span class="s1">'memo'</span>
@@ -416,13 +416,13 @@
 <p>After following all steps properly, we can now submit transaction to create new account.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//non-discounted account creation</span>
-<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromString</span><span class="p">(</span>
+<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromString</span><span class="p">(</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'wif'</span><span class="p">).</span><span class="nx">value</span>
 <span class="p">);</span>
 <span class="kd">const</span> <span class="nx">op</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">'account_create'</span><span class="p">,</span>
     <span class="p">{</span>
-        <span class="na">fee</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'steem'</span><span class="p">).</span><span class="nx">value</span><span class="p">,</span>
+        <span class="na">fee</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'crea'</span><span class="p">).</span><span class="nx">value</span><span class="p">,</span>
         <span class="na">creator</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'account'</span><span class="p">).</span><span class="nx">value</span><span class="p">,</span>
         <span class="na">new_account_name</span><span class="p">:</span> <span class="nx">username</span><span class="p">,</span>
         <span class="na">owner</span><span class="p">:</span> <span class="nx">ownerAuth</span><span class="p">,</span>
@@ -452,7 +452,7 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//discounted account creation</span>
 <span class="c1">//private active key of creator account</span>
-<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromString</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'wif'</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromString</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'wif'</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">ops</span> <span class="o">=</span> <span class="p">[];</span>
 
@@ -467,7 +467,7 @@
         <span class="s1">'claim_account'</span><span class="p">,</span>
         <span class="p">{</span>
             <span class="na">creator</span><span class="p">:</span> <span class="nx">creator</span><span class="p">,</span>
-            <span class="na">fee</span><span class="p">:</span> <span class="s1">'0.000 STEEM'</span><span class="p">,</span>
+            <span class="na">fee</span><span class="p">:</span> <span class="s1">'0.000 CREA'</span><span class="p">,</span>
             <span class="na">extensions</span><span class="p">:</span> <span class="p">[],</span>
         <span class="p">}</span>
     <span class="p">];</span>

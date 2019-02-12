@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Using jussi as a Multiplexer | Steem Developer</title>
+<title>Using jussi as a Multiplexer | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Using jussi as a Multiplexer" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Optimize your local applications with jussi" />
 <meta property="og:description" content="Optimize your local applications with jussi" />
-<link rel="canonical" href="https://developers.steem.io/tutorials-recipes/jussi-multiplexer" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-recipes/jussi-multiplexer" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-recipes/jussi-multiplexer" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-recipes/jussi-multiplexer" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Optimize your local applications with jussi","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-recipes/jussi-multiplexer","headline":"Using jussi as a Multiplexer","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-recipes/jussi-multiplexer"},"@context":"http://schema.org"}</script>
+{"description":"Optimize your local applications with jussi","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-recipes/jussi-multiplexer","headline":"Using jussi as a Multiplexer","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-recipes/jussi-multiplexer"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -357,17 +357,17 @@
 
 <h4 id="2-install-jussi-">2. Install <code class="highlighter-rouge">jussi</code> <a name="install-jussi"></a></h4>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/steemit/jussi.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/creativechain/jussi.git
 <span class="nb">cd </span>jussi
 </code></pre></div></div>
 
 <p>Edit the file <code class="highlighter-rouge">DEV_config.json</code> and change all:</p>
 
-<p><code class="highlighter-rouge">https://steemd.steemitdev.com</code></p>
+<p><code class="highlighter-rouge">https://cread.crearydev.com</code></p>
 
 <p>… to …</p>
 
-<p><code class="highlighter-rouge">https://api.steemit.com</code></p>
+<p><code class="highlighter-rouge">https://node1.creary.net</code></p>
 
 <p>Also consider adding the <a href="/services/#retry"><code class="highlighter-rouge">retries</code></a> element to your <code class="highlighter-rouge">DEV_config.json</code>.</p>
 
@@ -384,7 +384,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[8675309], "id":1}'</span> http://localhost:9000
 </code></pre></div></div>
 
-<p>In this case, <code class="highlighter-rouge">http://localhost:9000</code> will act like a full node.  In reality, it’s passing all of its request to its upstream, <code class="highlighter-rouge">https://api.steemit.com</code>.</p>
+<p>In this case, <code class="highlighter-rouge">http://localhost:9000</code> will act like a full node.  In reality, it’s passing all of its request to its upstream, <code class="highlighter-rouge">https://node1.creary.net</code>.</p>
 
 <p>Once you’ve implemented your own <code class="highlighter-rouge">jussi</code> node in this manner, you should notice an improvement in bandwidth utilization.  If you’re internet provider implements packet shaping strategies, this will have a positive impact because you are no longer streaming the entire blockchain once for each application.</p>
 

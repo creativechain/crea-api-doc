@@ -4,7 +4,7 @@ position: 5
 description: "Understand and use the most common fields of the requested content."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Details](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/05_get_post_details) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Details](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/05_get_post_details) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -17,7 +17,7 @@ We will also describe the most commonly used fields from the response object.
 
 ### Sections
 
-1. [Making the api call](#making-the-api-call) - Use steem-rb to a specific post
+1. [Making the api call](#making-the-api-call) - Use crea-rb to a specific post
     1. [Example api call](#example-api-call) - make the call in code
     1. [Example api call using script](#example-api-call-using-script) - using our tutorial script
     1. [Example Output](#example-output) - output from a successful call
@@ -46,15 +46,15 @@ end
 ```
 
 #### Example api call
-If we want to get the post "announcing-the-steem-developer-portal" by user @steemitdev
+If we want to get the post "announcing-the-crea-developer-portal" by user @crearydev
 ```ruby
-api.get_content("steemitdev", "announcing-the-steem-developer-portal") do |content| ...
+api.get_content("crearydev", "announcing-the-crea-developer-portal") do |content| ...
 ```
 
 #### Example api call using script
 And to do the same with our tutorial script
 ```bash
-ruby get_post_details.rb https://steemit.com/steemdev/@steemitdev/announcing-the-steem-developer-portal
+ruby get_post_details.rb https://creary.net/creadev/@crearydev/announcing-the-crea-developer-portal
 ```
 
 #### Example Output
@@ -62,23 +62,23 @@ ruby get_post_details.rb https://steemit.com/steemdev/@steemitdev/announcing-the
 From the example we get the following output from our script
 
 ```
-Post by steemitdev
-	title: Announcing the Steem Developer Portal!
-	permlink: announcing-the-steem-developer-portal
-	category: steemdev
+Post by crearydev
+	title: Announcing the Crea Developer Portal!
+	permlink: announcing-the-crea-developer-portal
+	category: creadev
 	body_length: 2342 (381 words)
 	posted at: 2017-10-30T16:34:27, updated at: 2017-10-30T16:34:27, active at: 2018-04-11T10:34:00
 	children: 66
 	net_rshares: 0
 	vote_rshares: 0
 	payout:
-		max_accepted_payout: 0.000 SBD
-		percent_steem_dollars: 100.00 %
+		max_accepted_payout: 0.000 CBD
+		percent_crea_dollars: 100.00 %
 		payout at: 2017-11-06T16:34:27 (235.2 days ago)
-		author_rewards: 0.000 SBD
-		curator_payout_value: 0.000 SBD
-		total_payout_value: 0.000 SBD
-	promoted: 0.000 SBD
+		author_rewards: 0.000 CBD
+		curator_payout_value: 0.000 CBD
+		total_payout_value: 0.000 CBD
+	promoted: 0.000 CBD
 	total_vote_weight: 0
 	reward_weight: 100.00 %
 	net_votes: 181, upvotes: 234, downvotes: 1, unvotes: 0, total: 235, top voter: thejohalfiles
@@ -86,8 +86,8 @@ Post by steemitdev
 	allow_votes: true
 	allow_curation_rewards: true
 	author_reputation: 14487360227924
-	tags: steemdev, steem, dev
-	app: steemit/0.1
+	tags: creadev, crea, dev
+	app: creary/0.1
 ```
 
 
@@ -132,13 +132,13 @@ You will note that we must parse the string found in `content.cashout_time` by a
 
 Even before payout, you can determine what the `max_accepted_payout` is.  Most often, this is set to one of two values by the author:
 
-* `1000000.000 SBD` - Accepted Payout
-* `0.000 SBD` - Declined Payout
+* `1000000.000 CBD` - Accepted Payout
+* `0.000 CBD` - Declined Payout
 
-In addition to `max_accepted_payout`, the author may specify how much of the author reward should be in STEEM Power or liquid rewards.  The most common settings are:
+In addition to `max_accepted_payout`, the author may specify how much of the author reward should be in CREA Power or liquid rewards.  The most common settings are:
 
 * `10000` - Maximum Liquid Reward
-* `0` - STEEM Power Only
+* `0` - CREA Power Only
 
 Once the payout time has arrived, it's possible to determine the split between author and curation by inspecting at `author_rewards` and `curator_payout_value`.
 
@@ -150,7 +150,7 @@ In our script, we use the ruby statement:
 content.beneficiaries.any?
 ```
 
-Some content will have a `beneficiaries` array.  This is used to determine reward routes any account, up to eight.  Payouts are in STEEM Power and are expressed as a reward percentage of the author reward.
+Some content will have a `beneficiaries` array.  This is used to determine reward routes any account, up to eight.  Payouts are in CREA Power and are expressed as a reward percentage of the author reward.
 
 To display a list of who the beneficiaries are, use the following ruby code, as seen in the example:
 
@@ -199,12 +199,12 @@ Note, we're using `rescue` in case the `json_metadata` string contains invalid J
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 *`<content-url>` 
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/05_get_post_details
 bundle install
 ruby get_post_details.rb <content-url>

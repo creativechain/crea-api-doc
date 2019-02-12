@@ -16,17 +16,17 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Docker | Steem Developer</title>
+<title>Docker | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Docker" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Steem Developer Documentation." />
-<meta property="og:description" content="Steem Developer Documentation." />
-<link rel="canonical" href="https://developers.steem.io/unused/docker" />
-<meta property="og:url" content="https://developers.steem.io/unused/docker" />
-<meta property="og:site_name" content="Steem Developer" />
+<meta name="description" content="Crea Developer Documentation." />
+<meta property="og:description" content="Crea Developer Documentation." />
+<link rel="canonical" href="https://developers.creaproject.io/unused/docker" />
+<meta property="og:url" content="https://developers.creaproject.io/unused/docker" />
+<meta property="og:site_name" content="Crea Developer" />
 <script type="application/ld+json">
-{"description":"Steem Developer Documentation.","@type":"WebPage","url":"https://developers.steem.io/unused/docker","headline":"Docker","@context":"http://schema.org"}</script>
+{"description":"Crea Developer Documentation.","@type":"WebPage","url":"https://developers.creaproject.io/unused/docker","headline":"Docker","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -36,7 +36,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -59,7 +59,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -80,11 +80,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -127,11 +127,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -245,7 +245,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -296,15 +296,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -319,10 +319,10 @@ dockerized container.  Both common binary types are included.</p>
 <p>To run a p2p node (ca. 2GB of memory is required at the moment):</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run \
-    -d -p 2001:2001 -p 8090:8090 --name steemd-default \
-    steemit/steem
+    -d -p 2001:2001 -p 8090:8090 --name cread-default \
+    creary/crea
 
-docker logs -f steemd-default  # follow along
+docker logs -f cread-default  # follow along
 </code></pre></div></div>
 
 <h4 id="dockerized-full-node">Dockerized Full Node</h4>
@@ -332,10 +332,10 @@ that uses ca. 14GB of memory and growing:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run \
     --env USE_WAY_TOO_MUCH_RAM=1 \
-    -d -p 2001:2001 -p 8090:8090 --name steemd-full \
-    steemit/steem
+    -d -p 2001:2001 -p 8090:8090 --name cread-full \
+    creary/crea
 
-docker logs -f steemd-full
+docker logs -f cread-full
 </code></pre></div></div>
 
 <h4 id="seed-nodes">Seed Nodes</h4>
@@ -344,7 +344,7 @@ docker logs -f steemd-full
 <a href="doc/seednodes.txt">doc/seednodes.txt</a>.</p>
 
 <p>This same file is baked into the docker images and can be overridden by
-setting <code class="highlighter-rouge">STEEMD_SEED_NODES</code> in the container environment at <code class="highlighter-rouge">docker run</code>
+setting <code class="highlighter-rouge">CREAD_SEED_NODES</code> in the container environment at <code class="highlighter-rouge">docker run</code>
 time to a whitespace delimited list of seed nodes (with port).</p>
 
 </div>

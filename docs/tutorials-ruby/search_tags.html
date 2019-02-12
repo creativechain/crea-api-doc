@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>RB: Search Tags | Steem Developer</title>
+<title>RB: Search Tags | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="RB: Search Tags" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Performing a search for tags." />
 <meta property="og:description" content="Performing a search for tags." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-ruby/search_tags" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-ruby/search_tags" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-ruby/search_tags" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-ruby/search_tags" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Performing a search for tags.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-ruby/search_tags","headline":"RB: Search Tags","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-ruby/search_tags"},"@context":"http://schema.org"}</script>
+{"description":"Performing a search for tags.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-ruby/search_tags","headline":"RB: Search Tags","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-ruby/search_tags"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,7 +323,7 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/16_search_tags">Search Tags</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-rb">RB tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/16_search_tags">Search Tags</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb">RB tutorials repository</a>.</span>
 <br /></p>
 
 <p>This tutorial will return tags sorted by trending, up to a specified limit.</p>
@@ -373,16 +373,16 @@
 
 <p>From the example we get the following output from our script:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag: &lt;empty&gt;, total_payouts: 57513246.041 SBD, net_votes: 47471936, top_posts: 4523493, comments: 27287924, trending: 100430269400
-tag: life, total_payouts: 12563434.550 SBD, net_votes: 10898489, top_posts: 1193059, comments: 1164873, trending: 7440962326
-tag: photography, total_payouts: 7529111.644 SBD, net_votes: 8578110, top_posts: 819008, comments: 1498469, trending: 7311205387
-tag: kr, total_payouts: 2953387.067 SBD, net_votes: 749380, top_posts: 79842, comments: 2138776, trending: 7009078414
-tag: steemit, total_payouts: 8531217.920 SBD, net_votes: 5393375, top_posts: 580400, comments: 1156174, trending: 5471456871
-tag: art, total_payouts: 4017591.434 SBD, net_votes: 3577651, top_posts: 330597, comments: 716566, trending: 3302526197
-tag: bitcoin, total_payouts: 3556944.650 SBD, net_votes: 2885034, top_posts: 416088, comments: 625529, trending: 3284115413
-tag: introduceyourself, total_payouts: 1863437.063 SBD, net_votes: 725570, top_posts: 24891, comments: 986875, trending: 3185017448
-tag: spanish, total_payouts: 1221282.258 SBD, net_votes: 2683931, top_posts: 154983, comments: 827033, trending: 3103643123
-tag: travel, total_payouts: 3976626.578 SBD, net_votes: 2505962, top_posts: 229401, comments: 622754, trending: 2687292306
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag: &lt;empty&gt;, total_payouts: 57513246.041 CBD, net_votes: 47471936, top_posts: 4523493, comments: 27287924, trending: 100430269400
+tag: life, total_payouts: 12563434.550 CBD, net_votes: 10898489, top_posts: 1193059, comments: 1164873, trending: 7440962326
+tag: photography, total_payouts: 7529111.644 CBD, net_votes: 8578110, top_posts: 819008, comments: 1498469, trending: 7311205387
+tag: kr, total_payouts: 2953387.067 CBD, net_votes: 749380, top_posts: 79842, comments: 2138776, trending: 7009078414
+tag: creary, total_payouts: 8531217.920 CBD, net_votes: 5393375, top_posts: 580400, comments: 1156174, trending: 5471456871
+tag: art, total_payouts: 4017591.434 CBD, net_votes: 3577651, top_posts: 330597, comments: 716566, trending: 3302526197
+tag: bitcoin, total_payouts: 3556944.650 CBD, net_votes: 2885034, top_posts: 416088, comments: 625529, trending: 3284115413
+tag: introduceyourself, total_payouts: 1863437.063 CBD, net_votes: 725570, top_posts: 24891, comments: 986875, trending: 3185017448
+tag: spanish, total_payouts: 1221282.258 CBD, net_votes: 2683931, top_posts: 154983, comments: 827033, trending: 3103643123
+tag: travel, total_payouts: 3976626.578 CBD, net_votes: 2505962, top_posts: 229401, comments: 622754, trending: 2687292306
 </code></pre></div></div>
 
 <h3 id="tag-fields">Tag fields</h3>
@@ -400,13 +400,13 @@ tag: travel, total_payouts: 3976626.578 SBD, net_votes: 2505962, top_posts: 2294
 
 <h3 id="to-run">To Run</h3>
 
-<p>First, set up your workstation using the steps provided in <a href="https://developers.steem.io/tutorials-ruby/getting_started">Getting Started</a>.  Then you can create and execute the script (or clone from this repository):</p>
+<p>First, set up your workstation using the steps provided in <a href="https://developers.creaproject.io/tutorials-ruby/getting_started">Getting Started</a>.  Then you can create and execute the script (or clone from this repository):</p>
 
 <ul>
   <li><code class="highlighter-rouge">[limit]</code> (optional)</li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:steemit/devportal-tutorials-rb.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:creary/devportal-tutorials-rb.git
 <span class="nb">cd </span>devportal-tutorials-rb/tutorials/16_search_tags
 bundle <span class="nb">install
 </span>ruby search_tags.rb <span class="o">[</span>limit]

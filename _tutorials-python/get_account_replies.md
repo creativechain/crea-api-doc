@@ -4,16 +4,16 @@ position: 8
 description: "List of replies received by account to its content, post, comment."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Account Replies](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/08_get_account_replies) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Account Replies](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/08_get_account_replies) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-Tutorial will explain and show you how to access the **Steem** blockchain using the [steem-python](https://github.com/steemit/steem-python) library to fetch a list of comments made on a specific accounts content.
+Tutorial will explain and show you how to access the **Crea** blockchain using the [crea-python](https://github.com/creativechain/crea-python) library to fetch a list of comments made on a specific accounts content.
 
 ## Intro
 
-In Steem there are built-in functions in the official library `steem-python` that we are going to use throughout all Python tutorials. For this one we are using the `get_replies` function.
+In Crea there are built-in functions in the official library `crea-python` that we are going to use throughout all Python tutorials. For this one we are using the `get_replies` function.
 
 ## Steps
 
@@ -24,17 +24,17 @@ In Steem there are built-in functions in the official library `steem-python` tha
 
 #### 1. App setup <a name="app-setup"></a>
 
-In this tutorial we use 3 packages, `pick` - helps us to select filter interactively. `steem` - steem-python library, interaction with Blockchain. `pprint` - print results in better format.
+In this tutorial we use 3 packages, `pick` - helps us to select filter interactively. `crea` - crea-python library, interaction with Blockchain. `pprint` - print results in better format.
 
-First we import all three library and initialize Steem class
+First we import all three library and initialize Crea class
 
 ```python
     import pprint
     from pick import pick
-    # initialize Steem class
-    from steem import Steem
+    # initialize Crea class
+    from crea import Crea
 
-    s = Steem()
+    s = Crea()
 ```
 
 #### 2. Post list <a name="post-list"></a>
@@ -67,7 +67,7 @@ This will show us list of posts to select in terminal/command prompt. And after 
 
 #### 3. Comment details <a name="comment-details"></a>
 
-Next we will allocate variables to make the function easier to use as well as provide a limit for the number of replies that we want to print. To retreive the replies we only need the `author` variable. This is then used in the `get_replies` function present in the steem library.
+Next we will allocate variables to make the function easier to use as well as provide a limit for the number of replies that we want to print. To retreive the replies we only need the `author` variable. This is then used in the `get_replies` function present in the crea library.
 
 ```python
     # allocate variables

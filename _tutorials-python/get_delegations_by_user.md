@@ -4,16 +4,16 @@ position: 29
 description: "How to get a list of active or expiring vesting delegations using Python."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Delegations By User](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/29_get_delegations_by_user) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Delegations By User](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/29_get_delegations_by_user) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial we will explain and show you how to pull a list of both active and expiring vesting delegations from the **Steem** blockchain using the `steem` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we will explain and show you how to pull a list of both active and expiring vesting delegations from the **Crea** blockchain using the `crea` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to pull information from the blockchain. We are using the `get_vesting_delegations` and `get_expiring_vesting_delegations` methods found within the `steem` class in the library. Each of these functions are executed separately. It should be noted that when a delegation is cancelled the VESTS will only be available again after 7 days. The value of the delegation can also be changed at any time, either decreased or increased. To get active delegations we need the following parameters:
+The Crea python library has a built-in function to pull information from the blockchain. We are using the `get_vesting_delegations` and `get_expiring_vesting_delegations` methods found within the `crea` class in the library. Each of these functions are executed separately. It should be noted that when a delegation is cancelled the VESTS will only be available again after 7 days. The value of the delegation can also be changed at any time, either decreased or increased. To get active delegations we need the following parameters:
 
 1.  _account_ - The user account that the delegation list is being queried for
 1.  _from-account_ - The account name from where to start the search. This parameter can be left empty to pull a list from the first delegatee
@@ -31,25 +31,25 @@ The function to query the expiring delegations use the the same parameters excep
 
 In this tutorial we use 2 package:
 
-- `steem` - steem-python library and interaction with Blockchain
+- `crea` - crea-python library and interaction with Blockchain
 - `pick` - helps select the query type interactively
 
 We import the libraries and connect to the `production` server.
 
 ```python
 from pick import pick
-from steem import Steem
+from crea import Crea
 
 import pprint
 
-client = Steem()
+client = Crea()
 ```
 
 `pprint` is used to print the query results in an easier to read format
 
 #### 2. User input <a name="input"></a>
 
-The `account` and `limit` parameters are assigned via input from the console/terminal. We also check if the username provided does in fact exist on the blockchain using the `get_account` method also found within the `steem` class. This will return an null value if the name does not exist.
+The `account` and `limit` parameters are assigned via input from the console/terminal. We also check if the username provided does in fact exist on the blockchain using the `get_account` method also found within the `crea` class. This will return an null value if the name does not exist.
 
 ```python
 #capture username

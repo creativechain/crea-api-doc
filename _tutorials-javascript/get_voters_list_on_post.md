@@ -4,7 +4,7 @@ position: 6
 description: "_By the end of this tutorial you would know how to get voters list on any content._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Voters List On Post](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/06_get_voters_list_on_post) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Voters List On Post](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/06_get_voters_list_on_post) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
@@ -15,7 +15,7 @@ We will also explain the most commonly used fields from the response object.
 
 ## Intro
 
-Each post has voters that support content and play big role in reward distribution. Getting details of each voter and their vote value, time, etc. is another crucial information for authors and app developers. We will be using `get_active_votes` API call to retrieve that information right from Steem blockchain.
+Each post has voters that support content and play big role in reward distribution. Getting details of each voter and their vote value, time, etc. is another crucial information for authors and app developers. We will be using `get_active_votes` API call to retrieve that information right from Crea blockchain.
 
 ## Steps
 
@@ -97,7 +97,7 @@ From this result, you have access to everything associated with the selected pos
 *   `weight` - Weight of the voting power.
 *   `rshares` - Reward shares.
 *   `percent` - Percent of vote.
-*   `reputation` - The [reputation](https://developers.steem.io/glossary/#reputation) of the account that voted.
+*   `reputation` - The [reputation](https://developers.creaproject.io/glossary/#reputation) of the account that voted.
 *   `time` - Time the vote was submitted.
 
 ### To Run the tutorial

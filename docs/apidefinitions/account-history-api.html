@@ -16,17 +16,17 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Account History Api | Steem Developer</title>
+<title>Account History Api | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Account History Api" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Used to lookup account history information. These AppBase API methods are still under development and subject to change. Working on mainnet Working on testnet account_history_api.get_account_history Returns a history of all operations for a given account. Query Parameters JSON { &quot;account&quot;: &quot;&quot;, &quot;start&quot;: &quot;18446744073709551615&quot;, &quot;limit&quot;: 1000 } Expected Response JSON {&quot;history&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;steemit&quot;, &quot;start&quot;:1000, &quot;limit&quot;:1000}, &quot;id&quot;:1}&#39; https://api.steemit.com curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;steemit&quot;, &quot;start&quot;:-1, &quot;limit&quot;:10000}, &quot;id&quot;:1}&#39; https://api.steemit.com Working on mainnet Working on testnet account_history_api.get_ops_in_block Returns all operations contained in a block. Query Parameters JSON {&quot;block_num&quot;: 0, &quot;only_virtual&quot;: false} Expected Response JSON {&quot;ops&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:1,&quot;only_virtual&quot;:false}, &quot;id&quot;:1}&#39; https://api.steemit.com curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:5443322,&quot;only_virtual&quot;:true}, &quot;id&quot;:1}&#39; https://api.steemit.com Deprecated Working on mainnet Working on testnet account_history_api.get_transaction Returns the details of a transaction based on a transaction id. Query Parameters JSON {&quot;id&quot;: &quot;0000000000000000000000000000000000000000&quot;} Expected Response JSON { &quot;ref_block_num&quot;: 0, &quot;ref_block_prefix&quot;: 0, &quot;expiration&quot;: &quot;1970-01-01T00:00:00&quot;, &quot;operations&quot;: [], &quot;extensions&quot;: [], &quot;signatures&quot;: [], &quot;transaction_id&quot;: &quot;0000000000000000000000000000000000000000&quot;, &quot;block_num&quot;: 0, &quot;transaction_num&quot;: 0 } Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_transaction&quot;, &quot;params&quot;:{&quot;id&quot;:&quot;6fde0190a97835ea6d9e651293e90c89911f933c&quot;}, &quot;id&quot;:1}&#39; https://api.steemit.com" />
-<meta property="og:description" content="Used to lookup account history information. These AppBase API methods are still under development and subject to change. Working on mainnet Working on testnet account_history_api.get_account_history Returns a history of all operations for a given account. Query Parameters JSON { &quot;account&quot;: &quot;&quot;, &quot;start&quot;: &quot;18446744073709551615&quot;, &quot;limit&quot;: 1000 } Expected Response JSON {&quot;history&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;steemit&quot;, &quot;start&quot;:1000, &quot;limit&quot;:1000}, &quot;id&quot;:1}&#39; https://api.steemit.com curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;steemit&quot;, &quot;start&quot;:-1, &quot;limit&quot;:10000}, &quot;id&quot;:1}&#39; https://api.steemit.com Working on mainnet Working on testnet account_history_api.get_ops_in_block Returns all operations contained in a block. Query Parameters JSON {&quot;block_num&quot;: 0, &quot;only_virtual&quot;: false} Expected Response JSON {&quot;ops&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:1,&quot;only_virtual&quot;:false}, &quot;id&quot;:1}&#39; https://api.steemit.com curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:5443322,&quot;only_virtual&quot;:true}, &quot;id&quot;:1}&#39; https://api.steemit.com Deprecated Working on mainnet Working on testnet account_history_api.get_transaction Returns the details of a transaction based on a transaction id. Query Parameters JSON {&quot;id&quot;: &quot;0000000000000000000000000000000000000000&quot;} Expected Response JSON { &quot;ref_block_num&quot;: 0, &quot;ref_block_prefix&quot;: 0, &quot;expiration&quot;: &quot;1970-01-01T00:00:00&quot;, &quot;operations&quot;: [], &quot;extensions&quot;: [], &quot;signatures&quot;: [], &quot;transaction_id&quot;: &quot;0000000000000000000000000000000000000000&quot;, &quot;block_num&quot;: 0, &quot;transaction_num&quot;: 0 } Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_transaction&quot;, &quot;params&quot;:{&quot;id&quot;:&quot;6fde0190a97835ea6d9e651293e90c89911f933c&quot;}, &quot;id&quot;:1}&#39; https://api.steemit.com" />
-<link rel="canonical" href="https://developers.steem.io/apidefinitions/account-history-api" />
-<meta property="og:url" content="https://developers.steem.io/apidefinitions/account-history-api" />
-<meta property="og:site_name" content="Steem Developer" />
+<meta name="description" content="Used to lookup account history information. These AppBase API methods are still under development and subject to change. Working on mainnet Working on testnet account_history_api.get_account_history Returns a history of all operations for a given account. Query Parameters JSON { &quot;account&quot;: &quot;&quot;, &quot;start&quot;: &quot;18446744073709551615&quot;, &quot;limit&quot;: 1000 } Expected Response JSON {&quot;history&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;creary&quot;, &quot;start&quot;:1000, &quot;limit&quot;:1000}, &quot;id&quot;:1}&#39; https://node1.creary.net curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;creary&quot;, &quot;start&quot;:-1, &quot;limit&quot;:10000}, &quot;id&quot;:1}&#39; https://node1.creary.net Working on mainnet Working on testnet account_history_api.get_ops_in_block Returns all operations contained in a block. Query Parameters JSON {&quot;block_num&quot;: 0, &quot;only_virtual&quot;: false} Expected Response JSON {&quot;ops&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:1,&quot;only_virtual&quot;:false}, &quot;id&quot;:1}&#39; https://node1.creary.net curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:5443322,&quot;only_virtual&quot;:true}, &quot;id&quot;:1}&#39; https://node1.creary.net Deprecated Working on mainnet Working on testnet account_history_api.get_transaction Returns the details of a transaction based on a transaction id. Query Parameters JSON {&quot;id&quot;: &quot;0000000000000000000000000000000000000000&quot;} Expected Response JSON { &quot;ref_block_num&quot;: 0, &quot;ref_block_prefix&quot;: 0, &quot;expiration&quot;: &quot;1970-01-01T00:00:00&quot;, &quot;operations&quot;: [], &quot;extensions&quot;: [], &quot;signatures&quot;: [], &quot;transaction_id&quot;: &quot;0000000000000000000000000000000000000000&quot;, &quot;block_num&quot;: 0, &quot;transaction_num&quot;: 0 } Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_transaction&quot;, &quot;params&quot;:{&quot;id&quot;:&quot;6fde0190a97835ea6d9e651293e90c89911f933c&quot;}, &quot;id&quot;:1}&#39; https://node1.creary.net" />
+<meta property="og:description" content="Used to lookup account history information. These AppBase API methods are still under development and subject to change. Working on mainnet Working on testnet account_history_api.get_account_history Returns a history of all operations for a given account. Query Parameters JSON { &quot;account&quot;: &quot;&quot;, &quot;start&quot;: &quot;18446744073709551615&quot;, &quot;limit&quot;: 1000 } Expected Response JSON {&quot;history&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;creary&quot;, &quot;start&quot;:1000, &quot;limit&quot;:1000}, &quot;id&quot;:1}&#39; https://node1.creary.net curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;creary&quot;, &quot;start&quot;:-1, &quot;limit&quot;:10000}, &quot;id&quot;:1}&#39; https://node1.creary.net Working on mainnet Working on testnet account_history_api.get_ops_in_block Returns all operations contained in a block. Query Parameters JSON {&quot;block_num&quot;: 0, &quot;only_virtual&quot;: false} Expected Response JSON {&quot;ops&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:1,&quot;only_virtual&quot;:false}, &quot;id&quot;:1}&#39; https://node1.creary.net curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:5443322,&quot;only_virtual&quot;:true}, &quot;id&quot;:1}&#39; https://node1.creary.net Deprecated Working on mainnet Working on testnet account_history_api.get_transaction Returns the details of a transaction based on a transaction id. Query Parameters JSON {&quot;id&quot;: &quot;0000000000000000000000000000000000000000&quot;} Expected Response JSON { &quot;ref_block_num&quot;: 0, &quot;ref_block_prefix&quot;: 0, &quot;expiration&quot;: &quot;1970-01-01T00:00:00&quot;, &quot;operations&quot;: [], &quot;extensions&quot;: [], &quot;signatures&quot;: [], &quot;transaction_id&quot;: &quot;0000000000000000000000000000000000000000&quot;, &quot;block_num&quot;: 0, &quot;transaction_num&quot;: 0 } Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_transaction&quot;, &quot;params&quot;:{&quot;id&quot;:&quot;6fde0190a97835ea6d9e651293e90c89911f933c&quot;}, &quot;id&quot;:1}&#39; https://node1.creary.net" />
+<link rel="canonical" href="https://developers.creaproject.io/apidefinitions/account-history-api" />
+<meta property="og:url" content="https://developers.creaproject.io/apidefinitions/account-history-api" />
+<meta property="og:site_name" content="Crea Developer" />
 <script type="application/ld+json">
-{"description":"Used to lookup account history information. These AppBase API methods are still under development and subject to change. Working on mainnet Working on testnet account_history_api.get_account_history Returns a history of all operations for a given account. Query Parameters JSON { &quot;account&quot;: &quot;&quot;, &quot;start&quot;: &quot;18446744073709551615&quot;, &quot;limit&quot;: 1000 } Expected Response JSON {&quot;history&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;steemit&quot;, &quot;start&quot;:1000, &quot;limit&quot;:1000}, &quot;id&quot;:1}&#39; https://api.steemit.com curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;steemit&quot;, &quot;start&quot;:-1, &quot;limit&quot;:10000}, &quot;id&quot;:1}&#39; https://api.steemit.com Working on mainnet Working on testnet account_history_api.get_ops_in_block Returns all operations contained in a block. Query Parameters JSON {&quot;block_num&quot;: 0, &quot;only_virtual&quot;: false} Expected Response JSON {&quot;ops&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:1,&quot;only_virtual&quot;:false}, &quot;id&quot;:1}&#39; https://api.steemit.com curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:5443322,&quot;only_virtual&quot;:true}, &quot;id&quot;:1}&#39; https://api.steemit.com Deprecated Working on mainnet Working on testnet account_history_api.get_transaction Returns the details of a transaction based on a transaction id. Query Parameters JSON {&quot;id&quot;: &quot;0000000000000000000000000000000000000000&quot;} Expected Response JSON { &quot;ref_block_num&quot;: 0, &quot;ref_block_prefix&quot;: 0, &quot;expiration&quot;: &quot;1970-01-01T00:00:00&quot;, &quot;operations&quot;: [], &quot;extensions&quot;: [], &quot;signatures&quot;: [], &quot;transaction_id&quot;: &quot;0000000000000000000000000000000000000000&quot;, &quot;block_num&quot;: 0, &quot;transaction_num&quot;: 0 } Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_transaction&quot;, &quot;params&quot;:{&quot;id&quot;:&quot;6fde0190a97835ea6d9e651293e90c89911f933c&quot;}, &quot;id&quot;:1}&#39; https://api.steemit.com","@type":"WebPage","url":"https://developers.steem.io/apidefinitions/account-history-api","headline":"Account History Api","@context":"http://schema.org"}</script>
+{"description":"Used to lookup account history information. These AppBase API methods are still under development and subject to change. Working on mainnet Working on testnet account_history_api.get_account_history Returns a history of all operations for a given account. Query Parameters JSON { &quot;account&quot;: &quot;&quot;, &quot;start&quot;: &quot;18446744073709551615&quot;, &quot;limit&quot;: 1000 } Expected Response JSON {&quot;history&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;creary&quot;, &quot;start&quot;:1000, &quot;limit&quot;:1000}, &quot;id&quot;:1}&#39; https://node1.creary.net curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_account_history&quot;, &quot;params&quot;:{&quot;account&quot;:&quot;creary&quot;, &quot;start&quot;:-1, &quot;limit&quot;:10000}, &quot;id&quot;:1}&#39; https://node1.creary.net Working on mainnet Working on testnet account_history_api.get_ops_in_block Returns all operations contained in a block. Query Parameters JSON {&quot;block_num&quot;: 0, &quot;only_virtual&quot;: false} Expected Response JSON {&quot;ops&quot;: []} Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:1,&quot;only_virtual&quot;:false}, &quot;id&quot;:1}&#39; https://node1.creary.net curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_ops_in_block&quot;, &quot;params&quot;:{&quot;block_num&quot;:5443322,&quot;only_virtual&quot;:true}, &quot;id&quot;:1}&#39; https://node1.creary.net Deprecated Working on mainnet Working on testnet account_history_api.get_transaction Returns the details of a transaction based on a transaction id. Query Parameters JSON {&quot;id&quot;: &quot;0000000000000000000000000000000000000000&quot;} Expected Response JSON { &quot;ref_block_num&quot;: 0, &quot;ref_block_prefix&quot;: 0, &quot;expiration&quot;: &quot;1970-01-01T00:00:00&quot;, &quot;operations&quot;: [], &quot;extensions&quot;: [], &quot;signatures&quot;: [], &quot;transaction_id&quot;: &quot;0000000000000000000000000000000000000000&quot;, &quot;block_num&quot;: 0, &quot;transaction_num&quot;: 0 } Example curl curl -s --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;, &quot;method&quot;:&quot;account_history_api.get_transaction&quot;, &quot;params&quot;:{&quot;id&quot;:&quot;6fde0190a97835ea6d9e651293e90c89911f933c&quot;}, &quot;id&quot;:1}&#39; https://node1.creary.net","@type":"WebPage","url":"https://developers.creaproject.io/apidefinitions/account-history-api","headline":"Account History Api","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -36,7 +36,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -59,7 +59,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -80,11 +80,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -127,11 +127,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -245,7 +245,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -296,15 +296,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -341,10 +341,10 @@
 
 <h5 id="account_history_api.get_account_history-curl-examples">Example <code>curl</code> <a href="#account_history_api.get_account_history-curl-examples"><i class="fas fa-link fa-sm"></i></a></h5>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"steemit", "start":1000, "limit":1000}, "id":1}'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"creary", "start":1000, "limit":1000}, "id":1}'</span> https://node1.creary.net
 </code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"steemit", "start":-1, "limit":10000}, "id":1}'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"creary", "start":-1, "limit":10000}, "id":1}'</span> https://node1.creary.net
 </code></pre></div></div>
 
 <hr />
@@ -374,10 +374,10 @@
 
 <h5 id="account_history_api.get_ops_in_block-curl-examples">Example <code>curl</code> <a href="#account_history_api.get_ops_in_block-curl-examples"><i class="fas fa-link fa-sm"></i></a></h5>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_ops_in_block", "params":{"block_num":1,"only_virtual":false}, "id":1}'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_ops_in_block", "params":{"block_num":1,"only_virtual":false}, "id":1}'</span> https://node1.creary.net
 </code></pre></div></div>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_ops_in_block", "params":{"block_num":5443322,"only_virtual":true}, "id":1}'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_ops_in_block", "params":{"block_num":5443322,"only_virtual":true}, "id":1}'</span> https://node1.creary.net
 </code></pre></div></div>
 
 <hr />
@@ -419,7 +419,7 @@
 
 <h5 id="account_history_api.get_transaction-curl-examples">Example <code>curl</code> <a href="#account_history_api.get_transaction-curl-examples"><i class="fas fa-link fa-sm"></i></a></h5>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_transaction", "params":{"id":"6fde0190a97835ea6d9e651293e90c89911f933c"}, "id":1}'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"account_history_api.get_transaction", "params":{"id":"6fde0190a97835ea6d9e651293e90c89911f933c"}, "id":1}'</span> https://node1.creary.net
 </code></pre></div></div>
 
 <hr />

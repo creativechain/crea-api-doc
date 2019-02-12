@@ -4,16 +4,16 @@ position: 33
 description: "How to change your accounts password and keys"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Password Key Change](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/33_password_key_change) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Password Key Change](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/33_password_key_change) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial we will explain and show you how to change your account password and keys on the **Steem** blockchain using the `steem` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we will explain and show you how to change your account password and keys on the **Crea** blockchain using the `crea` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to update your account details on the blockchain. We are using the `AccountUpdate` and `commit.finalizeOp` to make these changes. The `AccountUpdate` function creates the operation that we will be committing to the blockchain using the `commit.finalizeOp` function. We first get the existing keys from your account then recreate these from your new password. Once these have been created using your new password we commit them to the blockchain. The initial parameters we need to complete this operation are:
+The Crea python library has a built-in function to update your account details on the blockchain. We are using the `AccountUpdate` and `commit.finalizeOp` to make these changes. The `AccountUpdate` function creates the operation that we will be committing to the blockchain using the `commit.finalizeOp` function. We first get the existing keys from your account then recreate these from your new password. Once these have been created using your new password we commit them to the blockchain. The initial parameters we need to complete this operation are:
 
 1.  _account_ - The user account that we will be changing
 1.  _old_password_ - Your existing password for the account we are changing
@@ -34,17 +34,17 @@ This functionality does not work on the TestNet so we will be modifying the **li
 
 In this tutorial we use 2 package:
 
-- `steem` - steem-python library and interaction with Blockchain
-- `steembase` - library containing functions to manipulate private keys and passwords as well as commit the operation to the blockchain
+- `crea` - crea-python library and interaction with Blockchain
+- `creabase` - library containing functions to manipulate private keys and passwords as well as commit the operation to the blockchain
 
 We import the libraries and get parameters from the user.
 
 ```python
-import steem
-import steembase
-from steembase.account import PasswordKey
-from steembase.account import PrivateKey
-from steembase import operations
+import crea
+import creabase
+from creabase.account import PasswordKey
+from creabase.account import PrivateKey
+from creabase import operations
 ```
 
 ### 2. User input<a name="input"></a>
@@ -59,19 +59,19 @@ new_password = input('New password: ')
 
 ### 3. Connect to the blockchain<a name="connection"></a>
 
-From the parameters that have been collected we will generate the private key for the account and connect to the **Steem** blockchain. 
+From the parameters that have been collected we will generate the private key for the account and connect to the **Crea** blockchain. 
 
 ```python
 old_owner_key = str(
     PasswordKey(account, old_password, "owner").get_private_key()
 )
 
-client = steem.Steem(keys=[old_owner_key])
+client = crea.Crea(keys=[old_owner_key])
 ```
 
 ### 4. Configure new keys<a name="configure"></a>
 
-We will now generate new keys for each role using the new password as well as create the json that will be committed to the **Steem** blockchain. We generate new keys using the new password for each of these roles.
+We will now generate new keys for each role using the new password as well as create the json that will be committed to the **Crea** blockchain. We generate new keys using the new password for each of these roles.
 
 ```python
 new_public_keys = {}
@@ -128,7 +128,7 @@ print(result)
 If you update your password and attempt to update it again to quickly you will receive the following error.
 
 ```
-Assert Exception:_db.head_block_time() - account_auth.last_owner_update > STEEM_OWNER_UPDATE_LIMIT: Owner authority can only be updated once an hour.
+Assert Exception:_db.head_block_time() - account_auth.last_owner_update > CREA_OWNER_UPDATE_LIMIT: Owner authority can only be updated once an hour.
 ```
 
 You will need to wait at least an hour before attempting this again.

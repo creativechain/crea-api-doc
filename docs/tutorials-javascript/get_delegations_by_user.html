@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>JS: Get Delegations By User | Steem Developer</title>
+<title>JS: Get Delegations By User | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="JS: Get Delegations By User" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="View the vesting delegations made by a user as well as the delegations that are expiring." />
 <meta property="og:description" content="View the vesting delegations made by a user as well as the delegations that are expiring." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-javascript/get_delegations_by_user" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-javascript/get_delegations_by_user" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-javascript/get_delegations_by_user" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-javascript/get_delegations_by_user" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"View the vesting delegations made by a user as well as the delegations that are expiring.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-javascript/get_delegations_by_user","headline":"JS: Get Delegations By User","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-javascript/get_delegations_by_user"},"@context":"http://schema.org"}</script>
+{"description":"View the vesting delegations made by a user as well as the delegations that are expiring.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-javascript/get_delegations_by_user","headline":"JS: Get Delegations By User","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-javascript/get_delegations_by_user"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,14 +323,14 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/29_get_delegations_by_user">Get Delegations By User</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-js">JS tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/29_get_delegations_by_user">Get Delegations By User</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-js">JS tutorials repository</a>.</span>
 <br /></p>
 
-<p>This tutorial will take you through the process of calling delegation information from the steem blockchain using the <code class="highlighter-rouge">database API</code>. The account information provided has been chosen by random and the process is applicable to any user account on both the <code class="highlighter-rouge">production server</code> and the <code class="highlighter-rouge">testnet</code>.</p>
+<p>This tutorial will take you through the process of calling delegation information from the crea blockchain using the <code class="highlighter-rouge">database API</code>. The account information provided has been chosen by random and the process is applicable to any user account on both the <code class="highlighter-rouge">production server</code> and the <code class="highlighter-rouge">testnet</code>.</p>
 
 <h2 id="intro">Intro</h2>
 
-<p>This tutorial has two separate functions, one for viewing active delegations and one for viewing expiring delegations. Both of these use the <code class="highlighter-rouge">database API</code> to pull information from the steem blockchain. It should be noted that when a delegation is cancelled it will only be available after 7 days. The value of the delegation can also be changed at any time, either decreased or increased. The first function we use is <code class="highlighter-rouge">getVestingDelegations</code> for which we require the following parameters:</p>
+<p>This tutorial has two separate functions, one for viewing active delegations and one for viewing expiring delegations. Both of these use the <code class="highlighter-rouge">database API</code> to pull information from the crea blockchain. It should be noted that when a delegation is cancelled it will only be available after 7 days. The value of the delegation can also be changed at any time, either decreased or increased. The first function we use is <code class="highlighter-rouge">getVestingDelegations</code> for which we require the following parameters:</p>
 
 <ol>
   <li><em>account</em> - The username for which the query is done</li>
@@ -349,7 +349,7 @@
 <h2 id="steps">Steps</h2>
 
 <ol>
-  <li><a href="#connection"><strong>Configure connection</strong></a> Configuration of <code class="highlighter-rouge">dsteem</code> to communicate with a Steem blockchain</li>
+  <li><a href="#connection"><strong>Configure connection</strong></a> Configuration of <code class="highlighter-rouge">dcrea</code> to communicate with a Crea blockchain</li>
   <li><a href="#input"><strong>Input variables</strong></a> Collecting the required inputs via an HTML UI</li>
   <li><a href="#query"><strong>Database query</strong></a> Sending a query to the blockchain for the user delegations</li>
   <li><a href="#display"><strong>Display results</strong></a> Display the results of the blockchain query</li>
@@ -359,17 +359,17 @@
 
 <p>As usual, we have a <code class="highlighter-rouge">public/app.js</code> file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dsteem</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'dsteem'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dcrea</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'dcrea'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">opts</span> <span class="o">=</span> <span class="p">{};</span>
 <span class="c1">//define network parameters</span>
 <span class="nx">opts</span><span class="p">.</span><span class="nx">addressPrefix</span> <span class="o">=</span> <span class="s1">'STM'</span><span class="p">;</span>
 <span class="nx">opts</span><span class="p">.</span><span class="nx">chainId</span> <span class="o">=</span>
     <span class="s1">'0000000000000000000000000000000000000000000000000000000000000000'</span><span class="p">;</span>
-<span class="c1">//connect to a steem node, production in this case</span>
-<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">Client</span><span class="p">(</span><span class="s1">'https://api.steemit.com'</span><span class="p">);</span>
+<span class="c1">//connect to a crea node, production in this case</span>
+<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">Client</span><span class="p">(</span><span class="s1">'https://node1.creary.net'</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>Above, we have <code class="highlighter-rouge">dsteem</code> pointing to the production network with the proper chainId, addressPrefix, and endpoint.</p>
+<p>Above, we have <code class="highlighter-rouge">dcrea</code> pointing to the production network with the proper chainId, addressPrefix, and endpoint.</p>
 
 <h4 id="2-input-variables">2. Input variables<a name="input"></a></h4>
 
@@ -388,7 +388,7 @@
 
 <h4 id="3-database-query">3. Database query<a name="query"></a></h4>
 
-<p>The queries are sent through to the steem blockchain using the <code class="highlighter-rouge">database API</code> and parameters as per the <code class="highlighter-rouge">intro</code>. The result of the query is displayed on the console as a control check.</p>
+<p>The queries are sent through to the crea blockchain using the <code class="highlighter-rouge">database API</code> and parameters as per the <code class="highlighter-rouge">intro</code>. The result of the query is displayed on the console as a control check.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//active delegations function</span>
 <span class="nx">delegationdata</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">database</span><span class="p">.</span><span class="nx">getVestingDelegations</span><span class="p">(</span><span class="nx">delegator</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>

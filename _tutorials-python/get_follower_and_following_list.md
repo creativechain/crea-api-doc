@@ -4,16 +4,16 @@ position: 19
 description: "Tutorial pulls a list of the followers or authors being followed from the blockchain then displays the result."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Follower And Following List](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/19_get_follower_and_following_list) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Follower And Following List](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/19_get_follower_and_following_list) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-This tutorial will explain and show you how to access the **Steem** blockchain using the [steem-python](https://github.com/steemit/steem-python) library to fetch list of authors being followed or authors that a specified user is following.
+This tutorial will explain and show you how to access the **Crea** blockchain using the [crea-python](https://github.com/creativechain/crea-python) library to fetch list of authors being followed or authors that a specified user is following.
 
 ## Intro
 
-We are using the `get_followers` and `get_following` functions that are built into the official library `steem-python`. These functions allow us to query the Steem blockchain in order to retrieve either a list of authors that are being followed or a list of authors that are currently following a specified user. There are 4 parameters required to execute these functions:
+We are using the `get_followers` and `get_following` functions that are built into the official library `crea-python`. These functions allow us to query the Crea blockchain in order to retrieve either a list of authors that are being followed or a list of authors that are currently following a specified user. There are 4 parameters required to execute these functions:
 
 1.  _account_ - The specific user for which the follower(ing) list will be retrieved
 1.  _start follower(ing)_ - The starting letter(s) or name for the search query. This value can be set as an empty string in order to include all authors starting from "a"
@@ -29,15 +29,15 @@ We are using the `get_followers` and `get_following` functions that are built in
 
 #### 1. App setup <a name="setup"></a>
 
-In this tutorial we use 2 packages, `pick` - helps us to select the query type interactively. `steem` - steem-python library, interaction with Blockchain.
+In this tutorial we use 2 packages, `pick` - helps us to select the query type interactively. `crea` - crea-python library, interaction with Blockchain.
 
-First we import both libraries and initialize Steem class
+First we import both libraries and initialize Crea class
 
 ```python
 from pick import pick
-from steem import Steem
+from crea import Crea
 
-s = Steem()
+s = Crea()
 ```
 
 #### 2. Input variables <a name="input"></a>

@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Estimate the value of an upvote | Steem Developer</title>
+<title>Estimate the value of an upvote | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Estimate the value of an upvote" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Calculate the approximate value of an upvote on Steem" />
-<meta property="og:description" content="Calculate the approximate value of an upvote on Steem" />
-<link rel="canonical" href="https://developers.steem.io/tutorials-recipes/estimate_upvote" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-recipes/estimate_upvote" />
-<meta property="og:site_name" content="Steem Developer" />
+<meta name="description" content="Calculate the approximate value of an upvote on Crea" />
+<meta property="og:description" content="Calculate the approximate value of an upvote on Crea" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-recipes/estimate_upvote" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-recipes/estimate_upvote" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Calculate the approximate value of an upvote on Steem","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-recipes/estimate_upvote","headline":"Estimate the value of an upvote","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-recipes/estimate_upvote"},"@context":"http://schema.org"}</script>
+{"description":"Calculate the approximate value of an upvote on Crea","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-recipes/estimate_upvote","headline":"Estimate the value of an upvote","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-recipes/estimate_upvote"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -319,11 +319,11 @@
 		</a>
 	</h3>
 	
-		<span class="description"><p>Calculate the approximate value of an upvote on Steem</p>
+		<span class="description"><p>Calculate the approximate value of an upvote on Crea</p>
 </span>
 	
 
-	<p><em>By the end of this recipe you should know how to estimate value of each vote on Steem.</em></p>
+	<p><em>By the end of this recipe you should know how to estimate value of each vote on Crea.</em></p>
 
 <p>This recipe will take you through the process of fetching necessary data and formulating estimation.</p>
 
@@ -335,7 +335,7 @@
 
 <ol>
   <li><strong>Get Reward Fund</strong> Current reward fund information is crucial part of estimation</li>
-  <li><strong>Get Account</strong> Steem power and voting power is another important info</li>
+  <li><strong>Get Account</strong> Crea power and voting power is another important info</li>
   <li><strong>Feed history</strong> To get price rate reported by witnesses</li>
   <li><strong>Final calculation</strong> Formulate all information we have</li>
 </ol>
@@ -349,7 +349,7 @@
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
 	</span><span class="s2">"id"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
 	</span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"post"</span><span class="p">,</span><span class="w">
-	</span><span class="s2">"reward_balance"</span><span class="p">:</span><span class="s2">"741222.051 STEEM"</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"reward_balance"</span><span class="p">:</span><span class="s2">"741222.051 CREA"</span><span class="p">,</span><span class="w">
 	</span><span class="s2">"recent_claims"</span><span class="p">:</span><span class="s2">"457419472820935017"</span><span class="p">,</span><span class="w">
 	</span><span class="s2">"last_update"</span><span class="p">:</span><span class="s2">"2018-05-23T12:08:36"</span><span class="p">,</span><span class="w">
 	</span><span class="s2">"content_constant"</span><span class="p">:</span><span class="s2">"2000000000000"</span><span class="p">,</span><span class="w">
@@ -369,7 +369,7 @@
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9660</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steemitblog"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crearyblog"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"weight_threshold"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"account_auths"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -429,7 +429,7 @@
     </span><span class="s2">"last_account_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-17T18:19:18"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-05-24T18:54:24"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"mined"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"recovery_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"steem"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recovery_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crea"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_account_recovery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-19T19:48:54"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"reset_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
@@ -438,21 +438,21 @@
     </span><span class="s2">"can_vote"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"voting_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">9800</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_vote_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-22T20:10:45"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810.371 STEEM"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"savings_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 STEEM"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"sbd_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4613.426 SBD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810.371 CREA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"savings_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CREA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sbd_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4613.426 CBD"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sbd_seconds"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10828300402329"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sbd_seconds_last_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-05-22T22:34:24"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"sbd_last_interest_payment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-04-25T18:26:15"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"savings_sbd_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 SBD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"savings_sbd_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CBD"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"savings_sbd_seconds"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"savings_sbd_seconds_last_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01T00:00:00"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"savings_sbd_last_interest_payment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01T00:00:00"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"savings_withdraw_requests"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"reward_sbd_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79.490 SBD"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"reward_steem_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 STEEM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reward_sbd_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"79.490 CBD"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reward_crea_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CREA"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"reward_vesting_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"608341.169185 VESTS"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"reward_vesting_steem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"293.101 STEEM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"reward_vesting_crea"</span><span class="p">:</span><span class="w"> </span><span class="s2">"293.101 CREA"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"vesting_shares"</span><span class="p">:</span><span class="w"> </span><span class="s2">"93540695.469156 VESTS"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"delegated_vesting_shares"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000000 VESTS"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"received_vesting_shares"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000000 VESTS"</span><span class="p">,</span><span class="w">
@@ -478,7 +478,7 @@
     </span><span class="s2">"average_market_bandwidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1170000000</span><span class="p">,</span><span class="w">
     </span><span class="s2">"lifetime_market_bandwidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1170000000</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_market_bandwidth_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-07-27T15:10:09"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"vesting_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 STEEM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"vesting_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.000 CREA"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"reputation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"146151592482665"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"transfer_history"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
     </span><span class="s2">"market_history"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
@@ -499,8 +499,8 @@
 <p>The response example will look like:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.029 SBD"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"quote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.000 STEEM"</span><span class="w">
+  </span><span class="s2">"base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.029 CBD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quote"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.000 CREA"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 

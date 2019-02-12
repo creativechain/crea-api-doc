@@ -1,10 +1,10 @@
 ---
 title: 'JS: Get Posts'
 position: 4
-description: "Query for the most recent posts having a specific tag, using a Steem filter"
+description: "Query for the most recent posts having a specific tag, using a Crea filter"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Posts](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/04_get_posts) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Posts](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/04_get_posts) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
@@ -16,11 +16,11 @@ Tags and filters are different. It's important to understand them.
 
 Tags & Filters are two different.
 
-A `tag` in Steem is much like a tag in Gmail, or Twitter. It's a way to describe a
+A `tag` in Crea is much like a tag in Gmail, or Twitter. It's a way to describe a
 post as being relevant to a particular topic. Posts may have up to five tags on them, but there are limits when
 querying (more on this later).
 
-A `filter` in Steem is a kind of built-in 'view' or ordering of posts. You can use the following filters:
+A `filter` in Crea is a kind of built-in 'view' or ordering of posts. You can use the following filters:
 `trending`, `hot`, `new`, `active`, and `promoted`. You'll get a feel for the subtleties of each as you create your
 application.
 
@@ -28,13 +28,13 @@ application.
 
 1.  [**UI**](#UI) - A brief description of the UI and inputting our query values
 1.  [**Construct query**](#Construct-query) - Assemble the information from the UI into our `filter` & `query`
-1.  [**API call**](#API-call) - Make the call to Steem
+1.  [**API call**](#API-call) - Make the call to Crea
 1.  [**Handle response**](#Handle-response) - Accept the response in a promise callback, then render the results
 1.  [**Example post object**](#Example-post-object) - An example post object from the response list
 
 #### 1. UI <a name="UI"></a>
 
-The source HTML for our UI can be found in [public/index.html](https://github.com/steemit/devportal-tutorials-js/blob/master/tutorials/04_get_posts/public/index.html)
+The source HTML for our UI can be found in [public/index.html](https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/04_get_posts/public/index.html)
 
 There are three input components to the UI.
 
@@ -42,14 +42,14 @@ There are three input components to the UI.
 
     `<select id="filters" class="form-control" >...`
 
-*   Tag: where we type in a _single_, arbitrary tag. (The Steem blockchain does not support searching on multiple tags)
+*   Tag: where we type in a _single_, arbitrary tag. (The Crea blockchain does not support searching on multiple tags)
 
     `<input id="tag" class="form-control"/>`
 
 *   Get Posts: It's a button. You click it, and we move on to assembling our post.
     `<button class="btn btn-primary" onclick="getPosts()">Get Posts</button>`
 
-![Step-01-UI.png](https://github.com/steemit/devportal-tutorials-js/blob/master/tutorials/04_get_posts/images/Step-01-UI.png?raw=true)
+![Step-01-UI.png](https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/04_get_posts/images/Step-01-UI.png?raw=true)
 
 #### 2. Construct query <a name="Construct-query"></a>
 
@@ -71,7 +71,7 @@ const query = {
 The api call itself is fairly simple. We use `getDiscussions`.
 The first argument, filter, is a simple string.
 The second argument is our query object.
-Like most of dsteem's api functions, `getDiscussions` returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+Like most of dcrea's api functions, `getDiscussions` returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ```javascript
 client.database
@@ -116,16 +116,16 @@ The result returned from the service is a `JSON` list. This is an example list w
 [
     {
         "id": 37338948,
-        "author": "steemitblog",
-        "permlink": "join-team-steemit-at-tokenfest",
-        "category": "steemit",
+        "author": "crearyblog",
+        "permlink": "join-team-creary-at-tokenfest",
+        "category": "creary",
         "parent_author": "",
-        "parent_permlink": "steemit",
-        "title": "Join Team Steemit at TokenFest!",
+        "parent_permlink": "creary",
+        "title": "Join Team Creary at TokenFest!",
         "body":
-            "<a href=\"https://tokenfest.adria.digital\"><img src=\"https://i.imgur.com/fOScDIW.png\"/></a>\n\nHello Steemians! If you’d like to meet Team Steemit live-in-person, or are just interested in attending what promises to be a great blockchain conference, join us at <a href=\"https://tokenfest.adria.digital/\">TokenFest</a> in San Francisco from March 15th to 16th. \n\nSteemit CEO, Ned Scott, will be participating in a fireside chat alongside Steemit’s CTO, Harry Schmidt, as well as the creator of Utopian.io, Diego Pucci. Steemit will also be hosting the opening party on Thursday night and we’d certainly love to meet as many of you as possible IRL, so head on over to https://tokenfest.adria.digital/ and get your tickets while you can. \n\n*Team Steemit*",
+            "<a href=\"https://tokenfest.adria.digital\"><img src=\"https://i.imgur.com/fOScDIW.png\"/></a>\n\nHello Crearians! If you’d like to meet Team Creary live-in-person, or are just interested in attending what promises to be a great blockchain conference, join us at <a href=\"https://tokenfest.adria.digital/\">TokenFest</a> in San Francisco from March 15th to 16th. \n\nCreary CEO, Ned Scott, will be participating in a fireside chat alongside Creary’s CTO, Harry Schmidt, as well as the creator of Utopian.io, Diego Pucci. Creary will also be hosting the opening party on Thursday night and we’d certainly love to meet as many of you as possible IRL, so head on over to https://tokenfest.adria.digital/ and get your tickets while you can. \n\n*Team Creary*",
         "json_metadata":
-            "{\"tags\":[\"steemit\",\"tokenfest\",\"conference\"],\"image\":[\"https://i.imgur.com/fOScDIW.png\"],\"links\":[\"https://tokenfest.adria.digital\",\"https://tokenfest.adria.digital/\"],\"app\":\"steemit/0.1\",\"format\":\"markdown\"}",
+            "{\"tags\":[\"creary\",\"tokenfest\",\"conference\"],\"image\":[\"https://i.imgur.com/fOScDIW.png\"],\"links\":[\"https://tokenfest.adria.digital\",\"https://tokenfest.adria.digital/\"],\"app\":\"creary/0.1\",\"format\":\"markdown\"}",
         "last_update": "2018-03-07T23:22:54",
         "created": "2018-03-07T20:56:36",
         "active": "2018-03-13T01:40:21",
@@ -140,24 +140,24 @@ The result returned from the service is a `JSON` list. This is an example list w
         "max_cashout_time": "1969-12-31T23:59:59",
         "total_vote_weight": 3462435,
         "reward_weight": 10000,
-        "total_payout_value": "0.000 SBD",
-        "curator_payout_value": "0.000 SBD",
+        "total_payout_value": "0.000 CBD",
+        "curator_payout_value": "0.000 CBD",
         "author_rewards": 0,
         "net_votes": 77,
         "root_comment": 37338948,
-        "max_accepted_payout": "0.000 SBD",
-        "percent_steem_dollars": 10000,
+        "max_accepted_payout": "0.000 CBD",
+        "percent_crea_dollars": 10000,
         "allow_replies": true,
         "allow_votes": true,
         "allow_curation_rewards": true,
         "beneficiaries": [],
-        "url": "/steemit/@steemitblog/join-team-steemit-at-tokenfest",
-        "root_title": "Join Team Steemit at TokenFest!",
-        "pending_payout_value": "46.436 SBD",
-        "total_pending_payout_value": "0.000 STEEM",
+        "url": "/creary/@crearyblog/join-team-creary-at-tokenfest",
+        "root_title": "Join Team Creary at TokenFest!",
+        "pending_payout_value": "46.436 CBD",
+        "total_pending_payout_value": "0.000 CREA",
         "active_votes": [
             {
-                "voter": "steemitblog",
+                "voter": "crearyblog",
                 "weight": 0,
                 "rshares": "1870813909383",
                 "percent": 10000,
@@ -175,7 +175,7 @@ The result returned from the service is a `JSON` list. This is an example list w
         ],
         "replies": [],
         "author_reputation": "128210130644387",
-        "promoted": "0.000 SBD",
+        "promoted": "0.000 CBD",
         "body_length": 754,
         "reblogged_by": []
     }

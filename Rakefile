@@ -13,18 +13,18 @@ require 'yaml'
 require 'html-proofer'
 
 namespace :scrape do
-  desc "Scrape steemjs docs"
+  desc "Scrape creajs docs"
   task :javascript do
 
   end
 
-  desc "Scrape pysteem docs"
+  desc "Scrape pycrea docs"
   task :python do
   end
   
   desc "Scrape API Definitions"
   task :api_defs do
-    url = ENV.fetch('TEST_NODE', 'https://api.steemit.com')
+    url = ENV.fetch('TEST_NODE', 'https://node1.creary.net')
     job = Scrape::ApiDefinitionsJob.new(url: url)
     count = job.perform
     
@@ -143,16 +143,16 @@ namespace :test do
   desc "Tests the curl examples of api definitions.  Known APIs: #{KNOWN_APIS.join(' ')}"
   task :curl, [:apis] do |t, args|
     smoke = 0
-    url = ENV.fetch('TEST_NODE', 'https://api.steemit.com')
+    url = ENV.fetch('TEST_NODE', 'https://node1.creary.net')
     apis = [args[:apis].split(' ').map(&:to_sym)].flatten if !!args[:apis]
     apis ||= KNOWN_APIS
     
     version = `curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_version", "params":[], "id":1}' #{url}`
     version = JSON[version]['result']
     blockchain_version = version['blockchain_version']
-    steem_rev = version['steem_revision'][0..5]
+    crea_rev = version['crea_revision'][0..5]
     fc_rev = version['fc_revision'][0..5]
-    puts "node: #{url}; blockchain_version: #{blockchain_version}; steem_rev: #{steem_rev}; fc_rev: #{fc_rev}"
+    puts "node: #{url}; blockchain_version: #{blockchain_version}; crea_rev: #{crea_rev}; fc_rev: #{fc_rev}"
     
     apis.each do |api|
       file_name = "_data/apidefinitions/#{api}.yml"

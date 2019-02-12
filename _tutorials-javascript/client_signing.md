@@ -1,10 +1,10 @@
 ---
 title: 'JS: Client Signing'
 position: 3
-description: "_By the end of this tutorial you would know how to sign, verify broadcast transactions locally on Steem._"
+description: "_By the end of this tutorial you would know how to sign, verify broadcast transactions locally on Crea._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Client Signing](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/03_client_signing) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Client Signing](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/03_client_signing) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
@@ -17,11 +17,11 @@ We have predefined accounts to select for you to quickly use and few transaction
 
 ## Intro
 
-Client side signing of transaction is yet another way of interacting with Steem blockchain. Compare to [Steemconnect](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/02_steemconnect) method, client signing doesn't rely on other servers to generate and verify transaction, except when transaction is broadcasted to the network, it should be routed through one of the servers connected to that network or blockchain. It can be your own local machine running Steem blockchain or it could be any other publicly accessible servers.
+Client side signing of transaction is yet another way of interacting with Crea blockchain. Compare to [Creaconnect](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/02_creaconnect) method, client signing doesn't rely on other servers to generate and verify transaction, except when transaction is broadcasted to the network, it should be routed through one of the servers connected to that network or blockchain. It can be your own local machine running Crea blockchain or it could be any other publicly accessible servers.
 
 ## Steps
 
-1.  [**App setup**](#app-setup) Import `dsteem` into `app.js` and prepare it to communicate with a Testnet instance of Steem blockchain
+1.  [**App setup**](#app-setup) Import `dcrea` into `app.js` and prepare it to communicate with a Testnet instance of Crea blockchain
 1.  [**Get globals**](#get-globals) Network globals
 1.  [**Account selection**](#account-selection) Select predefined account
 1.  [**Operation selection**](#operation-selection) Select common operations
@@ -31,30 +31,30 @@ Client side signing of transaction is yet another way of interacting with Steem 
 
 #### 1. App setup<a name="app-setup"></a>
 
-Testnet and Production networks only differ with few settings which helps developers to switch their application from testnet to production. One of these settings is `addressPrefix` - string that is defined and will be in front of every public address on that chain/network. Another one is `chainId` - id of that network. By defining those parameters we are selecting Testnet and connecting to publicly available server with help of `dsteem` library. First few lines of code in `public/app.js` gives you example of connection to different networks, testnet and production.
+Testnet and Production networks only differ with few settings which helps developers to switch their application from testnet to production. One of these settings is `addressPrefix` - string that is defined and will be in front of every public address on that chain/network. Another one is `chainId` - id of that network. By defining those parameters we are selecting Testnet and connecting to publicly available server with help of `dcrea` library. First few lines of code in `public/app.js` gives you example of connection to different networks, testnet and production.
 
 ```javascript
 opts.addressPrefix = 'TST';
 opts.chainId =
     '46d82ab7d8db682eb1959aed0ada039a6d49afa1602491f93dde9cac3e8e6c32';
 //connect to server which is connected to the network/testnet
-const client = new dsteem.Client('https://testnet.steemitdev.com', opts);
+const client = new dcrea.Client('https://testnet.crearydev.com', opts);
 ```
 
 *   _Disclaimer: In this tutorial we are using testnet powered by community member (`@almost-digital`) and predefined accounts reside on this network only._
 
 #### 2. Get globals<a name="get-globals"></a>
 
-To test connection as well as to get parameters of the connected network, we can use `getDynamicGlobalProperties` function from **dsteem** library. Only 2 fields are in our interesting for this tutorial, `head_block_number` - returns head or latest block number of the network, `head_block_id` - returns id of head block.
+To test connection as well as to get parameters of the connected network, we can use `getDynamicGlobalProperties` function from **dcrea** library. Only 2 fields are in our interesting for this tutorial, `head_block_number` - returns head or latest block number of the network, `head_block_id` - returns id of head block.
 
-![Overview](https://github.com/steemit/devportal-tutorials-js/blob/master/tutorials/03_client_signing/images/overview.png?raw=true)
+![Overview](https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/03_client_signing/images/overview.png?raw=true)
 
 #### 3. Account selection<a name="account-selection"></a>
 
-We have predefined list of accounts to help you with generate, sign, verify and broadcast transaction on testnet. Select list has posting private key for each account and `onchange` selection event we keep account name and credentials in memory. `accountChange` function shows example of turning plain posting private key into private key buffer format that is understandable by **dsteem**.
+We have predefined list of accounts to help you with generate, sign, verify and broadcast transaction on testnet. Select list has posting private key for each account and `onchange` selection event we keep account name and credentials in memory. `accountChange` function shows example of turning plain posting private key into private key buffer format that is understandable by **dcrea**.
 
 ```javascript
-privateKey = dsteem.PrivateKey.fromString(
+privateKey = dcrea.PrivateKey.fromString(
     document.getElementById('account').value
 );
 ```

@@ -4,14 +4,14 @@ position: 12
 description: "---"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Edit Content Patching](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/12_edit_content_patching) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Edit Content Patching](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/12_edit_content_patching) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 title: How to edit a Post
 position: 5
 exclude: true
 layout: main-script
-description: Patching changes to a post on Steem.
+description: Patching changes to a post on Crea.
 main_script: tutorials-ruby/edit_content_patching.rb
 main_type: ruby
 main_script_anchor: Script
@@ -36,10 +36,10 @@ As stated earlier, you will need to change `broadcast` to `true`.  You can also 
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/12_edit_content_patching
 bundle install
 ruby edit_content_patching.rb

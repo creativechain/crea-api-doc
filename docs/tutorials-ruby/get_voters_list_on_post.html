@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>RB: Get Voters List On Post | Steem Developer</title>
+<title>RB: Get Voters List On Post | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="RB: Get Voters List On Post" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This example will output the active vote totals for the post/comment passed as an argument to the script." />
 <meta property="og:description" content="This example will output the active vote totals for the post/comment passed as an argument to the script." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-ruby/get_voters_list_on_post" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-ruby/get_voters_list_on_post" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-ruby/get_voters_list_on_post" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-ruby/get_voters_list_on_post" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"This example will output the active vote totals for the post/comment passed as an argument to the script.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-ruby/get_voters_list_on_post","headline":"RB: Get Voters List On Post","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-ruby/get_voters_list_on_post"},"@context":"http://schema.org"}</script>
+{"description":"This example will output the active vote totals for the post/comment passed as an argument to the script.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-ruby/get_voters_list_on_post","headline":"RB: Get Voters List On Post","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-ruby/get_voters_list_on_post"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,7 +323,7 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/06_get_voters_list_on_post">Get Voters List On Post</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-rb">RB tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/06_get_voters_list_on_post">Get Voters List On Post</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb">RB tutorials repository</a>.</span>
 <br /></p>
 
 <h3 id="script">Script</h3>
@@ -334,12 +334,12 @@
 
 <h3 id="to-run">To Run</h3>
 
-<p>First, set up your workstation using the steps provided in <a href="https://developers.steem.io/tutorials-ruby/getting_started">Getting Started</a>.  Then you can create and execute the script (or clone from this repository):</p>
+<p>First, set up your workstation using the steps provided in <a href="https://developers.creaproject.io/tutorials-ruby/getting_started">Getting Started</a>.  Then you can create and execute the script (or clone from this repository):</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:steemit/devportal-tutorials-rb.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:creary/devportal-tutorials-rb.git
 <span class="nb">cd </span>devportal-tutorials-rb/tutorials/06_get_voters_list_on_post
 bundle <span class="nb">install
-</span>ruby voter_list.rb https://steemit.com/steemdev/@steemitdev/announcing-the-steem-developer-portal
+</span>ruby voter_list.rb https://creary.net/creadev/@crearydev/announcing-the-crea-developer-portal
 </code></pre></div></div>
 
 <h3 id="example-output">Example Output</h3>

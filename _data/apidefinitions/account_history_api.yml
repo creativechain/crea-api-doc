@@ -6,8 +6,8 @@
       parameter_json: {"account":"","start":"18446744073709551615","limit":1000}
       expected_response_json: {"history":[]}
       curl_examples:
-        - '{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"steemit", "start":1000, "limit":1000}, "id":1}'
-        - '{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"steemit", "start":-1, "limit":10000}, "id":1}'
+        - '{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"creary", "start":1000, "limit":1000}, "id":1}'
+        - '{"jsonrpc":"2.0", "method":"account_history_api.get_account_history", "params":{"account":"creary", "start":-1, "limit":10000}, "id":1}'
       expected_curl_responses:
         - Could not find API account_history_api
         - Could not find API account_history_api

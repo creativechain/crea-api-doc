@@ -6,7 +6,7 @@
     are still under development and subject to change.**
   methods:
   - api_method: market_history_api.get_market_history
-    purpose: Returns the market history for the internal SBD:STEEM market.
+    purpose: Returns the market history for the internal CBD:CREA market.
     parameter_json: '{"bucket_seconds":0,"start":"1970-01-01T00:00:00","end":"1970-01-01T00:00:00"}'
     expected_response_json: '{"buckets":[]}'
     curl_examples:
@@ -37,7 +37,7 @@
     - '{"jsonrpc":"2.0", "method":"market_history_api.get_order_book", "params":{"limit":50},
       "id":1}'
   - api_method: market_history_api.get_recent_trades
-    purpose: Returns the most recent trades for the internal SBD:STEEM market.
+    purpose: Returns the most recent trades for the internal CBD:CREA market.
     parameter_json: '{"limit":1000}'
     expected_response_json: '{"trades":[]}'
     curl_examples:
@@ -46,13 +46,13 @@
     - '{"jsonrpc":"2.0", "method":"market_history_api.get_recent_trades", "params":{"limit":500},
       "id":1}'
   - api_method: market_history_api.get_ticker
-    purpose: Returns the market ticker for the internal SBD:STEEM market.
+    purpose: Returns the market ticker for the internal CBD:CREA market.
     parameter_json: "{}"
-    expected_response_json: '{"latest":"0.00000000000000000","lowest_ask":"0.00000000000000000","highest_bid":"0.00000000000000000","percent_change":"0.00000000000000000","steem_volume":{"amount":"0","precision":3,"nai":"@@000000021"},"sbd_volume":{"amount":"0","precision":3,"nai":"@@000000013"}}'
+    expected_response_json: '{"latest":"0.00000000000000000","lowest_ask":"0.00000000000000000","highest_bid":"0.00000000000000000","percent_change":"0.00000000000000000","crea_volume":{"amount":"0","precision":3,"nai":"@@000000021"},"sbd_volume":{"amount":"0","precision":3,"nai":"@@000000013"}}'
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"market_history_api.get_ticker", "id":1}'
   - api_method: market_history_api.get_trade_history
-    purpose: Returns the trade history for the internal SBD:STEEM market.
+    purpose: Returns the trade history for the internal CBD:CREA market.
     parameter_json: '{"start":"1970-01-01T00:00:00","end":"1970-01-01T00:00:00","limit":1000}'
     expected_response_json: '{"trades":[]}'
     curl_examples:
@@ -61,6 +61,6 @@
   - api_method: market_history_api.get_volume
     purpose: Returns the market volume for the past 24 hours.
     parameter_json: "{}"
-    expected_response_json: '{"steem_volume":{"amount":"0","precision":3,"nai":"@@000000021"},"sbd_volume":{"amount":"0","precision":3,"nai":"@@000000013"}}'
+    expected_response_json: '{"crea_volume":{"amount":"0","precision":3,"nai":"@@000000021"},"sbd_volume":{"amount":"0","precision":3,"nai":"@@000000013"}}'
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"market_history_api.get_volume", "id":1}'

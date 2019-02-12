@@ -4,16 +4,16 @@ position: 22
 description: "How to vote for or remove a vote for a witness user using Python."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Witness Listing And Voting](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/22_witness_listing_and_voting) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Witness Listing And Voting](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/22_witness_listing_and_voting) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial we show you how to create a list of active witnesses from the **Steem** blockchain and then vote or unvote for a witness using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to create a list of active witnesses from the **Crea** blockchain and then vote or unvote for a witness using the `commit` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `approve_witness` and `disapprove_witness` method found within the `commit` class in the library. We also use the `get_active_witnesses` function to query the blockchain for a list of available witnesses. Before we vote, we use the `get_account` function to check for all the witnesses that the user has currently voted for. This is not strictly necessary but adds to the useability of the process. The `approve_witness` method has 3 parameters:
+The Crea python library has a built-in function to transmit transactions to the blockchain. We are using the `approve_witness` and `disapprove_witness` method found within the `commit` class in the library. We also use the `get_active_witnesses` function to query the blockchain for a list of available witnesses. Before we vote, we use the `get_account` function to check for all the witnesses that the user has currently voted for. This is not strictly necessary but adds to the useability of the process. The `approve_witness` method has 3 parameters:
 
 1.  _witness_ - The witness to approve
 1.  _account_ - The source user account for the voting
@@ -24,7 +24,7 @@ The `disapprove_witness` has the same parameters except for `_approve_` which is
 ## Steps
 
 1.  [**App setup**](#setup) - Library install and import. Connection to testnet
-1.  [**User information and steem node**](#userinfo) - Input user information and connection to Steem node
+1.  [**User information and crea node**](#userinfo) - Input user information and connection to Crea node
 1.  [**Active witness list**](#list) - Create a list of active as well as already voted for witnesses
 1.  [**Vote / Unvote**](#commit) - Input witness name and commite vote/unvote to blockchain
 
@@ -32,29 +32,29 @@ The `disapprove_witness` has the same parameters except for `_approve_` which is
 
 In this tutorial we use 3 packages:
 
-- `steem` - steem-python library and interaction with Blockchain
+- `crea` - crea-python library and interaction with Blockchain
 - `pick` - helps select the query type interactively
 - `pprint` - print results in better format
 
 We import the libraries and connect to the `testnet`.
 
 ```python
-import steembase
-import steem
+import creabase
+import crea
 from pick import pick
 import pprint
 
-steembase.chains.known_chains['STEEM'] = {
+creabase.chains.known_chains['CREA'] = {
     'chain_id': '79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673',
-    'prefix': 'STX', 'steem_symbol': 'STEEM', 'sbd_symbol': 'SBD', 'vests_symbol': 'VESTS'
+    'prefix': 'STX', 'crea_symbol': 'CREA', 'sbd_symbol': 'CBD', 'vests_symbol': 'VESTS'
 }
 ```
 
 Because this tutorial alters the blockchain we connect to a testnet so we don't create spam on the production server.
 
-#### 2. User information and steem node <a name="userinfo"></a>
+#### 2. User information and crea node <a name="userinfo"></a>
 
-We require the `private active key` of the user in order for the transaction to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. We also check if the user name provided is active on the chain. There are some demo accounts available but we encourage you to create your own accounts on this testnet.
+We require the `private active key` of the user in order for the transaction to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the crea class. We also check if the user name provided is active on the chain. There are some demo accounts available but we encourage you to create your own accounts on this testnet.
 
 ```python
 #capture user information
@@ -62,7 +62,7 @@ username = input('Enter username: ') #demo account: cdemo
 wif = input('Enter private ACTIVE key: ') #demo account: 5KaNM84WWSqzwKzY82fXPaUW43idbLnPqf5SfjGxLfw6eV2kAP3
 
 #connect node and private active key
-client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=[wif])
+client = crea.Crea(nodes=['https://testnet.crea.vc'], keys=[wif])
 
 #check valid user
 userinfo = client.get_account(username)
@@ -139,7 +139,7 @@ else :
 
 A confirmation of the transaction to the blockchain is displayed on the UI.
 
-We encourage users to play around with different values and data types to fully understand how this process works. You can also check the balances and transaction history on the [testnet portal](http://condenser.steem.vc/).
+We encourage users to play around with different values and data types to fully understand how this process works. You can also check the balances and transaction history on the [testnet portal](http://condenser.crea.vc/).
 
 ### To Run the tutorial
 

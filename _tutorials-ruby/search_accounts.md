@@ -4,7 +4,7 @@ position: 15
 description: "Performing a search on account by names starting with a given input."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Search Accounts](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/15_search_accounts) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Search Accounts](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/15_search_accounts) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -59,13 +59,13 @@ alice alice-22 alice-is alice-labardo alice-mikhaylova alice-n-chains alice-rads
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 * `<lower-bound-name>`
 * `[limit]` (optional)
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/15_search_accounts
 bundle install
 ruby search_accounts.rb <lower-bound-name> [limit]

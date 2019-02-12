@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>PY: Account Reputation | Steem Developer</title>
+<title>PY: Account Reputation | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="PY: Account Reputation" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Would you like to know how to interpret account reputation to more human readable format, then this tutorial is for you." />
 <meta property="og:description" content="Would you like to know how to interpret account reputation to more human readable format, then this tutorial is for you." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-python/account_reputation" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-python/account_reputation" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-python/account_reputation" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-python/account_reputation" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Would you like to know how to interpret account reputation to more human readable format, then this tutorial is for you.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-python/account_reputation","headline":"PY: Account Reputation","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-python/account_reputation"},"@context":"http://schema.org"}</script>
+{"description":"Would you like to know how to interpret account reputation to more human readable format, then this tutorial is for you.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-python/account_reputation","headline":"PY: Account Reputation","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-python/account_reputation"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,7 +323,7 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/20_account_reputation">Account Reputation</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-py">PY tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/20_account_reputation">Account Reputation</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-py">PY tutorials repository</a>.</span>
 <br /></p>
 
 <h2 id="intro">Intro</h2>
@@ -341,18 +341,18 @@
 
 <h4 id="1-app-setup-">1. App setup <a name="app-setup"></a></h4>
 
-<p>In this tutorial we will use 4 packages, <code class="highlighter-rouge">pick</code> - helps us to select filter interactively. <code class="highlighter-rouge">steem</code> - steem-python library, interaction with Blockchain. <code class="highlighter-rouge">pprint</code> - print results in better format and <code class="highlighter-rouge">math</code> to perform some math calculations.</p>
+<p>In this tutorial we will use 4 packages, <code class="highlighter-rouge">pick</code> - helps us to select filter interactively. <code class="highlighter-rouge">crea</code> - crea-python library, interaction with Blockchain. <code class="highlighter-rouge">pprint</code> - print results in better format and <code class="highlighter-rouge">math</code> to perform some math calculations.</p>
 
-<p>First we import all libraries and initialize Steem class</p>
+<p>First we import all libraries and initialize Crea class</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">pprint</span>
     <span class="kn">import</span> <span class="nn">math</span>
     <span class="kn">from</span> <span class="nn">pick</span> <span class="kn">import</span> <span class="n">pick</span>
 
-    <span class="c1"># initialize Steem class
-</span>    <span class="kn">from</span> <span class="nn">steem</span> <span class="kn">import</span> <span class="n">Steem</span>
+    <span class="c1"># initialize Crea class
+</span>    <span class="kn">from</span> <span class="nn">crea</span> <span class="kn">import</span> <span class="n">Crea</span>
 
-    <span class="n">s</span> <span class="o">=</span> <span class="n">Steem</span><span class="p">()</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">Crea</span><span class="p">()</span>
 </code></pre></div></div>
 
 <h4 id="2-account-list-">2. Account list <a name="account-list"></a></h4>
@@ -360,7 +360,7 @@
 <p>Next we will show predefined account list to select and setup <code class="highlighter-rouge">pick</code> properly.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">title</span> <span class="o">=</span> <span class="s">'Please choose account: '</span>
-    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s">"steemitblog"</span><span class="p">,</span><span class="s">"esteemapp"</span><span class="p">,</span><span class="s">"busy.org"</span><span class="p">,</span><span class="s">"demo"</span><span class="p">]</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="p">[</span><span class="s">"crearyblog"</span><span class="p">,</span><span class="s">"ecreaapp"</span><span class="p">,</span><span class="s">"busy.org"</span><span class="p">,</span><span class="s">"demo"</span><span class="p">]</span>
 
     <span class="c1"># get index and selected filter name
 </span>    <span class="n">option</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">pick</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
@@ -379,7 +379,7 @@
 <p>Next we will define reputation interpreter:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">rep_log10</span><span class="p">(</span><span class="n">rep</span><span class="p">):</span>
-    <span class="s">"""Convert raw steemd rep into a UI-ready value centered at 25."""</span>
+    <span class="s">"""Convert raw cread rep into a UI-ready value centered at 25."""</span>
     <span class="k">def</span> <span class="nf">log10</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
         <span class="n">leading_digits</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
         <span class="n">log</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">leading_digits</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.00000001</span>

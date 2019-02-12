@@ -4,7 +4,7 @@ position: 9
 description: "Fetching the comments written by a particular account."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Account Comments](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/09_get_account_comments) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Account Comments](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/09_get_account_comments) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -71,17 +71,17 @@ Reply to @saarliconvalley in discussion: "The Empire has sent you a friend reque
 	body_length: 33 (7 words)
 	replied at: 2018-03-27T16:02:45
 	net_votes: 0
-	https://steemit.com/@lordvader/re-saarliconvalley-re-lordvader-2018327t16025594z-20180327t160243538z
+	https://creary.net/@lordvader/re-saarliconvalley-re-lordvader-2018327t16025594z-20180327t160243538z
 Reply to @teenovision in discussion: "The Empire has sent you a friend request."
 	body_length: 90 (16 words)
 	replied at: 2018-03-27T15:53:39, updated at: 2018-03-30T17:25:18, active at: 2018-03-30T17:25:18
 	net_votes: 0
-	https://steemit.com/@lordvader/re-teenovision-re-lordvader-the-empire-has-sent-you-a-friend-request-20180327t155339532z
+	https://creary.net/@lordvader/re-teenovision-re-lordvader-the-empire-has-sent-you-a-friend-request-20180327t155339532z
 Reply to @gtg in discussion: "gtg witness log"
 	body_length: 130 (25 words)
 	replied at: 2018-04-06T04:29:00
 	net_votes: 2
-	https://steemit.com/@lordvader/re-gtg-ffdhu-gtg-witness-log-20180406t042906872z
+	https://creary.net/@lordvader/re-gtg-ffdhu-gtg-witness-log-20180406t042906872z
 ```
 
 ### Comment fields
@@ -96,16 +96,16 @@ Comments in the results of `get_account_history` will only return the following 
 * `body`
 * `json_metadata`
 
-In our example script, we want more detail than this, so for every `comment`, we call `get_content` to retrieve more detail.  For a full explanation of the results provided by `get_content`, please refer to the tutorial: [Get Post Details](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/05_get_post_details)
+In our example script, we want more detail than this, so for every `comment`, we call `get_content` to retrieve more detail.  For a full explanation of the results provided by `get_content`, please refer to the tutorial: [Get Post Details](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/05_get_post_details)
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 * `<account-name>`
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/09_get_account_comments
 bundle install
 ruby get_account_comments.rb <account-name>

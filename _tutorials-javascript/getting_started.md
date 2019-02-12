@@ -1,15 +1,15 @@
 ---
 title: 'JS: Getting Started'
 position: 0
-description: "Prepare your development environment to use Javascript with the Steem blockchain."
+description: "Prepare your development environment to use Javascript with the Crea blockchain."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Getting Started](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/00_getting_started) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Getting Started](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/00_getting_started) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-For Javascript tutorials, we will use the opensource library [dsteem](https://github.com/steemit/dsteem).
+For Javascript tutorials, we will use the opensource library [dcrea](https://github.com/creativechain/dcrea).
 
 ### Node.js
 
@@ -18,7 +18,7 @@ You can still learn a lot of these if they aren't in your base skill-set; it'll 
 
 ### Your Dev Environment
 
-These tutorials require [Node.js 8.7+](https://nodejs.org/en/download/). [Yarn](https://yarnpkg.com/en/) is nice, but not required. Runnable versions of the tutorials are located [in this github repo](https://github.com/steemit/devportal-tutorials-js).
+These tutorials require [Node.js 8.7+](https://nodejs.org/en/download/). [Yarn](https://yarnpkg.com/en/) is nice, but not required. Runnable versions of the tutorials are located [in this github repo](https://github.com/creativechain/crea-api-doc-tutorials-js).
 If you haven't chosen an editor, you can use [Atom](https://atom.io/), [Sublime](https://www.sublimetext.com/), [Intellij](https://www.jetbrains.com/idea/), [Vi](https://en.wikipedia.org/wiki/Vi), etc.
 
 If you want to keep multiple versions of Node on your system try [Node Version Manager](https://github.com/creationix/nvm).
@@ -30,7 +30,7 @@ Let's say you wanted to run the very [first tutorial](blog_feed), `01_blog_feed`
 1.  From Bash:
 
     ```bash
-    git clone https://github.com/steemit/devportal-tutorials-js.git
+    git clone https://github.com/creativechain/crea-api-doc-tutorials-js.git
 
     cd devportal-tutorials-js/tutorials/01_blog_feed
     npm i

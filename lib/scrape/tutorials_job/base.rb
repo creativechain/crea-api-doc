@@ -8,9 +8,9 @@ module Scrape
       def initialize(options = {})
         @num = (options[:num] || '-1').to_i
         @force = options[:force] == 'true'
-        @tutorial_github_url = options[:tutorial_github_url] #e.g.: https://github.com/steemit/devportal-tutorials-js.git
+        @tutorial_github_url = options[:tutorial_github_url] #e.g.: https://github.com/creativechain/crea-api-doc-tutorials-js.git
         @tutorial_github_name = options[:tutorial_github_name] # e.g.: devportal-tutorials-js
-        @tutorial_url = options[:tutorial_url] # e.g.: https://github.com/steemit/devportal-tutorials-js
+        @tutorial_url = options[:tutorial_url] # e.g.: https://github.com/creativechain/crea-api-doc-tutorials-js
         @dest_tutorials_path = options[:dest_tutorials_path] # e.g.: _tutorials-javascript
         
         @clone_tutorials_path = "#{TMP_CHECKOUT}/#{@tutorial_github_name}/tutorials"

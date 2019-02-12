@@ -4,18 +4,18 @@ position: 22
 description: "_Create a list of available witnesses as well as vote for and remove your vote for a witness._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Witness Listing And Voting](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/22_witness_listing_and_voting) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Witness Listing And Voting](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/22_witness_listing_and_voting) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
 This tutorial will take you through the process of preparing and submitting a `vote` using the `broadcast` operation. A demo account is provided to use on the `testnet` but all variables can be easily changed and applied to the `production server`.
 
-There is also an alternative method to vote for a witness using a `hot signing` link that can be generated via [Steemconnect](https://steemconnect.com/sign/). You create a link using the `witness` name and the `approve` fields which denotes whether you want to vote for or remove the vote. This [link](https://v2.steemconnect.com/sign/account-witness-vote?witness=grg&approve=approve) then allows you to vote simply by signing in with your account details. This is a very simple way to send a vote request to any other user with the correct details already provided by the link.
+There is also an alternative method to vote for a witness using a `hot signing` link that can be generated via [Creaconnect](https://creaconnect.com/sign/). You create a link using the `witness` name and the `approve` fields which denotes whether you want to vote for or remove the vote. This [link](https://v2.creaconnect.com/sign/account-witness-vote?witness=grg&approve=approve) then allows you to vote simply by signing in with your account details. This is a very simple way to send a vote request to any other user with the correct details already provided by the link.
 
 ## Intro
 
-We are using the `account witness vote` function to create the vote which we then commit to the steem blockchain with a `broadcast` operation from `dsteem`. We also look at the vote status for a specific user using the `getAccounts` function. The parameters required for the witness voting operation are:
+We are using the `account witness vote` function to create the vote which we then commit to the crea blockchain with a `broadcast` operation from `dcrea`. We also look at the vote status for a specific user using the `getAccounts` function. The parameters required for the witness voting operation are:
 
 1.  _limit_ - Used in creating the witness list. Denotes the maximum number of witnesses to display
 1.  _voter_ - This is the account making the vote
@@ -25,7 +25,7 @@ We are using the `account witness vote` function to create the vote which we the
 
 ## Steps
 
-1.  [**Configure connection**](#connection) Configuration of `dsteem` to communicate with a Steem blockchain
+1.  [**Configure connection**](#connection) Configuration of `dcrea` to communicate with a Crea blockchain
 1.  [**Create witness list**](#createlist) Displaying a list of active witnesses
 1.  [**Input variables**](#input) Collecting the required inputs via an HTML UI
 1.  [**Voting status**](#status) Confirming the current vote status for the selected witness
@@ -36,15 +36,15 @@ We are using the `account witness vote` function to create the vote which we the
 As usual, we have a `public/app.js` file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-import { Client, PrivateKey } from 'dsteem';
-import { Testnet as NetConfig } from '../../configuration'; //A Steem Testnet. Replace 'Testnet' with 'Mainnet' to connect to the main Steem blockchain.
+import { Client, PrivateKey } from 'dcrea';
+import { Testnet as NetConfig } from '../../configuration'; //A Crea Testnet. Replace 'Testnet' with 'Mainnet' to connect to the main Crea blockchain.
 
 let opts = { ...NetConfig.net };
-//connect to a steem node, testnet in this case
+//connect to a crea node, testnet in this case
 const client = new Client(NetConfig.url, opts);
 ```
 
-Above, we have `dsteem` pointing to the test network with the proper chainId, addressPrefix, and endpoint by importing from the `configuration.js` file. Because this tutorial is interactive, we will not publish test content to the main network. Instead, we're using the testnet and a predefined account which is imported once the application loads, to demonstrate witness voting.
+Above, we have `dcrea` pointing to the test network with the proper chainId, addressPrefix, and endpoint by importing from the `configuration.js` file. Because this tutorial is interactive, we will not publish test content to the main network. Instead, we're using the testnet and a predefined account which is imported once the application loads, to demonstrate witness voting.
 
 ```javascript
 window.onload = async () => {
@@ -90,7 +90,7 @@ window.submitVote = async () => {
     //get account name of voter
     const voter = document.getElementById('username').value;
     //get private active key
-    const privateKey = dsteem.PrivateKey.fromString(
+    const privateKey = dcrea.PrivateKey.fromString(
         document.getElementById('activeKey').value
     );
     //get witness name
@@ -138,7 +138,7 @@ window.submitYes = async () => {
 
 The array cotains the function for the witness vote along with an object containing the needed parameters. We have to use the opposite of the `approve` variable that we created in the previous step. That variable is `true` if the user has already voted, and a value of `true` for the `approve` parameter means that the user is voting _for_ the specified witness which will then return an error.
 
-After the object has been created we can `broadcast` the operation to the steem blockchain along with the private active key of the user. The result of the vote is displayed on the UI to confirm whether you voted for or removed a vote for the witness as well as error details should there be one.
+After the object has been created we can `broadcast` the operation to the crea blockchain along with the private active key of the user. The result of the vote is displayed on the UI to confirm whether you voted for or removed a vote for the witness as well as error details should there be one.
 
 ```javascript
 //broadcast the vote

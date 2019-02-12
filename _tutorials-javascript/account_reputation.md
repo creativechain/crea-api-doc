@@ -4,37 +4,37 @@ position: 20
 description: "_Learn how to interpret account reputation._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Account Reputation](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/20_account_reputation) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Account Reputation](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/20_account_reputation) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-This tutorial runs on the main Steem blockchain. And accounts queried are real users with reputation.
+This tutorial runs on the main Crea blockchain. And accounts queried are real users with reputation.
 
 ## Intro
 
-This tutorial will show the method of capturing a queried tag name and matching it to the Steem. We are using the `call` function provided by the `dsteem` library to pull accounts from the Steem blockchain. A simple HTML interface is used to both capture the string query as well as display the completed search.
+This tutorial will show the method of capturing a queried tag name and matching it to the Crea. We are using the `call` function provided by the `dcrea` library to pull accounts from the Crea blockchain. A simple HTML interface is used to both capture the string query as well as display the completed search.
 
 ## steps
 
-1.  [**App setup**](#app-setup) Configuration of `dsteem` to use the proper connection and network.
+1.  [**App setup**](#app-setup) Configuration of `dcrea` to use the proper connection and network.
 2.  [**Search account**](#search-account) Collecting the relevant search criteria
 3.  [**Interpret account reputation**](#run-reputation) Running the search and interpreting reputation.
 4.  [**Output**](#output) Displaying the results
 
 #### 1. App setup <a name="app-setup"></a>
 
-Below we have `dsteem` pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:
+Below we have `dcrea` pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-const dsteem = require('dsteem');
+const dcrea = require('dcrea');
 let opts = {};
 //connect to production server
 opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
 //connect to server which is connected to the network/production
-const client = new dsteem.Client('https://api.steemit.com');
+const client = new dcrea.Client('https://node1.creary.net');
 ```
 
 #### 2. Search account <a name="search-account"></a>
@@ -55,7 +55,7 @@ In order to get accounts, we run the search with the `search field` and `maximum
 const _accounts = await client.database.call('lookup_accounts',[accSearch, max]);
 ```
 
-The result of the search is an array of accounts. After that we use `get_accounts` to pull account data from Steem.
+The result of the search is an array of accounts. After that we use `get_accounts` to pull account data from Crea.
 
 ```javascript
 const acc = await client.database.call('get_accounts',[_accounts]);

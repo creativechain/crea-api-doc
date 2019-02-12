@@ -12,7 +12,7 @@
     parameter_json: '{"account_lower_bound":"","limit":1000}'
     expected_response_json: '{"reputations":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_account_reputations", "params":{"account_lower_bound":"steemit",
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_account_reputations", "params":{"account_lower_bound":"creary",
       "limit":1}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_account_reputations", "params":{"account_lower_bound":"a",
       "limit":10}, "id":1}'
@@ -21,7 +21,7 @@
     parameter_json: '{"account":"","start_entry_id":0,"limit":500}'
     expected_response_json: '{"blog":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_blog", "params":{"account":"steemit","start_entry_id":0,"limit":1},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_blog", "params":{"account":"creary","start_entry_id":0,"limit":1},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_blog", "params":{"account":"alice","start_entry_id":0,"limit":50},
       "id":1}'
@@ -31,7 +31,7 @@
     parameter_json: '{"blog_account":""}'
     expected_response_json: '{"blog_authors":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_blog_authors", "params":{"blog_account":"steemit"},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_blog_authors", "params":{"blog_account":"creary"},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_blog_authors", "params":{"blog_account":"alice"},
       "id":1}'
@@ -40,7 +40,7 @@
     parameter_json: '{"account":"","start_entry_id":0,"limit":500}'
     expected_response_json: '{"blog":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_blog_entries", "params":{"account":"steemit","start_entry_id":0,"limit":1},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_blog_entries", "params":{"account":"creary","start_entry_id":0,"limit":1},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_blog_entries", "params":{"account":"alice","start_entry_id":0,"limit":50},
       "id":1}'
@@ -50,7 +50,7 @@
     parameter_json: '{"account":"","start_entry_id":0,"limit":500}'
     expected_response_json: '{"feed":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_feed", "params":{"account":"steemit","start_entry_id":0,"limit":1},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_feed", "params":{"account":"creary","start_entry_id":0,"limit":1},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_feed", "params":{"account":"alice","start_entry_id":1,"limit":10},
       "id":1}'
@@ -60,7 +60,7 @@
     parameter_json: '{"account":"","start_entry_id":0,"limit":500}'
     expected_response_json: '{"feed":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_feed_entries", "params":{"account":"steemit","start_entry_id":0,"limit":1},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_feed_entries", "params":{"account":"creary","start_entry_id":0,"limit":1},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_feed_entries", "params":{"account":"alice","start_entry_id":1,"limit":10},
       "id":1}'
@@ -70,7 +70,7 @@
     parameter_json: '{"account":""}'
     expected_response_json: '{"account":"","follower_count":0,"following_count":0}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_follow_count", "params":{"account":"steemit"},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_follow_count", "params":{"account":"creary"},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_follow_count", "params":{"account":"alice"},
       "id":1}'
@@ -80,7 +80,7 @@
     parameter_json: '{"account":"","start":"","type":"undefined","limit":1000}'
     expected_response_json: '{"followers":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_followers", "params":{"account":"steemit","start":null,"type":"blog","limit":10},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_followers", "params":{"account":"creary","start":null,"type":"blog","limit":10},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_followers", "params":{"account":"alice","start":null,"type":"ignore","limit":100},
       "id":1}'
@@ -90,7 +90,7 @@
     parameter_json: '{"account":"","start":"","type":"undefined","limit":1000}'
     expected_response_json: '{"following":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_following", "params":{"account":"steemit","start":null,"type":"blog","limit":10},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_following", "params":{"account":"creary","start":null,"type":"blog","limit":10},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_following", "params":{"account":"alice","start":null,"type":"ignore","limit":100},
       "id":1}'
@@ -100,7 +100,7 @@
     parameter_json: '{"author":"","permlink":""}'
     expected_response_json: '{"accounts":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"follow_api.get_reblogged_by", "params":{"author":"steemit","permlink":"firstpost"},
+    - '{"jsonrpc":"2.0", "method":"follow_api.get_reblogged_by", "params":{"author":"creary","permlink":"firstpost"},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"follow_api.get_reblogged_by", "params":{"author":"alice","permlink":"a-post-by-alice"},
       "id":1}'

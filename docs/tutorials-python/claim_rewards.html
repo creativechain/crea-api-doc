@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>PY: Claim Rewards | Steem Developer</title>
+<title>PY: Claim Rewards | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="PY: Claim Rewards" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="How to claim rewards using Python." />
 <meta property="og:description" content="How to claim rewards using Python." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-python/claim_rewards" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-python/claim_rewards" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-python/claim_rewards" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-python/claim_rewards" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"How to claim rewards using Python.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-python/claim_rewards","headline":"PY: Claim Rewards","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-python/claim_rewards"},"@context":"http://schema.org"}</script>
+{"description":"How to claim rewards using Python.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-python/claim_rewards","headline":"PY: Claim Rewards","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-python/claim_rewards"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,19 +323,19 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/23_claim_rewards">Claim Rewards</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-py">PY tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/23_claim_rewards">Claim Rewards</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-py">PY tutorials repository</a>.</span>
 <br /></p>
 
-<p>In this tutorial we show you how to check the STEEM, SBD and STEEM POWER rewards balances of an account on the <strong>Steem</strong> blockchain, and how to claim either a portion or all of the rewards for an account using the <code class="highlighter-rouge">commit</code> class found within the <a href="https://github.com/steemit/steem-python">steem-python</a> library.</p>
+<p>In this tutorial we show you how to check the CREA, CBD and CREA POWER rewards balances of an account on the <strong>Crea</strong> blockchain, and how to claim either a portion or all of the rewards for an account using the <code class="highlighter-rouge">commit</code> class found within the <a href="https://github.com/creativechain/crea-python">crea-python</a> library.</p>
 
 <h2 id="intro">Intro</h2>
 
-<p>The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the <code class="highlighter-rouge">claim_reward_balance</code> method found within the <code class="highlighter-rouge">commit</code> class in the library. Before we transmit a claim, we use the <code class="highlighter-rouge">get_account</code> function to check the current rewards balance of the account to see what is available to claim. The <code class="highlighter-rouge">claim</code> method has 4 parameters:</p>
+<p>The Crea python library has a built-in function to transmit transactions to the blockchain. We are using the <code class="highlighter-rouge">claim_reward_balance</code> method found within the <code class="highlighter-rouge">commit</code> class in the library. Before we transmit a claim, we use the <code class="highlighter-rouge">get_account</code> function to check the current rewards balance of the account to see what is available to claim. The <code class="highlighter-rouge">claim</code> method has 4 parameters:</p>
 
 <ol>
-  <li><em>reward steem</em> - The amount of STEEM to claim</li>
-  <li><em>reward sbd</em> - The amount of SBD to claim</li>
-  <li><em>reward vests</em> - The amount of VESTS (STEEM POWER) to claim</li>
+  <li><em>reward crea</em> - The amount of CREA to claim</li>
+  <li><em>reward sbd</em> - The amount of CBD to claim</li>
+  <li><em>reward vests</em> - The amount of VESTS (CREA POWER) to claim</li>
   <li><em>account</em> - The source account for the claim</li>
 </ol>
 
@@ -343,7 +343,7 @@
 
 <ol>
   <li><a href="#setup"><strong>App setup</strong></a> - Library install and import. Connection to testnet</li>
-  <li><a href="#userinfo"><strong>User information and steem node</strong></a> - Input user information and connection to Steem node</li>
+  <li><a href="#userinfo"><strong>User information and crea node</strong></a> - Input user information and connection to Crea node</li>
   <li><a href="#balance"><strong>Check reward balance</strong></a> - Check current rewards balances of user account</li>
   <li><a href="#commit"><strong>Claim commit</strong></a> - Input amount of rewards to claim and commit to blockchain</li>
   <li><a href="#update"><strong>Balance update</strong></a> - Check new rewards balances after completed claim</li>
@@ -354,35 +354,35 @@
 <p>In this tutorial we use 2 packages:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">steem</code> - steem-python library and interaction with Blockchain</li>
+  <li><code class="highlighter-rouge">crea</code> - crea-python library and interaction with Blockchain</li>
   <li><code class="highlighter-rouge">pick</code> - helps select the query type interactively</li>
 </ul>
 
 <p>We import the libraries and connect to the <code class="highlighter-rouge">testnet</code>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">steembase</span>
-<span class="kn">import</span> <span class="nn">steem</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">creabase</span>
+<span class="kn">import</span> <span class="nn">crea</span>
 <span class="kn">from</span> <span class="nn">pick</span> <span class="kn">import</span> <span class="n">pick</span>
-<span class="kn">from</span> <span class="nn">steem.amount</span> <span class="kn">import</span> <span class="n">Amount</span>
+<span class="kn">from</span> <span class="nn">crea.amount</span> <span class="kn">import</span> <span class="n">Amount</span>
 
-<span class="n">steembase</span><span class="o">.</span><span class="n">chains</span><span class="o">.</span><span class="n">known_chains</span><span class="p">[</span><span class="s">'STEEM'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">creabase</span><span class="o">.</span><span class="n">chains</span><span class="o">.</span><span class="n">known_chains</span><span class="p">[</span><span class="s">'CREA'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'chain_id'</span><span class="p">:</span> <span class="s">'79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673'</span><span class="p">,</span>
-    <span class="s">'prefix'</span><span class="p">:</span> <span class="s">'STX'</span><span class="p">,</span> <span class="s">'steem_symbol'</span><span class="p">:</span> <span class="s">'STEEM'</span><span class="p">,</span> <span class="s">'sbd_symbol'</span><span class="p">:</span> <span class="s">'SBD'</span><span class="p">,</span> <span class="s">'vests_symbol'</span><span class="p">:</span> <span class="s">'VESTS'</span>
+    <span class="s">'prefix'</span><span class="p">:</span> <span class="s">'STX'</span><span class="p">,</span> <span class="s">'crea_symbol'</span><span class="p">:</span> <span class="s">'CREA'</span><span class="p">,</span> <span class="s">'sbd_symbol'</span><span class="p">:</span> <span class="s">'SBD'</span><span class="p">,</span> <span class="s">'vests_symbol'</span><span class="p">:</span> <span class="s">'VESTS'</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <p>Because this tutorial alters the blockchain we connect to a testnet so we don’t create spam on the production server.</p>
 
-<h4 id="2-user-information-and-steem-node-">2. User information and steem node <a name="userinfo"></a></h4>
+<h4 id="2-user-information-and-crea-node-">2. User information and crea node <a name="userinfo"></a></h4>
 
-<p>We require the <code class="highlighter-rouge">private active key</code> of the user in order for the claim to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the steem class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it’s good practice.</p>
+<p>We require the <code class="highlighter-rouge">private active key</code> of the user in order for the claim to be committed to the blockchain. This is why we are using a testnet. The values are supplied via the terminal/console before we initialise the crea class. There are some demo accounts available but we encourage you to create your own accounts on this testnet and create balances you can claim; it’s good practice.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#capture user information
 </span><span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Enter username: '</span><span class="p">)</span> <span class="c1">#demo account: cdemo
 </span><span class="n">wif</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Enter private ACTIVE key: '</span><span class="p">)</span> <span class="c1">#demo account: 5KaNM84WWSqzwKzY82fXPaUW43idbLnPqf5SfjGxLfw6eV2kAP3
 </span>
 <span class="c1">#connect node
-</span><span class="n">client</span> <span class="o">=</span> <span class="n">steem</span><span class="o">.</span><span class="n">Steem</span><span class="p">(</span><span class="n">nodes</span><span class="o">=</span><span class="p">[</span><span class="s">'https://testnet.steem.vc'</span><span class="p">],</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">wif</span><span class="p">])</span>
+</span><span class="n">client</span> <span class="o">=</span> <span class="n">crea</span><span class="o">.</span><span class="n">Crea</span><span class="p">(</span><span class="n">nodes</span><span class="o">=</span><span class="p">[</span><span class="s">'https://testnet.crea.vc'</span><span class="p">],</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">wif</span><span class="p">])</span>
 </code></pre></div></div>
 
 <h4 id="3-check-reward-balance-">3. Check reward balance <a name="balance"></a></h4>
@@ -396,15 +396,15 @@
     <span class="k">print</span><span class="p">(</span><span class="s">'Oops. Looks like user '</span> <span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s">' doesn</span><span class="se">\'</span><span class="s">t exist on this chain!'</span><span class="p">)</span>
     <span class="nb">exit</span><span class="p">()</span>
 
-<span class="n">reward_steem</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_steem_balance'</span><span class="p">]</span>
+<span class="n">reward_crea</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_crea_balance'</span><span class="p">]</span>
 <span class="n">reward_sbd</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_sbd_balance'</span><span class="p">]</span>
-<span class="n">reward_sp</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_vesting_steem'</span><span class="p">]</span>
+<span class="n">reward_sp</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_vesting_crea'</span><span class="p">]</span>
 <span class="n">reward_vests</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_vesting_balance'</span><span class="p">]</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s">'Reward Balances:'</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> 
-    <span class="s">'STEEM: '</span> <span class="o">+</span> <span class="n">reward_steem</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> 
+    <span class="s">'CREA: '</span> <span class="o">+</span> <span class="n">reward_crea</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span>
     <span class="s">'SBD: '</span> <span class="o">+</span> <span class="n">reward_sbd</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> 
-    <span class="s">'STEEM POWER: '</span> <span class="o">+</span> <span class="n">reward_sp</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span>
+    <span class="s">'CREA POWER: '</span> <span class="o">+</span> <span class="n">reward_sp</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span>
     <span class="s">'VESTS: '</span> <span class="o">+</span> <span class="n">reward_vests</span>
     <span class="p">)</span>
 
@@ -413,7 +413,7 @@
 
 <h4 id="4-claim-commit-">4. Claim commit <a name="commit"></a></h4>
 
-<p>An option is provided to either claim all rewards at once or to specify specific amounts to be claimed for each individual reward balance. If you are using one of Steemit’s demo accounts, please leave some rewards for others to claim!</p>
+<p>An option is provided to either claim all rewards at once or to specify specific amounts to be claimed for each individual reward balance. If you are using one of Creary’s demo accounts, please leave some rewards for others to claim!</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#choice of claim
 </span><span class="n">title</span> <span class="o">=</span> <span class="s">'Please choose claim type: '</span>
@@ -425,29 +425,29 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#commit claim based on selection
 </span><span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">'ALL'</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">Amount</span><span class="p">(</span><span class="n">reward_steem</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">reward_sbd</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">reward_vests</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Amount</span><span class="p">(</span><span class="n">reward_crea</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">reward_sbd</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">reward_vests</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'No rewards to claim'</span><span class="p">)</span>
         <span class="nb">exit</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">client</span><span class="o">.</span><span class="n">claim_reward_balance</span><span class="p">(</span><span class="n">reward_steem</span><span class="p">,</span> <span class="n">reward_sbd</span><span class="p">,</span> <span class="n">reward_vests</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+        <span class="n">client</span><span class="o">.</span><span class="n">claim_reward_balance</span><span class="p">(</span><span class="n">reward_crea</span><span class="p">,</span> <span class="n">reward_sbd</span><span class="p">,</span> <span class="n">reward_vests</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'All reward balances have been claimed. New reward balances are:'</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">'CANCEL'</span><span class="p">:</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'Operation cancelled'</span><span class="p">)</span>
         <span class="nb">exit</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">claim_steem</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'Please enter the amount of STEEM to claim: '</span><span class="p">)</span> <span class="o">+</span> <span class="s">' STEEM'</span>
-        <span class="n">claim_sbd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Please enter the amount of SBD to claim: '</span><span class="p">)</span> <span class="o">+</span> <span class="s">' SBD'</span>
+        <span class="n">claim_crea</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'Please enter the amount of CREA to claim: '</span><span class="p">)</span> <span class="o">+</span> <span class="s">' CREA'</span>
+        <span class="n">claim_sbd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Please enter the amount of CBD to claim: '</span><span class="p">)</span> <span class="o">+</span> <span class="s">' CBD'</span>
         <span class="n">claim_vests</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Please enter the amount of VESTS to claim: '</span><span class="p">)</span> <span class="o">+</span> <span class="s">' VESTS'</span>
-        <span class="k">if</span> <span class="n">Amount</span><span class="p">(</span><span class="n">claim_steem</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">claim_sbd</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">claim_vests</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">Amount</span><span class="p">(</span><span class="n">claim_crea</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">claim_sbd</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">+</span> <span class="n">Amount</span><span class="p">(</span><span class="n">claim_vests</span><span class="p">)</span><span class="o">.</span><span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'Zero values entered, no claim to submit'</span><span class="p">)</span>
             <span class="nb">exit</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">claim_steem</span> <span class="o">&gt;</span> <span class="n">reward_steem</span> <span class="ow">or</span> <span class="n">claim_sbd</span> <span class="o">&gt;</span> <span class="n">reward_sbd</span> <span class="ow">or</span> <span class="n">claim_vests</span> <span class="o">&gt;</span> <span class="n">reward_vests</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">claim_crea</span> <span class="o">&gt;</span> <span class="n">reward_crea</span> <span class="ow">or</span> <span class="n">claim_sbd</span> <span class="o">&gt;</span> <span class="n">reward_sbd</span> <span class="ow">or</span> <span class="n">claim_vests</span> <span class="o">&gt;</span> <span class="n">reward_vests</span><span class="p">:</span>
                 <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'Requested claim value higher than available rewards'</span><span class="p">)</span>
                 <span class="nb">exit</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">client</span><span class="o">.</span><span class="n">claim_reward_balance</span><span class="p">(</span><span class="n">claim_steem</span><span class="p">,</span> <span class="n">claim_sbd</span><span class="p">,</span> <span class="n">claim_vests</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+                <span class="n">client</span><span class="o">.</span><span class="n">claim_reward_balance</span><span class="p">(</span><span class="n">claim_crea</span><span class="p">,</span> <span class="n">claim_sbd</span><span class="p">,</span> <span class="n">claim_vests</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
                 <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'Claim has been processed. New reward balances are:'</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
 
 </code></pre></div></div>
@@ -463,19 +463,19 @@
 
 <span class="n">userinfo</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
 
-<span class="n">reward_steem</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_steem_balance'</span><span class="p">]</span>
+<span class="n">reward_crea</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_crea_balance'</span><span class="p">]</span>
 <span class="n">reward_sbd</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_sbd_balance'</span><span class="p">]</span>
-<span class="n">reward_sp</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_vesting_steem'</span><span class="p">]</span>
+<span class="n">reward_sp</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_vesting_crea'</span><span class="p">]</span>
 <span class="n">reward_vests</span> <span class="o">=</span> <span class="n">userinfo</span><span class="p">[</span><span class="s">'reward_vesting_balance'</span><span class="p">]</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">'STEEM: '</span> <span class="o">+</span> <span class="n">reward_steem</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> 
+<span class="k">print</span><span class="p">(</span><span class="s">'CREA: '</span> <span class="o">+</span> <span class="n">reward_crea</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span>
     <span class="s">'SBD: '</span> <span class="o">+</span> <span class="n">reward_sbd</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> 
-    <span class="s">'STEEM POWER: '</span> <span class="o">+</span> <span class="n">reward_sp</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span>
+    <span class="s">'CREA POWER: '</span> <span class="o">+</span> <span class="n">reward_sp</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span>
     <span class="s">'VESTS: '</span> <span class="o">+</span> <span class="n">reward_vests</span>
     <span class="p">)</span>
 </code></pre></div></div>
 
-<p>We encourage users to play around with different values and data types to fully understand how this process works. You can also check the balances and transaction history on the <a href="http://condenser.steem.vc/">testnet portal</a>.</p>
+<p>We encourage users to play around with different values and data types to fully understand how this process works. You can also check the balances and transaction history on the <a href="http://condenser.crea.vc/">testnet portal</a>.</p>
 
 <h3 id="to-run-the-tutorial">To Run the tutorial</h3>
 

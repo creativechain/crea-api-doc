@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>JS: Grant Posting Permission | Steem Developer</title>
+<title>JS: Grant Posting Permission | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="JS: Grant Posting Permission" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="How to grant and revoke posting permission to another user." />
 <meta property="og:description" content="How to grant and revoke posting permission to another user." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-javascript/grant_posting_permission" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-javascript/grant_posting_permission" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-javascript/grant_posting_permission" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-javascript/grant_posting_permission" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"How to grant and revoke posting permission to another user.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-javascript/grant_posting_permission","headline":"JS: Grant Posting Permission","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-javascript/grant_posting_permission"},"@context":"http://schema.org"}</script>
+{"description":"How to grant and revoke posting permission to another user.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-javascript/grant_posting_permission","headline":"JS: Grant Posting Permission","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-javascript/grant_posting_permission"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,12 +323,12 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/30_grant_posting_permission">Grant Posting Permission</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-js">JS tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/30_grant_posting_permission">Grant Posting Permission</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-js">JS tutorials repository</a>.</span>
 <br /></p>
 
 <p>This tutorial will take you through the process of checking a specific users’ data, altering the array pertaining to the posting <code class="highlighter-rouge">account_auths</code>, and then broadcasting the changes to the blockchain. Demo account information has been provided to assist with the tutorial. This tutorial has been set up for the <code class="highlighter-rouge">testnet</code> but can be easily be changed for <code class="highlighter-rouge">production</code>.</p>
 
-<p>Providing another user posting permission for your account can be used to allow multiple users to submit posts on a single steemit community. @Utopian-Io is an example of such a community. There are also applications that allows you to schedule posts by automatically publishing on your behalf.</p>
+<p>Providing another user posting permission for your account can be used to allow multiple users to submit posts on a single creary community. @Utopian-Io is an example of such a community. There are also applications that allows you to schedule posts by automatically publishing on your behalf.</p>
 
 <h2 id="intro">Intro</h2>
 
@@ -351,7 +351,7 @@
 <h2 id="steps">Steps</h2>
 
 <ol>
-  <li><a href="#connection"><strong>Configure connection</strong></a> Configuration of <code class="highlighter-rouge">dsteem</code> to communicate with a Steem blockchain</li>
+  <li><a href="#connection"><strong>Configure connection</strong></a> Configuration of <code class="highlighter-rouge">dcrea</code> to communicate with a Crea blockchain</li>
   <li><a href="#input"><strong>Input variables</strong></a> Collecting the required inputs via an HTML UI.</li>
   <li><a href="#query"><strong>Database query</strong></a> Sending a query to the blockchain for the posting permissions (status)</li>
   <li><a href="#object"><strong>Object creation</strong></a> Create the array and subsequent data object for the broadcast operation</li>
@@ -362,17 +362,17 @@
 
 <p>As usual, we have a <code class="highlighter-rouge">public/app.js</code> file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dsteem</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'dsteem'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">dcrea</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'dcrea'</span><span class="p">);</span>
 <span class="c1">//define network parameters</span>
 <span class="kd">let</span> <span class="nx">opts</span> <span class="o">=</span> <span class="p">{};</span>
 <span class="nx">opts</span><span class="p">.</span><span class="nx">addressPrefix</span> <span class="o">=</span> <span class="s1">'STX'</span><span class="p">;</span>
 <span class="nx">opts</span><span class="p">.</span><span class="nx">chainId</span> <span class="o">=</span>
     <span class="s1">'79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673'</span><span class="p">;</span>
-<span class="c1">//connect to a steem node, testnet in this case</span>
-<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">Client</span><span class="p">(</span><span class="s1">'https://testnet.steem.vc'</span><span class="p">,</span> <span class="nx">opts</span><span class="p">);</span>
+<span class="c1">//connect to a crea node, testnet in this case</span>
+<span class="kd">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">Client</span><span class="p">(</span><span class="s1">'https://testnet.crea.vc'</span><span class="p">,</span> <span class="nx">opts</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>Above, we have <code class="highlighter-rouge">dsteem</code> pointing to the testnet with the proper chainId, addressPrefix, and endpoint. Due to this tutorial altering the blockchain it is preferable to not work on production.</p>
+<p>Above, we have <code class="highlighter-rouge">dcrea</code> pointing to the testnet with the proper chainId, addressPrefix, and endpoint. Due to this tutorial altering the blockchain it is preferable to not work on production.</p>
 
 <h4 id="2-input-variables">2. Input variables<a name="input"></a></h4>
 
@@ -383,7 +383,7 @@
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//get username</span>
 <span class="kd">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'username'</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
 <span class="c1">//get private active key</span>
-<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">dsteem</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromString</span><span class="p">(</span>
+<span class="kd">const</span> <span class="nx">privateKey</span> <span class="o">=</span> <span class="nx">dcrea</span><span class="p">.</span><span class="nx">PrivateKey</span><span class="p">.</span><span class="nx">fromString</span><span class="p">(</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'privateKey'</span><span class="p">).</span><span class="nx">value</span>
 <span class="p">);</span>
 <span class="c1">//get account to provide posting auth</span>
@@ -392,7 +392,7 @@
 
 <h4 id="3-database-query">3. Database query<a name="query"></a></h4>
 
-<p>The queries are sent through to the steem blockchain with the <code class="highlighter-rouge">database API</code> using the <code class="highlighter-rouge">getAccounts</code> function. The results of the query is used to check the status of the current posting authorisations and parameters as per the <code class="highlighter-rouge">intro</code>.</p>
+<p>The queries are sent through to the crea blockchain with the <code class="highlighter-rouge">database API</code> using the <code class="highlighter-rouge">getAccounts</code> function. The results of the query is used to check the status of the current posting authorisations and parameters as per the <code class="highlighter-rouge">intro</code>.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">//query database for posting array</span>
     <span class="nx">_data</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span>
@@ -435,7 +435,7 @@
 <span class="nx">postingAuth</span><span class="p">.</span><span class="nx">account_auths</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">arrayindex</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>When adding to the array (creaing permission) it is required to sort the array before we can broadcast. The steem blockchain does not accept the new fields in the array if it’s not alphabetically sorted.
+<p>When adding to the array (creaing permission) it is required to sort the array before we can broadcast. The crea blockchain does not accept the new fields in the array if it’s not alphabetically sorted.
 After the posting array has been defined, the broadcast object can be created. This holds all the required information for a successful transaction to be sent to the blockchain. Where there is no change in the authority types, the parameter can be omitted or in the case of required parameters, allocated directly from the database query.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//object creation</span>
@@ -476,9 +476,9 @@ After the posting array has been defined, the broadcast object can be created. T
 
 <p>The results of the operation is displayed on the UI along with a block number in the console to confirm a successful operation. If you add permission to an account that already has permission will display an error of “Missing Active Authority”.</p>
 
-<p>Steemconnect offers an alternative to revoking posting permission with a “simple link” solution. Instead of running through a list of opetions on your account, you can simply use a link similar to the one below. You will be prompted to enter your usename and password and the specified user will have their posting permission removed instantly.
-https://v2.steemconnect.com/revoke/@username
-This is similar to the steemconnect links that have been covered in previous tutorials. For a list of signing operations that work in this manner you can go to https://v2.steemconnect.com/sign</p>
+<p>Creaconnect offers an alternative to revoking posting permission with a “simple link” solution. Instead of running through a list of opetions on your account, you can simply use a link similar to the one below. You will be prompted to enter your usename and password and the specified user will have their posting permission removed instantly.
+https://v2.creaconnect.com/revoke/@username
+This is similar to the creaconnect links that have been covered in previous tutorials. For a list of signing operations that work in this manner you can go to https://v2.creaconnect.com/sign</p>
 
 <h3 id="to-run-this-tutorial">To run this tutorial</h3>
 

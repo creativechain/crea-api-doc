@@ -4,24 +4,24 @@ position: 31
 description: "How to give another user active permission on your account using Python."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Grant Active Permission](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/31_grant_active_permission) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Grant Active Permission](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/31_grant_active_permission) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial we show you how to check if someone has got active permission for an account on the **Steem** blockchain and how to grant or revoke that permission using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to check if someone has got active permission for an account on the **Crea** blockchain and how to grant or revoke that permission using the `commit` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 Providing another user active permission for your account enables them to do fund transfers from your account. This can be useful in setting up a secondary account(s) to manage funds for a main account or having a backup should you lose passwords for the main account.
 
 One of the common practice nowadays is to lend/delegate SP to another account, above same technique can be used to create market around it with minimum 3rd party trust. All your funds stay in your account. You can use/create automated system where you can lease for certain period of time and system can take care of payments and release of delegations (notify clients). Even better, you can use multi-signature feature to establish 100% trust where clients will have to confirm, approve transactions.
 
-Active permissions and authority should be used with utmost care, you don't want to lose your funds. It is really not easy to hack Steem accounts, let alone take control over it. But without careful use (revealing private keys) losing liquid funds are not that difficult and it takes only couple seconds to do that, keeping most value powered up always helps.
+Active permissions and authority should be used with utmost care, you don't want to lose your funds. It is really not easy to hack Crea accounts, let alone take control over it. But without careful use (revealing private keys) losing liquid funds are not that difficult and it takes only couple seconds to do that, keeping most value powered up always helps.
 
-[this article](https://steemit.com/steem/@good-karma/steem-multi-authority-permissions-and-how-active-authority-works-part-2-f158813ec0ec1) has more detail around active authorities
+[this article](https://creary.net/crea/@good-karma/crea-multi-authority-permissions-and-how-active-authority-works-part-2-f158813ec0ec1) has more detail around active authorities
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `allow` and `disallow` methods found within the `commit` class in the library. Before we grant or revoke permission, we use the `get_account` function to check whether the requested user already has that permission or not. This is not strictly necessary but adds to the useability of the process. The `allow` method has 5 parameters:
+The Crea python library has a built-in function to transmit transactions to the blockchain. We are using the `allow` and `disallow` methods found within the `commit` class in the library. Before we grant or revoke permission, we use the `get_account` function to check whether the requested user already has that permission or not. This is not strictly necessary but adds to the useability of the process. The `allow` method has 5 parameters:
 
 1.  _foreign_ - The foreign account that will obtain access
 1.  _weight_ - This is an optional parameter defining the weight to use. If not defined, the threshold value will be used. If the weight is smaller than the threshold, additional signatures will be required.
@@ -44,18 +44,18 @@ There is currently a bug with the `disallow` method when using it on the testnet
 
 In this tutorial we use 2 packages:
 
-- `steem` - steem-python library and interaction with Blockchain
+- `crea` - crea-python library and interaction with Blockchain
 - `pick` - helps select the query type interactively
 
 We import the libraries for the application.
 
 ```python
-import steembase
-import steem
+import creabase
+import crea
 from pick import pick
 ```
 
-We require the `private active key` of the user in order for the `allow` or `disallow` to be committed to the blockchain. The values are supplied via the terminal/console before we initialise the steem class with the supplied private key included.
+We require the `private active key` of the user in order for the `allow` or `disallow` to be committed to the blockchain. The values are supplied via the terminal/console before we initialise the crea class with the supplied private key included.
 
 ```python
 #capture user information
@@ -63,7 +63,7 @@ username = input('Enter username: ')
 wif = input('Enter private ACTIVE key: ')
 
 #connect to production server with active key
-client = steem.Steem(keys=[wif])
+client = crea.Crea(keys=[wif])
 ```
 
 #### 2. Username validation <a name="username"></a>

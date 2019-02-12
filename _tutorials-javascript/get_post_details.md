@@ -4,7 +4,7 @@ position: 5
 description: "_By the end of this tutorial you would know how to get post details and use them appropriately._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Details](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/05_get_post_details) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Details](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/05_get_post_details) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
@@ -15,7 +15,7 @@ We will also explain the most commonly used fields from the response object as w
 
 ## Intro
 
-Accounts have unique `permlink` - permanent link for each of their posts. And Steem blockchain provides API to directly fetch current state of the post and its details. We will be using `get_content` to retrieve additional details. We can easily reformat data in a way that fits out application.
+Accounts have unique `permlink` - permanent link for each of their posts. And Crea blockchain provides API to directly fetch current state of the post and its details. We will be using `get_content` to retrieve additional details. We can easily reformat data in a way that fits out application.
 
 ## Steps
 
@@ -55,7 +55,7 @@ client.database.call('get_content', [author, permlink]).then(result => {
 });
 ```
 
-Steem allows any text-based format for the body, but apps often follow standard markdown with mix of few html tags. After we have fetched the content, we can use the `remarkable` library to parse the body of the post into a readable format. The title and body of the post are then displayed with a button at the top right corner to switch back to the post list.
+Crea allows any text-based format for the body, but apps often follow standard markdown with mix of few html tags. After we have fetched the content, we can use the `remarkable` library to parse the body of the post into a readable format. The title and body of the post are then displayed with a button at the top right corner to switch back to the post list.
 
 ```javascript
 document.getElementById('postList').style.display = 'block';
@@ -71,16 +71,16 @@ The result is returned from the post content as a `JSON` object with the followi
 ```json
 {
     "id": 37338948,
-    "author": "steemitblog",
-    "permlink": "join-team-steemit-at-tokenfest",
-    "category": "steemit",
+    "author": "crearyblog",
+    "permlink": "join-team-creary-at-tokenfest",
+    "category": "creary",
     "parent_author": "",
-    "parent_permlink": "steemit",
-    "title": "Join Team Steemit at TokenFest!",
+    "parent_permlink": "creary",
+    "title": "Join Team Creary at TokenFest!",
     "body":
-        "<a href=\"https://tokenfest.adria.digital\"><img src=\"https://i.imgur.com/fOScDIW.png\"/></a>\n\nHello Steemians! If you’d like to meet Team Steemit live-in-person, or are just interested in attending what promises to be a great blockchain conference, join us at <a href=\"https://tokenfest.adria.digital/\">TokenFest</a> in San Francisco from March 15th to 16th. \n\nSteemit CEO, Ned Scott, will be participating in a fireside chat alongside Steemit’s CTO, Harry Schmidt, as well as the creator of Utopian.io, Diego Pucci. Steemit will also be hosting the opening party on Thursday night and we’d certainly love to meet as many of you as possible IRL, so head on over to https://tokenfest.adria.digital/ and get your tickets while you can. \n\n*Team Steemit*",
+        "<a href=\"https://tokenfest.adria.digital\"><img src=\"https://i.imgur.com/fOScDIW.png\"/></a>\n\nHello Crearians! If you’d like to meet Team Creary live-in-person, or are just interested in attending what promises to be a great blockchain conference, join us at <a href=\"https://tokenfest.adria.digital/\">TokenFest</a> in San Francisco from March 15th to 16th. \n\nCreary CEO, Ned Scott, will be participating in a fireside chat alongside Creary’s CTO, Harry Schmidt, as well as the creator of Utopian.io, Diego Pucci. Creary will also be hosting the opening party on Thursday night and we’d certainly love to meet as many of you as possible IRL, so head on over to https://tokenfest.adria.digital/ and get your tickets while you can. \n\n*Team Creary*",
     "json_metadata":
-        "{\"tags\":[\"steemit\",\"tokenfest\",\"conference\"],\"image\":[\"https://i.imgur.com/fOScDIW.png\"],\"links\":[\"https://tokenfest.adria.digital\",\"https://tokenfest.adria.digital/\"],\"app\":\"steemit/0.1\",\"format\":\"markdown\"}",
+        "{\"tags\":[\"creary\",\"tokenfest\",\"conference\"],\"image\":[\"https://i.imgur.com/fOScDIW.png\"],\"links\":[\"https://tokenfest.adria.digital\",\"https://tokenfest.adria.digital/\"],\"app\":\"creary/0.1\",\"format\":\"markdown\"}",
     "last_update": "2018-03-07T23:22:54",
     "created": "2018-03-07T20:56:36",
     "active": "2018-03-13T01:40:21",
@@ -95,24 +95,24 @@ The result is returned from the post content as a `JSON` object with the followi
     "max_cashout_time": "1969-12-31T23:59:59",
     "total_vote_weight": 3462435,
     "reward_weight": 10000,
-    "total_payout_value": "0.000 SBD",
-    "curator_payout_value": "0.000 SBD",
+    "total_payout_value": "0.000 CBD",
+    "curator_payout_value": "0.000 CBD",
     "author_rewards": 0,
     "net_votes": 77,
     "root_comment": 37338948,
-    "max_accepted_payout": "0.000 SBD",
-    "percent_steem_dollars": 10000,
+    "max_accepted_payout": "0.000 CBD",
+    "percent_crea_dollars": 10000,
     "allow_replies": true,
     "allow_votes": true,
     "allow_curation_rewards": true,
     "beneficiaries": [],
-    "url": "/steemit/@steemitblog/join-team-steemit-at-tokenfest",
-    "root_title": "Join Team Steemit at TokenFest!",
-    "pending_payout_value": "46.436 SBD",
-    "total_pending_payout_value": "0.000 STEEM",
+    "url": "/creary/@crearyblog/join-team-creary-at-tokenfest",
+    "root_title": "Join Team Creary at TokenFest!",
+    "pending_payout_value": "46.436 CBD",
+    "total_pending_payout_value": "0.000 CREA",
     "active_votes": [
         {
-            "voter": "steemitblog",
+            "voter": "crearyblog",
             "weight": 0,
             "rshares": "1870813909383",
             "percent": 10000,
@@ -130,7 +130,7 @@ The result is returned from the post content as a `JSON` object with the followi
     ],
     "replies": [],
     "author_reputation": "128210130644387",
-    "promoted": "0.000 SBD",
+    "promoted": "0.000 CBD",
     "body_length": 754,
     "reblogged_by": []
 }
@@ -167,11 +167,11 @@ From this result, you have access to everything associated with the selected pos
 *   `net_votes` - Net positive votes
 *   `root_comment` - ID of the original content.
 *   `max_accepted_payout` - Value of the maximum payout this content will receive.
-*   `percent_steem_dollars` - The percent of Steem Dollars to key, unkept amounts will be received as STEEM Power.
+*   `percent_crea_dollars` - The percent of Crea Dollars to key, unkept amounts will be received as CREA Power.
 *   `allow_replies` - Allows content to disable replies.
 *   `allow_votes` - Allows content to receive votes.
 *   `allow_curation_rewards` - Allows curators of this content receive rewards.
-*   `beneficiaries` - The list of up to 8 beneficiary accounts for this content as well as the percentage of the author reward they will receive in STEEM Power.
+*   `beneficiaries` - The list of up to 8 beneficiary accounts for this content as well as the percentage of the author reward they will receive in CREA Power.
 *   `url` - The end of the url to this content.
 *   `root_title` - Title of the original content (useful in replies).
 *   `pending_payout_value` - Pending payout amount if 7 days has not yet elapsed.

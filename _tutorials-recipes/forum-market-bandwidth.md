@@ -9,10 +9,10 @@ layout: full
 ### Intro
 
 <h4 class="danger">
-  Please note, Bandwidth has been replaced by <a href="{{ '/search/?q=resource+credits' | relative_url }}">Resource Credits</a>.  This document is outdated and will remain in place to give historical context prior to HF20.  Also see: <a href="https://github.com/steemit/steem/wiki/RC-Bandwidth-System">RC Bandwidth System</a>, <a href="https://github.com/steemit/steem/releases/tag/v0.20.2">0.20.2 Release Notes</a>, <a href="https://steemit.com/steem/@steemitdev/developer-guide-resource-credit-system">Developer Guide: Resource Credit System</a>
+  Please note, Bandwidth has been replaced by <a href="{{ '/search/?q=resource+credits' | relative_url }}">Resource Credits</a>.  This document is outdated and will remain in place to give historical context prior to HF20.  Also see: <a href="https://github.com/creativechain/crea/wiki/RC-Bandwidth-System">RC Bandwidth System</a>, <a href="https://github.com/creativechain/crea/releases/tag/v0.20.2">0.20.2 Release Notes</a>, <a href="https://creary.net/crea/@crearydev/developer-guide-resource-credit-system">Developer Guide: Resource Credit System</a>
 </h4>
 
-We're going over the various API calls needed to determine the remaining bandwidth available to a particular account.  As mentioned in the [STEEM Whitepaper](https://steem.io/steem-whitepaper.pdf):
+We're going over the various API calls needed to determine the remaining bandwidth available to a particular account.  As mentioned in the [CREA Whitepaper](https://creaproject.io/crea-whitepaper.pdf):
 
 > Bandwidth used by an individual user should be measured over a suitably long period of time to allow that
 user to time-shift their usage. Users tend to login, do many things at once, then logout. This means that
@@ -27,7 +27,7 @@ Bandwidth is specific to each account and depends on account activity.
 
 1. [Getting Account Bandwidth](#getting-account-bandwidth)
 1. [Dynamic Global Properties](#dynamic-global-properties)
-1. [Account STEEM Power](#account-steem-power)
+1. [Account CREA Power](#account-crea-power)
 1. [Calculate](#calculate)
 
 ### Getting Account Bandwidth
@@ -41,7 +41,7 @@ curl -s --data '{
       "forum"
    ],
    "id":1
-}' https://api.steemit.com
+}' https://node1.creary.net
 ```
 
 ```json
@@ -68,7 +68,7 @@ Note, `average_bandwidth` is expressed as an integer with six decimal places rep
 To do the calculation, we need `max_virtual_bandwidth` and `total_vesting_shares` from the global properties, e.g.:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://api.steemit.com
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://node1.creary.net
 ```
 
 ```json
@@ -82,17 +82,17 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_pro
       "current_witness":"followbtcnews",
       "total_pow":514415,
       "num_pow_witnesses":172,
-      "virtual_supply":"283443693.176 STEEM",
-      "current_supply":"271786073.683 STEEM",
-      "confidential_supply":"0.000 STEEM",
-      "current_sbd_supply":"15504633.926 SBD",
-      "confidential_sbd_supply":"0.000 SBD",
-      "total_vesting_fund_steem":"193007548.472 STEEM",
+      "virtual_supply":"283443693.176 CREA",
+      "current_supply":"271786073.683 CREA",
+      "confidential_supply":"0.000 CREA",
+      "current_sbd_supply":"15504633.926 CBD",
+      "confidential_sbd_supply":"0.000 CBD",
+      "total_vesting_fund_crea":"193007548.472 CREA",
       "total_vesting_shares":"391468555319.000697 VESTS",
-      "total_reward_fund_steem":"0.000 STEEM",
+      "total_reward_fund_crea":"0.000 CREA",
       "total_reward_shares2":"0",
       "pending_rewarded_vesting_shares":"382967391.274340 VESTS",
-      "pending_rewarded_vesting_steem":"187173.234 STEEM",
+      "pending_rewarded_vesting_crea":"187173.234 CREA",
       "sbd_interest_rate":0,
       "sbd_print_rate":2966,
       "maximum_block_size":65536,
@@ -108,12 +108,12 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_pro
 }
 ```
 
-### Account STEEM Power
+### Account CREA Power
 
-We also need to know how much the account has in STEEM Power from `vesting_shares` and `received_vesting_shares`:
+We also need to know how much the account has in CREA Power from `vesting_shares` and `received_vesting_shares`:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params":[["cheetah"]], "id":1}' https://api.steemit.com
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params":[["cheetah"]], "id":1}' https://node1.creary.net
 ```
 
 ```json
@@ -139,13 +139,13 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params
             "key_auths":[["STM5bicRFWhpxnwBymo2HHJv6mFLiaP6AwVVsFEnnVjVcqbvqzvFt", 100], ["STM7yFmwPSKUP7FCV7Ut9Aev5cwfDzJZixcreS1U3ha36XG47ZpqT", 100], ["STM8Jn23vNmBzVuDAgQeZzzR17LmruENmmZmv1ra53tbsBgYbJFwk", 100]]
          },
          "memo_key":"STM7yFmwPSKUP7FCV7Ut9Aev5cwfDzJZixcreS1U3ha36XG47ZpqT",
-         "json_metadata":"{\"profile\":{\"profile_image\":\"https:\/\/c1.staticflickr.com\/6\/5739\/22389343016_25d10c52a3_b.jpg\",\"about\":\"I am a robot that automatically finds similar content. Check the website linked to on my blog to learn more about me!\",\"website\":\"http:\/\/steemit.com\/steemit\/@cheetah\/faq-about-cheetah\"}}",
+         "json_metadata":"{\"profile\":{\"profile_image\":\"https:\/\/c1.staticflickr.com\/6\/5739\/22389343016_25d10c52a3_b.jpg\",\"about\":\"I am a robot that automatically finds similar content. Check the website linked to on my blog to learn more about me!\",\"website\":\"http:\/\/creary.net\/creary\/@cheetah\/faq-about-cheetah\"}}",
          "proxy":"",
          "last_owner_update":"1970-01-01T00:00:00",
          "last_account_update":"2017-06-13T00:14:00",
          "created":"2016-07-17T08:47:18",
          "mined":true,
-         "recovery_account":"steem",
+         "recovery_account":"crea",
          "last_account_recovery":"1970-01-01T00:00:00",
          "reset_account":"null",
          "comment_count":0,
@@ -154,21 +154,21 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params
          "can_vote":true,
          "voting_power":1249,
          "last_vote_time":"2018-07-18T16:39:21",
-         "balance":"118.463 STEEM",
-         "savings_balance":"0.000 STEEM",
-         "sbd_balance":"67.717 SBD",
+         "balance":"118.463 CREA",
+         "savings_balance":"0.000 CREA",
+         "sbd_balance":"67.717 CBD",
          "sbd_seconds":"127094582318",
          "sbd_seconds_last_update":"2018-07-18T14:13:15",
          "sbd_last_interest_payment":"2018-06-20T12:01:15",
-         "savings_sbd_balance":"0.000 SBD",
+         "savings_sbd_balance":"0.000 CBD",
          "savings_sbd_seconds":"0",
          "savings_sbd_seconds_last_update":"1970-01-01T00:00:00",
          "savings_sbd_last_interest_payment":"1970-01-01T00:00:00",
          "savings_withdraw_requests":0,
-         "reward_sbd_balance":"0.005 SBD",
-         "reward_steem_balance":"0.009 STEEM",
+         "reward_sbd_balance":"0.005 CBD",
+         "reward_crea_balance":"0.009 CREA",
          "reward_vesting_balance":"26.366463 VESTS",
-         "reward_vesting_steem":"0.013 STEEM",
+         "reward_vesting_crea":"0.013 CREA",
          "vesting_shares":"4770940.577823 VESTS",
          "delegated_vesting_shares":"0.000000 VESTS",
          "received_vesting_shares":"16020356.484882 VESTS",
@@ -189,7 +189,7 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params
          "average_market_bandwidth":2406616155,
          "lifetime_market_bandwidth":"224370000000",
          "last_market_bandwidth_update":"2018-07-12T04:57:36",
-         "vesting_balance":"0.000 STEEM",
+         "vesting_balance":"0.000 CREA",
          "reputation":"305786119478594",
          "transfer_history":[],
          "market_history":[],
@@ -216,7 +216,7 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params
             "patrice",
             "pfunk",
             "pjau",
-            "teamsteem",
+            "teamcrea",
             "thecryptodrive",
             "themarkymark",
             "timcliff"

@@ -16,17 +16,17 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Jussi | Steem Developer</title>
+<title>Jussi | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="Jussi" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A reverse proxy that forwards json-rpc requests." />
 <meta property="og:description" content="A reverse proxy that forwards json-rpc requests." />
-<link rel="canonical" href="https://developers.steem.io/services/jussi" />
-<meta property="og:url" content="https://developers.steem.io/services/jussi" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/services/jussi" />
+<meta property="og:url" content="https://developers.creaproject.io/services/jussi" />
+<meta property="og:site_name" content="Crea Developer" />
 <script type="application/ld+json">
-{"description":"A reverse proxy that forwards json-rpc requests.","@type":"WebPage","url":"https://developers.steem.io/services/jussi","headline":"Jussi","@context":"http://schema.org"}</script>
+{"description":"A reverse proxy that forwards json-rpc requests.","@type":"WebPage","url":"https://developers.creaproject.io/services/jussi","headline":"Jussi","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -36,7 +36,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -59,7 +59,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -80,11 +80,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -127,11 +127,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -245,7 +245,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -296,26 +296,26 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
 	</div>
-	<p>Jussi is a custom-built caching layer for use with <code class="highlighter-rouge">steemd</code> and other various services (such as <a href="/services/#services-sbds">SBDS</a>).</p>
+	<p>Jussi is a custom-built caching layer for use with <code class="highlighter-rouge">cread</code> and other various services (such as <a href="/services/#services-sbds">SBDS</a>).</p>
 
 <p>The purpose of this document is to help developers and node operators set up their own jussi node within a docker container.</p>
 
 <h3 id="intro">Intro</h3>
 
-<p>Jussi is a reverse proxy that is situation between the API client and the <code class="highlighter-rouge">steemd</code> server.  It allows node operators to route an API call to nodes that are optimized for the particular call, as if they are all hosted from the same place.</p>
+<p>Jussi is a reverse proxy that is situation between the API client and the <code class="highlighter-rouge">cread</code> server.  It allows node operators to route an API call to nodes that are optimized for the particular call, as if they are all hosted from the same place.</p>
 
 <h3 id="sections">Sections</h3>
 
@@ -337,7 +337,7 @@
 
 <h5 id="to-run-jussi-locally">To run <code class="highlighter-rouge">jussi</code> locally:</h5>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/steemit/jussi.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/creativechain/jussi.git
 <span class="nb">cd </span>jussi
 docker build <span class="nt">-t</span><span class="o">=</span><span class="s2">"</span><span class="nv">$USER</span><span class="s2">/jussi:</span><span class="k">$(</span>git rev-parse <span class="nt">--abbrev-ref</span> HEAD<span class="k">)</span><span class="s2">"</span> <span class="nb">.</span>
 docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span class="nv">$USER</span><span class="s2">/jussi:</span><span class="k">$(</span>git rev-parse <span class="nt">--abbrev-ref</span> HEAD<span class="k">)</span><span class="s2">"</span>
@@ -351,7 +351,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[8675309], "id":1}'</span> http://localhost:9000
 </code></pre></div></div>
 
-<p>See: <a href="https://steemit.com/steemdev/@maitland/running-condenser-jussi-and-a-new-service-locally-adding-feature-flags-to-condenser">Running Condenser, Jussi and a new service locally + adding feature flags to Condenser</a></p>
+<p>See: <a href="https://creary.net/creadev/@maitland/running-condenser-jussi-and-a-new-service-locally-adding-feature-flags-to-condenser">Running Condenser, Jussi and a new service locally + adding feature flags to Condenser</a></p>
 
 <hr />
 
@@ -360,43 +360,43 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 <p>The default <code class="highlighter-rouge">DEV_config.json</code> is:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-   </span><span class="s2">"limits"</span><span class="p">:{</span><span class="s2">"blacklist_accounts"</span><span class="p">:[</span><span class="s2">"non-steemit"</span><span class="p">]},</span><span class="w">
+   </span><span class="s2">"limits"</span><span class="p">:{</span><span class="s2">"blacklist_accounts"</span><span class="p">:[</span><span class="s2">"non-creary"</span><span class="p">]},</span><span class="w">
    </span><span class="s2">"upstreams"</span><span class="p">:[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-         </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"steemd"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"cread"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"translate_to_appbase"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"urls"</span><span class="p">:[[</span><span class="s2">"steemd"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://steemd.steemitdev.com"</span><span class="p">]],</span><span class="w">
+         </span><span class="s2">"urls"</span><span class="p">:[[</span><span class="s2">"cread"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://cread.crearydev.com"</span><span class="p">]],</span><span class="w">
          </span><span class="s2">"ttls"</span><span class="p">:[</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.login_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.network_broadcast_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.follow_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.market_history_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_block"</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_block_header"</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_content"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state.params=['/trending']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state.params=['trending']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state.params=['/hot']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state.params=['/welcome']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state.params=['/promoted']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_state.params=['/created']"</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.database_api.get_dynamic_global_properties"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.login_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.network_broadcast_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.follow_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.market_history_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_block"</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_block_header"</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_content"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state.params=['/trending']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state.params=['trending']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state.params=['/hot']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state.params=['/welcome']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state.params=['/promoted']"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_state.params=['/created']"</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.database_api.get_dynamic_global_properties"</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w">
          </span><span class="p">],</span><span class="w">
          </span><span class="s2">"timeouts"</span><span class="p">:[</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd"</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.network_broadcast_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread"</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.network_broadcast_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w">
          </span><span class="p">],</span><span class="w">
          </span><span class="s2">"retries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
-            </span><span class="p">[</span><span class="s2">"steemd.network_broadcast_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread"</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="s2">"cread.network_broadcast_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w">
          </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"appbase"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"urls"</span><span class="p">:[[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://steemd.steemitdev.com"</span><span class="p">]],</span><span class="w">
+         </span><span class="s2">"urls"</span><span class="p">:[[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://cread.crearydev.com"</span><span class="p">]],</span><span class="w">
          </span><span class="s2">"ttls"</span><span class="p">:[</span><span class="w">
             </span><span class="p">[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">],</span><span class="w">
             </span><span class="p">[</span><span class="s2">"appbase.block_api"</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">],</span><span class="w">
@@ -451,112 +451,112 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">login_api</code></td>
       <td><em>all</em></td>
       <td><em>all</em></td>
       <td>-1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">network_broadcast_api</code></td>
       <td><em>all</em></td>
       <td><em>all</em></td>
       <td>-1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">follow_api</code></td>
       <td><em>all</em></td>
       <td><em>all</em></td>
       <td>10</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">market_history_api</code></td>
       <td><em>all</em></td>
       <td><em>all</em></td>
       <td>1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><em>all</em></td>
       <td><em>all</em></td>
       <td>3</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_block</code></td>
       <td><em>all</em></td>
       <td>-2</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_block_header</code></td>
       <td><em>all</em></td>
       <td>-2</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_content</code></td>
       <td><em>all</em></td>
       <td>1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><em>all</em></td>
       <td>1</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><code class="highlighter-rouge">'/trending'</code></td>
       <td>30</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><code class="highlighter-rouge">'trending'</code></td>
       <td>30</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><code class="highlighter-rouge">'/hot'</code></td>
       <td>30</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><code class="highlighter-rouge">'/welcome'</code></td>
       <td>30</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><code class="highlighter-rouge">'/promoted'</code></td>
       <td>30</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_state</code></td>
       <td><code class="highlighter-rouge">'/created'</code></td>
       <td>10</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">steemd</code></td>
+      <td><code class="highlighter-rouge">cread</code></td>
       <td><code class="highlighter-rouge">database_api</code></td>
       <td><code class="highlighter-rouge">get_dynamic_global_properties</code></td>
       <td><em>all</em></td>
@@ -620,7 +620,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"urls"</span><span class="p">:[</span><span class="w">
-    </span><span class="p">[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://api.steemitdev.com"</span><span class="p">]</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="w"> </span><span class="s2">"https://api.crearydev.com"</span><span class="p">]</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
@@ -629,9 +629,9 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"urls"</span><span class="p">:[</span><span class="w">
-    </span><span class="p">[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="s2">"https://api.steemitdev.com"</span><span class="p">],</span><span class="w">
-    </span><span class="p">[</span><span class="s2">"appbase.condenser_api.get_account_history"</span><span class="p">,</span><span class="s2">"https://api-for-account-history.steemitdev.com"</span><span class="p">],</span><span class="w">
-    </span><span class="p">[</span><span class="s2">"appbase.condenser_api.get_ops_in_block"</span><span class="p">,</span><span class="s2">"https://api-for-get-ops-in-block.steemitdev.com"</span><span class="p">]</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"appbase"</span><span class="p">,</span><span class="s2">"https://api.crearydev.com"</span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"appbase.condenser_api.get_account_history"</span><span class="p">,</span><span class="s2">"https://api-for-account-history.crearydev.com"</span><span class="p">],</span><span class="w">
+    </span><span class="p">[</span><span class="s2">"appbase.condenser_api.get_ops_in_block"</span><span class="p">,</span><span class="s2">"https://api-for-get-ops-in-block.crearydev.com"</span><span class="p">]</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
@@ -642,7 +642,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 
 <p>Adding a <code class="highlighter-rouge">retries</code> element defines the number of retry attempts, where <code class="highlighter-rouge">0</code> (or absent) means no retry.  The maximum number of retries is <code class="highlighter-rouge">3</code>.</p>
 
-<p>Note that retrying broadcast methods is not recommended, which is why the example explicitly sets <code class="highlighter-rouge">steemd.network_broadcast_api</code> to <code class="highlighter-rouge">0</code>.</p>
+<p>Note that retrying broadcast methods is not recommended, which is why the example explicitly sets <code class="highlighter-rouge">cread.network_broadcast_api</code> to <code class="highlighter-rouge">0</code>.</p>
 
 <h4 id="json-rpc-batch">json-rpc batch<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm"></i></a></h4>
 
@@ -650,7 +650,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 
 <p>For example, this would be a typical, non-batched JSON Object request that asks for a single block:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1}'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1}'</span> https://node1.creary.net
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -679,7 +679,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 
 <p>To request more than one block using the batch construct, wrap each call in a JSON Array, that asks for two blocks in one request:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[2], "id":2}]'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[2], "id":2}]'</span> https://node1.creary.net
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -732,7 +732,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
 
 <p>Error responses are returned in the JSON Array response as well.  Notice the <code class="highlighter-rouge">"WRONG"</code> parameter in the second element.  The first block is returned as expected, the second one generates an error.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":["WRONG"], "id":2}]'</span> https://api.steemit.com
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">--data</span> <span class="s1">'[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":["WRONG"], "id":2}]'</span> https://node1.creary.net
 </code></pre></div></div>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
@@ -826,7 +826,7 @@ docker run <span class="nt">-itp</span> 9000:8080 <span class="s2">"</span><span
       <li><em>Also see: <a href="http://www.jsonrpc.org/specification#batch">json-rpc batch specification</a></em></li>
     </ul>
   </li>
-  <li>Repository: <a href="https://github.com/steemit/jussi">github.com/steemit/jussi</a></li>
+  <li>Repository: <a href="https://github.com/creativechain/jussi">github.com/creary/jussi</a></li>
 </ul>
 
 <hr />

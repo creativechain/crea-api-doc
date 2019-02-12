@@ -1,15 +1,15 @@
 # Be sure to group each tool by testnet_id.
 # Possible places to watch for new testnet tools:
-# https://steemprojects.com/search/?q=testnet
-- name: Steemit, Inc. Live Testnet Endpoint
+# https://creaprojects.com/search/?q=testnet
+- name: Creativechain FDN Live Testnet Endpoint
   testnet_id: 46d82ab
-  url: https://testnet.steemitdev.com/
+  url: https://testnet.crearydev.com/
   purpose: For anyone who wants to start testing their node and applications.
-- name: testnet.steem.vc
+- name: testnet.crea.vc
   testnet_id: 79276ae
-  url: https://steemprojects.com/projects/p/steem-testnet/
-  purpose: General bootstrapping to `testnet.steem.vc` maintained maintained by `@almost-digital`.
+  url: https://creaprojects.com/projects/p/crea-testnet/
+  purpose: General bootstrapping to `testnet.crea.vc` maintained maintained by `@almost-digital`.
 - name: TestNET Condenser
   testnet_id: 79276ae
-  url: https://steemprojects.com/projects/p/testnet-condenser/
-  purpose: A condenser instance for `testnet.steem.vc`.
+  url: https://creaprojects.com/projects/p/testnet-condenser/
+  purpose: A condenser instance for `testnet.crea.vc`.

@@ -24,9 +24,9 @@ Dynamic Global Properties represents a set of values that are calculated during 
   * [virtual_supply](#virtual_supply)
   * [current_supply](#current_supply)
   * [current_sbd_supply](#current_sbd_supply)
-  * [total_vesting_fund_steem](#total_vesting_fund_steem-deprecated)
+  * [total_vesting_fund_crea](#total_vesting_fund_crea-deprecated)
   * [total_vesting_shares](#total_vesting_shares)
-  * [total_reward_fund_steem](#total_reward_fund_steem-deprecated)
+  * [total_reward_fund_crea](#total_reward_fund_crea-deprecated)
   * [total_reward_shares2](#total_reward_shares2-deprecated)
   * [sbd_interest_rate](#sbd_interest_rate)
   * [maximum_block_size](#maximum_block_size)
@@ -87,53 +87,53 @@ The current count of how many pending POW witnesses there are, determines the di
 
 ### `virtual_supply`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-The virtual supply is the supply of all STEEM + all SBD if all SBD were converted to STEEM at the current median price.
+The virtual supply is the supply of all CREA + all CBD if all CBD were converted to CREA at the current median price.
 
-* example: `283290592.652 STEEM`
+* example: `283290592.652 CREA`
 
 ### `current_supply`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-STEEM currently in existence.
+CREA currently in existence.
 
-* example: `271546371.129 STEEM`
+* example: `271546371.129 CREA`
 
 ### `confidential_supply`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
 Total asset held in confidential balances.
 
-* example: `0.000 STEEM`
+* example: `0.000 CREA`
 
 ### `current_sbd_supply`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-SBD currently in existence.
+CBD currently in existence.
 
-* example: `15478883.968 SBD`
+* example: `15478883.968 CBD`
 
 ### `confidential_sbd_supply`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
 Total asset held in confidential balances.
 
-* example: `0.000 SBD`
+* example: `0.000 CBD`
 
-### `total_vesting_fund_steem` <span class="warn deprecated">Deprecated</span><a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
+### `total_vesting_fund_crea` <span class="warn deprecated">Deprecated</span><a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-*Now deprecated way to get STEEM that is invested in STEEM POWER (powered up).*
+*Now deprecated way to get CREA that is invested in CREA POWER (powered up).*
 
 Use [`condenser_api.get_reward_fund`]({{ '/apidefinitions/#condenser_api.get_reward_fund' | relative_url }}) instead.
 
-* example: `192713261.007 STEEM`
+* example: `192713261.007 CREA`
 
 ### `total_vesting_shares`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-VESTS that are invested in STEEM POWER (powered up).
+VESTS that are invested in CREA POWER (powered up).
 
 * example: `390950506702.452773 VESTS`
 
-### `total_reward_fund_steem` <a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
+### `total_reward_fund_crea` <a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-STEEM available in the reward pool.
+CREA available in the reward pool.
 
-* example: `0.000 STEEM`
+* example: `0.000 CREA`
 
 ### `total_reward_shares2` <span class="warn deprecated">Deprecated</span><a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
@@ -145,7 +145,7 @@ Use [`condenser_api.get_reward_fund`]({{ '/apidefinitions/#condenser_api.get_rew
 
 ### `sbd_interest_rate`<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-This property defines the interest rate that SBD deposits receive.
+This property defines the interest rate that CBD deposits receive.
 
 * example: `0`
 
@@ -183,7 +183,7 @@ The number of votes regenerated per day.  Any user voting slower than this rate 
 
 ### `average_block_size` <span class="danger removed">Removed</span><a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
  
-**Removed in 0.20.6, see: [#3029](https://github.com/steemit/steem/issues/3029#issuecomment-428404844)**
+**Removed in 0.20.6, see: [#3029](https://github.com/creativechain/crea/issues/3029#issuecomment-428404844)**
 
 Average block size is updated every block to be: `average_block_size = (99 * average_block_size + new_block_size) / 100`.  This property is used to update the `current_reserve_ratio` to maintain approximately *  50% or less utilization of network capacity.
 
@@ -191,17 +191,17 @@ Average block size is updated every block to be: `average_block_size = (99 * ave
 
 ### `current_reserve_ratio` <span class="danger removed">Removed</span><a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-**Removed in 0.20.6, see: [#3029](https://github.com/steemit/steem/issues/3029#issuecomment-428404844)**
+**Removed in 0.20.6, see: [#3029](https://github.com/creativechain/crea/issues/3029#issuecomment-428404844)**
 
-Any time `average_block_size <= 50% maximum_block_size` this value grows by 1 until it reaches `STEEM_MAX_RESERVE_RATIO`.  Any time `average_block_size` is greater than 50% it falls by 1%.  Upward adjustments happen once per round, downward adjustments happen every block.
+Any time `average_block_size <= 50% maximum_block_size` this value grows by 1 until it reaches `CREA_MAX_RESERVE_RATIO`.  Any time `average_block_size` is greater than 50% it falls by 1%.  Upward adjustments happen once per round, downward adjustments happen every block.
 
 * example: `200000000`
 
 ### `max_virtual_bandwidth` <span class="danger removed">Removed</span><a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-**Removed in 0.20.6, see: [#3029](https://github.com/steemit/steem/issues/3029#issuecomment-428404844)**
+**Removed in 0.20.6, see: [#3029](https://github.com/creativechain/crea/issues/3029#issuecomment-428404844)**
 
-The maximum bandwidth the blockchain can support is `max_bandwidth = maximum_block_size * STEEM_BANDWIDTH_AVERAGE_WINDOW_SECONDS / STEEM_BLOCK_INTERVAL`; The maximum virtual bandwidth is: `max_bandwidth * current_reserve_ratio`
+The maximum bandwidth the blockchain can support is `max_bandwidth = maximum_block_size * CREA_BANDWIDTH_AVERAGE_WINDOW_SECONDS / CREA_BLOCK_INTERVAL`; The maximum virtual bandwidth is: `max_bandwidth * current_reserve_ratio`
 
 * example: `264241152000000000000`
 
@@ -212,16 +212,16 @@ Fields not covered in this recipe are:
 * `confidential_supply`
 * `confidential_sbd_supply`
 * `pending_rewarded_vesting_shares`
-* `pending_rewarded_vesting_steem`
+* `pending_rewarded_vesting_crea`
 * `sbd_print_rate`
 * `participation_count`
 
 ### Example Method Call<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
-To retrieve the current results for [`condenser_api.get_dynamic_global_properties`](https://developers.steem.io/apidefinitions/#condenser_api.get_dynamic_global_properties), we can retrieve the current state information using `curl`:
+To retrieve the current results for [`condenser_api.get_dynamic_global_properties`](https://developers.creaproject.io/apidefinitions/#condenser_api.get_dynamic_global_properties), we can retrieve the current state information using `curl`:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://api.steemit.com
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://node1.creary.net
 ```
 
 ### Example Output<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
@@ -237,17 +237,17 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_pro
       "current_witness":"xeldal",
       "total_pow":514415,
       "num_pow_witnesses":172,
-      "virtual_supply":"283434761.199 STEEM",
-      "current_supply":"271729171.190 STEEM",
-      "confidential_supply":"0.000 STEEM",
-      "current_sbd_supply":"15498201.173 SBD",
-      "confidential_sbd_supply":"0.000 SBD",
-      "total_vesting_fund_steem":"192913644.627 STEEM",
+      "virtual_supply":"283434761.199 CREA",
+      "current_supply":"271729171.190 CREA",
+      "confidential_supply":"0.000 CREA",
+      "current_sbd_supply":"15498201.173 CBD",
+      "confidential_sbd_supply":"0.000 CBD",
+      "total_vesting_fund_crea":"192913644.627 CREA",
       "total_vesting_shares":"391296886352.617261 VESTS",
-      "total_reward_fund_steem":"0.000 STEEM",
+      "total_reward_fund_crea":"0.000 CREA",
       "total_reward_shares2":"0",
       "pending_rewarded_vesting_shares":"379159224.860656 VESTS",
-      "pending_rewarded_vesting_steem":"185294.019 STEEM",
+      "pending_rewarded_vesting_crea":"185294.019 CREA",
       "sbd_interest_rate":0,
       "sbd_print_rate":2933,
       "maximum_block_size":65536,

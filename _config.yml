@@ -1,10 +1,10 @@
 # ----
 # Site
 
-title: Steem Developer
-description: Steem Developer Documentation.
+title: Crea Developer
+description: Crea Developer Documentation.
 baseurl: '/'
-url: https://developers.steem.io
+url: https://developers.creaproject.io
 google_analytics_key: UA-76480270-4
 permalink: /:categories/:title.html
 

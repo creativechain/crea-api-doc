@@ -4,7 +4,7 @@ position: 1
 layout: full
 ---
 
-Everyone is welcome to contribute code to Steemit, Inc. projects. We have a Code of Conduct;
+Everyone is welcome to contribute code to Creativechain FDN projects. We have a Code of Conduct;
 we ask that you please follow it in all your interactions with our team and your fellow
 contributors.
 
@@ -14,8 +14,8 @@ Please note that this contributing guide only applies to our development presenc
 
 There are currently two repositories that you can contribute to:
 
-1.  Devportal [https://github.com/steemit/devportal](https://github.com/steemit/devportal)
-2.  Javascript Tutorials [https://github.com/steemit/devportal-tutorials-js](https://github.com/steemit/devportal-tutorials-js)
+1.  Devportal [https://github.com/creativechain/crea-api-doc](https://github.com/creativechain/crea-api-doc)
+2.  Javascript Tutorials [https://github.com/creativechain/crea-api-doc-tutorials-js](https://github.com/creativechain/crea-api-doc-tutorials-js)
 
 All of the repositories have a package.json file included with them with script helpers setup. To use these you will need the following packages installed:
 
@@ -80,7 +80,7 @@ We will clarify standards of acceptable behavior and we will take appropriate
 and fair corrective action in response to any instances of unacceptable behavior.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting us at github.abuse@steemit.com. All
+reported by contacting us at github.abuse@creary.net. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. We
 maintain strict confidentiality with regard to the reporter of an incident.

@@ -1,10 +1,10 @@
 ---
 title: 'RB: Reblogging Post'
 position: 14
-description: "To reblog ('resteem') a post, we can use a custom json operation that is handled by the follow plugin."
+description: "To reblog ('recrea') a post, we can use a custom json operation that is handled by the follow plugin."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Reblogging Post](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/14_reblogging_post) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Reblogging Post](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/14_reblogging_post) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -61,7 +61,7 @@ tx.operations << {
 And to do the same with our tutorial script:
 
 ```bash
-ruby reblogging_post.rb https://steemit.com/@inertia/kinda-spooky
+ruby reblogging_post.rb https://creary.net/@inertia/kinda-spooky
 ```
 
 #### Example Output
@@ -81,7 +81,7 @@ From the example we get the following output from our script:
 }
 ```
 
-The response we get after broadcasting the transaction gives us the transaction id ([`0aa41e0...`](https://steemd.com/tx/0aa41e06b2612315d32cadeb671eb1201f266dd7)), block number ([`24063620`](https://steemd.com/b/24063620)), and the transaction number of that block (`19`).
+The response we get after broadcasting the transaction gives us the transaction id ([`0aa41e0...`](https://cread.com/tx/0aa41e06b2612315d32cadeb671eb1201f266dd7)), block number ([`24063620`](https://cread.com/b/24063620)), and the transaction number of that block (`19`).
 
 ### Example Error
 
@@ -281,12 +281,12 @@ Broadcasting a `custom_json` operation will require the following fields:
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 * `<url>`
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/14_reblogging_post
 bundle install
 ruby reblogging_post.rb <url>

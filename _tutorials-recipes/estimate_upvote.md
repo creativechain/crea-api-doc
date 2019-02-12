@@ -1,13 +1,13 @@
 ---
 title: Estimate the value of an upvote
 position: 1
-description: Calculate the approximate value of an upvote on Steem
+description: Calculate the approximate value of an upvote on Crea
 exclude: true
 layout: full
 
 ---
 
-*By the end of this recipe you should know how to estimate value of each vote on Steem.*
+*By the end of this recipe you should know how to estimate value of each vote on Crea.*
 
 This recipe will take you through the process of fetching necessary data and formulating estimation.
 
@@ -18,7 +18,7 @@ Calculating value of each vote depends on multiple factors. Reward fund, recent 
 ## Steps
 
 1. **Get Reward Fund** Current reward fund information is crucial part of estimation
-1. **Get Account** Steem power and voting power is another important info
+1. **Get Account** Crea power and voting power is another important info
 1. **Feed history** To get price rate reported by witnesses
 1. **Final calculation** Formulate all information we have
 
@@ -33,7 +33,7 @@ The response we're working with will look like:
 {
 	"id":0,
 	"name":"post",
-	"reward_balance":"741222.051 STEEM",
+	"reward_balance":"741222.051 CREA",
 	"recent_claims":"457419472820935017",
 	"last_update":"2018-05-23T12:08:36",
 	"content_constant":"2000000000000",
@@ -54,7 +54,7 @@ The response example will look like:
 [
   {
     "id": 9660,
-    "name": "steemitblog",
+    "name": "crearyblog",
     "owner": {
       "weight_threshold": 1,
       "account_auths": [
@@ -114,7 +114,7 @@ The response example will look like:
     "last_account_update": "2017-03-17T18:19:18",
     "created": "2016-05-24T18:54:24",
     "mined": false,
-    "recovery_account": "steem",
+    "recovery_account": "crea",
     "last_account_recovery": "2016-07-19T19:48:54",
     "reset_account": "null",
     "comment_count": 0,
@@ -123,21 +123,21 @@ The response example will look like:
     "can_vote": true,
     "voting_power": 9800,
     "last_vote_time": "2018-05-22T20:10:45",
-    "balance": "810.371 STEEM",
-    "savings_balance": "0.000 STEEM",
-    "sbd_balance": "4613.426 SBD",
+    "balance": "810.371 CREA",
+    "savings_balance": "0.000 CREA",
+    "sbd_balance": "4613.426 CBD",
     "sbd_seconds": "10828300402329",
     "sbd_seconds_last_update": "2018-05-22T22:34:24",
     "sbd_last_interest_payment": "2018-04-25T18:26:15",
-    "savings_sbd_balance": "0.000 SBD",
+    "savings_sbd_balance": "0.000 CBD",
     "savings_sbd_seconds": "0",
     "savings_sbd_seconds_last_update": "1970-01-01T00:00:00",
     "savings_sbd_last_interest_payment": "1970-01-01T00:00:00",
     "savings_withdraw_requests": 0,
-    "reward_sbd_balance": "79.490 SBD",
-    "reward_steem_balance": "0.000 STEEM",
+    "reward_sbd_balance": "79.490 CBD",
+    "reward_crea_balance": "0.000 CREA",
     "reward_vesting_balance": "608341.169185 VESTS",
-    "reward_vesting_steem": "293.101 STEEM",
+    "reward_vesting_crea": "293.101 CREA",
     "vesting_shares": "93540695.469156 VESTS",
     "delegated_vesting_shares": "0.000000 VESTS",
     "received_vesting_shares": "0.000000 VESTS",
@@ -163,7 +163,7 @@ The response example will look like:
     "average_market_bandwidth": 1170000000,
     "lifetime_market_bandwidth": 1170000000,
     "last_market_bandwidth_update": "2016-07-27T15:10:09",
-    "vesting_balance": "0.000 STEEM",
+    "vesting_balance": "0.000 CREA",
     "reputation": "146151592482665",
     "transfer_history": [],
     "market_history": [],
@@ -187,8 +187,8 @@ The response example will look like:
 
 ```json
 {
-  "base": "3.029 SBD",
-  "quote": "1.000 STEEM"
+  "base": "3.029 CBD",
+  "quote": "1.000 CREA"
 }
 ```
 

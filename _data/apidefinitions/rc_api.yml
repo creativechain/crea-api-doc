@@ -3,7 +3,7 @@
 ---
 - name: Resource Credit API
   description: |
-    Allows querying of various Resource Credit metrics.  See: [RC Bandwidth System](https://github.com/steemit/steem/wiki/RC-Bandwidth-System), [0.20.2 Release Notes](https://github.com/steemit/steem/releases/tag/v0.20.2), [Developer Guide: Resource Credit System](https://steemit.com/steem/@steemitdev/developer-guide-resource-credit-system)
+    Allows querying of various Resource Credit metrics.  See: [RC Bandwidth System](https://github.com/creativechain/crea/wiki/RC-Bandwidth-System), [0.20.2 Release Notes](https://github.com/creativechain/crea/releases/tag/v0.20.2), [Developer Guide: Resource Credit System](https://creary.net/crea/@crearydev/developer-guide-resource-credit-system)
   methods:
   - api_method: rc_api.find_rc_accounts
     since: HF20
@@ -12,7 +12,7 @@
       
       | `accounts` (string) | |
       |---------------------|-|
-      | `"steemit"` | Query the available resource credits for the account named "steemit". |
+      | `"creary"` | Query the available resource credits for the account named "creary". |
       | `"alice"` | Query the available resource credits for the accounts named "alice" and "bob". |
     parameter_json: '{"accounts":[]}'
     expected_response_json: |
@@ -30,14 +30,14 @@
          ]
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"rc_api.find_rc_accounts", "params":{"accounts":["steemit"]},
+    - '{"jsonrpc":"2.0", "method":"rc_api.find_rc_accounts", "params":{"accounts":["creary"]},
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"rc_api.find_rc_accounts", "params":{"accounts":["alice","bob"]},
       "id":1}'
   - api_method: rc_api.get_resource_params
     since: HF20
     purpose: |
-      Work in progress.  See: [#2980](https://github.com/steemit/steem/issues/2980)
+      Work in progress.  See: [#2980](https://github.com/creativechain/crea/issues/2980)
     parameter_json: "{}"
     expected_response_json: |
       {
@@ -214,7 +214,7 @@
   - api_method: rc_api.get_resource_pool
     since: HF20
     purpose: |
-      Work in progress.  See: [#2563](https://github.com/steemit/steem/issues/2563), [PR#2678](https://github.com/steemit/steem/pull/2678)
+      Work in progress.  See: [#2563](https://github.com/creativechain/crea/issues/2563), [PR#2678](https://github.com/creativechain/crea/pull/2678)
     parameter_json: "{}"
     expected_response_json: |
       {

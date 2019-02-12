@@ -4,7 +4,7 @@ position: 10
 description: "This example will broadcast a new post to the blockchain using the values provided.  To create a post in `ruby`, we will use a `Radiator::Transaction` containing a `comment` operation, which is how all content is stored internally."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Submit Post](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/10_submit_post) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Submit Post](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/10_submit_post) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -25,10 +25,10 @@ You should change `wif` to the posting key that matches your `author`.  This scr
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/10_submit_post
 bundle install
 ruby submit_a_new_post.rb
@@ -49,7 +49,7 @@ ruby submit_a_new_post.rb
 }
 ```
 
-The response we get after broadcasting the transaction gives us the transaction id ([`768f7f6...`](https://steemd.com/tx/768f7f64cee94413da0017ef79f592bb4da86baf)), block number ([`22867626`](https://steemd.com/b/22867626)), and the transaction number of that block (`43`).
+The response we get after broadcasting the transaction gives us the transaction id ([`768f7f6...`](https://cread.com/tx/768f7f64cee94413da0017ef79f592bb4da86baf)), block number ([`22867626`](https://cread.com/b/22867626)), and the transaction number of that block (`43`).
 
 #### Error Handling
 

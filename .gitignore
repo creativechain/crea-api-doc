@@ -4,4 +4,4 @@ _site/
 vendor
 node_modules/
 .DS_Store
-
+resources

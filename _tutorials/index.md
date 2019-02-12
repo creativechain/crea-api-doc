@@ -6,7 +6,7 @@ exclude: true
 {% assign nav = site.data.nav.toc | where: "collection", "tutorials" | first %}
 <section id="{{ doc.id | slugify }}" class="row {{ doc.id | slugify }}">
 	<section class="row">
-		<p>Read, play, and <i>learn <b>Steem</b></i>.</p>
+		<p>Read, play, and <i>learn <b>Crea</b></i>.</p>
 		{% if nav.docs %}
 			{% assign sorted_nav_docs = nav.docs | sort: "position" %}
 			{% for nav_doc in sorted_nav_docs %}

@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>PY: Account Recovery | Steem Developer</title>
+<title>PY: Account Recovery | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="PY: Account Recovery" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="How to recover an account using Python." />
 <meta property="og:description" content="How to recover an account using Python." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-python/account_recovery" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-python/account_recovery" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-python/account_recovery" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-python/account_recovery" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"How to recover an account using Python.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-python/account_recovery","headline":"PY: Account Recovery","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-python/account_recovery"},"@context":"http://schema.org"}</script>
+{"description":"How to recover an account using Python.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-python/account_recovery","headline":"PY: Account Recovery","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-python/account_recovery"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,16 +323,16 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/35_account_recovery">Account Recovery</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-py">PY tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/35_account_recovery">Account Recovery</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-py">PY tutorials repository</a>.</span>
 <br /></p>
 
-<p>In this tutorial we show you how to request account recovery for a user and also recover that account on the <strong>Steem</strong> blockchain using the <a href="https://github.com/holgern/beem">beem-python</a> library.</p>
+<p>In this tutorial we show you how to request account recovery for a user and also recover that account on the <strong>Crea</strong> blockchain using the <a href="https://github.com/holgern/beem">beem-python</a> library.</p>
 
 <p>The recovery system is used to recover hacked accounts. In the event that you lose your password, your account is lost forever. You must know at least one old password that was used on your account within 30 days. This recovery process can only be executed once an hour. Stolen Account Recovery gives the rightful account owner 30 days to recover their account from the moment the thief changed their owner key.</p>
 
 <h2 id="intro">Intro</h2>
 
-<p>There are two parties involved in recovering an account. The user that requires their account to be recovered, and the recovery account (or trustee) which is the account that created the username on the blockchain. For anyone creating their account through the main Steemit webiste, their recovery account would be Steemit. If however your account was created for you by another user, that user is the one that would have to initialize your account recovery. The recovery account can be changed however to whichever user you require.</p>
+<p>There are two parties involved in recovering an account. The user that requires their account to be recovered, and the recovery account (or trustee) which is the account that created the username on the blockchain. For anyone creating their account through the main Creary webiste, their recovery account would be Creary. If however your account was created for you by another user, that user is the one that would have to initialize your account recovery. The recovery account can be changed however to whichever user you require.</p>
 
 <p>For this tutorial we are using the <code class="highlighter-rouge">beem-python</code> library which contains the required functions to execute this recovery process. There are two main sections to this process. Firstly, there is the <code class="highlighter-rouge">request_account_recovery</code> function where the owner is verified and the intent for account recovery is transmitted to the blockchain. The second part is the actual <code class="highlighter-rouge">recover_account</code> process. Along with this we also create a complete set of new account keys (posting, active, owner and memo) in order for the account to function properly. If these keys are not generated you will receive an error when trying to log in with your new password: <code class="highlighter-rouge">This password is bound to your account's owner key and can not be used to login to this site. However, you can use it to update your password to obtain a more secure set of keys</code></p>
 
@@ -379,13 +379,13 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">beembase</span>
 <span class="kn">from</span> <span class="nn">beem.account</span> <span class="kn">import</span> <span class="n">Account</span>
-<span class="kn">from</span> <span class="nn">beem</span> <span class="kn">import</span> <span class="n">Steem</span>
+<span class="kn">from</span> <span class="nn">beem</span> <span class="kn">import</span> <span class="n">Crea</span>
 <span class="kn">from</span> <span class="nn">beem.transactionbuilder</span> <span class="kn">import</span> <span class="n">TransactionBuilder</span>
 <span class="kn">from</span> <span class="nn">beemgraphenebase.account</span> <span class="kn">import</span> <span class="n">PasswordKey</span>
 <span class="kn">from</span> <span class="nn">beembase.objects</span> <span class="kn">import</span> <span class="n">Permission</span>
 </code></pre></div></div>
 
-<p>There are 5 inputs required. The account name to be recovered along with the old and new passwords. We also require the account name and private active key of the recovery account (account owner / trustee). For the first step in the process we initialize the steem class with the private key from the recovery account. The values are supplied via the terminal/console.</p>
+<p>There are 5 inputs required. The account name to be recovered along with the old and new passwords. We also require the account name and private active key of the recovery account (account owner / trustee). For the first step in the process we initialize the crea class with the private key from the recovery account. The values are supplied via the terminal/console.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#capture user information
 </span><span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'account to be recovered: '</span><span class="p">)</span>
@@ -396,14 +396,14 @@
 <span class="n">recovery_account_private_key</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'account owner private ACTIVE key: '</span><span class="p">)</span>
 
 <span class="c1">#connect to production server with active key
-</span><span class="n">s</span> <span class="o">=</span> <span class="n">Steem</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="p">[</span><span class="s">'https://api.steemit.com'</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">recovery_account_private_key</span><span class="p">])</span>
+</span><span class="n">s</span> <span class="o">=</span> <span class="n">Crea</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="p">[</span><span class="s">'https://node1.creary.net'</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">recovery_account_private_key</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>The new password for the account to be recovered must be at least 32 characters long.</p>
 
 <h4 id="2-owner-key-creation-">2. Owner key creation <a name="owner_key"></a></h4>
 
-<p>Both new and old owner keys are generated from the passwords supplied in the first step. For a more in depth look at creating keys please refer to <a href="https://developers.steem.io/tutorials-python/password_key_change">this</a> tutorial on changing your password and keys.</p>
+<p>Both new and old owner keys are generated from the passwords supplied in the first step. For a more in depth look at creating keys please refer to <a href="https://developers.creaproject.io/tutorials-python/password_key_change">this</a> tutorial on changing your password and keys.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#create new account owner keys
 </span><span class="n">new_account_owner_private_key</span> <span class="o">=</span> <span class="n">PasswordKey</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">new_password</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s">'owner'</span><span class="p">)</span><span class="o">.</span><span class="n">get_private_key</span><span class="p">()</span>
@@ -416,7 +416,7 @@
 <span class="n">old_account_owner_public_key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">old_account_owner_private_key</span><span class="o">.</span><span class="n">pubkey</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>The Steem blockchain knows the history of your account, and every owner key that has ever been used for it. When you enter your recent password, it uses that to generate an owner key that can match up to a previous owner public key on the account. Without that password and owner key, the recovery account can’t do anything to recover your account.</p>
+<p>The Crea blockchain knows the history of your account, and every owner key that has ever been used for it. When you enter your recent password, it uses that to generate an owner key that can match up to a previous owner public key on the account. Without that password and owner key, the recovery account can’t do anything to recover your account.</p>
 
 <h4 id="3-recovery-request-operation-and-transmission-">3. Recovery request operation and transmission <a name="recovery_request"></a></h4>
 
@@ -496,9 +496,9 @@
 
 <h4 id="5-account-recovery-commit-">5. Account recovery commit <a name="recovery_commit"></a></h4>
 
-<p>The steem class is initialised once more but with the required WIF for this specific section. This is necessary when different keys are required at various steps. The <code class="highlighter-rouge">recover_account</code> function is transmitted to the blockchain via the <code class="highlighter-rouge">TransactionBuilder</code> operation in order to append the new private keys. The operation is then broadcast.</p>
+<p>The crea class is initialised once more but with the required WIF for this specific section. This is necessary when different keys are required at various steps. The <code class="highlighter-rouge">recover_account</code> function is transmitted to the blockchain via the <code class="highlighter-rouge">TransactionBuilder</code> operation in order to append the new private keys. The operation is then broadcast.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="n">Steem</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="p">[</span><span class="s">'https://api.steemit.com'</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">recovery_account_private_key</span><span class="p">])</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="n">Crea</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="p">[</span><span class="s">'https://node1.creary.net'</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">recovery_account_private_key</span><span class="p">])</span>
 
 <span class="n">op_recover_account</span> <span class="o">=</span> <span class="n">beembase</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">Recover_account</span><span class="p">(</span><span class="o">**</span><span class="n">op_recover_account_data</span><span class="p">)</span>
 
@@ -518,9 +518,9 @@
 
 <h4 id="6-account-update-commit-">6. Account update commit <a name="account_commit"></a></h4>
 
-<p>The same basic process is followed as in the previous step. For this step however we require the new owner private key which is initialised in the steem class. The <code class="highlighter-rouge">TransactionBuilder</code> operation is used once more for the transmission to the blockchain.</p>
+<p>The same basic process is followed as in the previous step. For this step however we require the new owner private key which is initialised in the crea class. The <code class="highlighter-rouge">TransactionBuilder</code> operation is used once more for the transmission to the blockchain.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="n">Steem</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="p">[</span><span class="s">'https://api.steemit.com'</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">new_account_owner_private_key</span><span class="p">])</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="n">Crea</span><span class="p">(</span><span class="n">node</span><span class="o">=</span><span class="p">[</span><span class="s">'https://node1.creary.net'</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">new_account_owner_private_key</span><span class="p">])</span>
 
 <span class="n">op_account_update</span> <span class="o">=</span> <span class="n">beembase</span><span class="o">.</span><span class="n">operations</span><span class="o">.</span><span class="n">Account_update</span><span class="p">(</span><span class="o">**</span><span class="n">op_account_update_data</span><span class="p">)</span>
 

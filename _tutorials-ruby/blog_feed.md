@@ -4,7 +4,7 @@ position: 1
 description: "This example will output blog details to the terminal for the author specified, limited to five results."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Blog Feed](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/01_blog_feed) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Blog Feed](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/01_blog_feed) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -21,43 +21,43 @@ Finally, it creates the canonical URL by combining `parent_permlink`, `author`, 
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/01_blog_feed
 bundle install
-ruby blog_feed.rb steemitblog
+ruby blog_feed.rb crearyblog
 ```
 
 ### Example Output
 
 ```
 2018-03-24 17:30:36 UTC
-  Post: Happy 2nd Birthday Steem Blockchain
-  By: steemitblog
+  Post: Happy 2nd Birthday Crea Blockchain
+  By: crearyblog
   Words: 301
-  https://steemit.com/steem/@steemitblog/happy-2nd-birthday-steem-blockchain
+  https://creary.net/crea/@crearyblog/happy-2nd-birthday-crea-blockchain
 2018-03-07 20:56:36 UTC
-  Post: Join Team Steemit at TokenFest!
-  By: steemitblog
+  Post: Join Team Creary at TokenFest!
+  By: crearyblog
   Words: 104
-  https://steemit.com/steemit/@steemitblog/join-team-steemit-at-tokenfest
+  https://creary.net/creary/@crearyblog/join-team-creary-at-tokenfest
 2018-02-27 20:18:36 UTC
   Post: Smart Media Token Development
-  By: steemitblog
+  By: crearyblog
   Words: 699
-  https://steemit.com/smt/@steemitblog/smart-media-token-development
+  https://creary.net/smt/@crearyblog/smart-media-token-development
 2018-02-25 20:55:24 UTC
-  Reblog: I filmed this video of @ned @pkattera and @sneak talking about the SMTs and the future of Steemit
+  Reblog: I filmed this video of @ned @pkattera and @sneak talking about the SMTs and the future of Creary
   By: ruwan
   Words: 89
-  https://steemit.com/steemit/@ruwan/i-filmed-this-video-of-ned-pkattera-and-sneak-talking-about-the-smts-and-the-future-of-steemit
+  https://creary.net/creary/@ruwan/i-filmed-this-video-of-ned-pkattera-and-sneak-talking-about-the-smts-and-the-future-of-creary
 2018-02-22 17:41:00 UTC
-  Post: STEEM 및 SBD가 GOPAX에 상장되었습니다
-  By: steemitblog
+  Post: CREA 및 CBD가 GOPAX에 상장되었습니다
+  By: crearyblog
   Words: 317
-  https://steemit.com/gopax/@steemitblog/steem-sbd-gopa
+  https://creary.net/gopax/@crearyblog/crea-sbd-gopa
 ```
 
 

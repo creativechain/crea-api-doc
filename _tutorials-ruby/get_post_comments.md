@@ -4,7 +4,7 @@ position: 7
 description: "This example will output the reply details and totals for the post/comment passed as an argument to the script."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Comments](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/07_get_post_comments) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Comments](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/07_get_post_comments) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -15,13 +15,13 @@ First, we ask the blockchain for the replies on a post or comment.  Then, we gra
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/07_get_post_comments
 bundle install
-ruby comments_list.rb https://steemit.com/steem/@steemitblog/dev-portal-update-new-steem-developer-resources
+ruby comments_list.rb https://creary.net/crea/@crearyblog/dev-portal-update-new-crea-developer-resources
 ```
 
 ### Example Output
@@ -34,7 +34,7 @@ Replies by:
 	reseller
 	latikasha
 	dannywill
-	steemitag
+	crearyag
 	sequentialvibe
 	xplosive
 	whatsup

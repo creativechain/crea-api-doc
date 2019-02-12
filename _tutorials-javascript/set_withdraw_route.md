@@ -1,40 +1,40 @@
 ---
 title: 'JS: Set Withdraw Route'
 position: 28
-description: "_Set routes to an account's power downs or withdraws._"
+description: "_Set routes to an account's de-energizes or withdraws._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Set Withdraw Route](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/28_set_withdraw_route) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Set Withdraw Route](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/28_set_withdraw_route) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-We will learn how to allocate a percentage for withdrawal to other accounts using Steemconnect as well as with the client-side signing method. This tutorial runs on the main Steem blockchain. Therefore, any accounts used here will affect real funds on the live network. **Use with caution.**
+We will learn how to allocate a percentage for withdrawal to other accounts using Creaconnect as well as with the client-side signing method. This tutorial runs on the main Crea blockchain. Therefore, any accounts used here will affect real funds on the live network. **Use with caution.**
 
 ## Intro
 
-This tutorial will demonstrate a few functions such as querying account by name and determining the vesting balance of the related account. This will allow us to set "withdraw routes" to other accounts with a percent selection and auto power up function. This feature is quite useful if you want to withdraw a portion of your STEEM to a separate account or POWER UP other accounts as you withdraw from one account.
+This tutorial will demonstrate a few functions such as querying account by name and determining the vesting balance of the related account. This will allow us to set "withdraw routes" to other accounts with a percent selection and auto energize function. This feature is quite useful if you want to withdraw a portion of your CREA to a separate account or ENERGIZE other accounts as you withdraw from one account.
 
 ## Steps
 
-1.  [**App setup**](#app-setup) Setup `dsteem` to use the proper connection and network.
+1.  [**App setup**](#app-setup) Setup `dcrea` to use the proper connection and network.
 2.  [**Get account routes**](#search-account) Get account's current routes
 3.  [**Fill form**](#fill-form) Fill form with appropriate data
-4.  [**Set withdraw route**](#withdraw-route) Set route with Steemconnect or client-side signing
+4.  [**Set withdraw route**](#withdraw-route) Set route with Creaconnect or client-side signing
 
 #### 1. App setup <a name="app-setup"></a>
 
-Below, we have `dsteem` pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:
+Below, we have `dcrea` pointing to the production network with the proper chainId, addressPrefix, and endpoint. There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-const dsteem = require('dsteem');
+const dcrea = require('dcrea');
 let opts = {};
 //connect to production server
 opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
 //connect to server which is connected to the network/production
-const client = new dsteem.Client('https://api.steemit.com');
+const client = new dcrea.Client('https://node1.creary.net');
 ```
 
 #### 2. Get account routes <a name="search-account"></a>
@@ -69,13 +69,13 @@ document.getElementById('accInfo').innerHTML = info;
 
 Previous routes can be overwritten by changing and submitting a new transaction to the same account.
 
-We also generate a Steemconnect signing link.
+We also generate a Creaconnect signing link.
 
 ```javascript
 window.openSC = async () => {
-    const link = `https://steemconnect.com/sign/set-withdraw-vesting-route?from_account=${
+    const link = `https://creaconnect.com/sign/set-withdraw-vesting-route?from_account=${
         document.getElementById('username').value
-    }&percent=${document.getElementById('steem').value * 100}&to_account=${
+    }&percent=${document.getElementById('crea').value * 100}&to_account=${
         document.getElementById('account').value
     }&auto_vest=${document.getElementById('percent').checked}`;
     window.open(link);
@@ -84,11 +84,11 @@ window.openSC = async () => {
 
 #### 4. Set withdraw route <a name="withdraw-route"></a>
 
-We have two options on how to Power down: Steemconnect and client-side signing. Since this action requires Active authority, both client-side and Stemconnect signing will require the Active Private key to sign the transaction. The transaction submission function appears as follows:
+We have two options on how to De-energize: Creaconnect and client-side signing. Since this action requires Active authority, both client-side and Stemconnect signing will require the Active Private key to sign the transaction. The transaction submission function appears as follows:
 
 ```javascript
 window.submitTx = async () => {
-    const privateKey = dsteem.PrivateKey.fromString(
+    const privateKey = dcrea.PrivateKey.fromString(
         document.getElementById('wif').value
     );
     const op = [
@@ -96,7 +96,7 @@ window.submitTx = async () => {
         {
             from_account: document.getElementById('username').value,
             to_account: document.getElementById('account').value,
-            percent: document.getElementById('steem').value * 100,
+            percent: document.getElementById('crea').value * 100,
             auto_vest: document.getElementById('percent').checked,
         },
     ];

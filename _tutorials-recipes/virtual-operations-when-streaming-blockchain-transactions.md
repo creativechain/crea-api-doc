@@ -11,9 +11,9 @@ This recipe will take you through the process of streaming blockchain transactio
 
 ## Intro
 
-There are two points from which Steem blockchain transactions can be streamed to give a "live" view of what's happening on the blockchain. The first is from the `head block` which is the most recent block created on the chain (every 3 seconds when a new block is created). The second, is from the `last irreversible block` which is the newest block that has been confirmed by a sufficient number of block producers so that it can no longer be invalidated. This is not a live view but it is normally not far behind the head block number.
+There are two points from which Crea blockchain transactions can be streamed to give a "live" view of what's happening on the blockchain. The first is from the `head block` which is the most recent block created on the chain (every 3 seconds when a new block is created). The second, is from the `last irreversible block` which is the newest block that has been confirmed by a sufficient number of block producers so that it can no longer be invalidated. This is not a live view but it is normally not far behind the head block number.
 
-There is already a [javascript tutorial](https://developers.steem.io/tutorials-javascript/stream_blockchain_transactions) on the [devportal](https://developers.steem.io/) describing how to stream blockchain transactions. This recipe will go into further detail on operations on each block and more specifically the virtual operations that are executed with every new block. We will also assume that you have already run through the basic tutorials on the Steem blockchain and will focus more on the specific functions and outputs pertinent to this topic.
+There is already a [javascript tutorial](https://developers.creaproject.io/tutorials-javascript/stream_blockchain_transactions) on the [devportal](https://developers.creaproject.io/) describing how to stream blockchain transactions. This recipe will go into further detail on operations on each block and more specifically the virtual operations that are executed with every new block. We will also assume that you have already run through the basic tutorials on the Crea blockchain and will focus more on the specific functions and outputs pertinent to this topic.
 
 ## Steps
 
@@ -22,7 +22,7 @@ There is already a [javascript tutorial](https://developers.steem.io/tutorials-j
 
 #### 1. Blocks, transactions and operations <a name="BTO"></a>
 
-In order to stream a block and get the information as will be shown below we use the `blockchain api` in the `dsteem` library. The below method has an option parameter `mode` that defaults to `irreversible` but can be set to `latest` which would then return the `head block`. This means that both types of blocks can be streamed.
+In order to stream a block and get the information as will be shown below we use the `blockchain api` in the `dcrea` library. The below method has an option parameter `mode` that defaults to `irreversible` but can be set to `latest` which would then return the `head block`. This means that both types of blocks can be streamed.
 
 ```javascript
 stream = client.blockchain.getBlockStream();
@@ -84,13 +84,13 @@ And each transaction contains operations:
 
 Virtual operations (curation rewards, etc) are derived from blockchain activity, but aren't actually stored as operations themselves. They happen based on consensus from the blockchain based on other user initiated operations. These `virtual operations` are **NOT** available on the `head block`, so a 100% live feed of this information would not be possible. In order then to follow these operations you would have to stream the `last_irreversible_block`. To get a feed of virtual operations, each of the block transactions needs to be investigated for the `type` of the operations.
 
-`steem-python` provides a very simple method to stream virtual or any other operations directly:
+`crea-python` provides a very simple method to stream virtual or any other operations directly:
 
 ```python
-from steem import Steem
-from steem.blockchain import Blockchain
+from crea import Crea
+from crea.blockchain import Blockchain
 import pprint
-s = Steem()
+s = Crea()
 b = Blockchain(s)
 
 for op in b.stream('author_reward'):
@@ -106,8 +106,8 @@ With result:
   "author": "hopehash",
   "block_num": 25145619,
   "permlink": "hopehash-btc-1-057",
-  "sbd_payout": "0.000 SBD",
-  "steem_payout": "2.341 STEEM",
+  "sbd_payout": "0.000 CBD",
+  "crea_payout": "2.341 CREA",
   "timestamp": "2018-08-17T17:11:36.18",
   "trx_id": "0000000000000000000000000000000000000000",
   "type": "author_reward",
@@ -115,7 +115,7 @@ With result:
 }
 ```
 
-From the above example all operations of type "author_reward" will be printed on the console/terminal. You can change the type to which ever operation you want to stream or remove the parameter and stream all operations. The same logic can be followed when using `steem-js` by isolating the operations of each transaction and looking for the required operation type. Below example is again a modification of the tutorial initially referenced.
+From the above example all operations of type "author_reward" will be printed on the console/terminal. You can change the type to which ever operation you want to stream or remove the parameter and stream all operations. The same logic can be followed when using `crea-js` by isolating the operations of each transaction and looking for the required operation type. Below example is again a modification of the tutorial initially referenced.
 
 ```javascript
 stream = client.blockchain.getBlockStream();

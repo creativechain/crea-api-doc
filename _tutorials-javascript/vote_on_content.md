@@ -4,22 +4,22 @@ position: 17
 description: "_Create a weighted up or down vote on a comment/post._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Vote On Content](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/17_vote_on_content) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Vote On Content](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/17_vote_on_content) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
 This tutorial will take you through the process of preparing and submitting a `vote` using the `broadcast` operation.
-Because this tutorial essentially produces spam, it will be pointed at a Steem testnet. The testnet is an open resource,
+Because this tutorial essentially produces spam, it will be pointed at a Crea testnet. The testnet is an open resource,
 so the default account and posting key in this tutorial may have been changed by another developer learning the ropes.
 If that happens, you'll want to create a new account on the testnet and use that account's credentials instead.
 
-To learn more about the testnet, including an easy way to create a play account, visit https://testnet.steem.vc/
+To learn more about the testnet, including an easy way to create a play account, visit https://testnet.crea.vc/
 
 ## Intro
 
-We are using the `broadcast.vote` function provided by the `dsteem` library to send the transaction through to the
-network. On the Steem platform, posts and comments are all internally stored as a `comment` object, differentiated by
+We are using the `broadcast.vote` function provided by the `dcrea` library to send the transaction through to the
+network. On the Crea platform, posts and comments are all internally stored as a `comment` object, differentiated by
 whether or not a `parent_author` exists. When there is no `parent_author`, then it's a post, when there is, it's a
 comment. Voting is done on either of the two based on the author and permlink of the comment. There are 5 parameters
 required for the voting operation:
@@ -30,11 +30,11 @@ required for the voting operation:
 1.  _Permlink_ - The unique identifier of the comment/post of the author
 1.  _Weight_ - This is the weight that the vote will carry. The value ranges from -10000 (100% flag) to 10000 (100% upvote)
 
-Due to the low amount of posts on the testnet we added an additional step to create a post before we vote on it. The values are auto loaded in the respective input boxes. A full tutorial on how to create a new post can be found on the [Steem Devportal](https://developers.steem.io/tutorials-javascript/submit_post)
+Due to the low amount of posts on the testnet we added an additional step to create a post before we vote on it. The values are auto loaded in the respective input boxes. A full tutorial on how to create a new post can be found on the [Crea Devportal](https://developers.creaproject.io/tutorials-javascript/submit_post)
 
 ## Steps
 
-1.  [**Configure connection**](#connection) Configuration of `dsteem` to communicate with a Steem blockchain
+1.  [**Configure connection**](#connection) Configuration of `dcrea` to communicate with a Crea blockchain
 1.  [**Create new post**](#createpost) Creating a new post on the testnet
 1.  [**Input variables**](#input) Collecting the required inputs via an HTML UI
 1.  [**Broadcast**](#broadcast) Creating an object and broadcasting the vote to the blockchain
@@ -44,16 +44,16 @@ Due to the low amount of posts on the testnet we added an additional step to cre
 As usual, we have a `public/app.js` file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-import { Client, PrivateKey } from 'dsteem';
-import { Testnet as NetConfig } from '../../configuration'; //A Steem Testnet. Replace 'Testnet' with 'Mainnet' to connect to the main Steem blockchain.
+import { Client, PrivateKey } from 'dcrea';
+import { Testnet as NetConfig } from '../../configuration'; //A Crea Testnet. Replace 'Testnet' with 'Mainnet' to connect to the main Crea blockchain.
 
 let opts = { ...NetConfig.net };
 
-//connect to a steem node, testnet in this case
+//connect to a crea node, testnet in this case
 const client = new Client(NetConfig.url, opts);
 ```
 
-Above, we have `dsteem` pointing to the test network with the proper chainId, addressPrefix, and endpoint by importing from the `configuration.js` file. Because this tutorial is interactive, we will not publish test content to the main network. Instead, we're using the testnet and a predefined account which is imported once the application loads, to demonstrate voting on content.
+Above, we have `dcrea` pointing to the test network with the proper chainId, addressPrefix, and endpoint by importing from the `configuration.js` file. Because this tutorial is interactive, we will not publish test content to the main network. Instead, we're using the testnet and a predefined account which is imported once the application loads, to demonstrate voting on content.
 
 ```javascript
 window.onload = () => {
@@ -68,7 +68,7 @@ window.onload = () => {
 A new blog post is created on the testnet with the necessary variables for the vote function being allocated as well. If a post is successfully created it will display a block number and a value will be assigned to the `permlink` variable.
 
 ```javascript
-//refer to "10_submit_post" in the tutorials folder for creating a post on steemit
+//refer to "10_submit_post" in the tutorials folder for creating a post on creary
 //create post function
 window.createPost = async () => {
     //get private key
@@ -78,9 +78,9 @@ window.createPost = async () => {
     //for content
     const time = new Date().getTime();
     //get title
-    const title = `developers.steem.io - JS-T:17 ${time}`;
+    const title = `developers.creaproject.io - JS-T:17 ${time}`;
     //get body
-    const body = `Go to [developers.steem.io](https://developers.steem.io) for the latest in Steem tutorials! This post was created by someone using the active version of those tutorials at  [https://github.com/steemit/devportal-tutorials-js](https://github.com/steemit/devportal-tutorials-js)
+    const body = `Go to [developers.creaproject.io](https://developers.creaproject.io) for the latest in Crea tutorials! This post was created by someone using the active version of those tutorials at  [https://github.com/creativechain/crea-api-doc-tutorials-js](https://github.com/creativechain/crea-api-doc-tutorials-js)
         
         ${time}`;
     //get tags and convert to array list
@@ -111,7 +111,7 @@ window.createPost = async () => {
                 document.getElementById('permlink').innerHTML = permlink;
                 document.getElementById(
                     'postLink'
-                ).innerHTML = `Included in block: <a href="http://condenser.steem.vc/${
+                ).innerHTML = `Included in block: <a href="http://condenser.crea.vc/${
                     taglist[0]
                 }/@${account}/${permlink}" target="_blank">${
                     result.block_num
@@ -128,12 +128,12 @@ window.createPost = async () => {
 
 You may have noted the mystery function `createPrivateKey()`. It's a convenience function that allows us to give the
 user some meaningful UI feedback if they put in a bad posting key. The important part of it is
-`return dsteem.PrivateKey.fromString(<somestring>)` but its full glory can be seen in the snippet below
+`return dcrea.PrivateKey.fromString(<somestring>)` but its full glory can be seen in the snippet below
 
 ```javascript
 const createPrivateKey = function() {
     try {
-        return dsteem.PrivateKey.fromString(
+        return dcrea.PrivateKey.fromString(
             document.getElementById('postingKey').value
         );
     } catch (e) {
@@ -215,7 +215,7 @@ window.onload = () => {
     };
 ```
 
-More information on how to use the `broadcast` operation and options surrounding the operation can be found on the [Steem Devportal](https://developers.steem.io/apidefinitions/#broadcast_ops_vote)
+More information on how to use the `broadcast` operation and options surrounding the operation can be found on the [Crea Devportal](https://developers.creaproject.io/apidefinitions/#broadcast_ops_vote)
 
 ### To run this tutorial
 

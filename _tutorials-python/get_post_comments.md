@@ -4,16 +4,16 @@ position: 7
 description: "Fetch comments made on each content or post using Python."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Comments](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/07_get_post_comments) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Comments](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/07_get_post_comments) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-This tutorial will explain and show you how to access the **Steem** blockchain using the [steem-python](https://github.com/steemit/steem-python) library to fetch list of posts and get replies info on selected post.
+This tutorial will explain and show you how to access the **Crea** blockchain using the [crea-python](https://github.com/creativechain/crea-python) library to fetch list of posts and get replies info on selected post.
 
 ## Intro
 
-Steem python library has built-in function to get active voters information if post with author and permlink as an argument. Since we don't have predefined post or author/permlink. We will fetch post list from previous tutorial and give option to choose one post to get its active voters. `get_content_replies` function fetches list of replies on content. Note that `get_discussions_by_hot` filter is used for fetching 5 posts and after selection of post tutorial uses `author` and `permlink` of the post to fetch replies. 
+Crea python library has built-in function to get active voters information if post with author and permlink as an argument. Since we don't have predefined post or author/permlink. We will fetch post list from previous tutorial and give option to choose one post to get its active voters. `get_content_replies` function fetches list of replies on content. Note that `get_discussions_by_hot` filter is used for fetching 5 posts and after selection of post tutorial uses `author` and `permlink` of the post to fetch replies. 
 
 ## Steps
 
@@ -24,17 +24,17 @@ Steem python library has built-in function to get active voters information if p
 
 #### 1. App setup <a name="app-setup"></a>
 
-In this tutorial we use 3 packages, `pick` - helps us to select filter interactively. `steem` - steem-python library, interaction with Blockchain. `pprint` - print results in better format.
+In this tutorial we use 3 packages, `pick` - helps us to select filter interactively. `crea` - crea-python library, interaction with Blockchain. `pprint` - print results in better format.
 
-First we import all three library and initialize Steem class
+First we import all three library and initialize Crea class
 
 ```python
     import pprint
     from pick import pick
-    # initialize Steem class
-    from steem import Steem
+    # initialize Crea class
+    from crea import Crea
 
-    s = Steem()
+    s = Crea()
 ```
 
 #### 2. Post list <a name="post-list"></a>
@@ -103,22 +103,22 @@ The example of result returned from the service is a `JSON` object with the foll
   'children': 0,
   'children_abs_rshares': 0,
   'created': '2018-06-15T10:43:36',
-  'curator_payout_value': '0.000 SBD',
+  'curator_payout_value': '0.000 CBD',
   'depth': 1,
   'id': 53110589,
-  'json_metadata': '{"tags":["fiction"],"users":["sarcasms"],"app":"steemit/0.1"}',
+  'json_metadata': '{"tags":["fiction"],"users":["sarcasms"],"app":"creary/0.1"}',
   'last_payout': '1970-01-01T00:00:00',
   'last_update': '2018-06-15T10:43:36',
-  'max_accepted_payout': '1000000.000 SBD',
+  'max_accepted_payout': '1000000.000 CBD',
   'max_cashout_time': '1969-12-31T23:59:59',
   'net_rshares': 0,
   'net_votes': 0,
   'parent_author': 'muratkbesiroglu',
   'parent_permlink': 'short-sci-fi-story-the-android-that-sell-meaning',
-  'pending_payout_value': '0.000 SBD',
-  'percent_steem_dollars': 10000,
+  'pending_payout_value': '0.000 CBD',
+  'percent_crea_dollars': 10000,
   'permlink': 're-muratkbesiroglu-short-sci-fi-story-the-android-that-sell-meaning-20180615t104323737z',
-  'promoted': '0.000 SBD',
+  'promoted': '0.000 CBD',
   'reblogged_by': [],
   'replies': [],
   'reward_weight': 10000,
@@ -126,8 +126,8 @@ The example of result returned from the service is a `JSON` object with the foll
   'root_permlink': 'short-sci-fi-story-the-android-that-sell-meaning',
   'root_title': 'Short Sci-Fi Story: The Android That Sell Meaning',
   'title': '',
-  'total_payout_value': '0.000 SBD',
-  'total_pending_payout_value': '0.000 STEEM',
+  'total_payout_value': '0.000 CBD',
+  'total_pending_payout_value': '0.000 CREA',
   'total_vote_weight': 0,
   'url': '/fiction/@muratkbesiroglu/short-sci-fi-story-the-android-that-sell-meaning#@sarcasms/re-muratkbesiroglu-short-sci-fi-story-the-android-that-sell-meaning-20180615t104323737z',
   'vote_rshares': 0},
@@ -148,22 +148,22 @@ The example of result returned from the service is a `JSON` object with the foll
   'children': 0,
   'children_abs_rshares': 0,
   'created': '2018-06-15T11:26:15',
-  'curator_payout_value': '0.000 SBD',
+  'curator_payout_value': '0.000 CBD',
   'depth': 1,
   'id': 53114015,
-  'json_metadata': '{"tags":["fiction"],"app":"steemit/0.1"}',
+  'json_metadata': '{"tags":["fiction"],"app":"creary/0.1"}',
   'last_payout': '1970-01-01T00:00:00',
   'last_update': '2018-06-15T11:26:15',
-  'max_accepted_payout': '1000000.000 SBD',
+  'max_accepted_payout': '1000000.000 CBD',
   'max_cashout_time': '1969-12-31T23:59:59',
   'net_rshares': 0,
   'net_votes': 0,
   'parent_author': 'muratkbesiroglu',
   'parent_permlink': 'short-sci-fi-story-the-android-that-sell-meaning',
-  'pending_payout_value': '0.000 SBD',
-  'percent_steem_dollars': 10000,
+  'pending_payout_value': '0.000 CBD',
+  'percent_crea_dollars': 10000,
   'permlink': 're-muratkbesiroglu-short-sci-fi-story-the-android-that-sell-meaning-20180615t112615204z',
-  'promoted': '0.000 SBD',
+  'promoted': '0.000 CBD',
   'reblogged_by': [],
   'replies': [],
   'reward_weight': 10000,
@@ -171,8 +171,8 @@ The example of result returned from the service is a `JSON` object with the foll
   'root_permlink': 'short-sci-fi-story-the-android-that-sell-meaning',
   'root_title': 'Short Sci-Fi Story: The Android That Sell Meaning',
   'title': '',
-  'total_payout_value': '0.000 SBD',
-  'total_pending_payout_value': '0.000 STEEM',
+  'total_payout_value': '0.000 CBD',
+  'total_pending_payout_value': '0.000 CREA',
   'total_vote_weight': 0,
   'url': '/fiction/@muratkbesiroglu/short-sci-fi-story-the-android-that-sell-meaning#@vicky3585/re-muratkbesiroglu-short-sci-fi-story-the-android-that-sell-meaning-20180615t112615204z',
   'vote_rshares': 0}]

@@ -1,21 +1,21 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/steemit/devportal/master/images/steemdev.png" alt="Steemit API Portal" width="226">
+  <img src="https://raw.githubusercontent.com/creary/devportal/master/images/creadev.png" alt="Creary API Portal" width="226">
   <br>
   <br>
   
 </p>
 
-# Steemit API Portal
+# Creary API Portal
 
-Steemit is the social media platform where everyone gets paid for creating and curating content.
+Creary is the social media platform where everyone gets paid for creating and curating content.
 
-The following API documents provide details on how to interact with the Steem blockchain database API which can get information on accounts, content, blocks and much more!
+The following API documents provide details on how to interact with the Crea blockchain database API which can get information on accounts, content, blocks and much more!
 
-The developer portal will also serve as a toolbox for steem clients, libraries, and language wrappers.
+The developer portal will also serve as a toolbox for crea clients, libraries, and language wrappers.
 
 ## Develop
 
-Steemit Portal was built with [Jekyll](http://jekyllrb.com/) version 3.1.6, but should support newer versions as well.
+Creary Portal was built with [Jekyll](http://jekyllrb.com/) version 3.1.6, but should support newer versions as well.
 
 Install the dependencies with [Bundler](http://bundler.io/):
 
@@ -100,10 +100,10 @@ If you're interested in running the scrape against a different server, run the c
 $ TEST_NODE=<some server url> bundle exec rake scrape:api_defs
 ```
 
-An example pointing at the steemitdev testnet:
+An example pointing at the crearydev testnet:
 
 ```bash
-$ TEST_NODE=https://testnet.steemitdev.com bundle exec rake scrape:api_defs
+$ TEST_NODE=https://testnet.crearydev.com bundle exec rake scrape:api_defs
 ```
 
 ### Importing
@@ -114,7 +114,7 @@ To import all new tutorials from all known tutorial repositories, which is the t
 bundle exec rake scrape:tutorials
 ```
 
-#### Targeted Import: [devportal-tutorials-js](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials)
+#### Targeted Import: [devportal-tutorials-js](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials)
 
 This command will check for new tutorials in `devportal-tutorials-js` and import them into this project.
 
@@ -132,13 +132,13 @@ Where `1` represents the numerical prefix like in `01_blog_feed` and `true` inst
 
 Other Targeted imports supported are `:py` and `:js` using the same syntax.
 
-#### Targeted Import: [devportal-tutorials-py](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials)
+#### Targeted Import: [devportal-tutorials-py](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials)
 
 ```bash
 bundle exec rake scrape:tutorials:py
 ```
 
-#### Targeted Import: [devportal-tutorials-rb](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials)
+#### Targeted Import: [devportal-tutorials-rb](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials)
 
 ```bash
 bundle exec rake scrape:tutorials:rb
@@ -164,8 +164,8 @@ If you're interested in running this test against a different server, run the co
 $ TEST_NODE=<some server url> bundle exec rake test:curl
 ```
 
-An example pointing at the steemitdev testnet
+An example pointing at the crearydev testnet
 
 ```bash
-$ TEST_NODE=https://testnet.steemitdev.com bundle exec rake test:curl
+$ TEST_NODE=https://testnet.crearydev.com bundle exec rake test:curl
 ```

@@ -16,19 +16,19 @@
 	
 
 	<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>RB: Get Account Comments | Steem Developer</title>
+<title>RB: Get Account Comments | Crea Developer</title>
 <meta name="generator" content="Jekyll v3.8.4" />
 <meta property="og:title" content="RB: Get Account Comments" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Fetching the comments written by a particular account." />
 <meta property="og:description" content="Fetching the comments written by a particular account." />
-<link rel="canonical" href="https://developers.steem.io/tutorials-ruby/get_account_comments" />
-<meta property="og:url" content="https://developers.steem.io/tutorials-ruby/get_account_comments" />
-<meta property="og:site_name" content="Steem Developer" />
+<link rel="canonical" href="https://developers.creaproject.io/tutorials-ruby/get_account_comments" />
+<meta property="og:url" content="https://developers.creaproject.io/tutorials-ruby/get_account_comments" />
+<meta property="og:site_name" content="Crea Developer" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-15T17:18:46-06:00" />
 <script type="application/ld+json">
-{"description":"Fetching the comments written by a particular account.","@type":"BlogPosting","url":"https://developers.steem.io/tutorials-ruby/get_account_comments","headline":"RB: Get Account Comments","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.steem.io/tutorials-ruby/get_account_comments"},"@context":"http://schema.org"}</script>
+{"description":"Fetching the comments written by a particular account.","@type":"BlogPosting","url":"https://developers.creaproject.io/tutorials-ruby/get_account_comments","headline":"RB: Get Account Comments","dateModified":"2018-11-15T17:18:46-06:00","datePublished":"2018-11-15T17:18:46-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://developers.creaproject.io/tutorials-ruby/get_account_comments"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -38,7 +38,7 @@
 <header>
 	<h1>
 		<button type="button" class="open-nav" id="open-nav"></button>
-		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Steem Developer logo"></a>
+		<a href="/"  class="logo-link"><img src="/images/logotype_white.svg" height="40" alt="Crea Developer logo"></a>
 	</h1>
 
 	
@@ -61,7 +61,7 @@
 					
 					
 						
-						<li><a href="/#introduction-welcome">Welcome to Steem</a></li>
+						<li><a href="/#introduction-welcome">Welcome to Crea</a></li>
 						
 					
 				
@@ -82,11 +82,11 @@
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-steemd-nodes">steemd Nodes</a></li>
+						<li><a href="/quickstart/#quickstart-cread-nodes">cread Nodes</a></li>
 						
 					
 						
-						<li><a href="/quickstart/#quickstart-testnet">Steem Testnet</a></li>
+						<li><a href="/quickstart/#quickstart-testnet">Crea Testnet</a></li>
 						
 					
 				
@@ -129,11 +129,11 @@
 					
 					
 						
-						<li><a href="/services/#services-steemit">Steemit.com</a></li>
+						<li><a href="/services/#services-creary">Creary.net</a></li>
 						
 					
 						
-						<li><a href="/services/#services-steemconnect">SteemConnect</a></li>
+						<li><a href="/services/#services-creaconnect">CreaConnect</a></li>
 						
 					
 						
@@ -247,7 +247,7 @@
 						
 					
 						
-						<li><a href="/resources/#resources-steem-connect-libs">SteemConnect Libs</a></li>
+						<li><a href="/resources/#resources-crea-connect-libs">CreaConnect Libs</a></li>
 						
 					
 						
@@ -298,15 +298,15 @@
 
 
 	<!--<p class="copyright">-->
-	<!--<a href="https://steemit.com.com/">-->
-	<!--steemit-->
+	<!--<a href="https://creary.net.com/">-->
+	<!--creary-->
 	<!--</a>-->
 	<!--</p>-->
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </header>
 <div class="main" id="top">
 	<div class="hero">
-		<h1 class="hero__h1">Steem Developer Portal </h1>
+		<h1 class="hero__h1">Crea Developer Portal </h1>
 		
 		<img class="hero__img" src="/images/hero.png">
 		
@@ -323,7 +323,7 @@
 </span>
 	
 
-	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/09_get_account_comments">Get Account Comments</a> can be downloaded as part of the <a href="https://github.com/steemit/devportal-tutorials-rb">RB tutorials repository</a>.</span>
+	<p><span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/09_get_account_comments">Get Account Comments</a> can be downloaded as part of the <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb">RB tutorials repository</a>.</span>
 <br /></p>
 
 <p>Historically, applications that wanted to retrieve comments written by a particular account would use <code class="highlighter-rouge">get_state</code>.  But this method has been scheduled for deprecation.  So we’ll use a more supported approach in this tutorial using <code class="highlighter-rouge">get_account_history</code>.</p>
@@ -389,17 +389,17 @@ Reply to @saarliconvalley in discussion: "The Empire has sent you a friend reque
 	body_length: 33 (7 words)
 	replied at: 2018-03-27T16:02:45
 	net_votes: 0
-	https://steemit.com/@lordvader/re-saarliconvalley-re-lordvader-2018327t16025594z-20180327t160243538z
+	https://creary.net/@lordvader/re-saarliconvalley-re-lordvader-2018327t16025594z-20180327t160243538z
 Reply to @teenovision in discussion: "The Empire has sent you a friend request."
 	body_length: 90 (16 words)
 	replied at: 2018-03-27T15:53:39, updated at: 2018-03-30T17:25:18, active at: 2018-03-30T17:25:18
 	net_votes: 0
-	https://steemit.com/@lordvader/re-teenovision-re-lordvader-the-empire-has-sent-you-a-friend-request-20180327t155339532z
+	https://creary.net/@lordvader/re-teenovision-re-lordvader-the-empire-has-sent-you-a-friend-request-20180327t155339532z
 Reply to @gtg in discussion: "gtg witness log"
 	body_length: 130 (25 words)
 	replied at: 2018-04-06T04:29:00
 	net_votes: 2
-	https://steemit.com/@lordvader/re-gtg-ffdhu-gtg-witness-log-20180406t042906872z
+	https://creary.net/@lordvader/re-gtg-ffdhu-gtg-witness-log-20180406t042906872z
 </code></pre></div></div>
 
 <h3 id="comment-fields">Comment fields</h3>
@@ -416,17 +416,17 @@ Reply to @gtg in discussion: "gtg witness log"
   <li><code class="highlighter-rouge">json_metadata</code></li>
 </ul>
 
-<p>In our example script, we want more detail than this, so for every <code class="highlighter-rouge">comment</code>, we call <code class="highlighter-rouge">get_content</code> to retrieve more detail.  For a full explanation of the results provided by <code class="highlighter-rouge">get_content</code>, please refer to the tutorial: <a href="https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/05_get_post_details">Get Post Details</a></p>
+<p>In our example script, we want more detail than this, so for every <code class="highlighter-rouge">comment</code>, we call <code class="highlighter-rouge">get_content</code> to retrieve more detail.  For a full explanation of the results provided by <code class="highlighter-rouge">get_content</code>, please refer to the tutorial: <a href="https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/05_get_post_details">Get Post Details</a></p>
 
 <h3 id="to-run">To Run</h3>
 
-<p>First, set up your workstation using the steps provided in <a href="https://developers.steem.io/tutorials-ruby/getting_started">Getting Started</a>.  Then you can create and execute the script (or clone from this repository):</p>
+<p>First, set up your workstation using the steps provided in <a href="https://developers.creaproject.io/tutorials-ruby/getting_started">Getting Started</a>.  Then you can create and execute the script (or clone from this repository):</p>
 
 <ul>
   <li><code class="highlighter-rouge">&lt;account-name&gt;</code></li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:steemit/devportal-tutorials-rb.git
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:creary/devportal-tutorials-rb.git
 <span class="nb">cd </span>devportal-tutorials-rb/tutorials/09_get_account_comments
 bundle <span class="nb">install
 </span>ruby get_account_comments.rb &lt;account-name&gt;

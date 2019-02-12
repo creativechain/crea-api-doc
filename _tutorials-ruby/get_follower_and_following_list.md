@@ -4,7 +4,7 @@ position: 19
 description: "_How to create a list of followers and accounts that you are following._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Follower And Following List](https://github.com/steemit/devportal-tutorials-rb/tree/master/tutorials/19_get_follower_and_following_list) can be downloaded as part of the [RB tutorials repository](https://github.com/steemit/devportal-tutorials-rb).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Follower And Following List](https://github.com/creativechain/crea-api-doc-tutorials-rb/tree/master/tutorials/19_get_follower_and_following_list) can be downloaded as part of the [RB tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-rb).</span>
 <br>
 
 
@@ -22,7 +22,7 @@ In `radiator`, we can request follow results using `condenser_api.get_following`
 
 ## Steps
 
-1.  [**Configure connection**](#connection) Configuration of `radiator` to communicate with the Steem blockchain
+1.  [**Configure connection**](#connection) Configuration of `radiator` to communicate with the Crea blockchain
 2.  [**Input variables**](#input) Collecting the required inputs via command line arguments
 3.  [**Get followers/following**](#query) Get the followers or accounts being followed
 4.  [**Display**](#display) Return the array of results to the console
@@ -43,7 +43,7 @@ api = Radiator::Api.new
 Above, we have `radiator` pointing to the production network.  To specify a different full node, e.g.:
 
 ```ruby
-api = Radiator::Api.new(url: 'https://testnet.steemitdev.com')
+api = Radiator::Api.new(url: 'https://testnet.crearydev.com')
 ```
 
 #### 2. Input variables<a name="input"></a>
@@ -83,10 +83,10 @@ end
 
 ### To Run
 
-First, set up your workstation using the steps provided in [Getting Started](https://developers.steem.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
+First, set up your workstation using the steps provided in [Getting Started](https://developers.creaproject.io/tutorials-ruby/getting_started).  Then you can create and execute the script (or clone from this repository):
 
 ```bash
-git clone git@github.com:steemit/devportal-tutorials-rb.git
+git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/19_get_follower_and_following_list
 bundle install
 ruby get_follow.rb

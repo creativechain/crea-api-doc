@@ -7,7 +7,7 @@
 
 
 
-    To enable this API for `steemd`, the following is required in `config.ini`
+    To enable this API for `cread`, the following is required in `config.ini`
     by specifying:
 
     ```ini
@@ -24,26 +24,26 @@
 
       | `account` (string) | |
       |--------------------|-|
-      | `"steemit"` | Queries the recovery requests for account named "steemit". |
+      | `"creary"` | Queries the recovery requests for account named "creary". |
     parameter_json: '{"accounts":[]}'
     expected_response_json: '{"requests":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_account_recovery_requests", "params": {"accounts":["steemit"]}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_account_recovery_requests", "params": {"accounts":["creary"]}, "id":1}'
   - api_method: database_api.find_accounts
     purpose: |
       Returns accounts, queried by name.  Parameters: `account:string array`
 
       | `account` (string array) | |
       |-------------------|-|
-      | `["steemit"]` | Queries for account named "steemit". |
-      | `["steemit", "alice"]` | Queries for accounts named "steemit" and "alice". |
+      | `["creary"]` | Queries for account named "creary". |
+      | `["creary", "alice"]` | Queries for accounts named "creary" and "alice". |
     parameter_json: '{"accounts":[]}'
     expected_response_json: |
       {
         "accounts": [
           {
             "id": 28,
-            "name": "steemit",
+            "name": "creary",
             "owner": {
               "weight_threshold": 1,
               "account_auths": [],
@@ -93,7 +93,7 @@
             "last_account_update": "2018-05-31T23:32:06",
             "created": "2016-03-24T17:00:21",
             "mined": true,
-            "recovery_account": "steem",
+            "recovery_account": "crea",
             "last_account_recovery": "1970-01-01T00:00:00",
             "reset_account": "null",
             "comment_count": 0,
@@ -136,7 +136,7 @@
               "precision": 3,
               "nai": "@@000000013"
             },
-            "reward_steem_balance": {
+            "reward_crea_balance": {
               "amount": "0",
               "precision": 3,
               "nai": "@@000000021"
@@ -146,7 +146,7 @@
               "precision": 6,
               "nai": "@@000000037"
             },
-            "reward_vesting_steem": {
+            "reward_vesting_crea": {
               "amount": "0",
               "precision": 3,
               "nai": "@@000000021"
@@ -194,8 +194,8 @@
         ]
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_accounts", "params": {"accounts":["steemit"]}, "id":1}'
-    - '{"jsonrpc":"2.0", "method":"database_api.find_accounts", "params": {"accounts":["steemit", "alice"]}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_accounts", "params": {"accounts":["creary"]}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_accounts", "params": {"accounts":["creary", "alice"]}, "id":1}'
   - api_method: database_api.find_change_recovery_account_requests
     since: HF11
     purpose: |
@@ -203,11 +203,11 @@
 
       | `account` (array) | |
       |--------------------|-|
-      | `["steemit"]` | Queries the recovery requests for account named "steemit". |
+      | `["creary"]` | Queries the recovery requests for account named "creary". |
     parameter_json: '{"accounts":[]}'
     expected_response_json: '{"requests":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_change_recovery_account_requests", "params": {"accounts":["steemit"]}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_change_recovery_account_requests", "params": {"accounts":["creary"]}, "id":1}'
   - api_method: database_api.find_comments
     purpose: Search for comments.
     parameter_json: '{"start":[["",""]], "limit":0, "order":""}'
@@ -241,7 +241,7 @@
               "precision": 3,
               "nai": "@@000000013"
             },
-            "steem_balance": {
+            "crea_balance": {
               "amount": "1",
               "precision": 3,
               "nai": "@@000000021"
@@ -271,12 +271,12 @@
 
       | `owner` (string) | |
       |--------------------|-|
-      | `"steemit"` | Queries the owner history for account named "steemit". |
+      | `"creary"` | Queries the owner history for account named "creary". |
       | `"alice"` | Queries the owner history for account named "alice". |
     parameter_json: '{"owner":""}'
     expected_response_json: '{"owner_auths":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_owner_histories", "params": {"owner":"steemit"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_owner_histories", "params": {"owner":"creary"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.find_owner_histories", "params": {"owner":"alice"}, "id":1}'
   - api_method: database_api.find_savings_withdrawals
     since: HF14
@@ -285,7 +285,7 @@
 
       | `account` (string) | |
       |--------------------|-|
-      | `"steemit"` | Queries the savings withdraw for account named "steemit". |
+      | `"creary"` | Queries the savings withdraw for account named "creary". |
     parameter_json: '{"start":null,"limit":0,"order":"by_name"}'
     parameter_json: '{"account":""}'
     expected_response_json: '{"withdrawals":[]}'
@@ -293,16 +293,16 @@
     - '{"jsonrpc":"2.0", "method":"database_api.find_savings_withdrawals", "params": {"start":"temp"}, "id":1}'
   - api_method: database_api.find_sbd_conversion_requests
     purpose: |
-      Returns the list of SBD conversion requests for an account.  Parameters: `account:string`
+      Returns the list of CBD conversion requests for an account.  Parameters: `account:string`
 
       | `account` (string) | |
       |-------------------|-|
-      | `"steemit"` | Queries a conversion request for steemit. |
+      | `"creary"` | Queries a conversion request for creary. |
       | `"alice"` | Queries a conversion request for alice. |
     parameter_json: '{"account":""}'
     expected_response_json: '{"requests":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_sbd_conversion_requests", "params": {"account":"steemit"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_sbd_conversion_requests", "params": {"account":"creary"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.find_sbd_conversion_requests", "params": {"account":"alice"}, "id":1}'
   - api_method: database_api.find_vesting_delegation_expirations
     since: HF17
@@ -311,7 +311,7 @@
 
       | `account` (string) | | |
       |----------------------------|---------------|-|
-      | `"steemit"` | | Queries for expiring vesting for `steemit`. |
+      | `"creary"` | | Queries for expiring vesting for `creary`. |
       | `"alice"` | | Queries for expiring vesting for `alice`. |
     parameter_json: '{"account":""}'
     expected_response_json: |
@@ -319,7 +319,7 @@
         "delegations": [
           {
             "id": 3077902,
-            "delegator": "steem",
+            "delegator": "crea",
             "vesting_shares": {
               "amount": "201417615",
               "precision": 6,
@@ -330,7 +330,7 @@
         ]
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_vesting_delegation_expirations", "params": {"account":"steemit"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_vesting_delegation_expirations", "params": {"account":"creary"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.find_vesting_delegation_expirations", "params": {"account":"alice"}, "id":1}'
   - api_method: database_api.find_vesting_delegations
     since: HF17
@@ -339,12 +339,12 @@
 
       | `account` (string) | | |
       |----------------------------|---------------|-|
-      | `"steemit"` | | Queries for vesting for `steemit`. |
+      | `"creary"` | | Queries for vesting for `creary`. |
       | `"alice"` | | Queries for vesting for `alice`. |
     parameter_json: '{"account":""}'
     expected_response_json: '{"delegations":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_vesting_delegations", "params": {"account":"steemit"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_vesting_delegations", "params": {"account":"creary"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.find_vesting_delegations", "params": {"account":"alice"}, "id":1}'
   - api_method: database_api.find_votes
     purpose: |
@@ -352,7 +352,7 @@
 
       | `author` (string) | `permlink` (string) | |
       |----------------------------|---------------|-|
-      | `"steemit"` | `"firstpost"` | Queries votes for content with a slug `@steemit/firstpost` |
+      | `"creary"` | `"firstpost"` | Queries votes for content with a slug `@creary/firstpost` |
       | `"alice"` | `"a-post-by-alice"` | Queries votes for content with a slug `@alice/a-post-by-alice` |
     parameter_json: '{"author":"","permlink":""}'
     expected_response_json: |
@@ -383,7 +383,7 @@
         ]
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.find_votes", "params": {"author":"steemit", "permlink":"firstpost"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.find_votes", "params": {"author":"creary", "permlink":"firstpost"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.find_votes", "params": {"author":"alice", "permlink":"a-post-by-alice"}, "id":1}'
     expected_curl_responses:
     -
@@ -487,225 +487,225 @@
     expected_response_json: |
       {
         "IS_TEST_NET": false,
-        "STEEM_ENABLE_SMT": false,
-        "SBD_SYMBOL": null,
-        "STEEM_INITIAL_VOTE_POWER_RATE": 40,
-        "STEEM_REDUCED_VOTE_POWER_RATE": 10,
-        "STEEM_100_PERCENT": 10000,
-        "STEEM_1_PERCENT": 100,
-        "STEEM_ACCOUNT_RECOVERY_REQUEST_EXPIRATION_PERIOD": "86400000000",
-        "STEEM_ACTIVE_CHALLENGE_COOLDOWN": "86400000000",
-        "STEEM_ACTIVE_CHALLENGE_FEE": {
+        "CREA_ENABLE_SMT": false,
+        "CBD_SYMBOL": null,
+        "CREA_INITIAL_VOTE_POWER_RATE": 40,
+        "CREA_REDUCED_VOTE_POWER_RATE": 10,
+        "CREA_100_PERCENT": 10000,
+        "CREA_1_PERCENT": 100,
+        "CREA_ACCOUNT_RECOVERY_REQUEST_EXPIRATION_PERIOD": "86400000000",
+        "CREA_ACTIVE_CHALLENGE_COOLDOWN": "86400000000",
+        "CREA_ACTIVE_CHALLENGE_FEE": {
           "amount": "2000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_ADDRESS_PREFIX": "STM",
-        "STEEM_APR_PERCENT_MULTIPLY_PER_BLOCK": "102035135585887",
-        "STEEM_APR_PERCENT_MULTIPLY_PER_HOUR": "119577151364285",
-        "STEEM_APR_PERCENT_MULTIPLY_PER_ROUND": "133921203762304",
-        "STEEM_APR_PERCENT_SHIFT_PER_BLOCK": 87,
-        "STEEM_APR_PERCENT_SHIFT_PER_HOUR": 77,
-        "STEEM_APR_PERCENT_SHIFT_PER_ROUND": 83,
-        "STEEM_BANDWIDTH_AVERAGE_WINDOW_SECONDS": 604800,
-        "STEEM_BANDWIDTH_PRECISION": 1000000,
-        "STEEM_BLOCKCHAIN_PRECISION": 1000,
-        "STEEM_BLOCKCHAIN_PRECISION_DIGITS": 3,
-        "STEEM_BLOCKCHAIN_HARDFORK_VERSION": "0.20.0",
-        "STEEM_BLOCKCHAIN_VERSION": "0.20.6",
-        "STEEM_BLOCK_INTERVAL": 3,
-        "STEEM_BLOCKS_PER_DAY": 28800,
-        "STEEM_BLOCKS_PER_HOUR": 1200,
-        "STEEM_BLOCKS_PER_YEAR": 10512000,
-        "STEEM_CASHOUT_WINDOW_SECONDS": 604800,
-        "STEEM_CASHOUT_WINDOW_SECONDS_PRE_HF12": 86400,
-        "STEEM_CASHOUT_WINDOW_SECONDS_PRE_HF17": 43200,
-        "STEEM_CHAIN_ID": "0000000000000000000000000000000000000000000000000000000000000000",
-        "STEEM_COMMENT_REWARD_FUND_NAME": "comment",
-        "STEEM_CONTENT_APR_PERCENT": 3875,
-        "STEEM_CONTENT_CONSTANT_HF0": "2000000000000",
-        "STEEM_CONTENT_REWARD_PERCENT": 7500,
-        "STEEM_CONVERSION_DELAY": "302400000000",
-        "STEEM_CONVERSION_DELAY_PRE_HF_16": "604800000000",
-        "STEEM_CREATE_ACCOUNT_DELEGATION_RATIO": 5,
-        "STEEM_CREATE_ACCOUNT_DELEGATION_TIME": "2592000000000",
-        "STEEM_CREATE_ACCOUNT_WITH_STEEM_MODIFIER": 30,
-        "STEEM_CURATE_APR_PERCENT": 3875,
-        "STEEM_DEFAULT_SBD_INTEREST_RATE": 1000,
-        "STEEM_EQUIHASH_K": 6,
-        "STEEM_EQUIHASH_N": 140,
-        "STEEM_FEED_HISTORY_WINDOW": 84,
-        "STEEM_FEED_HISTORY_WINDOW_PRE_HF_16": 168,
-        "STEEM_FEED_INTERVAL_BLOCKS": 1200,
-        "STEEM_GENESIS_TIME": "2016-03-24T16:00:00",
-        "STEEM_HARDFORK_REQUIRED_WITNESSES": 17,
-        "STEEM_INFLATION_NARROWING_PERIOD": 250000,
-        "STEEM_INFLATION_RATE_START_PERCENT": 978,
-        "STEEM_INFLATION_RATE_STOP_PERCENT": 95,
-        "STEEM_INIT_MINER_NAME": "initminer",
-        "STEEM_INIT_PUBLIC_KEY_STR": "STM8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
-        "STEEM_INIT_SUPPLY": 0,
-        "STEEM_INIT_TIME": "1970-01-01T00:00:00",
-        "STEEM_IRREVERSIBLE_THRESHOLD": 7500,
-        "STEEM_LIQUIDITY_APR_PERCENT": 750,
-        "STEEM_LIQUIDITY_REWARD_BLOCKS": 1200,
-        "STEEM_LIQUIDITY_REWARD_PERIOD_SEC": 3600,
-        "STEEM_LIQUIDITY_TIMEOUT_SEC": "604800000000",
-        "STEEM_MAX_ACCOUNT_CREATION_FEE": 1000000000,
-        "STEEM_MAX_ACCOUNT_NAME_LENGTH": 16,
-        "STEEM_MAX_ACCOUNT_WITNESS_VOTES": 30,
-        "STEEM_MAX_ASSET_WHITELIST_AUTHORITIES": 10,
-        "STEEM_MAX_AUTHORITY_MEMBERSHIP": 40,
-        "STEEM_MAX_BLOCK_SIZE": 393216000,
-        "STEEM_SOFT_MAX_BLOCK_SIZE": 2097152,
-        "STEEM_MAX_CASHOUT_WINDOW_SECONDS": 1209600,
-        "STEEM_MAX_COMMENT_DEPTH": 65535,
-        "STEEM_MAX_COMMENT_DEPTH_PRE_HF17": 6,
-        "STEEM_MAX_FEED_AGE_SECONDS": 604800,
-        "STEEM_MAX_INSTANCE_ID": "281474976710655",
-        "STEEM_MAX_MEMO_SIZE": 2048,
-        "STEEM_MAX_WITNESSES": 21,
-        "STEEM_MAX_MINER_WITNESSES_HF0": 1,
-        "STEEM_MAX_MINER_WITNESSES_HF17": 0,
-        "STEEM_MAX_PERMLINK_LENGTH": 256,
-        "STEEM_MAX_PROXY_RECURSION_DEPTH": 4,
-        "STEEM_MAX_RATION_DECAY_RATE": 1000000,
-        "STEEM_MAX_RESERVE_RATIO": 20000,
-        "STEEM_MAX_RUNNER_WITNESSES_HF0": 1,
-        "STEEM_MAX_RUNNER_WITNESSES_HF17": 1,
-        "STEEM_MAX_SATOSHIS": "4611686018427387903",
-        "STEEM_MAX_SHARE_SUPPLY": "1000000000000000",
-        "STEEM_MAX_SIG_CHECK_DEPTH": 2,
-        "STEEM_MAX_SIG_CHECK_ACCOUNTS": 125,
-        "STEEM_MAX_TIME_UNTIL_EXPIRATION": 3600,
-        "STEEM_MAX_TRANSACTION_SIZE": 65536,
-        "STEEM_MAX_UNDO_HISTORY": 10000,
-        "STEEM_MAX_URL_LENGTH": 127,
-        "STEEM_MAX_VOTE_CHANGES": 5,
-        "STEEM_MAX_VOTED_WITNESSES_HF0": 19,
-        "STEEM_MAX_VOTED_WITNESSES_HF17": 20,
-        "STEEM_MAX_WITHDRAW_ROUTES": 10,
-        "STEEM_MAX_WITNESS_URL_LENGTH": 2048,
-        "STEEM_MIN_ACCOUNT_CREATION_FEE": 1,
-        "STEEM_MIN_ACCOUNT_NAME_LENGTH": 3,
-        "STEEM_MIN_BLOCK_SIZE_LIMIT": 65536,
-        "STEEM_MIN_BLOCK_SIZE": 115,
-        "STEEM_MIN_CONTENT_REWARD": {
+        "CREA_ADDRESS_PREFIX": "STM",
+        "CREA_APR_PERCENT_MULTIPLY_PER_BLOCK": "102035135585887",
+        "CREA_APR_PERCENT_MULTIPLY_PER_HOUR": "119577151364285",
+        "CREA_APR_PERCENT_MULTIPLY_PER_ROUND": "133921203762304",
+        "CREA_APR_PERCENT_SHIFT_PER_BLOCK": 87,
+        "CREA_APR_PERCENT_SHIFT_PER_HOUR": 77,
+        "CREA_APR_PERCENT_SHIFT_PER_ROUND": 83,
+        "CREA_BANDWIDTH_AVERAGE_WINDOW_SECONDS": 604800,
+        "CREA_BANDWIDTH_PRECISION": 1000000,
+        "CREA_BLOCKCHAIN_PRECISION": 1000,
+        "CREA_BLOCKCHAIN_PRECISION_DIGITS": 3,
+        "CREA_BLOCKCHAIN_HARDFORK_VERSION": "0.20.0",
+        "CREA_BLOCKCHAIN_VERSION": "0.20.6",
+        "CREA_BLOCK_INTERVAL": 3,
+        "CREA_BLOCKS_PER_DAY": 28800,
+        "CREA_BLOCKS_PER_HOUR": 1200,
+        "CREA_BLOCKS_PER_YEAR": 10512000,
+        "CREA_CASHOUT_WINDOW_SECONDS": 604800,
+        "CREA_CASHOUT_WINDOW_SECONDS_PRE_HF12": 86400,
+        "CREA_CASHOUT_WINDOW_SECONDS_PRE_HF17": 43200,
+        "CREA_CHAIN_ID": "0000000000000000000000000000000000000000000000000000000000000000",
+        "CREA_COMMENT_REWARD_FUND_NAME": "comment",
+        "CREA_CONTENT_APR_PERCENT": 3875,
+        "CREA_CONTENT_CONSTANT_HF0": "2000000000000",
+        "CREA_CONTENT_REWARD_PERCENT": 7500,
+        "CREA_CONVERSION_DELAY": "302400000000",
+        "CREA_CONVERSION_DELAY_PRE_HF_16": "604800000000",
+        "CREA_CREATE_ACCOUNT_DELEGATION_RATIO": 5,
+        "CREA_CREATE_ACCOUNT_DELEGATION_TIME": "2592000000000",
+        "CREA_CREATE_ACCOUNT_WITH_CREA_MODIFIER": 30,
+        "CREA_CURATE_APR_PERCENT": 3875,
+        "CREA_DEFAULT_CBD_INTEREST_RATE": 1000,
+        "CREA_EQUIHASH_K": 6,
+        "CREA_EQUIHASH_N": 140,
+        "CREA_FEED_HISTORY_WINDOW": 84,
+        "CREA_FEED_HISTORY_WINDOW_PRE_HF_16": 168,
+        "CREA_FEED_INTERVAL_BLOCKS": 1200,
+        "CREA_GENESIS_TIME": "2016-03-24T16:00:00",
+        "CREA_HARDFORK_REQUIRED_WITNESSES": 17,
+        "CREA_INFLATION_NARROWING_PERIOD": 250000,
+        "CREA_INFLATION_RATE_START_PERCENT": 978,
+        "CREA_INFLATION_RATE_STOP_PERCENT": 95,
+        "CREA_INIT_MINER_NAME": "initminer",
+        "CREA_INIT_PUBLIC_KEY_STR": "STM8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
+        "CREA_INIT_SUPPLY": 0,
+        "CREA_INIT_TIME": "1970-01-01T00:00:00",
+        "CREA_IRREVERSIBLE_THRESHOLD": 7500,
+        "CREA_LIQUIDITY_APR_PERCENT": 750,
+        "CREA_LIQUIDITY_REWARD_BLOCKS": 1200,
+        "CREA_LIQUIDITY_REWARD_PERIOD_SEC": 3600,
+        "CREA_LIQUIDITY_TIMEOUT_SEC": "604800000000",
+        "CREA_MAX_ACCOUNT_CREATION_FEE": 1000000000,
+        "CREA_MAX_ACCOUNT_NAME_LENGTH": 16,
+        "CREA_MAX_ACCOUNT_WITNESS_VOTES": 30,
+        "CREA_MAX_ASSET_WHITELIST_AUTHORITIES": 10,
+        "CREA_MAX_AUTHORITY_MEMBERSHIP": 40,
+        "CREA_MAX_BLOCK_SIZE": 393216000,
+        "CREA_SOFT_MAX_BLOCK_SIZE": 2097152,
+        "CREA_MAX_CASHOUT_WINDOW_SECONDS": 1209600,
+        "CREA_MAX_COMMENT_DEPTH": 65535,
+        "CREA_MAX_COMMENT_DEPTH_PRE_HF17": 6,
+        "CREA_MAX_FEED_AGE_SECONDS": 604800,
+        "CREA_MAX_INSTANCE_ID": "281474976710655",
+        "CREA_MAX_MEMO_SIZE": 2048,
+        "CREA_MAX_WITNESSES": 21,
+        "CREA_MAX_MINER_WITNESSES_HF0": 1,
+        "CREA_MAX_MINER_WITNESSES_HF17": 0,
+        "CREA_MAX_PERMLINK_LENGTH": 256,
+        "CREA_MAX_PROXY_RECURSION_DEPTH": 4,
+        "CREA_MAX_RATION_DECAY_RATE": 1000000,
+        "CREA_MAX_RESERVE_RATIO": 20000,
+        "CREA_MAX_RUNNER_WITNESSES_HF0": 1,
+        "CREA_MAX_RUNNER_WITNESSES_HF17": 1,
+        "CREA_MAX_SATOSHIS": "4611686018427387903",
+        "CREA_MAX_SHARE_SUPPLY": "1000000000000000",
+        "CREA_MAX_SIG_CHECK_DEPTH": 2,
+        "CREA_MAX_SIG_CHECK_ACCOUNTS": 125,
+        "CREA_MAX_TIME_UNTIL_EXPIRATION": 3600,
+        "CREA_MAX_TRANSACTION_SIZE": 65536,
+        "CREA_MAX_UNDO_HISTORY": 10000,
+        "CREA_MAX_URL_LENGTH": 127,
+        "CREA_MAX_VOTE_CHANGES": 5,
+        "CREA_MAX_VOTED_WITNESSES_HF0": 19,
+        "CREA_MAX_VOTED_WITNESSES_HF17": 20,
+        "CREA_MAX_WITHDRAW_ROUTES": 10,
+        "CREA_MAX_WITNESS_URL_LENGTH": 2048,
+        "CREA_MIN_ACCOUNT_CREATION_FEE": 1,
+        "CREA_MIN_ACCOUNT_NAME_LENGTH": 3,
+        "CREA_MIN_BLOCK_SIZE_LIMIT": 65536,
+        "CREA_MIN_BLOCK_SIZE": 115,
+        "CREA_MIN_CONTENT_REWARD": {
           "amount": "1000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_MIN_CURATE_REWARD": {
+        "CREA_MIN_CURATE_REWARD": {
           "amount": "1000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_MIN_PERMLINK_LENGTH": 0,
-        "STEEM_MIN_REPLY_INTERVAL": 20000000,
-        "STEEM_MIN_REPLY_INTERVAL_HF20": 3000000,
-        "STEEM_MIN_ROOT_COMMENT_INTERVAL": 300000000,
-        "STEEM_MIN_VOTE_INTERVAL_SEC": 3,
-        "STEEM_MINER_ACCOUNT": "miners",
-        "STEEM_MINER_PAY_PERCENT": 100,
-        "STEEM_MIN_FEEDS": 7,
-        "STEEM_MINING_REWARD": {
+        "CREA_MIN_PERMLINK_LENGTH": 0,
+        "CREA_MIN_REPLY_INTERVAL": 20000000,
+        "CREA_MIN_REPLY_INTERVAL_HF20": 3000000,
+        "CREA_MIN_ROOT_COMMENT_INTERVAL": 300000000,
+        "CREA_MIN_VOTE_INTERVAL_SEC": 3,
+        "CREA_MINER_ACCOUNT": "miners",
+        "CREA_MINER_PAY_PERCENT": 100,
+        "CREA_MIN_FEEDS": 7,
+        "CREA_MINING_REWARD": {
           "amount": "1000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_MINING_TIME": "2016-03-24T17:00:00",
-        "STEEM_MIN_LIQUIDITY_REWARD": {
+        "CREA_MINING_TIME": "2016-03-24T17:00:00",
+        "CREA_MIN_LIQUIDITY_REWARD": {
           "amount": "1200000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_MIN_LIQUIDITY_REWARD_PERIOD_SEC": 60000000,
-        "STEEM_MIN_PAYOUT_SBD": {
+        "CREA_MIN_LIQUIDITY_REWARD_PERIOD_SEC": 60000000,
+        "CREA_MIN_PAYOUT_CBD": {
           "amount": "20",
           "precision": 3,
           "nai": "@@000000013"
         },
-        "STEEM_MIN_POW_REWARD": {
+        "CREA_MIN_POW_REWARD": {
           "amount": "1000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_MIN_PRODUCER_REWARD": {
+        "CREA_MIN_PRODUCER_REWARD": {
           "amount": "1000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_MIN_TRANSACTION_EXPIRATION_LIMIT": 15,
-        "STEEM_MIN_TRANSACTION_SIZE_LIMIT": 1024,
-        "STEEM_MIN_UNDO_HISTORY": 10,
-        "STEEM_NULL_ACCOUNT": "null",
-        "STEEM_NUM_INIT_MINERS": 1,
-        "STEEM_OWNER_AUTH_HISTORY_TRACKING_START_BLOCK_NUM": 3186477,
-        "STEEM_OWNER_AUTH_RECOVERY_PERIOD": "2592000000000",
-        "STEEM_OWNER_CHALLENGE_COOLDOWN": "86400000000",
-        "STEEM_OWNER_CHALLENGE_FEE": {
+        "CREA_MIN_TRANSACTION_EXPIRATION_LIMIT": 15,
+        "CREA_MIN_TRANSACTION_SIZE_LIMIT": 1024,
+        "CREA_MIN_UNDO_HISTORY": 10,
+        "CREA_NULL_ACCOUNT": "null",
+        "CREA_NUM_INIT_MINERS": 1,
+        "CREA_OWNER_AUTH_HISTORY_TRACKING_START_BLOCK_NUM": 3186477,
+        "CREA_OWNER_AUTH_RECOVERY_PERIOD": "2592000000000",
+        "CREA_OWNER_CHALLENGE_COOLDOWN": "86400000000",
+        "CREA_OWNER_CHALLENGE_FEE": {
           "amount": "30000",
           "precision": 3,
           "nai": "@@000000021"
         },
-        "STEEM_OWNER_UPDATE_LIMIT": 3600000000,
-        "STEEM_POST_AVERAGE_WINDOW": 86400,
-        "STEEM_POST_REWARD_FUND_NAME": "post",
-        "STEEM_POST_WEIGHT_CONSTANT": 1600000000,
-        "STEEM_POW_APR_PERCENT": 750,
-        "STEEM_PRODUCER_APR_PERCENT": 750,
-        "STEEM_PROXY_TO_SELF_ACCOUNT": "",
-        "STEEM_SBD_INTEREST_COMPOUND_INTERVAL_SEC": 2592000,
-        "STEEM_SECONDS_PER_YEAR": 31536000,
-        "STEEM_RECENT_RSHARES_DECAY_TIME_HF19": "1296000000000",
-        "STEEM_RECENT_RSHARES_DECAY_TIME_HF17": "2592000000000",
-        "STEEM_REVERSE_AUCTION_WINDOW_SECONDS_HF6": 1800,
-        "STEEM_REVERSE_AUCTION_WINDOW_SECONDS_HF20": 900,
-        "STEEM_ROOT_POST_PARENT": "",
-        "STEEM_SAVINGS_WITHDRAW_REQUEST_LIMIT": 100,
-        "STEEM_SAVINGS_WITHDRAW_TIME": "259200000000",
-        "STEEM_SBD_START_PERCENT_HF14": 200,
-        "STEEM_SBD_START_PERCENT_HF20": 900,
-        "STEEM_SBD_STOP_PERCENT_HF14": 500,
-        "STEEM_SBD_STOP_PERCENT_HF20": 1000,
-        "STEEM_SECOND_CASHOUT_WINDOW": 2592000,
-        "STEEM_SOFT_MAX_COMMENT_DEPTH": 255,
-        "STEEM_START_MINER_VOTING_BLOCK": 864000,
-        "STEEM_START_VESTING_BLOCK": 201600,
-        "STEEM_TEMP_ACCOUNT": "temp",
-        "STEEM_UPVOTE_LOCKOUT_HF7": 60000000,
-        "STEEM_UPVOTE_LOCKOUT_HF17": "43200000000",
-        "STEEM_UPVOTE_LOCKOUT_SECONDS": 43200,
-        "STEEM_VESTING_FUND_PERCENT": 1500,
-        "STEEM_VESTING_WITHDRAW_INTERVALS": 13,
-        "STEEM_VESTING_WITHDRAW_INTERVALS_PRE_HF_16": 104,
-        "STEEM_VESTING_WITHDRAW_INTERVAL_SECONDS": 604800,
-        "STEEM_VOTE_DUST_THRESHOLD": 50000000,
-        "STEEM_VOTING_MANA_REGENERATION_SECONDS": 432000,
-        "STEEM_SYMBOL": null,
+        "CREA_OWNER_UPDATE_LIMIT": 3600000000,
+        "CREA_POST_AVERAGE_WINDOW": 86400,
+        "CREA_POST_REWARD_FUND_NAME": "post",
+        "CREA_POST_WEIGHT_CONSTANT": 1600000000,
+        "CREA_POW_APR_PERCENT": 750,
+        "CREA_PRODUCER_APR_PERCENT": 750,
+        "CREA_PROXY_TO_SELF_ACCOUNT": "",
+        "CREA_CBD_INTEREST_COMPOUND_INTERVAL_SEC": 2592000,
+        "CREA_SECONDS_PER_YEAR": 31536000,
+        "CREA_RECENT_RSHARES_DECAY_TIME_HF19": "1296000000000",
+        "CREA_RECENT_RSHARES_DECAY_TIME_HF17": "2592000000000",
+        "CREA_REVERSE_AUCTION_WINDOW_SECONDS_HF6": 1800,
+        "CREA_REVERSE_AUCTION_WINDOW_SECONDS_HF20": 900,
+        "CREA_ROOT_POST_PARENT": "",
+        "CREA_SAVINGS_WITHDRAW_REQUEST_LIMIT": 100,
+        "CREA_SAVINGS_WITHDRAW_TIME": "259200000000",
+        "CREA_CBD_START_PERCENT_HF14": 200,
+        "CREA_CBD_START_PERCENT_HF20": 900,
+        "CREA_CBD_STOP_PERCENT_HF14": 500,
+        "CREA_CBD_STOP_PERCENT_HF20": 1000,
+        "CREA_SECOND_CASHOUT_WINDOW": 2592000,
+        "CREA_SOFT_MAX_COMMENT_DEPTH": 255,
+        "CREA_START_MINER_VOTING_BLOCK": 864000,
+        "CREA_START_VESTING_BLOCK": 201600,
+        "CREA_TEMP_ACCOUNT": "temp",
+        "CREA_UPVOTE_LOCKOUT_HF7": 60000000,
+        "CREA_UPVOTE_LOCKOUT_HF17": "43200000000",
+        "CREA_UPVOTE_LOCKOUT_SECONDS": 43200,
+        "CREA_VESTING_FUND_PERCENT": 1500,
+        "CREA_VESTING_WITHDRAW_INTERVALS": 13,
+        "CREA_VESTING_WITHDRAW_INTERVALS_PRE_HF_16": 104,
+        "CREA_VESTING_WITHDRAW_INTERVAL_SECONDS": 604800,
+        "CREA_VOTE_DUST_THRESHOLD": 50000000,
+        "CREA_VOTING_MANA_REGENERATION_SECONDS": 432000,
+        "CREA_SYMBOL": null,
         "VESTS_SYMBOL": null,
-        "STEEM_VIRTUAL_SCHEDULE_LAP_LENGTH": "18446744073709551615",
-        "STEEM_VIRTUAL_SCHEDULE_LAP_LENGTH2": "340282366920938463463374607431768211455",
-        "STEEM_MAX_LIMIT_ORDER_EXPIRATION": 2419200,
-        "STEEM_DELEGATION_RETURN_PERIOD_HF0": 604800,
-        "STEEM_DELEGATION_RETURN_PERIOD_HF20": 432000,
-        "STEEM_RD_MIN_DECAY_BITS": 6,
-        "STEEM_RD_MAX_DECAY_BITS": 32,
-        "STEEM_RD_DECAY_DENOM_SHIFT": 36,
-        "STEEM_RD_MAX_POOL_BITS": 64,
-        "STEEM_RD_MAX_BUDGET_1": "17179869183",
-        "STEEM_RD_MAX_BUDGET_2": 268435455,
-        "STEEM_RD_MAX_BUDGET_3": 2147483647,
-        "STEEM_RD_MAX_BUDGET": 268435455,
-        "STEEM_RD_MIN_DECAY": 64,
-        "STEEM_RD_MIN_BUDGET": 1,
-        "STEEM_RD_MAX_DECAY": 4294967295,
-        "STEEM_ACCOUNT_SUBSIDY_PRECISION": 10000,
-        "STEEM_WITNESS_SUBSIDY_BUDGET_PERCENT": 12500,
-        "STEEM_WITNESS_SUBSIDY_DECAY_PERCENT": 210000,
-        "STEEM_DEFAULT_ACCOUNT_SUBSIDY_DECAY": 347321,
-        "STEEM_DEFAULT_ACCOUNT_SUBSIDY_BUDGET": 797,
-        "STEEM_DECAY_BACKSTOP_PERCENT": 9000
+        "CREA_VIRTUAL_SCHEDULE_LAP_LENGTH": "18446744073709551615",
+        "CREA_VIRTUAL_SCHEDULE_LAP_LENGTH2": "340282366920938463463374607431768211455",
+        "CREA_MAX_LIMIT_ORDER_EXPIRATION": 2419200,
+        "CREA_DELEGATION_RETURN_PERIOD_HF0": 604800,
+        "CREA_DELEGATION_RETURN_PERIOD_HF20": 432000,
+        "CREA_RD_MIN_DECAY_BITS": 6,
+        "CREA_RD_MAX_DECAY_BITS": 32,
+        "CREA_RD_DECAY_DENOM_SHIFT": 36,
+        "CREA_RD_MAX_POOL_BITS": 64,
+        "CREA_RD_MAX_BUDGET_1": "17179869183",
+        "CREA_RD_MAX_BUDGET_2": 268435455,
+        "CREA_RD_MAX_BUDGET_3": 2147483647,
+        "CREA_RD_MAX_BUDGET": 268435455,
+        "CREA_RD_MIN_DECAY": 64,
+        "CREA_RD_MIN_BUDGET": 1,
+        "CREA_RD_MAX_DECAY": 4294967295,
+        "CREA_ACCOUNT_SUBSIDY_PRECISION": 10000,
+        "CREA_WITNESS_SUBSIDY_BUDGET_PERCENT": 12500,
+        "CREA_WITNESS_SUBSIDY_DECAY_PERCENT": 210000,
+        "CREA_DEFAULT_ACCOUNT_SUBSIDY_DECAY": 347321,
+        "CREA_DEFAULT_ACCOUNT_SUBSIDY_BUDGET": 797,
+        "CREA_DECAY_BACKSTOP_PERCENT": 9000
       }
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"database_api.get_config", "id":1}'
@@ -720,7 +720,7 @@
       Returns the current dynamic global properties.  See: [Understanding
       Dynamic Global Properties]({{ '/tutorials-recipes/understanding-dynamic-global-properties' | relative_url }})
     parameter_json: "{}"
-    expected_response_json: '{"id":0,"head_block_number":0,"head_block_id":"0000000000000000000000000000000000000000","time":"1970-01-01T00:00:00","current_witness":"","total_pow":"18446744073709551615","num_pow_witnesses":0,"virtual_supply":{"amount":"0","precision":3,"nai":"@@000000021"},"current_supply":{"amount":"0","precision":3,"nai":"@@000000021"},"confidential_supply":{"amount":"0","precision":3,"nai":"@@000000021"},"current_sbd_supply":{"amount":"0","precision":3,"nai":"@@000000013"},"confidential_sbd_supply":{"amount":"0","precision":3,"nai":"@@000000013"},"total_vesting_fund_steem":{"amount":"0","precision":3,"nai":"@@000000021"},"total_vesting_shares":{"amount":"0","precision":6,"nai":"@@000000037"},"total_reward_fund_steem":{"amount":"0","precision":3,"nai":"@@000000021"},"total_reward_shares2":"0","pending_rewarded_vesting_shares":{"amount":"0","precision":6,"nai":"@@000000037"},"pending_rewarded_vesting_steem":{"amount":"0","precision":3,"nai":"@@000000021"},"sbd_interest_rate":0,"sbd_print_rate":10000,"maximum_block_size":0,"current_aslot":0,"recent_slots_filled":"0","participation_count":0,"last_irreversible_block_num":0,"vote_power_reserve_rate":40,"delegation_return_period":604800,"reverse_auction_seconds":0,"available_account_subsidies":0,"sbd_stop_percent":0,"sbd_start_percent":0}'
+    expected_response_json: '{"id":0,"head_block_number":0,"head_block_id":"0000000000000000000000000000000000000000","time":"1970-01-01T00:00:00","current_witness":"","total_pow":"18446744073709551615","num_pow_witnesses":0,"virtual_supply":{"amount":"0","precision":3,"nai":"@@000000021"},"current_supply":{"amount":"0","precision":3,"nai":"@@000000021"},"confidential_supply":{"amount":"0","precision":3,"nai":"@@000000021"},"current_sbd_supply":{"amount":"0","precision":3,"nai":"@@000000013"},"confidential_sbd_supply":{"amount":"0","precision":3,"nai":"@@000000013"},"total_vesting_fund_crea":{"amount":"0","precision":3,"nai":"@@000000021"},"total_vesting_shares":{"amount":"0","precision":6,"nai":"@@000000037"},"total_reward_fund_crea":{"amount":"0","precision":3,"nai":"@@000000021"},"total_reward_shares2":"0","pending_rewarded_vesting_shares":{"amount":"0","precision":6,"nai":"@@000000037"},"pending_rewarded_vesting_crea":{"amount":"0","precision":3,"nai":"@@000000021"},"sbd_interest_rate":0,"sbd_print_rate":10000,"maximum_block_size":0,"current_aslot":0,"recent_slots_filled":"0","participation_count":0,"last_irreversible_block_num":0,"vote_power_reserve_rate":40,"delegation_return_period":604800,"reverse_auction_seconds":0,"available_account_subsidies":0,"sbd_stop_percent":0,"sbd_start_percent":0}'
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"database_api.get_dynamic_global_properties", "id":1}'
   - api_method: database_api.get_feed_history
@@ -780,11 +780,11 @@
       "id":1}'
   - api_method: database_api.get_version
     since: HF20
-    purpose: Returns the compile time versions of blockchain, steem, FC. Also returns
+    purpose: Returns the compile time versions of blockchain, crea, FC. Also returns
       the boot time version of the chain id (*may* be different from compile time
       value only when looking at a testnet)
     parameter_json: "{}"
-    expected_response_json: '{"blockchain_version":"","steem_revision":"","fc_revision":"","chain_id":"0000000000000000000000000000000000000000000000000000000000000000"}'
+    expected_response_json: '{"blockchain_version":"","crea_revision":"","fc_revision":"","chain_id":"0000000000000000000000000000000000000000000000000000000000000000"}'
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"database_api.get_version", "id":1}'
   - api_method: database_api.get_witness_schedule
@@ -805,7 +805,7 @@
 
       | `account` (string) | `limit` (int) | `order` (string) | |
       |--------------------|-|
-      | `"steemit"` | 10 | `"by_account"` | Queries the recovery requests for account named "steemit", ordered by account name. |
+      | `"creary"` | 10 | `"by_account"` | Queries the recovery requests for account named "creary", ordered by account name. |
       | `["1960-01-01T00:00:00"]` | 10 | `"by_expiration"`| Queries the recovery requests for date, ordered by expiration. |
     parameter_json: '{"start":null,"limit":0,"order":"by_name"}'
     expected_response_json: '{"requests":[]}'
@@ -871,7 +871,7 @@
             "last_account_update": "1970-01-01T00:00:00",
             "created": "2016-04-30T12:27:12",
             "mined": true,
-            "recovery_account": "steem",
+            "recovery_account": "crea",
             "last_account_recovery": "1970-01-01T00:00:00",
             "reset_account": "null",
             "comment_count": 0,
@@ -914,7 +914,7 @@
               "precision": 3,
               "nai": "@@000000013"
             },
-            "reward_steem_balance": {
+            "reward_crea_balance": {
               "amount": "0",
               "precision": 3,
               "nai": "@@000000021"
@@ -924,7 +924,7 @@
               "precision": 6,
               "nai": "@@000000037"
             },
-            "reward_vesting_steem": {
+            "reward_vesting_crea": {
               "amount": "0",
               "precision": 3,
               "nai": "@@000000021"
@@ -1002,8 +1002,8 @@
       |----------------------------|---------------|-|
       | `["1970-01-01T00:00:00", "", ""]` | 10 | `"by_cashout_time"` | Queries first 10 comments, sort by cashout time |
       | `["", ""]` | 10 | `"by_permlink"` | Queries first 10 comments, sort by permlink |
-      | `["steemit","firstpost","",""]` | 10 | `"by_root"` | Queries next 10 comments starting at @steemit/firstpost, sort by root |
-      | `["steemit","firstpost","",""]` | 10 | `"by_parent"` | Queries next 10 comments starting at @steemit/firstpost, sort by parent |
+      | `["creary","firstpost","",""]` | 10 | `"by_root"` | Queries next 10 comments starting at @creary/firstpost, sort by root |
+      | `["creary","firstpost","",""]` | 10 | `"by_parent"` | Queries next 10 comments starting at @creary/firstpost, sort by parent |
     parameter_json: '{"start":null,"limit":0,"order":"by_name"}'
     expected_response_json: |
       {
@@ -1012,11 +1012,11 @@
             "id": 66710716,
             "author": "libert",
             "permlink": "libert-re-runicar-re-libert-libert-re-runicar-re-libert-libert-re-runicar-ykwyxgj6-20181128t063355338z",
-            "category": "steem",
+            "category": "crea",
             "parent_author": "runicar",
             "parent_permlink": "re-libert-libert-re-runicar-re-libert-libert-re-runicar-ykwyxgj6-20181128t063100538z",
             "title": "",
-            "body": "13\n\nPosted using [Partiko Android](https://steemit.com/@partiko-android)",
+            "body": "13\n\nPosted using [Partiko Android](https://creary.net/@partiko-android)",
             "json_metadata": "{\"app\":\"partiko\"}",
             "last_update": "2018-11-28T06:33:57",
             "created": "2018-11-28T06:33:57",
@@ -1051,7 +1051,7 @@
               "precision": 3,
               "nai": "@@000000013"
             },
-            "percent_steem_dollars": 10000,
+            "percent_crea_dollars": 10000,
             "allow_replies": true,
             "allow_votes": true,
             "allow_curation_rewards": true,
@@ -1062,8 +1062,8 @@
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"database_api.list_comments", "params": {"start":["1970-01-01T00:00:00","",""], "limit":10, "order":"by_cashout_time"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.list_comments", "params": {"start":["",""], "limit":10, "order":"by_permlink"}, "id":1}'
-    - '{"jsonrpc":"2.0", "method":"database_api.list_comments", "params": {"start":["steemit","firstpost","",""], "limit":10, "order":"by_root"}, "id":1}'
-    - '{"jsonrpc":"2.0", "method":"database_api.list_comments", "params": {"start":["steemit","firstpost","",""], "limit":10, "order":"by_parent"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.list_comments", "params": {"start":["creary","firstpost","",""], "limit":10, "order":"by_root"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.list_comments", "params": {"start":["creary","firstpost","",""], "limit":10, "order":"by_parent"}, "id":1}'
   - api_method: database_api.list_decline_voting_rights_requests
     since: HF14
     purpose: Returns a list of decline voting rights requests.
@@ -1091,7 +1091,7 @@
               "precision": 3,
               "nai": "@@000000013"
             },
-            "steem_balance": {
+            "crea_balance": {
               "amount": "4832",
               "precision": 3,
               "nai": "@@000000021"
@@ -1145,7 +1145,7 @@
 
       | `start` (array) | `limit` (int) | |
       |--------------------|-|-|
-      | `["steemit", "1970-01-01T00:00:00"]` | 10 | Queries the owner history starting from account named "steemit" on "1970-01-01T00:00:00", limit 10 results. |
+      | `["creary", "1970-01-01T00:00:00"]` | 10 | Queries the owner history starting from account named "creary" on "1970-01-01T00:00:00", limit 10 results. |
       | `["alice", "1970-01-01T00:00:00"]` | 10 | Queries the owner history starting from account named "alice", limit 10 results. |
     parameter_json: '{"start":null,"limit":0}'
     expected_response_json: |
@@ -1169,7 +1169,7 @@
         ]
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.list_owner_histories", "params": {"start":["steemit","1970-01-01T00:00:00"], "limit":10}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.list_owner_histories", "params": {"start":["creary","1970-01-01T00:00:00"], "limit":10}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.list_owner_histories", "params": {"start":["alice","1970-01-01T00:00:00"], "limit":10}, "id":1}'
   - api_method: database_api.list_savings_withdrawals
     since: HF14
@@ -1184,7 +1184,7 @@
       | `start` (object) | `limit` (int) | `order` (string) | |
       |--------------------|-|-|-|
       | `[0]` | `10` | `"by_from_id"` | Queries the savings withdraw for id. |
-      | `["2018-12-07T16:54:03", "steemit", 0]` | `10` | `"by_complete_from_id"` | Queries the savings withdraw for id (completed). |
+      | `["2018-12-07T16:54:03", "creary", 0]` | `10` | `"by_complete_from_id"` | Queries the savings withdraw for id (completed). |
     parameter_json: '{"start":null,"limit":0,"order":"by_name"}'
     expected_response_json: |
       {
@@ -1206,10 +1206,10 @@
       }
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"database_api.list_savings_withdrawals", "params": {"start":[0], "limit":10, "order":"by_from_id"}, "id":1}'
-    - '{"jsonrpc":"2.0", "method":"database_api.list_savings_withdrawals", "params": {"start":["2018-12-07T16:54:03", "steemit", 0], "limit":10, "order":"by_complete_from_id"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.list_savings_withdrawals", "params": {"start":["2018-12-07T16:54:03", "creary", 0], "limit":10, "order":"by_complete_from_id"}, "id":1}'
   - api_method: database_api.list_sbd_conversion_requests
     purpose: |
-      Returns the list of SBD conversion requests for an account.  Parameters: `start:array`, `limit:int`, `order:string`
+      Returns the list of CBD conversion requests for an account.  Parameters: `start:array`, `limit:int`, `order:string`
 
       * `limit` is up to 1000.
       * `order` can be one of:
@@ -1218,7 +1218,7 @@
 
       | `start` (array) | `limit` (int) | `order` (string) | |
       |-------------------|-|-|-|
-      | `["steemit"]` | 10 | `by_account` | Queries a conversion request for steemit, limit to 10 results, order by account name. |
+      | `["creary"]` | 10 | `by_account` | Queries a conversion request for creary, limit to 10 results, order by account name. |
       | `["2018-12-07T16:54:03"]` | 10 | `by_conversion_date`| Queries a conversion request from this date, limit to 10 results, order by conversion date. |
     parameter_json: '{"start":null,"limit":0,"order":"by_name"}'
     expected_response_json: |
@@ -1238,7 +1238,7 @@
         ]
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.list_sbd_conversion_requests", "params": {"start":["steemit"], "limit":10, "order":"by_account"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.list_sbd_conversion_requests", "params": {"start":["creary"], "limit":10, "order":"by_account"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.list_sbd_conversion_requests", "params": {"start":["2018-12-07T16:54:03"], "limit":10, "order":"by_conversion_date"}, "id":1}'
   - api_method: database_api.list_vesting_delegation_expirations
     since: HF17
@@ -1249,7 +1249,7 @@
         "delegations": [
           {
             "id": 3076685,
-            "delegator": "anonsteem",
+            "delegator": "anoncrea",
             "vesting_shares": {
               "amount": "6050629930",
               "precision": 6,
@@ -1310,7 +1310,7 @@
           {
             "id": 9,
             "voter": "dantheman",
-            "author": "steemit",
+            "author": "creary",
             "permlink": "firstpost",
             "weight": "32866333630",
             "rshares": 375241,
@@ -1323,7 +1323,7 @@
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"database_api.list_votes", "params": {"start":["", "", ""], "limit":10, "order":"by_comment_voter"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.list_votes", "params": {"start":["", "", ""], "limit":10, "order":"by_voter_comment"}, "id":1}'
-    - '{"jsonrpc":"2.0", "method":"database_api.list_votes", "params": {"start":["", "", "steemit"], "limit":10, "order":"by_comment_voter"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.list_votes", "params": {"start":["", "", "creary"], "limit":10, "order":"by_comment_voter"}, "id":1}'
     - '{"jsonrpc":"2.0", "method":"database_api.list_votes", "params": {"start":["alice", "xeroc", "vanteem-config"], "limit":10, "order":"by_voter_comment"}, "id":1}'
   - api_method: database_api.list_withdraw_vesting_routes
     purpose: Returns a list of vesting withdraw routes.
@@ -1417,9 +1417,9 @@
     parameter_json: '{"account":"","signers":[]}'
     expected_response_json: '{"valid":false}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"database_api.verify_account_authority", "params":{"account":"steemit","signers":["STM7u1BsoqLaoCu9XHi1wjWctLWSFCuvyagFjYMfga4QNWEjP7d3U","STM5VkLha96X5EQu3HSkJdD8SEuwazWtZrzLjUT6Sc5sopgghBYrz"]}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"database_api.verify_account_authority", "params":{"account":"creary","signers":["STM7u1BsoqLaoCu9XHi1wjWctLWSFCuvyagFjYMfga4QNWEjP7d3U","STM5VkLha96X5EQu3HSkJdD8SEuwazWtZrzLjUT6Sc5sopgghBYrz"]}, "id":1}'
     expected_curl_responses:
-    - Missing Active Authority steemit
+    - Missing Active Authority creary
   - api_method: database_api.verify_authority
     purpose: |
       Returns true if the transaction has all of the required signatures,

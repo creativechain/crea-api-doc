@@ -8,9 +8,9 @@ layout: full
 
 ## Intro
 
-Hive is a "consensus interpretation" layer for the Steem blockchain, maintaining the state of social features such as post feeds, follows, and communities. Written in Python, it synchronizes an SQL database with chain state, providing developers with a more flexible/extensible alternative to the raw steemd API. This means that you can bypass steemd and access data in a more traditional way, for example, with SQL. But you can't use SQL on steemd. So Hivemind solves that problem. Hive does not support any queries to do with wallets, orders, escrow, keys, recovery, or account history.
+Hive is a "consensus interpretation" layer for the Crea blockchain, maintaining the state of social features such as post feeds, follows, and communities. Written in Python, it synchronizes an SQL database with chain state, providing developers with a more flexible/extensible alternative to the raw cread API. This means that you can bypass cread and access data in a more traditional way, for example, with SQL. But you can't use SQL on cread. So Hivemind solves that problem. Hive does not support any queries to do with wallets, orders, escrow, keys, recovery, or account history.
 
-A good source of additional information on hive and how to use it can be found in [this Steemit article](https://steemit.com/hivemind/@inertia/hivemind-queries) by @inertia.
+A good source of additional information on hive and how to use it can be found in [this Creary article](https://creary.net/hivemind/@inertia/hivemind-queries) by @inertia.
 
 #### Supported API functionality:
 
@@ -30,9 +30,9 @@ A good source of additional information on hive and how to use it can be found i
 *   condenser_api.get_content
 *   condenser_api.get_state
 
-**Additional functions available within hive-steem library**
+**Additional functions available within hive-crea library**
 
-The majority of these functions are reliant on steemd so any changes to steemd would affect these function calls. The only two functions not directly reliant on steemd are `stream_blocks` and `get_steem_per_mvest`.
+The majority of these functions are reliant on cread so any changes to cread would affect these function calls. The only two functions not directly reliant on cread are `stream_blocks` and `get_crea_per_mvest`.
 
 *   get_accounts
 *   get_all_account_names
@@ -44,16 +44,16 @@ The majority of these functions are reliant on steemd so any changes to steemd w
 *   head_block
 *   last_irreversible
 *   gdgp_extended
-*   get_steem_per_mvest
+*   get_crea_per_mvest
 *   get_feed_price
-*   get_steem_price
+*   get_crea_price
 *   get_blocks_range
 
-Detailed information on the hive-steem library can be found in the [Hivemind repo](https://github.com/steemit/hivemind/blob/master/hive/steem/client.py).
+Detailed information on the hive-crea library can be found in the [Hivemind repo](https://github.com/creativechain/hivemind/blob/master/hive/crea/client.py).
 
 #### Hivemind dependencies and setup
 
-Hivemind is available as a pre-built docker image which can be downloaded directly from Dockerhub at [https://hub.docker.com/r/steemit/hivemind/](https://hub.docker.com/r/steemit/hivemind/).
+Hivemind is available as a pre-built docker image which can be downloaded directly from Dockerhub at [https://hub.docker.com/r/creary/hivemind/](https://hub.docker.com/r/creary/hivemind/).
 
 If you would prefer to install Hivemind yourself you can do so following the basic instructions below.
 
@@ -73,7 +73,7 @@ $ sudo apt-get install python3 python3-pip
 $ sudo apt-get install postgresql
 ```
 
-More detailed documentation on the setup of Hivemind can be found at the [Hivemind github repository](https://github.com/steemit/hivemind).
+More detailed documentation on the setup of Hivemind can be found at the [Hivemind github repository](https://github.com/creativechain/hivemind).
 
 Once the dependencies have been installed the database can be created and the environment variables set.
 
@@ -82,10 +82,10 @@ $ createdb hive
 $ export DATABASE_URL=postgresql://user:pass@localhost:5432/hive
 ```
 
-By default Hivemind will connect to the mainnet [https://api.steemit.com](https://api.steemit.com) but if required you can change this to connect to a testnet. To do this set the environment variable as described below.
+By default Hivemind will connect to the mainnet [https://node1.creary.net](https://node1.creary.net) but if required you can change this to connect to a testnet. To do this set the environment variable as described below.
 
 ```bash
-$ export STEEMD_URL=https://testnet.steem.vc
+$ export CREAD_URL=https://testnet.crea.vc
 ```
 
 Now that the basic setup is done you are able to sync the database.

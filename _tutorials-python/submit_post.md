@@ -1,19 +1,19 @@
 ---
 title: 'PY: Submit Post'
 position: 10
-description: "How to submit post on Steem blockchain using Python."
+description: "How to submit post on Crea blockchain using Python."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Submit Post](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/10_submit_post) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Submit Post](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/10_submit_post) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial will explain and show you how to submit a new post to the `Steem` blockchain using the `commit` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial will explain and show you how to submit a new post to the `Crea` blockchain using the `commit` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-The Steem python library has a built-in function to transmit transactions to the blockchain. We are using the `post` method found within the `commit` class in the the library. It should be noted that comments and new post are both treated as `commit.post` operation with the only difference being that a comment/reply has got an additional parameter containing the `parent post/comment`. There are 11 parameters within the `post` method:
+The Crea python library has a built-in function to transmit transactions to the blockchain. We are using the `post` method found within the `commit` class in the the library. It should be noted that comments and new post are both treated as `commit.post` operation with the only difference being that a comment/reply has got an additional parameter containing the `parent post/comment`. There are 11 parameters within the `post` method:
 
 1. _title_ - The title of the post
 2. _body_ - The body of the post
@@ -27,11 +27,11 @@ The Steem python library has a built-in function to transmit transactions to the
 10. _beneficiaries_ - A list of beneficiaries for posting reward distribution.
 11. _self_vote_ - Upvote the post as author right after posting
 
-We will only be using the first 5 parameters as these are the only ones required to create a basic post. If you want to explore the other parameters further you can find more information [HERE](http://steem.readthedocs.io/en/latest/core.html).
+We will only be using the first 5 parameters as these are the only ones required to create a basic post. If you want to explore the other parameters further you can find more information [HERE](http://crea.readthedocs.io/en/latest/core.html).
 
 ## Steps
 
-1.  [**App setup**](#setup) - Library install and import. Connection to Steem node
+1.  [**App setup**](#setup) - Library install and import. Connection to Crea node
 2.  [**Variable input and format**](#input) - Input and creation of varialbes
 3.  [**Post submission and result**](#submit) - Committing of transaction to the blockchain
 
@@ -40,24 +40,24 @@ We will only be using the first 5 parameters as these are the only ones required
 In this tutorial we use 4 packages:
 
 - `random` and `string` - used to create a random string used for the `permlink`
-- `steem` - steem-python library and interaction with Blockchain
-- `steembase` - used to connect to the testnet
+- `crea` - crea-python library and interaction with Blockchain
+- `creabase` - used to connect to the testnet
 
-We import the libraries, connect to the `testnet` and initialize the Steem class.
+We import the libraries, connect to the `testnet` and initialize the Crea class.
 
 ```python
 import random
 import string
-import steembase
-import steem
+import creabase
+import crea
 
-steembase.chains.known_chains['STEEM'] = {
+creabase.chains.known_chains['CREA'] = {
     'chain_id': '79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673',
-    'prefix': 'STX', 'steem_symbol': 'STEEM', 'sbd_symbol': 'SBD', 'vests_symbol': 'VESTS'
+    'prefix': 'STX', 'crea_symbol': 'CREA', 'sbd_symbol': 'CBD', 'vests_symbol': 'VESTS'
 }
 
 #connect node and private posting key
-client = steem.Steem(nodes=['https://testnet.steem.vc'], keys=['5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz'])
+client = crea.Crea(nodes=['https://testnet.crea.vc'], keys=['5JEZ1EiUjFKfsKP32b15Y7jybjvHQPhnvCYZ9BW62H1LDUnMvHz'])
 ```
 
 Because this tutorial alters the blockchain we have to connect to the testnet. We also require the `private posting key` of the contributing author in order to commit the post which is why it is specified along with the `testnet` node. We have supplied a test account, `cdemo` to use with this tutorial.
@@ -104,7 +104,7 @@ print("Post created successfully")
 
 A simple confirmation is printed on the screen if the post is committed successfully.
 
-You can also check on the [testportal](http://condenser.steem.vc/blog/@cdemo) for the post.
+You can also check on the [testportal](http://condenser.crea.vc/blog/@cdemo) for the post.
 
 ### To Run the tutorial
 

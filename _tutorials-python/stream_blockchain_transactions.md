@@ -1,21 +1,21 @@
 ---
 title: 'PY: Stream Blockchain Transactions'
 position: 13
-description: "How to stream transactions on the live **Steem** blockchain"
+description: "How to stream transactions on the live **Crea** blockchain"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Stream Blockchain Transactions](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/13_stream_blockchain_transactions) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Stream Blockchain Transactions](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/13_stream_blockchain_transactions) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-In this tutorial we show you how to stream transactions on the **Steem** blockchain using the `blockchain` class found within the [steem-python](https://github.com/steemit/steem-python) library.
+In this tutorial we show you how to stream transactions on the **Crea** blockchain using the `blockchain` class found within the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-Tutorial is demonstrating the typical process of streaming blocks on Steem. We will show some information from each block that is being streamed to give you an idea. Each block contains transactions objects as well but we will not show each of this data in user interface.
+Tutorial is demonstrating the typical process of streaming blocks on Crea. We will show some information from each block that is being streamed to give you an idea. Each block contains transactions objects as well but we will not show each of this data in user interface.
 
-We are using the `blockchain.stream()` function provided by `steem-python` which returns each block after it has been accepted by witnesses. By default it follows irreversible blocks which was accepted by all witnesses.
+We are using the `blockchain.stream()` function provided by `crea-python` which returns each block after it has been accepted by witnesses. By default it follows irreversible blocks which was accepted by all witnesses.
 
 ## Steps
 
@@ -27,10 +27,10 @@ We are using the `blockchain.stream()` function provided by `steem-python` which
 
 In this tutorial we use 1 package:
 
-steem - steem-python library and interaction with Blockchain
+crea - crea-python library and interaction with Blockchain
 
 ```python
-from steem.blockain import Blockchain
+from crea.blockain import Blockchain
 
 blockchain = Blockchain()
 ```

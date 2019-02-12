@@ -4,7 +4,7 @@ position: 20
 description: "Would you like to know how to interpret account reputation to more human readable format, then this tutorial is for you."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Account Reputation](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/20_account_reputation) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Account Reputation](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/20_account_reputation) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
@@ -22,19 +22,19 @@ Account reputation is long integer string which requires special function or for
 
 #### 1. App setup <a name="app-setup"></a>
 
-In this tutorial we will use 4 packages, `pick` - helps us to select filter interactively. `steem` - steem-python library, interaction with Blockchain. `pprint` - print results in better format and `math` to perform some math calculations.
+In this tutorial we will use 4 packages, `pick` - helps us to select filter interactively. `crea` - crea-python library, interaction with Blockchain. `pprint` - print results in better format and `math` to perform some math calculations.
 
-First we import all libraries and initialize Steem class
+First we import all libraries and initialize Crea class
 
 ```python
     import pprint
     import math
     from pick import pick
 
-    # initialize Steem class
-    from steem import Steem
+    # initialize Crea class
+    from crea import Crea
 
-    s = Steem()
+    s = Crea()
 ```
 
 #### 2. Account list <a name="account-list"></a>
@@ -43,7 +43,7 @@ Next we will show predefined account list to select and setup `pick` properly.
 
 ```python
     title = 'Please choose account: '
-    options = ["steemitblog","esteemapp","busy.org","demo"]
+    options = ["crearyblog","ecreaapp","busy.org","demo"]
 
     # get index and selected filter name
     option, index = pick(options, title)
@@ -65,7 +65,7 @@ Next we will define reputation interpreter:
 
 ```python
 def rep_log10(rep):
-    """Convert raw steemd rep into a UI-ready value centered at 25."""
+    """Convert raw cread rep into a UI-ready value centered at 25."""
     def log10(string):
         leading_digits = int(string[0:4])
         log = math.log10(leading_digits) + 0.00000001

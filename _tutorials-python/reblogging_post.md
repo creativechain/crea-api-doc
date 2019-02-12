@@ -1,19 +1,19 @@
 ---
 title: 'PY: Reblogging Post'
 position: 14
-description: "We will show how to reblog or resteem post using Python, with username and posting private key."
+description: "We will show how to reblog or recrea post using Python, with username and posting private key."
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Reblogging Post](https://github.com/steemit/devportal-tutorials-py/tree/master/tutorials/14_reblogging_post) can be downloaded as part of the [PY tutorials repository](https://github.com/steemit/devportal-tutorials-py).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Reblogging Post](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/14_reblogging_post) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
 <br>
 
 
 
-Tutorial will also explain and show you how to sign/broadcast transaction on **Steem** blockchain using the [steem-python](https://github.com/steemit/steem-python) library.
+Tutorial will also explain and show you how to sign/broadcast transaction on **Crea** blockchain using the [crea-python](https://github.com/creativechain/crea-python) library.
 
 ## Intro
 
-Steem python library has built-in function to commit transaction and broadcast it to the network. 
+Crea python library has built-in function to commit transaction and broadcast it to the network. 
 
 ## Steps
 
@@ -23,17 +23,17 @@ Steem python library has built-in function to commit transaction and broadcast i
 
 #### 1. App setup <a name="app-setup"></a>
 
-In this tutorial we use 3 packages, `pick` - helps us to select filter interactively. `steem` - steem-python library, interaction with Blockchain. `pprint` - print results in better format.
+In this tutorial we use 3 packages, `pick` - helps us to select filter interactively. `crea` - crea-python library, interaction with Blockchain. `pprint` - print results in better format.
 
-First we import all three library and initialize Steem class
+First we import all three library and initialize Crea class
 
 ```python
     import pprint
     from pick import pick
-    # initialize Steem class
-    from steem import Steem
+    # initialize Crea class
+    from crea import Crea
 
-    s = Steem()
+    s = Crea()
 ```
 
 #### 2. Post list <a name="post-list"></a>
@@ -72,10 +72,10 @@ Next in order to sign transaction, application asks for username and posting pri
   wif = input("Enter your Posting private key? ")
 
   # commit or build transaction
-  c = Commit(steem=Steem(keys=[wif]))
+  c = Commit(crea=Crea(keys=[wif]))
 
   # broadcast transaction
-  c.resteem(option, account=account)
+  c.recrea(option, account=account)
 
 ```
 

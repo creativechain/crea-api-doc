@@ -15,17 +15,17 @@
       
       | `account` (string) | `limit` (int) | |
       |--------------------|-|
-      | `"steemit"` | 10 | Queries the reputation for account named "steemit". |
+      | `"creary"` | 10 | Queries the reputation for account named "creary". |
       
-      See [#1425](https://github.com/steemit/steem/issues/1425)
+      See [#1425](https://github.com/creativechain/crea/issues/1425)
     parameter_json: '{"account_lower_bound":"","limit":1000}'
     expected_response_json: |
       {
-        "account": "steem",
+        "account": "crea",
         "reputation": 0
       }
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"reputation_api.get_account_reputations", "params": {"account_lower_bound": "steem"}, "id":1}'
+    - '{"jsonrpc":"2.0", "method":"reputation_api.get_account_reputations", "params": {"account_lower_bound": "crea"}, "id":1}'
     mainnet:
       working: false
       detail: "Not yet enabled."

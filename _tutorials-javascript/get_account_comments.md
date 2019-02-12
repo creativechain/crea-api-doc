@@ -1,40 +1,40 @@
 ---
 title: 'JS: Get Account Comments'
 position: 9
-description: "_By the end of this tutorial you should know how to retrieve account comments from the steem blockchain_"
+description: "_By the end of this tutorial you should know how to retrieve account comments from the crea blockchain_"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Account Comments](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/09_get_account_comments) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Account Comments](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/09_get_account_comments) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
 
-This tutorial will show how to fetch comments made by a specific account (in this case `@steemitblog`) by demonstrating how to use the `get_state` api function call. We will also demonstrate the most commonly used fields from the response object as well as how to parse the body of each comment.
+This tutorial will show how to fetch comments made by a specific account (in this case `@crearyblog`) by demonstrating how to use the `get_state` api function call. We will also demonstrate the most commonly used fields from the response object as well as how to parse the body of each comment.
 
 ## Intro
 
-We are using the `get_state` function with `dsteem` that returns the current state of the network as well as additional content. Each content body is written in markdown and could be submitted to the blockchain by many different applications built on top of Steem. For that reason we are using the `remarkable` npm package to parse markdown in a readable format.
+We are using the `get_state` function with `dcrea` that returns the current state of the network as well as additional content. Each content body is written in markdown and could be submitted to the blockchain by many different applications built on top of Crea. For that reason we are using the `remarkable` npm package to parse markdown in a readable format.
 
 ## Steps
 
-1.  [**App setup**](#app-setup) Configuration of `dsteem` to use the proper connection and network.
-1.  [**Query**](#query) Query the path which we want to extract from Steem blockchain state.
+1.  [**App setup**](#app-setup) Configuration of `dcrea` to use the proper connection and network.
+1.  [**Query**](#query) Query the path which we want to extract from Crea blockchain state.
 1.  [**Formatting**](#formatting) Formatting the JSON object to be viewed in a simple user interface.
 
 #### 1. App setup<a name="app-setup"></a>
 
-Below we have `dsteem` pointing to the main network with the proper chainId, addressPrefix and connection server.
+Below we have `dcrea` pointing to the main network with the proper chainId, addressPrefix and connection server.
 There is a `public/app.js` file which holds the Javascript segment of this tutorial. In the first few lines we define and configure library and packages.
 
 ```javascript
-const dsteem = require('dsteem');
+const dcrea = require('dcrea');
 let opts = {};
 //connect to production server
 opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
 //connect to server which is connected to the network/production
-const client = new dsteem.Client('https://api.steemit.com');
+const client = new dcrea.Client('https://node1.creary.net');
 
 const Remarkable = require('remarkable');
 const md = new Remarkable({ html: true, linkify: true });
@@ -47,21 +47,21 @@ const md = new Remarkable({ html: true, linkify: true });
 Next, we have the `main` function which runs when the page is loaded.
 
 ```javascript
-// query string, fetching comments made by @steemitblog account
-const query = '/@steemitblog/comments';
+// query string, fetching comments made by @crearyblog account
+const query = '/@crearyblog/comments';
 
 client.database.call('get_state', [query]).then(result => {
     // work with state object
 });
 ```
 
-`query` is the path from where want to extract Steem blockchain state. In our example we are querying `comments` from the `@steemitblog` account. The result will be the current state object with various information as well as the `content` property holding the content of the query.
+`query` is the path from where want to extract Crea blockchain state. In our example we are querying `comments` from the `@crearyblog` account. The result will be the current state object with various information as well as the `content` property holding the content of the query.
 
 The following is an example of the returned object:
 
 ```json
 {
-    "current_route":"/@steemitblog/comments",
+    "current_route":"/@crearyblog/comments",
     "props":{
         "head_block_number":22307429,
         "head_block_id":"01546265c9dc3e761add4c4b652743e3c640fa19",
@@ -69,17 +69,17 @@ The following is an example of the returned object:
         "current_witness":"smooth.witness",
         "total_pow":514415,
         "num_pow_witnesses":172,
-        "virtual_supply":"271970374.699 STEEM",
-        "current_supply":"268140818.508 STEEM",
-        "confidential_supply":"0.000 STEEM",
-        "current_sbd_supply":"13342173.771 SBD",
-        "confidential_sbd_supply":"0.000 SBD",
-        "total_vesting_fund_steem":"191002132.498 STEEM",
+        "virtual_supply":"271970374.699 CREA",
+        "current_supply":"268140818.508 CREA",
+        "confidential_supply":"0.000 CREA",
+        "current_sbd_supply":"13342173.771 CBD",
+        "confidential_sbd_supply":"0.000 CBD",
+        "total_vesting_fund_crea":"191002132.498 CREA",
         "total_vesting_shares":"388786707656.308148 VESTS",
-        "total_reward_fund_steem":"0.000 STEEM",
+        "total_reward_fund_crea":"0.000 CREA",
         "total_reward_shares2":"0",
         "pending_rewarded_vesting_shares":"366359809.533218 VESTS",
-        "pending_rewarded_vesting_steem":"178575.754 STEEM",
+        "pending_rewarded_vesting_crea":"178575.754 CREA",
         "sbd_interest_rate":0,
         "sbd_print_rate":10000,
         "maximum_block_size":65536,
@@ -93,15 +93,15 @@ The following is an example of the returned object:
         "max_virtual_bandwidth":"264241152000000000000"
     },
     "tag_idx":{
-        "trending":["","life","photography","steemit","kr","introduceyourself","bitcoin","art","travel","cryptocurrency","spanish","food","steem","blog","funny","news","nature","colorchallenge","dtube","indonesia","story","cn","money","music","writing","crypto","contest","busy","health","poetry","meme","video","utopian-io","photo","new","love","blockchain","deutsch","dmania","science","technology","aceh","entertainment","gaming","politics","myanmar","esteem","sports","fun","tr"]
+        "trending":["","life","photography","creary","kr","introduceyourself","bitcoin","art","travel","cryptocurrency","spanish","food","crea","blog","funny","news","nature","colorchallenge","dtube","indonesia","story","cn","money","music","writing","crypto","contest","busy","health","poetry","meme","video","utopian-io","photo","new","love","blockchain","deutsch","dmania","science","technology","aceh","entertainment","gaming","politics","myanmar","ecrea","sports","fun","tr"]
     },
     "tags":{},
     "content":{
-        "steemitblog/afm007-re-steemitblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t050215510z":{
+        "crearyblog/afm007-re-crearyblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t050215510z":{
             "id":47669989,
-            "author":"steemitblog",
-            "permlink":"afm007-re-steemitblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t050215510z",
-            "category":"steem",
+            "author":"crearyblog",
+            "permlink":"afm007-re-crearyblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t050215510z",
+            "category":"crea",
             "parent_author":"afm007",
             "parent_permlink":"devportal-update-3-ux-improvements-more-javascript-tutorials-and-more","title":"","body":"I want to learn the Python language.",
             "json_metadata":"{''}",
@@ -119,39 +119,39 @@ The following is an example of the returned object:
             "max_cashout_time":"1969-12-31T23:59:59",
             "total_vote_weight":32523,
             "reward_weight":10000,
-            "total_payout_value":"0.000 SBD",
-            "curator_payout_value":"0.000 SBD",
+            "total_payout_value":"0.000 CBD",
+            "curator_payout_value":"0.000 CBD",
             "author_rewards":0,
             "net_votes":1,
-            "root_author":"steemitblog",
+            "root_author":"crearyblog",
             "root_permlink":"devportal-update-3-ux-improvements-more-javascript-tutorials-and-more",
-            "max_accepted_payout":"1000000.000 SBD",
-            "percent_steem_dollars":10000,
+            "max_accepted_payout":"1000000.000 CBD",
+            "percent_crea_dollars":10000,
             "allow_replies":true,
             "allow_votes":true,
             "allow_curation_rewards":true,
             "beneficiaries":[],
-            "url":"/steem/@steemitblog/devportal-update-3-ux-improvements-more-javascript-tutorials-and-more#@afm007/afm007-re-steemitblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t050215510z",
+            "url":"/crea/@crearyblog/devportal-update-3-ux-improvements-more-javascript-tutorials-and-more#@afm007/afm007-re-crearyblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t050215510z",
             "root_title":"DevPortal Update #3: UX Improvements, More Javascript Tutorials and More!",
-            "pending_payout_value":"0.005 SBD",
-            "total_pending_payout_value":"0.000 STEEM",
+            "pending_payout_value":"0.005 CBD",
+            "total_pending_payout_value":"0.000 CREA",
             "active_votes":[{"voter":"afm007","weight":17182,"rshares":1057692008,"percent":10000,"reputation":"855556264424","time":"2018-05-09T05:18:06"}],
             "replies":[],
             "author_reputation":"855556264424",
-            "promoted":"0.000 SBD",
+            "promoted":"0.000 CBD",
             "body_length":0,
             "reblogged_by":[]
         },
-        "steemitblog/re-steemitblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t045305223z":{
+        "crearyblog/re-crearyblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t045305223z":{
             "id":47669080,
-            "author":"steemitblog",
-            "permlink":"re-steemitblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t045305223z",
-            "category":"steem",
+            "author":"crearyblog",
+            "permlink":"re-crearyblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t045305223z",
+            "category":"crea",
             "parent_author":"andreina89",
             "parent_permlink":"devportal-update-3-ux-improvements-more-javascript-tutorials-and-more",
             "title":"",
             "body":"Excellent post very interesting friend, thanks",
-            "json_metadata":"{\"tags\":[\"steem\"],\"app\":\"steemit/0.1\"}",
+            "json_metadata":"{\"tags\":[\"crea\"],\"app\":\"creary/0.1\"}",
             "last_update":"2018-05-09T04:53:21",
             "created":"2018-05-09T04:53:21",
             "active":"2018-05-09T04:53:27",
@@ -166,32 +166,32 @@ The following is an example of the returned object:
             "max_cashout_time":"1969-12-31T23:59:59",
             "total_vote_weight":0,
             "reward_weight":10000,
-            "total_payout_value":"0.000 SBD",
-            "curator_payout_value":"0.000 SBD",
+            "total_payout_value":"0.000 CBD",
+            "curator_payout_value":"0.000 CBD",
             "author_rewards":0,
             "net_votes":0,
-            "root_author":"steemitblog",
+            "root_author":"crearyblog",
             "root_permlink":"devportal-update-3-ux-improvements-more-javascript-tutorials-and-more",
-            "max_accepted_payout":"1000000.000 SBD",
-            "percent_steem_dollars":10000,
+            "max_accepted_payout":"1000000.000 CBD",
+            "percent_crea_dollars":10000,
             "allow_replies":true,
             "allow_votes":true,
             "allow_curation_rewards":true,
             "beneficiaries":[],
-            "url":"/steem/@steemitblog/devportal-update-3-ux-improvements-more-javascript-tutorials-and-more#@andreina89/re-steemitblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t045305223z",
+            "url":"/crea/@crearyblog/devportal-update-3-ux-improvements-more-javascript-tutorials-and-more#@andreina89/re-crearyblog-devportal-update-3-ux-improvements-more-javascript-tutorials-and-more-20180509t045305223z",
             "root_title":"DevPortal Update #3: UX Improvements, More Javascript Tutorials and More!",
-            "pending_payout_value":"0.000 SBD",
-            "total_pending_payout_value":"0.000 STEEM",
+            "pending_payout_value":"0.000 CBD",
+            "total_pending_payout_value":"0.000 CREA",
             "active_votes":[],
             "replies":[],
             "author_reputation":"174938588721",
-            "promoted":"0.000 SBD",
+            "promoted":"0.000 CBD",
             "body_length":0,"reblogged_by":[]
         },
         {"etc.":"etc."}
     },
     "accounts":{
-        "steemitblog:{
+        "crearyblog:{
             "etc.":"etc."
         },
     },
@@ -208,7 +208,7 @@ The following is an example of the returned object:
         "miner_weight":1,
         "witness_pay_normalization_factor":25,
         "median_props":{
-            "account_creation_fee":"0.100 STEEM",
+            "account_creation_fee":"0.100 CREA",
             "maximum_block_size":65536,
             "sbd_interest_rate":0
         },
@@ -219,8 +219,8 @@ The following is an example of the returned object:
         "hardfork_required_witnesses":17
     },
     "feed_price":{
-        "base":"3.484 SBD",
-        "quote":"1.000 STEEM"
+        "base":"3.484 CBD",
+        "quote":"1.000 CREA"
     },
     "error":""
 }
@@ -265,7 +265,7 @@ We first check if `content` is not an empty object. We then iterate through each
 
 *   `parent_author`
 *   `parent_permlink`
-*   and the post or comment the `@steemitblog` account is replying to
+*   and the post or comment the `@crearyblog` account is replying to
 
 We format `created` date and time, parse `body` markdown and get `net_votes` on that comment.
 Each line is then pushed and displayed separately.

@@ -6,12 +6,12 @@
   
     **Purpose:**
     
-    A broadcast operation on Steem is a way of expressing intention on the blockchain.
-    It is used to transmit signed transactions to the Steem network.
+    A broadcast operation on Crea is a way of expressing intention on the blockchain.
+    It is used to transmit signed transactions to the Crea network.
     
     There are various broadcast types, in this instance we are focusing specifically on the `comment` operation.
     Each of the broadcast operations have parameters that are passed with the specific method in order to affect the required change to the blockchain.
-    In other words, the `broadcast.comment` operation creates a comment or a post (post are also defined as comments) on the Steem blockchain.
+    In other words, the `broadcast.comment` operation creates a comment or a post (post are also defined as comments) on the Crea blockchain.
   
     **Rules:**
       - The "title" must not be longer than 256 bytes
@@ -35,7 +35,7 @@
         There is no blockchain enforced validation on json_metadata, but the community has adopted a particular structure.
       - It should contain a JSON object with the following keys:
           - tags - An array of up to 5 strings. Although the blockchain will accept more than 5, the tags plugin only looks at the first five
-          - app - A user agent style application identifier. Typically app_name.version, e.g. steemit/0.1
+          - app - A user agent style application identifier. Typically app_name.version, e.g. creary/0.1
           - format - The format of the body, e.g. markdown
           - In addition to the above keys, application developers are free to add any other keys they want to help manage the content they broadcast.
 
@@ -47,9 +47,9 @@
         title :"A post by Joe",
         body :"Look at my awesome post",
         parent_author :'',
-        parent_permlink :"steem",
+        parent_permlink :"crea",
         permlink :"a-post-by-joe",
-        json_metadata :"{\"tags\":[\"steemit\",\"example\",\"tags\"]}",
+        json_metadata :"{\"tags\":[\"creary\",\"example\",\"tags\"]}",
       };
     ```
     In which case the complete `broadcast` operation would look like this:
@@ -66,11 +66,11 @@
   
     For example, if we have a paragraph that has already been broadcast:
       
-      "It's been quite a lot of fun working with these wonderful folk at Steemit, Inc"
+      "It's been quite a lot of fun working with these wonderful folk at Creary, Inc"
   
     And we want to change it to:
       
-      "It's been quite a lot of fun working with these wonderful people at Steemit, Inc"
+      "It's been quite a lot of fun working with these wonderful people at Creary, Inc"
   
     We can broadcast the comment operation with the following body:
       - "@@ -406,12 +406,14 @@"

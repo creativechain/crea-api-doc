@@ -4,7 +4,7 @@ position: 31
 description: "_How to grant and revoke active permission to another user._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Grant Active Permission](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/31_grant_active_permission) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Grant Active Permission](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/31_grant_active_permission) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
@@ -15,9 +15,9 @@ Providing another user active permission for your account enables them to do fun
 
 One of the common practice nowadays is to lend/delegate SP to another account, above same technique can be used to create market around it with minimum 3rd party trust. All your funds stay in your account. You can use/create automated system where you can lease for certain period of time and system can take care of payments and release of delegations (notify clients). Even better, you can use multi-signature feature to establish 100% trust where clients will have to confirm, approve transactions.
 
-Active permissions and authority should be used with utmost care, you don't want to loose your funds. It is really not easy to hack Steem accounts, let alone take control over it. But without careful use (revealing private keys) loosing liquid funds are not that difficult and it takes only couple seconds to do that, keeping most value powered up always helps.
+Active permissions and authority should be used with utmost care, you don't want to loose your funds. It is really not easy to hack Crea accounts, let alone take control over it. But without careful use (revealing private keys) loosing liquid funds are not that difficult and it takes only couple seconds to do that, keeping most value powered up always helps.
 
-[this article](https://steemit.com/steem/@good-karma/steem-multi-authority-permissions-and-how-active-authority-works-part-2-f158813ec0ec1) has more detail around active authorities
+[this article](https://creary.net/crea/@good-karma/crea-multi-authority-permissions-and-how-active-authority-works-part-2-f158813ec0ec1) has more detail around active authorities
 
 ## Intro
 
@@ -37,7 +37,7 @@ The tutorial is set up with three individual functions for each of the required 
 
 ## Steps
 
-1.  [**Configure connection**](#connection) Configuration of `dsteem` to communicate with a Steem blockchain
+1.  [**Configure connection**](#connection) Configuration of `dcrea` to communicate with a Crea blockchain
 1.  [**Input variables**](#input) Collecting the required inputs via an HTML UI.
 1.  [**Database query**](#query) Sending a query to the blockchain for the active permissions (status)
 1.  [**Object creation**](#object) Create the array and subsequent data object for the broadcast operation
@@ -48,16 +48,16 @@ The tutorial is set up with three individual functions for each of the required 
 As usual, we have a `public/app.js` file which holds the Javascript segment of the tutorial. In the first few lines we define the configured library and packages:
 
 ```javascript
-import { Client, PrivateKey } from 'dsteem';
-import { Testnet as NetConfig } from '../../configuration'; //A Steem Testnet. Replace 'Testnet' with 'Mainnet' to connect to the main Steem blockchain.
+import { Client, PrivateKey } from 'dcrea';
+import { Testnet as NetConfig } from '../../configuration'; //A Crea Testnet. Replace 'Testnet' with 'Mainnet' to connect to the main Crea blockchain.
 
 let opts = { ...NetConfig.net };
 
-//connect to a steem node, testnet in this case
+//connect to a crea node, testnet in this case
 const client = new Client(NetConfig.url, opts);
 ```
 
-Above, we have `dsteem` pointing to the testnet with the proper chainId, addressPrefix, and endpoint by importing it from the `configuration.js` file. Due to this tutorial altering the blockchain it is preferable to not work on production.
+Above, we have `dcrea` pointing to the testnet with the proper chainId, addressPrefix, and endpoint by importing it from the `configuration.js` file. Due to this tutorial altering the blockchain it is preferable to not work on production.
 
 #### 2. Input variables<a name="input"></a>
 
@@ -88,7 +88,7 @@ const newAccount = document.getElementById('newAccount').value;
 
 #### 3. Database query<a name="query"></a>
 
-The queries are sent through to the steem blockchain with the `database API` using the `getAccounts` function. The results of the query is used to check the status of the current active authorisations and parameters as per the `intro`.
+The queries are sent through to the crea blockchain with the `database API` using the `getAccounts` function. The results of the query is used to check the status of the current active authorisations and parameters as per the `intro`.
 
 ```javascript
 //query database for active array
@@ -133,7 +133,7 @@ activeAuth.account_auths.sort();
 activeAuth.account_auths.splice(arrayindex, 1);
 ```
 
-When adding to the array (creaing permission) it is required to sort the array before we can broadcast. The Steem blockchain does not accept the new fields in the array if it's not alphabetically sorted.
+When adding to the array (creaing permission) it is required to sort the array before we can broadcast. The Crea blockchain does not accept the new fields in the array if it's not alphabetically sorted.
 After the active array has been defined, the broadcast object can be created. This holds all the required information for a successful transaction to be sent to the blockchain. Where there is no change in the authority types, the parameter can be omitted or in the case of required parameters, allocated directly from the database query.
 
 ```javascript
@@ -173,9 +173,9 @@ client.broadcast.updateAccount(accObj, privateKey).then(
 
 The results of the operation is displayed on the UI along with a block number in the console to confirm a successful operation. If you add permission to an account that already has permission, or if your private key has been entered incorrectly, an error of "Missing Active Authority" will be displayed.
 
-Steemconnect offers an alternative to revoking active permission with a "simple link" solution. Instead of running through a list of operations on your account, you can simply use a link similar to the one below. You will be prompted to enter your usename and password and the specified user will have their permissions removed instantly.
-https://v2.steemconnect.com/revoke/@username
-This is similar to the steemconnect links that have been covered in previous tutorials. For a list of signing operations that work in this manner you can go to https://v2.steemconnect.com/sign
+Creaconnect offers an alternative to revoking active permission with a "simple link" solution. Instead of running through a list of operations on your account, you can simply use a link similar to the one below. You will be prompted to enter your usename and password and the specified user will have their permissions removed instantly.
+https://v2.creaconnect.com/revoke/@username
+This is similar to the creaconnect links that have been covered in previous tutorials. For a list of signing operations that work in this manner you can go to https://v2.creaconnect.com/sign
 
 ### To run this tutorial
 

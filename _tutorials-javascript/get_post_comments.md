@@ -4,7 +4,7 @@ position: 7
 description: "_By the end of this tutorial you would know how to get comments made by others on any post._"
 layout: full
 ---              
-<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Comments](https://github.com/steemit/devportal-tutorials-js/tree/master/tutorials/07_get_post_comments) can be downloaded as part of the [JS tutorials repository](https://github.com/steemit/devportal-tutorials-js).</span>
+<span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Get Post Comments](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/07_get_post_comments) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
 <br>
 
 
@@ -15,7 +15,7 @@ We will also explain the most commonly used fields from the response object as w
 
 ## Intro
 
-Each post might have comments/replies that is interesting and contributes to the topic and discussion. Steem offers out of box API for pulling replies for particular post with `get_content_replies`. We will fetch replies and list them in simple user interface.
+Each post might have comments/replies that is interesting and contributes to the topic and discussion. Crea offers out of box API for pulling replies for particular post with `get_content_replies`. We will fetch replies and list them in simple user interface.
 
 ## Steps
 
@@ -73,14 +73,14 @@ The result is returned from the post content as a `JSON` object with the followi
     {
         "id": 37338948,
         "author": "demo",
-        "permlink": "re-join-team-steemit-at-tokenfest-20180500t181413163z",
-        "category": "steemit",
-        "parent_author": "steemit",
-        "parent_permlink": "join-team-steemit-at-tokenfest",
+        "permlink": "re-join-team-creary-at-tokenfest-20180500t181413163z",
+        "category": "creary",
+        "parent_author": "creary",
+        "parent_permlink": "join-team-creary-at-tokenfest",
         "title": "",
         "body": "Thank you for sharing",
         "json_metadata":
-            "{\"tags\":[\"steemit\"],\"app\":\"steemit/0.1\",\"format\":\"markdown\"}",
+            "{\"tags\":[\"creary\"],\"app\":\"creary/0.1\",\"format\":\"markdown\"}",
         "last_update": "2018-03-07T23:22:54",
         "created": "2018-05-00T20:56:36",
         "active": "2018-05-06T01:40:21",
@@ -95,25 +95,25 @@ The result is returned from the post content as a `JSON` object with the followi
         "max_cashout_time": "1969-12-31T23:59:59",
         "total_vote_weight": 3462435,
         "reward_weight": 10000,
-        "total_payout_value": "0.000 SBD",
-        "curator_payout_value": "0.000 SBD",
+        "total_payout_value": "0.000 CBD",
+        "curator_payout_value": "0.000 CBD",
         "author_rewards": 0,
         "net_votes": 77,
         "root_comment": 37338948,
-        "max_accepted_payout": "0.000 SBD",
-        "percent_steem_dollars": 10000,
+        "max_accepted_payout": "0.000 CBD",
+        "percent_crea_dollars": 10000,
         "allow_replies": true,
         "allow_votes": true,
         "allow_curation_rewards": true,
         "beneficiaries": [],
         "url":
-            "/steemit/@steemitblog/join-team-steemit-at-tokenfest#@demo/re-join-team-steemit-at-tokenfest-20180500t181413163z",
-        "root_title": "Join Team Steemit at TokenFest!",
-        "pending_payout_value": "0.436 SBD",
-        "total_pending_payout_value": "0.000 STEEM",
+            "/creary/@crearyblog/join-team-creary-at-tokenfest#@demo/re-join-team-creary-at-tokenfest-20180500t181413163z",
+        "root_title": "Join Team Creary at TokenFest!",
+        "pending_payout_value": "0.436 CBD",
+        "total_pending_payout_value": "0.000 CREA",
         "active_votes": [
             {
-                "voter": "steemitblog",
+                "voter": "crearyblog",
                 "weight": 0,
                 "rshares": "1870813909383",
                 "percent": 10000,
@@ -131,7 +131,7 @@ The result is returned from the post content as a `JSON` object with the followi
         ],
         "replies": [],
         "author_reputation": "128210130644387",
-        "promoted": "0.000 SBD",
+        "promoted": "0.000 CBD",
         "body_length": 0,
         "reblogged_by": []
     },
