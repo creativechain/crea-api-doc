@@ -229,7 +229,7 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[
 
       ],
       "block_id":"0000000109833ce528d5bbfb3f6225b39ee10086",
-      "signing_key":"STM8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
+      "signing_key":"CREA8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
       "transaction_ids":[
 
       ]
@@ -261,7 +261,7 @@ curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":
 
          ],
          "block_id":"0000000109833ce528d5bbfb3f6225b39ee10086",
-         "signing_key":"STM8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
+         "signing_key":"CREA8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
          "transaction_ids":[
 
          ]
@@ -283,7 +283,7 @@ curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":
 
          ],
          "block_id":"00000002ed04e3c3def0238f693931ee7eebbdf1",
-         "signing_key":"STM8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
+         "signing_key":"CREA8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
          "transaction_ids":[
 
          ]
@@ -315,7 +315,7 @@ curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":
 
          ],
          "block_id":"0000000109833ce528d5bbfb3f6225b39ee10086",
-         "signing_key":"STM8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
+         "signing_key":"CREA8GC13uCZbP44HzMLV6zPZGwVQ8Nt4Kji8PapsPiNq1BK153XTX",
          "transaction_ids":[
 
          ]

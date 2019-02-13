@@ -11,7 +11,7 @@ If you don't know about Crea yet, visit [creaproject.io](https://creaproject.io)
 
 The code for this site is on [github](https://github.com/creativechain/crea-api-doc). If you'd like to see a specific improvement 
 you can either submit a pull request or file an issue. Please follow our 
-[contribution guidelines](https://github.com/creativechain/crea-api-doc/blob/master/CONTRIBUTING.md)
+[contribution guidelines](https://github.com/creativechain/crea-api-doc/blob/develop/CONTRIBUTING.md)
 
 
 

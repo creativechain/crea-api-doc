@@ -12,5 +12,5 @@
     parameter_json: '{"keys":[]}'
     expected_response_json: '{"accounts":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"account_by_key_api.get_key_references", "params":{"keys":["STM5jZtLoV8YbxCxr4imnbWn61zMB24wwonpnVhfXRmv7j6fk3dTH"]},
+    - '{"jsonrpc":"2.0", "method":"account_by_key_api.get_key_references", "params":{"keys":["CREA5jZtLoV8YbxCxr4imnbWn61zMB24wwonpnVhfXRmv7j6fk3dTH"]},
       "id":1}'

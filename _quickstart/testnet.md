@@ -13,7 +13,7 @@ Creary maintains a live testnet to which you can connect. In the near future, we
 
 ### Features
 
-The official Creativechain FDN Testnet is a mirror of the mainnet.  This is achieved by copying the existing accounts and transactions from the mainnet state, as the they happen.  Accounts are copied from a [snapshot](https://github.com/creativechain/tinman#taking-a-snapshot) of mainnet while the module used to copy transactions in real time is called [`gatling`](https://github.com/creativechain/tinman#gatling-transactions-from-mainnet).  The `gatling` module runs at the final step of each testnet deployment.
+The official Creativechain FDN Testnet is a mirror of the mainnet.  This is achieved by copying the existing accounts and transactions from the mainnet state, as the they happen.  Accounts are copied from a [snapshot](https://github.com/creativechain/chinman#taking-a-snapshot) of mainnet while the module used to copy transactions in real time is called [`gatling`](https://github.com/creativechain/chinman#gatling-transactions-from-mainnet).  The `gatling` module runs at the final step of each testnet deployment.
 
 The combination of `snapshot` and `gatling` means that this testnet approaches a subset of the same activity that the mainnet experiences.  Not everything can be mirrored.  For example, if someone comments or votes on a post that hasn't been mirrored to the testnet (because the post itself pre-dates the testnet deploy), those operations will also not be included.
 
@@ -115,7 +115,7 @@ This would mean that 19 hardforks have been accepted by witnesses and the new ch
 
 After these changes, all we have to do is compile the source code and get the `cread` executable. And once we fire up the custom testnet we can start testing and experimenting.
 
-If you want to port some data from Crea main network you can use [Tinman](https://github.com/creativechain/tinman), also developed by Creary, to help with taking snapshots of the main network.
+If you want to port some data from Crea main network you can use [Chinman](https://github.com/creativechain/chinman), also developed by Creary, to help with taking snapshots of the main network.
 
 #### Custom live testnet
 

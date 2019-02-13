@@ -3,13 +3,13 @@ title: Community & Help
 position: 6
 ---
 
-**Developer Advocate**
+**Developer Team**
 
-The members of the Creary Inc. development team are currently the main contributors to the Crea blockchain software. They oversee the open source [Crea](https://github.com/creativechain/crea) GitHub repository, and maintain many of the open source [libraries](https://github.com/creativechain) that developers use.
+The members of the Creary development team are currently the main contributors to the Crea blockchain software. They oversee the open source [Crea GitHub repository](https://github.com/creativechain/crea), and maintain many of the open source [libraries](https://github.com/creativechain) that developers use.
 
-Creary’s [Developer Advocate](mailto:da@creary.net) is here to make the process of developing for the Crea platform as smooth as possible. If you have any comments, concerns, or suggestions about how to improve the experience of developing applications with the Crea blockchain - please [reach out](mailto:da@creary.net). 
+If you have any comments, concerns, or suggestions about how to improve the experience of developing applications with the Crea blockchain - please [reach out](mailto:da@creary.net). 
 
-The D.A. receives a lot of emails, but will respond as quickly as possible.
+The team receives a lot of emails, but will respond as quickly as possible.
 
 ---
 

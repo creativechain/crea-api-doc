@@ -8,20 +8,15 @@ Applications that interface directly with the Crea blockchain will need to conne
 
 ### Public Nodes
 
-Although `cread` fully supports WebSockets (`wss://` and `ws://`) public nodes typically do not.  All nodes listed use HTTPS (`https://`).  If you require WebSockets for your solutions, please consider setting up your own `cread` node or proxy WebSockets to HTTPS using [lineman](https://github.com/creativechain/lineman).
+Although `cread` fully supports WebSockets (`wss://` and `ws://`) public nodes typically do not.  All nodes listed use HTTPS (`https://`).  If you require WebSockets for your solutions, please consider setting up your own `cread` node.
 
-| URL                             | Owner          |
-| ------------------------------- | -------------- |
-| node1.creary.net                 | @creary       |
-| api.crearydev.com              | @creary       |
-| cread-appbase.creary.net      | @creary       |
-| api.crea.house                 | @gtg           |
-| appbasetest.timcliff.com        | @timcliff      |
-| rpc.curiecreaproject.io              | @curie         |
-| rpc.creaviz.com                | @ausbitbank    |
-| cread.minnowsupportproject.org | @followbtcnews |
-| cread.privex.io                | @privex        |
-| anyx.io                         | @anyx          |
+| URL                             | Owner         |
+| ------------------------------- | ------------- |
+| node1.creary.net                | @creary       |
+| node2.creary.net                | @creary       |
+| node3.creary.net                | @creary       |
+| crea.owldevelopers.site         | @ander7agar   |
+
 
 
 For a report on the latest public full nodes, check the latest posts on [@fullnodeupdate](https://creary.net/@fullnodeupdate) by [@holger80](https://creary.net/@holger80).  Another excellent tool for checking real-time full node status is [geo.crea.pl](https://geo.crea.pl) by [@jamzed](https://creary.net/@jamzed).
@@ -43,25 +38,7 @@ _to run a node with all the data (e.g. for supporting a content website) that us
 
 Normally syncing blockchain starts from very first, `0` genesis block. It might take long time to catch up with live network. Because it connectes to various p2p nodes in the Crea network and requests blocks from 0 to head block. It stores blocks in block log file and builds up the current state in the shared memory file. But there is a way to bootstrap syncing by using trusted `block_log` file. The block log is an external append only log of the blocks. It contains blocks that are only added to the log after they are irreversible because the log is append only.
 
-Trusted block log file helps to download blocks faster. Creary Inc, provides public block log file which can be downloaded from [here](https://s3.amazonaws.com/creary-dev-blockchainstate/block_log-latest) and there is also option from community witness `@gtg` which can be downloaded from [here](https://gtg.crea.house/get/blockchain/).
-
-Both `block_log` files updated periodically, as of May 2018 uncompressed `block_log` file size ~110 GB. Docker container on `stable` branch of Crea source code has option to use `USE_PUBLIC_BLOCKLOG=1` to download latest block log and start Crea node with replay.
-
-Block log should be place in `blockchain` directory below `data_dir` and node should be started with `--replay-blockchain` to ensure block log is valid and continue to sync from the point of snapshot. Replay uses the downloaded block log file to build up the shared memory file up to the highest block stored in that snapshot and then continues with sync up to the head block.
-
-Replay helps to sync blockchain in much faster rate, but as blockchain grows in size replay might also take some time to verify blocks. 
-
-There is another [trick which might help](https://github.com/creativechain/crea/issues/2391) with faster sync/replay on smaller equipped servers:
-
-```
-while :
-do
-   dd if=blockchain/block_log iflag=nocache count=0
-   sleep 60
-done
-```
-
-Above bash script drops `block_log` from the OS cache, leaving more memory free for backing the blockchain database. It might also help while running live, but measurement would be needed to determine this.
+Trusted block log file helps to download blocks faster. 
 
 ##### Few other tricks that might help: 
 

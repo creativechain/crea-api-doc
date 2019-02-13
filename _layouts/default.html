@@ -64,11 +64,6 @@
 <div class="main" id="top">
 	<div class="hero">
 		<h1 class="hero__h1">Crea Developer Portal {% if page.section %} - {{ page.section }}{% endif %}</h1>
-		{% if jekyll.environment == 'production' %}
-		<img class="hero__img" src="{{ '/images/hero.png' | relative_url }}">
-		{% else %}
-		<img class="hero__img" src="{{ '/images/hero.png' | relative_url }}">
-		{% endif %}
 	</div>
 	{{ content }}
 </div>

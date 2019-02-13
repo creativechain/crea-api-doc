@@ -57,12 +57,12 @@ This would mean that 19 hardforks have been accepted by witnesses and the new ch
 
 After these changes, all we have to do is compile the source code and get the `cread` executable. And once we fire up the custom testnet we can start testing and experimenting.
 
-If you want to port some data from Crea main network you can use [Tinman](https://github.com/creativechain/tinman), also developed by Creary, to help with taking snapshots of the main network.
+If you want to port some data from Crea main network you can use [Chinman](https://github.com/creativechain/chinman), also developed by Creary, to help with taking snapshots of the main network.
 
 #### Custom live testnet
 
-* ChainID: `79276aea5d4877d9a25892eaa01b0adf019d3e5cb12a97478df3298ccdd01673`
-* Address prefix: `STX`
-* API node: `https://testnet.crea.vc`
+* ChainID: `0000000000000000000000000000000000000000000000000000000000000000`
+* Address prefix: `CREA`
+* API node: `https://node1.creary.net`
 
-The above testnet is powered by community member @almost-digital and doesn't have a snapshot of the main network. 
+The above testnet is experimental network. 

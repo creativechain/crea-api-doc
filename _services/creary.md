@@ -23,19 +23,19 @@ User object
       "owner":{
          "weight_threshold":1,
          "account_auths":[],
-         "key_auths":[["STM69WGR1yhUdKrnzwQLDPnXrW9kaAERwHze8Uvtw2ecgRqCEjWxT", 1]]
+         "key_auths":[["CREA69WGR1yhUdKrnzwQLDPnXrW9kaAERwHze8Uvtw2ecgRqCEjWxT", 1]]
       },
       "active":{
          "weight_threshold":1,
          "account_auths":[],
-         "key_auths":[["STM5GAbbS84ViMEouJL3LKcM8VZzPejn68AfPaYaLZZDdmy98kwU5", 1]]
+         "key_auths":[["CREA5GAbbS84ViMEouJL3LKcM8VZzPejn68AfPaYaLZZDdmy98kwU5", 1]]
       },
       "posting":{
          "weight_threshold":1,
          "account_auths":[["creaauto", 1]],
-         "key_auths":[["STM5cmuKw6EPkZWeVNXcZorKtattZTX5wSopcRb4xNe6VhRKjETgv", 1]]
+         "key_auths":[["CREA5cmuKw6EPkZWeVNXcZorKtattZTX5wSopcRb4xNe6VhRKjETgv", 1]]
       },
-      "memo_key":"STM7ZBi61xYz1b9STE1PHcAraPXJbvafzge3AcPjcfeq4XkKtM2At",
+      "memo_key":"CREA7ZBi61xYz1b9STE1PHcAraPXJbvafzge3AcPjcfeq4XkKtM2At",
       "json_metadata":{
          "profile":{
             "profile_image":"https://i.imgur.com/Mjewc66.jpg",

@@ -29,11 +29,6 @@ collections:
     id: javascript
     position: 4
     output: true
-  tutorials:
-    title: Tutorials
-    id: tutorials
-    position: 5
-    output: true
   services:
     title: Services
     id: services
@@ -48,21 +43,6 @@ collections:
     title: Glossary
     id: glossary
     position: 8
-    output: true
-  tutorials-recipes:
-    title: Recipes
-    id: tutorials-recipes
-    position: 9
-    output: true
-  tutorials-javascript:
-    title: Javascript Tutorials
-    id: tutorials-javascript
-    position: 10
-    output: true
-  tutorials-python:
-    title: Python Tutorials
-    id: tutorials-python
-    position: 11
     output: true
   apidefinitions:
     title: API Definitions
