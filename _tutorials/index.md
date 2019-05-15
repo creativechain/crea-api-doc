@@ -1,7 +1,6 @@
 ---
 title: Tutorials
 section: Tutorials
-exclude: true
 ---
 {% assign nav = site.data.nav.toc | where: "collection", "tutorials" | first %}
 <section id="{{ doc.id | slugify }}" class="row {{ doc.id | slugify }}">
