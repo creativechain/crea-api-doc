@@ -15,10 +15,10 @@ Create a filed called `get_posts_by_category.rb`.
 
 This script will pick a method to call based on the arguments passed.  The expected categories are:
 
-* trending
-* hot
+* popular
+* skyrockets
 * active
-* created
+* now
 * votes
 * promoted
 * children
@@ -44,7 +44,7 @@ First, set up your workstation using the steps provided in [Getting Started](htt
 git clone git@github.com:creary/devportal-tutorials-rb.git
 cd devportal-tutorials-rb/tutorials/04_get_posts
 bundle install
-ruby get_posts_by_category.rb trending 1 crea
+ruby get_posts_by_category.rb popular 1 crea
 ```
 
 ### Example Output

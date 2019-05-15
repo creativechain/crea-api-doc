@@ -101,14 +101,14 @@
     expected_curl_responses:
     - 
     - Comment is not in account's comments
-  - api_method: tags_api.get_discussions_by_created
-    purpose: Returns a list of discussions by created.
+  - api_method: tags_api.get_discussions_by_now
+    purpose: Returns a list of discussions by now.
     parameter_json: '{"tag":"","limit":0,"filter_tags":[],"select_authors":[],"select_tags":[],"truncate_body":0}'
     expected_response_json: '{"discussions":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_created", "params":{"tag":"crea","limit":1},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_now", "params":{"tag":"crea","limit":1},
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_created", "params":{"tag":"photography","limit":10,"truncate_body":0},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_now", "params":{"tag":"photography","limit":10,"truncate_body":0},
       "id":1}'
   - api_method: tags_api.get_discussions_by_feed
     since: HF14
@@ -120,14 +120,14 @@
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_feed", "params":{"tag":"photography","limit":10,"truncate_body":0},
       "id":1}'
-  - api_method: tags_api.get_discussions_by_hot
-    purpose: Returns a list of discussions by hot.
+  - api_method: tags_api.get_discussions_by_skyrockets
+    purpose: Returns a list of discussions by skyrockets.
     parameter_json: '{"tag":"","limit":0,"filter_tags":[],"select_authors":[],"select_tags":[],"truncate_body":0}'
     expected_response_json: '{"discussions":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_hot", "params":{"tag":"crea","limit":1},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_skyrockets", "params":{"tag":"crea","limit":1},
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_hot", "params":{"tag":"photography","limit":10,"truncate_body":0},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_skyrockets", "params":{"tag":"photography","limit":10,"truncate_body":0},
       "id":1}'
   - api_method: tags_api.get_discussions_by_promoted
     since: HF13
@@ -139,14 +139,14 @@
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_promoted", "params":{"tag":"photography","limit":10,"truncate_body":0},
       "id":1}'
-  - api_method: tags_api.get_discussions_by_trending
-    purpose: Returns a list of discussions by trending.
+  - api_method: tags_api.get_discussions_by_popular
+    purpose: Returns a list of discussions by popular.
     parameter_json: '{"tag":"","limit":0,"filter_tags":[],"select_authors":[],"select_tags":[],"truncate_body":0}'
     expected_response_json: '{"discussions":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_trending", "params":{"tag":"crea","limit":1},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_popular", "params":{"tag":"crea","limit":1},
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_trending", "params":{"tag":"photography","limit":10,"truncate_body":0},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_discussions_by_popular", "params":{"tag":"photography","limit":10,"truncate_body":0},
       "id":1}'
   - api_method: tags_api.get_discussions_by_votes
     purpose: Returns a list of discussions by votes.
@@ -181,12 +181,12 @@
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"tags_api.get_tags_used_by_author", "params":{"author":"creary"},
       "id":1}'
-  - api_method: tags_api.get_trending_tags
-    purpose: Returns the list of trending tags.
+  - api_method: tags_api.get_popular_tags
+    purpose: Returns the list of popular tags.
     parameter_json: '{"start_tag":"","limit":100}'
     expected_response_json: '{"tags":[]}'
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_trending_tags", "params":{"start_tag":null,"limit":100},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_popular_tags", "params":{"start_tag":null,"limit":100},
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"tags_api.get_trending_tags", "params":{"start_tag":"crea","limit":10},
+    - '{"jsonrpc":"2.0", "method":"tags_api.get_popular_tags", "params":{"start_tag":"crea","limit":10},
       "id":1}'

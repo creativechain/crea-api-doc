@@ -9,7 +9,7 @@ layout: full
 
 
 
-This tutorial will return tags sorted by trending, up to a specified limit.
+This tutorial will return tags sorted by popular, up to a specified limit.
 
 ### Sections
 
@@ -22,12 +22,12 @@ This tutorial will return tags sorted by trending, up to a specified limit.
 
 ### Making the api call
 
-To request the a list of tags, we can use the `get_trending_tags` method:
+To request the a list of tags, we can use the `get_popular_tags` method:
 
 ```ruby
 api = Radiator::Api.new
 
-api.get_trending_tags(nil, 100) do |tags|
+api.get_popular_tags(nil, 100) do |tags|
   puts tags
 end
 ```
@@ -39,7 +39,7 @@ Notice, the above example can request up to 100 tags as an array.
 If we want to get 10 tags starting from the tag named "music" ...
 
 ```ruby
-api.get_trending_tags("music", 10) do |content| ...
+api.get_popular_tags("music", 10) do |content| ...
 ```
 
 #### Example api call using script
@@ -55,28 +55,28 @@ ruby search_tags.rb
 From the example we get the following output from our script:
 
 ```
-tag: <empty>, total_payouts: 57513246.041 CBD, net_votes: 47471936, top_posts: 4523493, comments: 27287924, trending: 100430269400
-tag: life, total_payouts: 12563434.550 CBD, net_votes: 10898489, top_posts: 1193059, comments: 1164873, trending: 7440962326
-tag: photography, total_payouts: 7529111.644 CBD, net_votes: 8578110, top_posts: 819008, comments: 1498469, trending: 7311205387
-tag: kr, total_payouts: 2953387.067 CBD, net_votes: 749380, top_posts: 79842, comments: 2138776, trending: 7009078414
-tag: creary, total_payouts: 8531217.920 CBD, net_votes: 5393375, top_posts: 580400, comments: 1156174, trending: 5471456871
-tag: art, total_payouts: 4017591.434 CBD, net_votes: 3577651, top_posts: 330597, comments: 716566, trending: 3302526197
-tag: bitcoin, total_payouts: 3556944.650 CBD, net_votes: 2885034, top_posts: 416088, comments: 625529, trending: 3284115413
-tag: introduceyourself, total_payouts: 1863437.063 CBD, net_votes: 725570, top_posts: 24891, comments: 986875, trending: 3185017448
-tag: spanish, total_payouts: 1221282.258 CBD, net_votes: 2683931, top_posts: 154983, comments: 827033, trending: 3103643123
-tag: travel, total_payouts: 3976626.578 CBD, net_votes: 2505962, top_posts: 229401, comments: 622754, trending: 2687292306
+tag: <empty>, total_payouts: 57513246.041 CBD, net_votes: 47471936, top_posts: 4523493, comments: 27287924, popular: 100430269400
+tag: life, total_payouts: 12563434.550 CBD, net_votes: 10898489, top_posts: 1193059, comments: 1164873, popular: 7440962326
+tag: photography, total_payouts: 7529111.644 CBD, net_votes: 8578110, top_posts: 819008, comments: 1498469, popular: 7311205387
+tag: kr, total_payouts: 2953387.067 CBD, net_votes: 749380, top_posts: 79842, comments: 2138776, popular: 7009078414
+tag: creary, total_payouts: 8531217.920 CBD, net_votes: 5393375, top_posts: 580400, comments: 1156174, popular: 5471456871
+tag: art, total_payouts: 4017591.434 CBD, net_votes: 3577651, top_posts: 330597, comments: 716566, popular: 3302526197
+tag: bitcoin, total_payouts: 3556944.650 CBD, net_votes: 2885034, top_posts: 416088, comments: 625529, popular: 3284115413
+tag: introduceyourself, total_payouts: 1863437.063 CBD, net_votes: 725570, top_posts: 24891, comments: 986875, popular: 3185017448
+tag: spanish, total_payouts: 1221282.258 CBD, net_votes: 2683931, top_posts: 154983, comments: 827033, popular: 3103643123
+tag: travel, total_payouts: 3976626.578 CBD, net_votes: 2505962, top_posts: 229401, comments: 622754, popular: 2687292306
 ```
 
 ### Tag fields
 
-Tags in the results of `get_trending_tags` returns the following fields:
+Tags in the results of `get_popular_tags` returns the following fields:
 
 * `name` - Name of the tag or empty.
 * `total_payouts` - Rewards paid in this tag.
 * `net_votes` - Net votes in this tag.
 * `top_posts` - Top votes in this tag.
 * `comments` - Number of comments in this tag.
-* `trending` - Total trending.
+* `popular` - Total popular.
 
 ### To Run
 

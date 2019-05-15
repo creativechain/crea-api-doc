@@ -13,7 +13,7 @@ In this tutorial will explain and show you how to access the **Crea** blockchain
 
 ## Intro
 
-Crea python library has built-in function to get comments list made by specific account. Since we don't have predefined account list, we will fetch newly created posts and show their authors for selection and give option to choose one account to get its comments. `get_discussions_by_comments` function fetches list of comments made by account. Note that `get_discussions_by_created` filter is used for fetching 5 posts and after selection of its author tutorial uses `author` of the post to fetch that account's comments. 
+Crea python library has built-in function to get comments list made by specific account. Since we don't have predefined account list, we will fetch newly created posts and show their authors for selection and give option to choose one account to get its comments. `get_discussions_by_comments` function fetches list of comments made by account. Note that `get_discussions_by_now` filter is used for fetching 5 posts and after selection of its author tutorial uses `author` of the post to fetch that account's comments. 
 
 ## Steps
 
@@ -48,7 +48,7 @@ Next we will fetch and make list of accounts and setup `pick` properly.
       "tag":"" #tag of posts
     }
     #author list from created post list to randomize account list
-    posts = s.get_discussions_by_created(query)
+    posts = s.get_discussions_by_now(query)
 
     title = 'Please choose account: '
     options = []

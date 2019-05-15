@@ -13,7 +13,7 @@ This tutorial will explain and show you how to access the **Crea** blockchain us
 
 ## Intro
 
-In Crea there are built-in filters `trending`, `hot`, `created`, `active`, `promoted` etc. which helps us to get list of posts. `get_discussions_by_trending(query)`, `get_discussions_by_hot(query)`, `get_discussions_by_created(query)`, etc. functions are built-in in official library `crea-python` that we are going to use throughout all Python tutorials. 
+In Crea there are built-in filters `popular`, `skyrockets`, `created`, `active`, `promoted` etc. which helps us to get list of posts. `get_discussions_by_popular(query)`, `get_discussions_by_skyrockets(query)`, `get_discussions_by_now(query)`, etc. functions are built-in in official library `crea-python` that we are going to use throughout all Python tutorials. 
 
 
 ## Steps
@@ -45,7 +45,7 @@ Next we will make list of filters and setup `pick` properly.
 ```python
     title = 'Please choose filter: '
     #filters list
-    options = ['trending', 'hot', 'active', 'created', 'promoted']
+    options = ['popular', 'skyrockets', 'active', 'created', 'promoted']
     # get index and selected filter name
     option, index = pick(options, title)
 ```
@@ -65,10 +65,10 @@ query = {
     "tag":"" #tag of posts
     }
 #post list for selected query
-posts = {0: s.get_discussions_by_trending(query),
-         1: s.get_discussions_by_hot(query),
+posts = {0: s.get_discussions_by_popular(query),
+         1: s.get_discussions_by_skyrockets(query),
          2: s.get_discussions_by_active(query),
-         3: s.get_discussions_by_created(query),
+         3: s.get_discussions_by_now(query),
          4: s.get_discussions_by_promoted(query)
 }
 ```
@@ -158,7 +158,7 @@ The example of result returned from the service is a `JSON` object with the foll
 
     }
 ]
-'Selected: hot'
+'Selected: skyrockets'
 ```
 
 From this result you have access to everything associated to the posts including additional metadata which is a `JSON` string (that must be decoded to use), `active_votes` info, post title, body, etc. details that can be used in further development of application with Python.

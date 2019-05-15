@@ -1,7 +1,7 @@
 ---
 title: 'JS: Search Tags'
 position: 16
-description: "_By the end of this tutorial you should know how to run a search for trending tags_"
+description: "_By the end of this tutorial you should know how to run a search for popular tags_"
 layout: full
 ---              
 <span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Search Tags](https://github.com/creativechain/crea-api-doc-tutorials-js/tree/master/tutorials/16_search_tags) can be downloaded as part of the [JS tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-js).</span>
@@ -52,7 +52,7 @@ window.submitTag = async () => {
 In order to access the blockchain to run the search a `call` function is used with the `search field` and `maximum` list items as parameters.
 
 ```javascript
-const _tags = await client.database.call('get_trending_tags',[tagSearch, max]);
+const _tags = await client.database.call('get_popular_tags',[tagSearch, max]);
 ```
 
 The result of the search is an array of tags along with their respective vital data like `comments`, `payouts`, etc.

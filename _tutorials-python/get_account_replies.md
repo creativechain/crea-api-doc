@@ -50,7 +50,7 @@ Next we will fetch and make a list of posts and setup `pick` properly.
     #we are merely using this to display the most recent posters
     #the 'author' can easily be changed to any value within the 'get_replies' function
 
-    posts = s.get_discussions_by_created(query)
+    posts = s.get_discussions_by_now(query)
 
     title = 'Please choose author: '
     options = []

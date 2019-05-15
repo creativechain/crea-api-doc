@@ -9,7 +9,7 @@ layout: full
 
 
 
-The purpose of this tutorial is to **a)** demonstrate how to get a list of articles from the trending list on the blockchain, and **b)** fetch the voters of the selected post to display the account and date at which they voted.
+The purpose of this tutorial is to **a)** demonstrate how to get a list of articles from the popular list on the blockchain, and **b)** fetch the voters of the selected post to display the account and date at which they voted.
 
 We will also explain the most commonly used fields from the response object.
 
@@ -19,13 +19,13 @@ Each post has voters that support content and play big role in reward distributi
 
 ## Steps
 
-1.  [**Fetching posts**](#fetching-posts) Get trending post list
+1.  [**Fetching posts**](#fetching-posts) Get popular post list
 1.  [**Voter information**](#voter-info) Voters information on selected post
 1.  [**Query result**](#query-result) Example of result from query
 
 #### 1. Fetching posts<a name="fetching-posts"></a>
 
-As mentioned in our previous tutorial we can fetch various lists of posts with different filters. Here, we are reusing some parts of that tutorial to list the top 5 trending posts.
+As mentioned in our previous tutorial we can fetch various lists of posts with different filters. Here, we are reusing some parts of that tutorial to list the top 5 popular posts.
 
 ```javascript
 var query = {

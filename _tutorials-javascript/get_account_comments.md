@@ -93,7 +93,7 @@ The following is an example of the returned object:
         "max_virtual_bandwidth":"264241152000000000000"
     },
     "tag_idx":{
-        "trending":["","life","photography","creary","kr","introduceyourself","bitcoin","art","travel","cryptocurrency","spanish","food","crea","blog","funny","news","nature","colorchallenge","dtube","indonesia","story","cn","money","music","writing","crypto","contest","busy","health","poetry","meme","video","utopian-io","photo","new","love","blockchain","deutsch","dmania","science","technology","aceh","entertainment","gaming","politics","myanmar","ecrea","sports","fun","tr"]
+        "popular":["","life","photography","creary","kr","introduceyourself","bitcoin","art","travel","cryptocurrency","spanish","food","crea","blog","funny","news","nature","colorchallenge","dtube","indonesia","story","cn","money","music","writing","crypto","contest","busy","health","poetry","meme","video","utopian-io","photo","new","love","blockchain","deutsch","dmania","science","technology","aceh","entertainment","gaming","politics","myanmar","ecrea","sports","fun","tr"]
     },
     "tags":{},
     "content":{

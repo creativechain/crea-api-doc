@@ -18,7 +18,7 @@ Crea python library has built-in function to commit transaction and broadcast it
 ## Steps
 
 1.  [**App setup**](#app-setup) - Library install and import
-1.  [**Post list**](#post-list) - List of posts to select from trending filter 
+1.  [**Post list**](#post-list) - List of posts to select from popular filter 
 1.  [**Enter user credentials**](#credentials-list) - Enter user credentails to sign transaction
 
 #### 1. App setup <a name="app-setup"></a>
@@ -46,8 +46,8 @@ Next we will fetch and make list of accounts and setup `pick` properly.
       "limit":5, #number of posts
       "tag":"" #tag of posts
     }
-    # post list from trending post list
-    posts = s.get_discussions_by_trending(query)
+    # post list from popular post list
+    posts = s.get_discussions_by_popular(query)
 
     title = 'Please choose post to reblog: '
     options = []

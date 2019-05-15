@@ -13,7 +13,7 @@ layout: full
 
 With the `getState` API call retrieving ALL block information and now being deprecated, a more efficient process is required to call only the dataset that you require for a your specific application. There are a couple different `routes` (data groupings) that can be found within the `getState` function. Each of these will be described and a replacement API call will be discussed.
 
-Included in this single `getState` call is the list of content being requested, the latest Dynamic Global Properties, the latest Account Data for the authors included in the results, and the current feed price. The `getState` function is great in order to get the first 20 posts (and account information based on the post authors) based on the selected tag. If the query field is left empty `getState` automatically calls info based on the `trending` tag. `getState` can also be used to call information for a specific account.
+Included in this single `getState` call is the list of content being requested, the latest Dynamic Global Properties, the latest Account Data for the authors included in the results, and the current feed price. The `getState` function is great in order to get the first 20 posts (and account information based on the post authors) based on the selected tag. If the query field is left empty `getState` automatically calls info based on the `popular` tag. `getState` can also be used to call information for a specific account.
 
 The call `routes` that will be covered are for:
 
@@ -61,7 +61,7 @@ The call `routes` that will be covered are for:
     "current_reserve_ratio": 1,
     "max_virtual_bandwidth": "0"
   },
-  "tag_idx": {"trending": []},
+  "tag_idx": {"popular": []},
   "tags": {},
   "content": {},
   "accounts": {},
@@ -97,7 +97,7 @@ The call `routes` that will be covered are for:
 
 #### Route: getState('accounts')<a name="accounts"></a>
 
-- Purpose: Returns a list of account objects for the top 20 trending post authors or a single account if specified.
+- Purpose: Returns a list of account objects for the top 20 popular post authors or a single account if specified.
 
 - Replacement API call:
 
@@ -105,7 +105,7 @@ The call `routes` that will be covered are for:
 databaseAPI.getAccounts(['username'])
 ```
 
-In order to get the full compliment of account information for a specified account, `getAccounts` can be used as in the example above. If you require this information for the top 20 trending authors, you can use the function as per `getState('content')` to retrieve the author names and then get the information per individual. The account information can be used to track balances, vesting, followers, witness votes and pending rewards among others.
+In order to get the full compliment of account information for a specified account, `getAccounts` can be used as in the example above. If you require this information for the top 20 popular authors, you can use the function as per `getState('content')` to retrieve the author names and then get the information per individual. The account information can be used to track balances, vesting, followers, witness votes and pending rewards among others.
 
 - Expected result:
 
@@ -197,15 +197,15 @@ In order to get the full compliment of account information for a specified accou
 
 #### Route: getState('content')<a name="content"></a>
 
-- Purpose: The `content` in getState calls the top 20 trending posts
+- Purpose: The `content` in getState calls the top 20 popular posts
 
 - Replacement API call:
 
 ```javascript
-databaseAPI.call('get_discussions_by_trending',[{limit:20}])
+databaseAPI.call('get_discussions_by_popular',[{limit:20}])
 ```
 
-While `getState()` truncates the post body at 1024 characters, `getDiscussionsBy` will not truncate the body unless you provide a truncate_body value in the query structure. `getDiscussionsBy` can be executed by trending, created, active, cashout, payout, votes, children, hot, feed, blog or comments. This provides a wide range by which the posts can be called depending on the specific needs. Within the `query` parameter specific tags, filters, authors and permlinks can be provided. The limit can also be increased to a maximum of 100 posts where `getState` is limited to the first 20. You can also refer to the [get post](https://developers.creaproject.io/tutorials-javascript/get_posts) tutorial for a simplified database call for posts. The detail provided by this statement can be used to track pending payouts, curator rewards and votes for the trending, or specified posts.
+While `getState()` truncates the post body at 1024 characters, `getDiscussionsBy` will not truncate the body unless you provide a truncate_body value in the query structure. `getDiscussionsBy` can be executed by popular, now, active, cashout, payout, votes, children, skyrockets, feed, blog or comments. This provides a wide range by which the posts can be called depending on the specific needs. Within the `query` parameter specific tags, filters, authors and permlinks can be provided. The limit can also be increased to a maximum of 100 posts where `getState` is limited to the first 20. You can also refer to the [get post](https://developers.creaproject.io/tutorials-javascript/get_posts) tutorial for a simplified database call for posts. The detail provided by this statement can be used to track pending payouts, curator rewards and votes for the popular, or specified posts.
 
 - Expected result:
 
@@ -338,15 +338,15 @@ databaseAPI.getBlock(HeadBlockNum)
 
 #### Route: getState('tags')<a name="tags"></a>
 
-- Purpose: Calls a list of trending tags with detailed information on each tag. The list is displayed alphabetically.
+- Purpose: Calls a list of popular tags with detailed information on each tag. The list is displayed alphabetically.
 
 - Replacement API call:
 
 ```javascript
-databaseAPI.call('get_trending_tags',[startingValue, limit])
+databaseAPI.call('get_popular_tags',[startingValue, limit])
 ```
 
-The `getTrendingTags` function calls the same information as with `getState` but can be limited in the number of results. The data on each tag includes the number of votes and comments made with that tag as well as the total payouts for that tag. This is useful to determine which tags are most popular to assist in effective post creation.
+The `getPopularTags` function calls the same information as with `getState` but can be limited in the number of results. The data on each tag includes the number of votes and comments made with that tag as well as the total payouts for that tag. This is useful to determine which tags are most popular to assist in effective post creation.
 
 - Expected result:
 
@@ -357,18 +357,18 @@ The `getTrendingTags` function calls the same information as with `getState` but
   "net_votes": 54671586,
   "top_posts": 4996200,
   "total_payouts": "61584243.124 CBD",
-  "trending": "114450355665"
+  "popular": "114450355665"
 }
 ```
 
 #### Route: getState('tag_idx')<a name="tagidx"></a>
 
-- Purpose: Provides a list of names (index) of the current tags (according to trending) available on the blockchain with no additional information.
+- Purpose: Provides a list of names (index) of the current tags (according to popular) available on the blockchain with no additional information.
 
 - Replacement API call:
 
 ```javascript
-databaseAPI.call('get_trending_tags',[startingValue, limit])
+databaseAPI.call('get_popular_tags',[startingValue, limit])
 ```
 
 This information can be gained by the using the same method as for `getState('tags')` and then only displaying the `name` object of the array of tags provided. You can refer to the tutorial [search tags](https://developers.creaproject.io/tutorials-javascript/search_tags) for a detailed example of this.

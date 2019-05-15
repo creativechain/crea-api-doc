@@ -13,7 +13,7 @@ We will explain and show you how to access the **Crea** blockchain using the [cr
 
 ## Intro
 
-Crea python library has built-in function to get details of post with author and permlink as an argument. Since we don't have predefined post or author/permlink. We will fetch post list from previous tutorial and give option to choose one option/post to get its details. `get_content` function fetches latest state of the post and delivers its details. Note that `get_discussions_by_created` filter is used for fetching 5 posts which by default contains details of each post, but for purpose of this tutorial we will showcase `get_content` function to fetch details.
+Crea python library has built-in function to get details of post with author and permlink as an argument. Since we don't have predefined post or author/permlink. We will fetch post list from previous tutorial and give option to choose one option/post to get its details. `get_content` function fetches latest state of the post and delivers its details. Note that `get_discussions_by_now` filter is used for fetching 5 posts which by default contains details of each post, but for purpose of this tutorial we will showcase `get_content` function to fetch details.
 
 ## Steps
 
@@ -48,7 +48,7 @@ Next we will fetch and make list of posts and setup `pick` properly.
         "tag":"" #tag of posts
         }
     #post list for selected query
-    posts = s.get_discussions_by_created(query)
+    posts = s.get_discussions_by_now(query)
 
     title = 'Please choose post: '
     options = []
@@ -63,7 +63,7 @@ This will show us list of posts to select in terminal/command prompt. And after 
 
 #### 3. Post details <a name="post-details"></a>
 
-Next we will fetch post details with `get_content`. By default `get_discussions_by_created` function already contains post details, but for this tutorial purpose we will ignore all other fields but only use `author` and `permlink` fields to fetch fresh post details.
+Next we will fetch post details with `get_content`. By default `get_discussions_by_now` function already contains post details, but for this tutorial purpose we will ignore all other fields but only use `author` and `permlink` fields to fetch fresh post details.
 
 ```python
 

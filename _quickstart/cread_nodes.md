@@ -8,13 +8,11 @@ Applications that interface directly with the Crea blockchain will need to conne
 
 ### Public Nodes
 
-Although `cread` fully supports WebSockets (`wss://` and `ws://`) public nodes typically do not.  All nodes listed use HTTPS (`https://`).  If you require WebSockets for your solutions, please consider setting up your own `cread` node.
+Although all the nodes listed here support Websocket (`wss://`) and HTTPS (`https://`), it is preferable that you consider the option to use only HTTPS connections.
 
 | URL                             | Owner         |
 | ------------------------------- | ------------- |
-| node1.creary.net                | @creary       |
-| node2.creary.net                | @creary       |
-| node3.creary.net                | @creary       |
+| nodes.creary.net                | @creary       |
 | crea.owldevelopers.site         | @ander7agar   |
 
 

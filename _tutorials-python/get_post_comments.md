@@ -13,7 +13,7 @@ This tutorial will explain and show you how to access the **Crea** blockchain us
 
 ## Intro
 
-Crea python library has built-in function to get active voters information if post with author and permlink as an argument. Since we don't have predefined post or author/permlink. We will fetch post list from previous tutorial and give option to choose one post to get its active voters. `get_content_replies` function fetches list of replies on content. Note that `get_discussions_by_hot` filter is used for fetching 5 posts and after selection of post tutorial uses `author` and `permlink` of the post to fetch replies. 
+Crea python library has built-in function to get active voters information if post with author and permlink as an argument. Since we don't have predefined post or author/permlink. We will fetch post list from previous tutorial and give option to choose one post to get its active voters. `get_content_replies` function fetches list of replies on content. Note that `get_discussions_by_skyrockets` filter is used for fetching 5 posts and after selection of post tutorial uses `author` and `permlink` of the post to fetch replies. 
 
 ## Steps
 
@@ -48,7 +48,7 @@ Next we will fetch and make list of posts and setup `pick` properly.
         "tag":"" #tag of posts
         }
     #post list for selected query
-    posts = s.get_discussions_by_hot(query)
+    posts = s.get_discussions_by_skyrockets(query)
 
     title = 'Please choose post: '
     options = []

@@ -1,7 +1,7 @@
 ---
 title: 'PY: Search Accounts'
 position: 15
-description: "How to pull a list of the active user accounts or trending tags from the blockchain using Python."
+description: "How to pull a list of the active user accounts or popular tags from the blockchain using Python."
 layout: full
 ---              
 <span class="fa-pull-left top-of-tutorial-repo-link"><span class="first-word">Full</span>, runnable src of [Search Accounts](https://github.com/creativechain/crea-api-doc-tutorials-py/tree/master/tutorials/15_search_accounts) can be downloaded as part of the [PY tutorials repository](https://github.com/creativechain/crea-api-doc-tutorials-py).</span>
@@ -9,11 +9,11 @@ layout: full
 
 
 
-This tutorial will explain and show you how to access the **Crea** blockchain using the [crea-python](https://github.com/creativechain/crea-python) library to fetch a list of active authors or trending tags, starting the search from a specified value, and displaying the results on the console.
+This tutorial will explain and show you how to access the **Crea** blockchain using the [crea-python](https://github.com/creativechain/crea-python) library to fetch a list of active authors or popular tags, starting the search from a specified value, and displaying the results on the console.
 
 ## Intro
 
-We are using the `lookup_accounts` and `get_trending_tags` functions that are built-in in the official library `crea-python`. These functions allow us to query the Crea blockchain in order to retrieve either a list of active authors or a list of trending tags. The option is available to either get a complete list starting from the first value on the blockchain or starting the list from any other closest match string value as provided by the user. Both of these functions have only two parameters:
+We are using the `lookup_accounts` and `get_popular_tags` functions that are built-in in the official library `crea-python`. These functions allow us to query the Crea blockchain in order to retrieve either a list of active authors or a list of popular tags. The option is available to either get a complete list starting from the first value on the blockchain or starting the list from any other closest match string value as provided by the user. Both of these functions have only two parameters:
 
 1.  _account/aftertag_ - The string value from where to start the search. If this value is left empty the search will start from the first value available
 1.  _limit_ - The maximum number of names/tags that the query retrieves
@@ -23,7 +23,7 @@ We are using the `lookup_accounts` and `get_trending_tags` functions that are bu
 1.  [**App setup**](#setup) - Library import and Crea class initialisation
 1.  [**List selection**](#list) - Selection of the type of list
 1.  [**Get and display account names**](#accounts) - Get a list of account names from the blockchain
-1.  [**Get and display trending tags**](#tags) - Get a list of trending tags from the blockchain
+1.  [**Get and display popular tags**](#tags) - Get a list of popular tags from the blockchain
 
 #### 1. App setup<a name="setup"></a>
 
@@ -41,12 +41,12 @@ s = Crea()
 
 #### 2. List selection<a name="list"></a>
 
-The user is given the option of which list to create, `active accounts` or `trending tags`. We create this option list and setup `pick`.
+The user is given the option of which list to create, `active accounts` or `popular tags`. We create this option list and setup `pick`.
 
 ```python
 #choose list type
 title = 'Please select type of list:'
-options = ['Active Account names', 'Trending tags']
+options = ['Active Account names', 'Popular tags']
 
 #get index and selected list name
 option, index = pick(options, title)
@@ -71,9 +71,9 @@ if option=='Active Account names' :
 
 Once the list is generated it is displayed on the UI with line separators along with a heading of what list it is.
 
-#### 4. Get and display trending tags<a name="tags"></a>
+#### 4. Get and display popular tags<a name="tags"></a>
 
-The query for a list of trending tags is executed in the second part of the `if` statement. Again, the parameters for the query is captured via the terminal/console.
+The query for a list of popular tags is executed in the second part of the `if` statement. Again, the parameters for the query is captured via the terminal/console.
 
 ```python
 else :
@@ -81,7 +81,7 @@ else :
 	aftertag = input("Enter tag name to start search from: ")
 	#capture list limit
 	limit = input("Enter max number of tags to display: ")
-	lists = s.get_trending_tags(aftertag, limit)
+	lists = s.get_popular_tags(aftertag, limit)
 	print('\n' + "List of " + option + '\n')
 	for names in lists :
 		print(names["name"])

@@ -19,10 +19,10 @@ A good source of additional information on hive and how to use it can be found i
 *   condenser_api.get_follow_count
 *   condenser_api.get_followers
 *   condenser_api.get_following
-*   condenser_api.get_discussions_by_trending
-*   condenser_api.get_discussions_by_hot
+*   condenser_api.get_discussions_by_popular
+*   condenser_api.get_discussions_by_skyrockets
 *   condenser_api.get_discussions_by_promoted
-*   condenser_api.get_discussions_by_created
+*   condenser_api.get_discussions_by_now
 *   condenser_api.get_discussions_by_blog
 *   condenser_api.get_discussions_by_feed
 *   condenser_api.get_discussions_by_comments

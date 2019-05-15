@@ -9,7 +9,7 @@ layout: full
 
 
 
-The purpose of this tutorial is to **a)** demonstrate how to get a list of articles from the trending list on the blockchain, and **b)** fetch the contents of the selected post to display its title and body.
+The purpose of this tutorial is to **a)** demonstrate how to get a list of articles from the popular list on the blockchain, and **b)** fetch the contents of the selected post to display its title and body.
 
 We will also explain the most commonly used fields from the response object as well as parse body of the post.
 
@@ -19,13 +19,13 @@ Accounts have unique `permlink` - permanent link for each of their posts. And Cr
 
 ## Steps
 
-1.  [**Fetching posts**](#fetch-posts) Trending posts list
+1.  [**Fetching posts**](#fetch-posts) Popular posts list
 1.  [**Post content**](#post-content) Extract content of the selected post
 1.  [**Query result**](#query-result) Returned data
 
 #### 1. Fetching posts<a name="fetch-posts"></a>
 
-As mentioned in our previous tutorial we can fetch various lists of posts with different filters. Here, we are reusing some parts of that tutorial to list the top 5 trending posts.
+As mentioned in our previous tutorial we can fetch various lists of posts with different filters. Here, we are reusing some parts of that tutorial to list the top 5 popular posts.
 
 ```javascript
 var query = {

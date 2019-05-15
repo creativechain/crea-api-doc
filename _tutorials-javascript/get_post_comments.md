@@ -9,7 +9,7 @@ layout: full
 
 
 
-The purpose of this tutorial is to **a)** demonstrate how to get a list of articles from the trending list on the blockchain, and **b)** fetch the contents of the selected post to display its title and body and **c)** fetch comments of the post and display them with author, body, created time and number of votes.
+The purpose of this tutorial is to **a)** demonstrate how to get a list of articles from the popular list on the blockchain, and **b)** fetch the contents of the selected post to display its title and body and **c)** fetch comments of the post and display them with author, body, created time and number of votes.
 
 We will also explain the most commonly used fields from the response object as well as parse body of each comment.
 
@@ -19,13 +19,13 @@ Each post might have comments/replies that is interesting and contributes to the
 
 ## Steps
 
-1.  [**Fetching posts**](#fetching-posts) Getting trending posts
+1.  [**Fetching posts**](#fetching-posts) Getting popular posts
 1.  [**Post comments**](#post-comments) Open post and fetch comments
 1.  [**Query result**](#query-result) Result of the query
 
 #### 1. Fetching post<a name="fetching-posts"></a>
 
-As mentioned in our previous tutorials we can fetch various lists of posts with different filters. Here, we are reusing some parts of that tutorial to list the top 5 trending posts. And we parse content of selected post to display few fields in a meaningful way.
+As mentioned in our previous tutorials we can fetch various lists of posts with different filters. Here, we are reusing some parts of that tutorial to list the top 5 popular posts. And we parse content of selected post to display few fields in a meaningful way.
 
 #### 2. Post comments<a name="post-comments"></a>
 

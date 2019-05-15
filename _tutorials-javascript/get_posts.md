@@ -21,7 +21,7 @@ post as being relevant to a particular topic. Posts may have up to five tags on 
 querying (more on this later).
 
 A `filter` in Crea is a kind of built-in 'view' or ordering of posts. You can use the following filters:
-`trending`, `hot`, `new`, `active`, and `promoted`. You'll get a feel for the subtleties of each as you create your
+`popular`, `skyrockets`, `new`, `active`, and `promoted`. You'll get a feel for the subtleties of each as you create your
 application.
 
 ## Steps

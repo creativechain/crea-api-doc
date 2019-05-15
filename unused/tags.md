@@ -10,4 +10,4 @@ crea.api.setSubscribeCallback(callback, clearFilter, function(err, result) {
   console.log(err, result);
 });
 ~~~
-{: title="Get Trending Tags"} 
+{: title="Get Popular Tags"} 

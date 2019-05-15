@@ -70,12 +70,12 @@ The default `DEV_config.json` is:
             ["cread.database_api.get_block_header", -2],
             ["cread.database_api.get_content", 1],
             ["cread.database_api.get_state", 1],
-            ["cread.database_api.get_state.params=['/trending']", 30],
-            ["cread.database_api.get_state.params=['trending']", 30],
-            ["cread.database_api.get_state.params=['/hot']", 30],
+            ["cread.database_api.get_state.params=['/popular']", 30],
+            ["cread.database_api.get_state.params=['popular']", 30],
+            ["cread.database_api.get_state.params=['/skyrockets']", 30],
             ["cread.database_api.get_state.params=['/welcome']", 30],
             ["cread.database_api.get_state.params=['/promoted']", 30],
-            ["cread.database_api.get_state.params=['/created']", 10],
+            ["cread.database_api.get_state.params=['/now']", 10],
             ["cread.database_api.get_dynamic_global_properties", 1]
          ],
          "timeouts":[
@@ -145,12 +145,12 @@ Jussi can be configured with various `TTL` (Time To Live) schemes. A `TTL` is an
 | `cread`   | `database_api`          | `get_block_header`              | _all_              | -2            |
 | `cread`   | `database_api`          | `get_content`                   | _all_              | 1             |
 | `cread`   | `database_api`          | `get_state`                     | _all_              | 1             |
-| `cread`   | `database_api`          | `get_state`                     | `'/trending'`      | 30            |
-| `cread`   | `database_api`          | `get_state`                     | `'trending'`       | 30            |
-| `cread`   | `database_api`          | `get_state`                     | `'/hot'`           | 30            |
+| `cread`   | `database_api`          | `get_state`                     | `'/popular'`      | 30            |
+| `cread`   | `database_api`          | `get_state`                     | `'popular'`       | 30            |
+| `cread`   | `database_api`          | `get_state`                     | `'/skyrockets'`           | 30            |
 | `cread`   | `database_api`          | `get_state`                     | `'/welcome'`       | 30            |
 | `cread`   | `database_api`          | `get_state`                     | `'/promoted'`      | 30            |
-| `cread`   | `database_api`          | `get_state`                     | `'/created'`       | 10            |
+| `cread`   | `database_api`          | `get_state`                     | `'/now'`       | 10            |
 | `cread`   | `database_api`          | `get_dynamic_global_properties` | _all_              | 1             |
 | `overseer` | _all_                   | _all_                           | _all_              | 5             |
 | `conveyor` | _all_                   | _all_                           | _all_              | -1            |

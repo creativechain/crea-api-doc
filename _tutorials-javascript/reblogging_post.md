@@ -22,7 +22,7 @@ We are using the `client.broadcast` function provided by `dcrea` to reblog the s
 
 A simple HTML interface is used to capture the required information after which the transaction is submitted. There are two prerequisites within the reblog process in Crea that have to be adhered to, namely, the post must not be older than 7 days, and the post can only be reblogged once by a specific account. The fields have been populated with information to give an example of what it would look like but care has to be taken to provide correct details before the function is executed.
 
-This tutorial makes use of the This function is taken from the tutorial [Blog Feed](https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/01_blog_feed/) to get a list of trending posts.
+This tutorial makes use of the This function is taken from the tutorial [Blog Feed](https://github.com/creativechain/crea-api-doc-tutorials-js/blob/master/tutorials/01_blog_feed/) to get a list of popular posts.
 
 ## Steps
 

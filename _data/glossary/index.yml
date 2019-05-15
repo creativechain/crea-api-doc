@@ -99,9 +99,9 @@
 - name: API 
   id: glossary-api
   items:
-    - term: Trending
+    - term: Popular
       def: Posts/Discussions that are highly valued by community with bigger time interval update
-    - term: Hot
+    - term: Skyrockets
       def: Posts/Disccussions that are highly valued with shorter time interval update
     - term: Feed
       def: Posts/Disccussions from followers of particular account
@@ -117,7 +117,7 @@
       def: Estimated pending payout for blog posts/comments
     - term: Tags
       def: A tag is a descriptor that is used to identify the type of content contained within a comment/post.
-    - term: Trending Tags
+    - term: Popular Tags
       def: Mostly used tags
     - term: Following
       def: Account that is being followed

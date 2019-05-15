@@ -740,8 +740,8 @@
     expected_curl_responses:
     - 
     - Comment is not in account's comments
-  - api_method: condenser_api.get_discussions_by_created
-    purpose: Returns a list of discussions by created.
+  - api_method: condenser_api.get_discussions_by_now
+    purpose: Returns a list of discussions by now.
     parameter_json:
     - tag: ''
       limit: 0
@@ -751,9 +751,9 @@
       truncate_body: 0
     expected_response_json: []
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_created", "params":[{"tag":"crea","limit":1}],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_now", "params":[{"tag":"crea","limit":1}],
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_created", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_now", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
       "id":1}'
   - api_method: condenser_api.get_discussions_by_feed
     since: HF14
@@ -769,8 +769,8 @@
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_feed", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
       "id":1}'
-  - api_method: condenser_api.get_discussions_by_hot
-    purpose: Returns a list of discussions by hot.
+  - api_method: condenser_api.get_discussions_by_skyrockets
+    purpose: Returns a list of discussions by skyrockets.
     parameter_json:
     - tag: ''
       limit: 0
@@ -780,9 +780,9 @@
       truncate_body: 0
     expected_response_json: []
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_hot", "params":[{"tag":"crea","limit":1}],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_skyrockets", "params":[{"tag":"crea","limit":1}],
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_hot", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_skyrockets", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
       "id":1}'
   - api_method: condenser_api.get_discussions_by_promoted
     since: HF13
@@ -800,8 +800,8 @@
       "id":1}'
     - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_promoted", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
       "id":1}'
-  - api_method: condenser_api.get_discussions_by_trending
-    purpose: Returns a list of discussions by trending.
+  - api_method: condenser_api.get_discussions_by_popular
+    purpose: Returns a list of discussions by popular.
     parameter_json:
     - tag: ''
       limit: 0
@@ -811,9 +811,9 @@
       truncate_body: 0
     expected_response_json: []
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_trending", "params":[{"tag":"crea","limit":1}],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_popular", "params":[{"tag":"crea","limit":1}],
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_trending", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_discussions_by_popular", "params":[{"tag":"photography","limit":10,"truncate_body":0}],
       "id":1}'
   - api_method: condenser_api.get_discussions_by_votes
     purpose: Returns a list of discussions by votes.
@@ -1358,7 +1358,7 @@
         current_reserve_ratio: 1
         max_virtual_bandwidth: '0'
       tag_idx:
-        trending: []
+        popular: []
       tags: {}
       content: {}
       accounts: {}
@@ -1470,13 +1470,13 @@
     curl_examples:
     - '{"jsonrpc":"2.0", "method":"condenser_api.get_transaction_hex", "params":[{"ref_block_num":1097,"ref_block_prefix":2181793527,"expiration":"2016-03-24T18:00:21","operations":[["pow",{"worker_account":"cloop3","block_id":"00000449f7860b82b4fbe2f317c670e9f01d6d9a","nonce":3899,"work":{"worker":"CREA7P5TDnA87Pj9T4mf6YHrhzjC1KbPZpNxLWCcVcHxNYXakpoT4F","input":"ae8e7c677119d22385f8c48026fee7aad7bba693bf788d7f27047f40b47738c0","signature":"1f38fe9a3f9989f84bd94aa5bbc88beaf09b67f825aa4450cf5105d111149ba6db560b582c7dbb026c7fc9c2eb5051815a72b17f6896ed59d3851d9a0f9883ca7a","work":"000e7b209d58f2e64b36e9bf12b999c6c7af168cc3fc41eb7f8a4bf796c174c3"},"props":{"account_creation_fee":{"amount":"100000","precision":3,"nai":"@@000000021"},"maximum_block_size":131072,"sbd_interest_rate":1000}}]],"extensions":[],"signatures":[]}],
       "id":1}'
-  - api_method: condenser_api.get_trending_tags
+  - api_method: condenser_api.get_popular_tags
     purpose: |
-      Returns the list of trending tags.  Parameter: `start_tag:string`; `limit:int` up to 100
+      Returns the list of popular tags.  Parameter: `start_tag:string`; `limit:int` up to 100
 
       | `tag` (string) | `limit` (int) | |
       |----------------|---------------|-|
-      | `null` | 100 | Queries the top 100 trending tags. |
+      | `null` | 100 | Queries the top 100 popular tags. |
       | `"crea"` | 10 | Queries the tags after "crea", up to 10 tags. |
     parameter_json:
     - ''
@@ -1487,11 +1487,11 @@
       net_votes: 0
       top_posts: 0
       comments: 0
-      trending: ''
+      popular: ''
     curl_examples:
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_trending_tags", "params":[null,100],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_popular_tags", "params":[null,100],
       "id":1}'
-    - '{"jsonrpc":"2.0", "method":"condenser_api.get_trending_tags", "params":["crea",10],
+    - '{"jsonrpc":"2.0", "method":"condenser_api.get_popular_tags", "params":["crea",10],
       "id":1}'
   - api_method: condenser_api.get_version
     purpose: Returns the versions of blockchain, crea, and FC.
