@@ -29,6 +29,11 @@ collections:
     id: javascript
     position: 4
     output: true
+  tutorials:
+    title: Tutorials
+    id: tutorials
+    position: 5
+    output: true
   services:
     title: Services
     id: services
