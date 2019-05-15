@@ -75,7 +75,7 @@ recovery_account = input('account owner (recovery account): ')
 recovery_account_private_key = input('account owner private ACTIVE key: ')
 
 #connect to production server with active key
-s = Crea(node=['https://node1.creary.net'], keys=[recovery_account_private_key])
+s = Crea(node=['https://nodes.creary.net'], keys=[recovery_account_private_key])
 ```
 
 The new password for the account to be recovered must be at least 32 characters long.
@@ -182,7 +182,7 @@ op_account_update_data = {
 The crea class is initialised once more but with the required WIF for this specific section. This is necessary when different keys are required at various steps. The `recover_account` function is transmitted to the blockchain via the `TransactionBuilder` operation in order to append the new private keys. The operation is then broadcast.
 
 ```python
-s = Crea(node=['https://node1.creary.net'], keys=[recovery_account_private_key])
+s = Crea(node=['https://nodes.creary.net'], keys=[recovery_account_private_key])
 
 op_recover_account = beembase.operations.Recover_account(**op_recover_account_data)
 
@@ -205,7 +205,7 @@ print(result)
 The same basic process is followed as in the previous step. For this step however we require the new owner private key which is initialised in the crea class. The `TransactionBuilder` operation is used once more for the transmission to the blockchain.
 
 ```python
-s = Crea(node=['https://node1.creary.net'], keys=[new_account_owner_private_key])
+s = Crea(node=['https://nodes.creary.net'], keys=[new_account_owner_private_key])
 
 op_account_update = beembase.operations.Account_update(**op_account_update_data)
 

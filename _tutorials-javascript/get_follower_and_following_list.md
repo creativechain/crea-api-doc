@@ -41,7 +41,7 @@ opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
 //connect to a crea node, production in this case
-const client = new dcrea.Client('https://node1.creary.net');
+const client = new dcrea.Client('https://nodes.creary.net');
 ```
 
 Above, we have `dcrea` pointing to the production network with the proper chainId, addressPrefix, and endpoint.

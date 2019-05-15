@@ -63,6 +63,6 @@ If you want to port some data from Crea main network you can use [Chinman](https
 
 * ChainID: `0000000000000000000000000000000000000000000000000000000000000000`
 * Address prefix: `CREA`
-* API node: `https://node1.creary.net`
+* API node: `https://nodes.creary.net`
 
 The above testnet is experimental network. 

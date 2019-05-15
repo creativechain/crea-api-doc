@@ -361,7 +361,7 @@ Fields not covered in this recipe are:
 ### Example Method Call<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_config", "params":[], "id":1}' https://node1.creary.net
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_config", "params":[], "id":1}' https://nodes.creary.net
 ```
 
 ### Example Output<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>

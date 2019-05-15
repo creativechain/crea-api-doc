@@ -82,7 +82,7 @@ $ createdb hive
 $ export DATABASE_URL=postgresql://user:pass@localhost:5432/hive
 ```
 
-By default Hivemind will connect to the mainnet [https://node1.creary.net](https://node1.creary.net) but if required you can change this to connect to a testnet. To do this set the environment variable as described below.
+By default Hivemind will connect to the mainnet [https://nodes.creary.net](https://nodes.creary.net) but if required you can change this to connect to a testnet. To do this set the environment variable as described below.
 
 ```bash
 $ export CREAD_URL=https://testnet.crea.vc

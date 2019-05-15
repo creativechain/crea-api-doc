@@ -44,7 +44,7 @@ opts.addressPrefix = 'STM';
 opts.chainId =
     '0000000000000000000000000000000000000000000000000000000000000000';
 //connect to a Crea node. This is currently setup on production, but we recommend using a testnet like https://testnet.crea.vc
-const client = new dcrea.Client('https://node1.creary.net', opts);
+const client = new dcrea.Client('https://nodes.creary.net', opts);
 ```
 
 #### 2. Collecting information<a name="collecting_information"></a>

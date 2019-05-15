@@ -32,7 +32,7 @@ In first couple lines we require package and define connection server:
 ```
 const { Client } = require('dcrea');
 
-const client = new Client('https://node1.creary.net');
+const client = new Client('https://nodes.creary.net');
 ```
 
 #### 2. Query format<a name="Query-format"></a>

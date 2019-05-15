@@ -21,7 +21,7 @@ Crea's has base unit is VESTS and usually user doesn't know about this unit beca
 Following method can be used to fetch global values
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://node1.creary.net
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://nodes.creary.net
 ```
 
 ##### Example Output<a style="float: right" href="#steps"><i class="fas fa-chevron-up fa-sm" /></a>

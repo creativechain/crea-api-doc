@@ -24,7 +24,7 @@ namespace :scrape do
   
   desc "Scrape API Definitions"
   task :api_defs do
-    url = ENV.fetch('TEST_NODE', 'https://node1.creary.net')
+    url = ENV.fetch('TEST_NODE', 'https://nodes.creary.net')
     job = Scrape::ApiDefinitionsJob.new(url: url)
     count = job.perform
     
@@ -143,7 +143,7 @@ namespace :test do
   desc "Tests the curl examples of api definitions.  Known APIs: #{KNOWN_APIS.join(' ')}"
   task :curl, [:apis] do |t, args|
     smoke = 0
-    url = ENV.fetch('TEST_NODE', 'https://node1.creary.net')
+    url = ENV.fetch('TEST_NODE', 'https://nodes.creary.net')
     apis = [args[:apis].split(' ').map(&:to_sym)].flatten if !!args[:apis]
     apis ||= KNOWN_APIS
     

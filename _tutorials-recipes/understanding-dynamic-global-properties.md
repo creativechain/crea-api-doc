@@ -221,7 +221,7 @@ Fields not covered in this recipe are:
 To retrieve the current results for [`condenser_api.get_dynamic_global_properties`](https://developers.creaproject.io/apidefinitions/#condenser_api.get_dynamic_global_properties), we can retrieve the current state information using `curl`:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://node1.creary.net
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://nodes.creary.net
 ```
 
 ### Example Output<a style="float: right" href="#sections"><i class="fas fa-chevron-up fa-sm" /></a>

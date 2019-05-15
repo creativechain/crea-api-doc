@@ -209,7 +209,7 @@ Normally, a request is made with a JSON Object (`{}`).  But jussi also supports 
 For example, this would be a typical, non-batched JSON Object request that asks for a single block:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1}' https://node1.creary.net
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1}' https://nodes.creary.net
 ```
 
 ```json
@@ -240,7 +240,7 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[
 To request more than one block using the batch construct, wrap each call in a JSON Array, that asks for two blocks in one request:
 
 ```bash
-curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[2], "id":2}]' https://node1.creary.net
+curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[2], "id":2}]' https://nodes.creary.net
 ```
 
 ```json
@@ -295,7 +295,7 @@ curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":
 Error responses are returned in the JSON Array response as well.  Notice the `"WRONG"` parameter in the second element.  The first block is returned as expected, the second one generates an error.
 
 ```bash
-curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":["WRONG"], "id":2}]' https://node1.creary.net
+curl -s --data '[{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[1], "id":1},{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":["WRONG"], "id":2}]' https://nodes.creary.net
 ```
 
 ```json

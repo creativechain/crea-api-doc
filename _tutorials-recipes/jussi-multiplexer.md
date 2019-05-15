@@ -47,7 +47,7 @@ Edit the file `DEV_config.json` and change all:
 
 ... to ...
 
-`https://node1.creary.net`
+`https://nodes.creary.net`
 
 Also consider adding the [`retries`]({{ '/services/#retry' | relative_url }}) element to your `DEV_config.json`.
 
@@ -66,7 +66,7 @@ Now, you can use your new `jussi` node as if it's a full node running locally.  
 curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_block", "params":[8675309], "id":1}' http://localhost:9000
 ```
 
-In this case, `http://localhost:9000` will act like a full node.  In reality, it's passing all of its request to its upstream, `https://node1.creary.net`.
+In this case, `http://localhost:9000` will act like a full node.  In reality, it's passing all of its request to its upstream, `https://nodes.creary.net`.
 
 Once you've implemented your own `jussi` node in this manner, you should notice an improvement in bandwidth utilization.  If you're internet provider implements packet shaping strategies, this will have a positive impact because you are no longer streaming the entire blockchain once for each application.
 

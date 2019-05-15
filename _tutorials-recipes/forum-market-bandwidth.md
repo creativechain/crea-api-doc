@@ -41,7 +41,7 @@ curl -s --data '{
       "forum"
    ],
    "id":1
-}' https://node1.creary.net
+}' https://nodes.creary.net
 ```
 
 ```json
@@ -68,7 +68,7 @@ Note, `average_bandwidth` is expressed as an integer with six decimal places rep
 To do the calculation, we need `max_virtual_bandwidth` and `total_vesting_shares` from the global properties, e.g.:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://node1.creary.net
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_properties", "params":[], "id":1}' https://nodes.creary.net
 ```
 
 ```json
@@ -113,7 +113,7 @@ curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_dynamic_global_pro
 We also need to know how much the account has in CREA Power from `vesting_shares` and `received_vesting_shares`:
 
 ```bash
-curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params":[["cheetah"]], "id":1}' https://node1.creary.net
+curl -s --data '{"jsonrpc":"2.0", "method":"condenser_api.get_accounts", "params":[["cheetah"]], "id":1}' https://nodes.creary.net
 ```
 
 ```json

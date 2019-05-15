@@ -40,7 +40,7 @@ opts.addressPrefix = 'STM';
 opts.chainId =
 	'0000000000000000000000000000000000000000000000000000000000000000';
 //connect to server which is connected to the network/production
-const client = new dcrea.Client('https://node1.creary.net');
+const client = new dcrea.Client('https://nodes.creary.net');
 ```
 
 #### 2.  **Collecting input variables**<a name="collecting_input_variables"></a>
