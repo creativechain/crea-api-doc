@@ -44,6 +44,16 @@ collections:
     id: glossary
     position: 8
     output: true
+  tutorials-javascript:
+    title: Javascript Tutorials
+    id: tutorials-javascript
+    position: 10
+    output: true
+  tutorials-python:
+    title: Python Tutorials
+    id: tutorials-python
+    position: 11
+    output: true
   apidefinitions:
     title: API Definitions
     id: apidefinitions
